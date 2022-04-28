@@ -89,25 +89,25 @@ rectangle "FireSale! models" as models{
         PICKUP
         HANDOFF
     }
-    User -d-> OrderHistory
-    User -> SearchHistory
+    User -d- OrderHistory
+    User - SearchHistory
 
-    OrderHistory -d-> Order
-    OrderItems -l-> Order
-    OrderItems -u-> Item
+    OrderHistory -d- Order
+    OrderItems -l- Order
+    OrderItems -u- Item
 
-    UserBids -u-> User
-    UserSales -u-> User
-    UserRatings -u-> User
+    UserBids -u- User
+    UserSales -u- User
+    UserRatings -u- User
 
-    Item -> ConditionType
-    Item -d-> Category
-    Item -d-> DeliveryType
+    Item -- ConditionType
+    Item -d- Category
+    Item -d- DeliveryType
 
-    Order -l-> PaymentInformation
-    Order -d-> ShippingDetails
+    Order -l- PaymentInformation
+    Order -d- ShippingDetails
 
-    User -l-> Notfications
+    User -l- Notfications
 }
 
 @enduml

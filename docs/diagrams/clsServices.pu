@@ -6,6 +6,30 @@ rectangle "FireSale! Services" as services {
         + delete_item()
         + update_item()
         + get_all_items()
+        + get_item_images()
+        + sort_items()
+    }
+    class BidService{
+        + add_bid()
+        + retract_bid()
+        + accept_bid()
+    }
+    class CategoryService {
+        + create_category()
+        + delete_category()
+        + update_category()
+    }
+    class OrderService{
+        + set_shipping_info()
+        + set_payment_info()
+        + create_invoice()
+        + get_order_details()
+    }
+    class UserService {
+        + get_user_info()
+        + set_user_info()
+        + delete_user()
+        + create_user()
     }
     class SearchService() {
         + item_search()

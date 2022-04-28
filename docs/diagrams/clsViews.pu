@@ -18,5 +18,12 @@ rectangle "FireSale! Views" as views {
         + item_page()
         + item_bid()
     }
+
+    class CheckoutViews {
+        + customer_info()
+        + delivery_method()
+        + payment_information()
+        + order_confirmed()
+    }
 }
 @enduml
