@@ -1,25 +1,88 @@
 @startuml FireSale!
-class User {
-    string fullname
-    string email
-    string password
-}
-class Order {
+package "FireSale! Dataclasses" {
+    class User {
+        id: BigAutoField
+        full_name: CharField
+        email: EmailField
+        password: CharField
+    }
+    class Order {
+        id: BigAutoField
+        buyer: User
+        seller: User
+        --
+        displayOrderSummary(): void
+    }
+    class OrderItems {
+        order_id: BigIntergerField
+        items: Array<Item>
+        --
+        + getTotal(): DecimalField
+    }
+    class OrderHistory{
+        user_id: BigIntergerField
+        orderArray: Array<Order>
+    }
+    class PaymentInformation {
+        cardholder_name: CharField
+        card_number: CharField
+        cvc: CharField
+        expiry_month: IntegerField
+        expiry_year: IntergerField
 
-}
-class OrderHistory{
+    }
+    class ShippingDetails {
+        full_name: CharField
+        address: CharField
+        postal_code: SmallIntegerField
+        city: CharField
+    }
+    class Item{
+        id: BigAutoField
+        price: DecimalField
+        delivery_Options: Array<DeliveryType>
 
-}
-class PaymentInformation {
+    }
+    class SearchHistory{
+        search_string: CharField
+        timestamp: DateTimeField
+    }
+    class Category{
+        id: BigAutoField
+        name: CharField
+        sub_categories: Array<Category>
+    }
+    class UserBids {
+        user_id: BigIntergerField
+        item_id: BigIntergerField
+        amount: BigIntergerField
+        timestamp: DateTimeField
+        expires: DateTimeField
 
+    }
+    class UserSales {
+        user_id: BigIntergerField
+        items: Array<Item>
+    }
+    class UserRatings {
+        rater: User
+        ratee: User
+        rating: DecimalField
+    }
+    class Notfications {
+        id: BigAutoField
+        message: CharField
+    }
+    enum DeliveryType {
+        DELIVERY
+        PICKUP
+        HANDOFF
+    }
 }
-class Item{
+package "FireSale! Views" {
+    entity FrontPage {
 
-}
-class SearchHistory{
-
-}
-class Category{
+    }
 
 }
 @enduml
