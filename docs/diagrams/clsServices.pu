@@ -1,0 +1,22 @@
+@startuml FireSale
+
+rectangle "FireSale! Services" as services {
+    class ItemService {
+        + create_item()
+        + delete_item()
+        + update_item()
+        + get_all_items()
+    }
+    class SearchService() {
+        + item_search()
+        + category_search()
+    }
+    class NotificationService() {
+        + send_notification()
+        + mark_notification_read()
+    }
+    class PaymentService {
+        + verify_payment()
+    }
+}
+@enduml

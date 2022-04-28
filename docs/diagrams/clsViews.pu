@@ -1,0 +1,22 @@
+@startuml FireSaleViews
+rectangle "FireSale! Views" as views {
+    class GeneralViews {
+        + home()
+        + search_results()
+    }
+
+    class UserViews {
+        + login()
+        + logout()
+        + profile()
+        + active_bids()
+        + active_sales()
+        + notification()
+    }
+
+    class ItemViews {
+        + item_page()
+        + item_bid()
+    }
+}
+@enduml

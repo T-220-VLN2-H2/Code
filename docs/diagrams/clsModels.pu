@@ -1,8 +1,9 @@
 @startuml FireSale!
-package "FireSale! Dataclasses" {
+rectangle "FireSale! models" as models{
     class User {
         id: BigAutoField
         full_name: CharField
+        user_name: CharField
         email: EmailField
         password: CharField
     }
@@ -10,6 +11,7 @@ package "FireSale! Dataclasses" {
         id: BigAutoField
         buyer: User
         seller: User
+        order_items: OrderItems
         --
         displayOrderSummary(): void
     }
@@ -40,8 +42,16 @@ package "FireSale! Dataclasses" {
     class Item{
         id: BigAutoField
         price: DecimalField
+        condition: ConditionType
+        category: Category
         delivery_Options: Array<DeliveryType>
 
+    }
+    enum ConditionType {
+        NEW
+        USED
+        USED_LIKE_NEW
+        FOR_PARTS_NOT_WORKING
     }
     class SearchHistory{
         search_string: CharField
@@ -67,6 +77,7 @@ package "FireSale! Dataclasses" {
     class UserRatings {
         rater: User
         ratee: User
+        order: Order
         rating: DecimalField
     }
     class Notfications {
@@ -78,11 +89,25 @@ package "FireSale! Dataclasses" {
         PICKUP
         HANDOFF
     }
-}
-package "FireSale! Views" {
-    entity FrontPage {
+    User -d-> OrderHistory
+    User -> SearchHistory
 
-    }
+    OrderHistory -d-> Order
+    OrderItems -l-> Order
+    OrderItems -u-> Item
 
+    UserBids -u-> User
+    UserSales -u-> User
+    UserRatings -u-> User
+
+    Item -> ConditionType
+    Item -d-> Category
+    Item -d-> DeliveryType
+
+    Order -l-> PaymentInformation
+    Order -d-> ShippingDetails
+
+    User -l-> Notfications
 }
+
 @enduml
