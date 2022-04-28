@@ -1,31 +1,23 @@
-# If a file with the .py ending is changed, lable PR with code
+# If a file in layer dir changed lable PR with code tag
 code:
-- 'src/**/*.py'
+- 'layers/**/*'
 
 # If any file under design or its sub dirs is chagned append the design lable
-design:
-- 'design/**/*'
+doc:
+- 'docs/**/*'
 
-# If a file in 'logic layer' is changed add the lable buisness layer
-business-layer:
-- 'src/logic_layer/**/*'
-
-# If a file is changed in either 'file layer' or 'design/data' is changed add the file-layer lable
-file-layer:
-- 'src/file_layer/**/*'
-- 'design/data/**/*'
-
-# if changes are made to ui soruce or the wireframes add ui lable
-ui-layer:
-- 'src/ui/**/*'
-- 'design/wireframes/**/*'
+api:
+- 'layers/api/**/*'
+db:
+- 'layers/db/**/*'
+web:
+- 'layers/web/**/*'
 
 # all dotfiles, all files in dotdirs, and all .md files in root
 meta:
 - '.*/**/*'
 - '.*'
 - '*.md'
-#- any: ['.*', '**/.*', '*.md']
 
 tests:
-- 'src/tests/**/*'
+- '**/*/tests/**/*'
