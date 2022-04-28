@@ -1,1 +1,1 @@
-# monorepo (namechange due)
+# FireSale! codebase
