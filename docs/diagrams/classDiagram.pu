@@ -1,0 +1,25 @@
+@startuml FireSale!
+class User {
+    string fullname
+    string email
+    string password
+}
+class Order {
+
+}
+class OrderHistory{
+
+}
+class PaymentInformation {
+
+}
+class Item{
+
+}
+class SearchHistory{
+
+}
+class Category{
+
+}
+@enduml
