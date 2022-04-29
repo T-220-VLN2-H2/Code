@@ -1,4 +1,6 @@
 @startuml FireSaleViews
+scale 0.7
+'scale 1.5 | scale 200 width | scale 100 height | scale [max] 200x100
 rectangle "FireSale! Views" as views {
     class GeneralViews {
         + home()

@@ -1,4 +1,6 @@
 @startuml FireSale!
+scale 0.42
+'scale 1.5 | scale 200 width | scale 100 height | scale [max] 200x100
 rectangle "FireSale! models" as models{
     class User {
         id: BigAutoField

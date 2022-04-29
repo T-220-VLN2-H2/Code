@@ -1,5 +1,6 @@
 @startuml FireSale
-
+scale 0.6
+'scale 1.5 | scale 200 width | scale 100 height | scale [max] 200x100
 rectangle "FireSale! Services" as services {
     class ItemService {
         + create_item()
