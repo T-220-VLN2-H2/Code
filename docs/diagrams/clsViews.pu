@@ -1,0 +1,31 @@
+@startuml FireSaleViews
+scale 0.7
+'scale 1.5 | scale 200 width | scale 100 height | scale [max] 200x100
+rectangle "FireSale! Views" as views {
+    class GeneralViews {
+        + home()
+        + search_results()
+    }
+
+    class UserViews {
+        + login()
+        + logout()
+        + profile()
+        + active_bids()
+        + active_sales()
+        + notification()
+    }
+
+    class ItemViews {
+        + item_page()
+        + item_bid()
+    }
+
+    class CheckoutViews {
+        + customer_info()
+        + delivery_method()
+        + payment_information()
+        + order_confirmed()
+    }
+}
+@enduml

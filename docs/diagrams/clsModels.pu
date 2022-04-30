@@ -1,0 +1,115 @@
+@startuml FireSale!
+scale 0.42
+'scale 1.5 | scale 200 width | scale 100 height | scale [max] 200x100
+rectangle "FireSale! models" as models{
+    class User {
+        id: BigAutoField
+        full_name: CharField
+        user_name: CharField
+        email: EmailField
+        password: CharField
+    }
+    class Order {
+        id: BigAutoField
+        buyer: User
+        seller: User
+        order_items: OrderItems
+        --
+        displayOrderSummary(): void
+    }
+    class OrderItems {
+        order_id: BigIntergerField
+        items: Array<Item>
+        --
+        + getTotal(): DecimalField
+    }
+    class OrderHistory{
+        user_id: BigIntergerField
+        orderArray: Array<Order>
+    }
+    class PaymentInformation {
+        cardholder_name: CharField
+        card_number: CharField
+        cvc: CharField
+        expiry_month: IntegerField
+        expiry_year: IntergerField
+
+    }
+    class ShippingDetails {
+        full_name: CharField
+        address: CharField
+        postal_code: SmallIntegerField
+        city: CharField
+    }
+    class Item{
+        id: BigAutoField
+        price: DecimalField
+        condition: ConditionType
+        category: Category
+        delivery_Options: Array<DeliveryType>
+
+    }
+    enum ConditionType {
+        NEW
+        USED
+        USED_LIKE_NEW
+        FOR_PARTS_NOT_WORKING
+    }
+    class SearchHistory{
+        search_string: CharField
+        timestamp: DateTimeField
+    }
+    class Category{
+        id: BigAutoField
+        name: CharField
+        sub_categories: Array<Category>
+    }
+    class UserBids {
+        user_id: BigIntergerField
+        item_id: BigIntergerField
+        amount: BigIntergerField
+        timestamp: DateTimeField
+        expires: DateTimeField
+
+    }
+    class UserSales {
+        user_id: BigIntergerField
+        items: Array<Item>
+    }
+    class UserRatings {
+        rater: User
+        ratee: User
+        order: Order
+        rating: DecimalField
+    }
+    class Notfications {
+        id: BigAutoField
+        message: CharField
+    }
+    enum DeliveryType {
+        DELIVERY
+        PICKUP
+        HANDOFF
+    }
+    User -d- OrderHistory
+    User - SearchHistory
+
+    OrderHistory -d- Order
+    OrderItems -l- Order
+    OrderItems -u- Item
+
+    UserBids -u- User
+    UserSales -u- User
+    UserRatings -u- User
+
+    Item -- ConditionType
+    Item -d- Category
+    Item -d- DeliveryType
+
+    Order -l- PaymentInformation
+    Order -d- ShippingDetails
+
+    User -l- Notfications
+}
+
+@enduml
