@@ -1,15 +1,18 @@
 # If a file in layer dir changed lable PR with code tag
 code:
-- 'layers/**/*'
+
+- 'FireBase!/**/*'
+- 'db/**/*'
 
 # If any file under design or its sub dirs is chagned append the design lable
 doc:
 - 'docs/**/*'
 
+# TODO: fix paths when coding starts
 api:
 - 'layers/api/**/*'
 db:
-- 'layers/db/**/*'
+- 'db/**/*'
 web:
 - 'layers/web/**/*'
 
@@ -20,4 +23,4 @@ meta:
 - '*.md'
 
 tests:
-- '**/*/tests/**/*'
+- 'tests/**/*'

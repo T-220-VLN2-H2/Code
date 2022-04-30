@@ -1,0 +1,21 @@
+
+@startuml
+state "Accept / decline bid" as confirmBid {
+    state "Bid declined" as declineBid
+    state "Bid accepted" as acceptBid
+    state "Awaiting payment" as awaitingPayment
+    declineBid : do / notify bidder
+    declineBid : do / find second highest bid
+    acceptBid : do / notify buyer
+
+    [*] --> declineBid
+    [*] --> acceptBid
+
+    declineBid --> [*]
+    acceptBid --> awaitingPayment
+
+    awaitingPayment --> [*]
+}
+
+
+@enduml
