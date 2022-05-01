@@ -36,16 +36,13 @@ jobs:
         pip install -r requirements.txt
         pip install apprise braintree coverage coveralls
     - name: Run Tests
-      env:
-        DB_NAME: ""
-        DB_PASS: ""
-        DB_USER: "runner"
-        SECRET_KEY: "supersecretkeyfortesting"
       working-directory: ./firesale
       env:
         DB: ${{ matrix.db }}
         DB_USER: ${{ matrix.db_user }}
-        DB_PASSWORD: ${{ matrix.db_password }}
+        DB_PASS: ${{ matrix.db_password }}
+        DB_NAME: ""
+        SECRET_KEY: "supersecretkeyfortesting"
       run: |
         coverage run --omit=*/tests/* --source=hc manage.py test
     - name: Coveralls
