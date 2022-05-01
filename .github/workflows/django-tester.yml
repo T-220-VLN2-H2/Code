@@ -40,7 +40,7 @@ jobs:
       env:
         DB: ${{ matrix.db }}
         DB_USER: ${{ matrix.db_user }}
-        DB_PASS: ${{ matrix.db_password }}
+        DB_PASSWORD: ${{ matrix.db_password }}
         DB_NAME: ""
         SECRET_KEY: "supersecretkeyfortesting"
       run: |
