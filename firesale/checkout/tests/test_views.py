@@ -13,6 +13,6 @@ class StatusCodeTest(TestCase):
         pass
 
     def test_catalog_returns_200(self):
-        response = self.client.get('/catalog')
+        response = self.client.get('/checkout')
         self.assertEqual(response.status_code, 200)
 
