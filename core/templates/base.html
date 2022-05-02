@@ -1,13 +1,15 @@
+{% load static %}
 <html>
     <head>
         <title>FireSale!</title>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
     </head>
     <body>
-        {% block navigation%}
+        {% block navigation %}
+            {% include 'navigation.html' %}
         {% endblock %}
-        <div>
         {% block content %}
         {% endblock %}
-        </div>
     </body>
 </html>
