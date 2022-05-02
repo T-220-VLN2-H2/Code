@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h1>Halló</h1>
+  {% for cat in categories %}
+    <p>{{cat.name}}</p>
+  {% endfor %}
 {% endblock %}
