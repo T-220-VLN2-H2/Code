@@ -1,6 +1,5 @@
 # If a file in layer dir changed lable PR with code tag
 code:
-
 - 'FireBase!/**/*'
 - 'db/**/*'
 
@@ -10,11 +9,11 @@ doc:
 
 # TODO: fix paths when coding starts
 api:
-- 'layers/api/**/*'
+- 'firebase/**/*'
 db:
 - 'db/**/*'
 web:
-- 'layers/web/**/*'
+- 'firebase/**/*'
 
 # all dotfiles, all files in dotdirs, and all .md files in root
 meta:
