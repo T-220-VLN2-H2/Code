@@ -40,7 +40,8 @@ jobs:
       - name: Install ESLint
         run: |
           npm install eslint@8.10.0
-          npm install @google/eslint-config-google@0.14.0
+          #npm install @google/eslint-config-google@0.14.0
+          npm install @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
         run: npx eslint .
