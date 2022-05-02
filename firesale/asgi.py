@@ -1,5 +1,5 @@
 """
-ASGI config for firesale project.
+ASGI config for firesale_old project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

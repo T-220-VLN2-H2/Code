@@ -36,7 +36,7 @@ jobs:
         pip install -r requirements.txt
         pip install apprise braintree coverage coveralls
     - name: Run Tests
-      working-directory: ./firesale
+      working-directory: ./firesale_old
       env:
         DB: ${{ matrix.db }}
         DB_USER: ${{ matrix.db_user }}
