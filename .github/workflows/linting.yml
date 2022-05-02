@@ -37,7 +37,7 @@ jobs:
           node-version: 12
 
       - name: Install JavaScript linter
-        run: npm install -save-dev eslint eslint-config-google
+        run: npm install -save-dev eslint eslint-config-google @babel/core @babel/eslint-parser
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
