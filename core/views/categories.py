@@ -9,4 +9,4 @@ def home(request):
     ctx = {
         "categories": categories
     }
-    return render(request, '../templates/category/home.html', context=ctx)
+    return render(request, '../templates/categories/home.html', context=ctx)

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="categoryItems">
+    {% for cat in categories %}
+        <div>
+            <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'">
+            <p>{{cat.name}}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
