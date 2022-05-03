@@ -1,2 +1,2 @@
-const profile = document.getElementById("profileImg")
-console.log(profile)
+const profile = document.getElementById('profileImg');
+console.log(profile);
