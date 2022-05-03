@@ -1,5 +1,88 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Welcome to History! Your name is {{ name }}</h1>
-    <div style="background-color: aqua; height: 100px; width: 100px;"></div>
+<div class="col-md-8">
+    <h1>
+        My History!</h1>
+</div>
+
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="active-sales-tab" data-bs-toggle="tab" data-bs-target="#active-sales"
+            type="button" role="tab" aria-controls="active-sales" aria-selected="true">Active Sales</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="active-bids-tab" data-bs-toggle="tab" data-bs-target="#active-bids" type="button"
+            role="tab" aria-controls="active-bids" aria-selected="false">Active Bids</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button" role="tab"
+            aria-controls="sales" aria-selected="false">Sales</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="purchases-tab" data-bs-toggle="tab" data-bs-target="#purchases" type="button"
+            role="tab" aria-controls="purchases" aria-selected="false">Purchases</button>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="list-group tab-pane fade show active" id="active-sales" role="tabpanel"
+        aria-labelledby="active-sales-tab">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>And some small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+        </a>
+    </div>
+
+    <div class="list-group tab-pane fade" id="active-bids" role="tabpanel" aria-labelledby="active-bids-tab">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Processor</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>And some small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Lawn mower</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">List group item heading</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+        </a>
+    </div>
+    <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">...</div>
+    <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">...</div>
+</div>
+
+
+
 {% endblock %}
