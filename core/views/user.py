@@ -1,22 +1,20 @@
 from django.shortcuts import render
 
-folder_path = '../templates/user'
+folder_path = "../templates/user"
 
-categories = [
-        {"id": 1, "name": "Electronics"},
-        {"id": 2, "name": "Furniture"}
-    ]
+categories = [{"id": 1, "name": "Electronics"}, {"id": 2, "name": "Furniture"}]
+
 
 def home(request):
-    ctx = {
-        "categories": categories
-    }
+    ctx = {"categories": categories}
 
-    return render(request, f'{folder_path}/index.html', context=ctx)
+    return render(request, f"{folder_path}/index.html", context=ctx)
+
 
 def edit(request):
 
-    return render(request, f'{folder_path}/edit.html')
+    return render(request, f"{folder_path}/edit.html")
+
 
 def profile(request, id):
     users = [
@@ -29,15 +27,14 @@ def profile(request, id):
             ctx = user
             break
 
-    return render(request, f'{folder_path}/user.html', context=ctx)
+    return render(request, f"{folder_path}/user.html", context=ctx)
+
 
 def history(request, id):
-    ctx = {
-        "categories": categories
-    }
+    ctx = {"categories": categories}
 
-    return render(request, f'{folder_path}/history.html', context=ctx)
+    return render(request, f"{folder_path}/history.html", context=ctx)
+
 
 def messages(request, id):
-    return render(request, f'{folder_path}/messages.html')
-
+    return render(request, f"{folder_path}/messages.html")
