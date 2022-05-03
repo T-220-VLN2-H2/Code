@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Welcome to Profile! Your name is {{ name }}</h1>
-    <div style="background-color: gray; height: 100px; width: 100px;"></div>
-{% endblock %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1>My Profile!</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6 d-flex justify-content-center">
+            <img src="../../static/images/profile.jpg" class="img-thumbnail" alt="...">
+        </div>
+        <div class="col-6 d-flex justify-content-start">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-start">
+                    <h2>John Doe</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-start">
+                    <p class="text-start">Start aligned text on all viewport sizes.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-start">
+                    <p class="text-start">Start aligned text on all viewport sizes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
