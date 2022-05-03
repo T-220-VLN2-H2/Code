@@ -1,0 +1,14 @@
+<div class="container">
+    <ul class="list-group">
+        {% for cat in categories %}
+        {% if cat.id == selected_category.id %}
+            <li class="list-group-item selected">
+        {% endif %}
+        {% if cat.id != selected_category.id %}
+        <li class="list-group-item">
+        {% endif %}
+                <a href="/category/{{cat.id}}">{{cat.name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

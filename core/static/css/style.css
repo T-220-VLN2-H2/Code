@@ -1,0 +1,10 @@
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+a:hover{
+    color: orange !important;
+}
+.selected a{
+    color: orange !important;
+}
