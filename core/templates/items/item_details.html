@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'" class="d-block w-100" alt="...">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="input-group-fluid mb-3">
+                                    <div class="form-floating">
+                                    <input type="text" class="form-control" id="item-name" aria-describedby="item-name" disabled value="{{item.name}}">
+                                    <label for="item-name" class="form-label">Name</label>
+                                    </div>
+                                </div>
+                                <div class="input-group-fluid mb-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="item-category" aria-describedby="item-price" disabled value="{{item.category}}">
+                                        <label for="item-category" class="form-label">Category</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="input-group-fluid mb-3">
+                                    <div class="form-floating">
+                                        {% if item.auction %}
+                                        <input type="text" class="form-control" id="item-high-bid" aria-describedby="item-highest-bid" disabled value="{{item.price}}">
+                                        <label for="item-high-bid" class="form-label">Highest bid</label>
+                                        {% endif %}
+                                        {% if not item.auction %}
+                                            <input type="text" class="form-control" id="item-price" aria-describedby="item-highest-bid" disabled value="{{item.price}}">
+                                            <label for="item-price" class="form-label">Price</label>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="input-group-fluid mb-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="item-condition" aria-describedby="item-condition" disabled value="{{item.condition}}">
+                                        <label for="item-condition" class="form-label">Condition</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <p id="item-description" class="form-control" disabled></p>
+                                    <label for="item-description">Description</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>Similar items here </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
