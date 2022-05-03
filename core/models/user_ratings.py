@@ -1,10 +1,12 @@
 from django.db import models
+from .user import User
+from .order import Order
 
 
 class UserRatings(models.Models):
-    rater = models.User()
-    ratee = models.User()
-    order = models.Order()
+    rater = models.ForeignKey(User, on_delete=models.CASCADE)
+    ratee = models.ForeignKey(User, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     rating = models.DecimalField()
 
     class Meta:

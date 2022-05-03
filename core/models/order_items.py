@@ -1,8 +1,10 @@
 from django.db import models
+from .item import Item
+from .order import Order
 
 
 class OrderItems(models.Models):
-    order_id = models.BigIntergerField
+    order_id = models.ForeignKey(Order, on_delete=models.CASCADE)
     # TODO: add items to model
     # items: array<Item>
 

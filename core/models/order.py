@@ -1,11 +1,13 @@
 from django.db import models
+from .order_items import OrderItems
+from .user import User
 
 
 class Order(models.Models):
-    id = models.BigAutoField()
-    buyer = models.User()
-    seller = models.User()
-    order_items = models.OrderItems()
+    id = models.BigAutoField(primary_key=True)
+    buyer = models.ForeignKey(User, on_delete=models.CASCADE)
+    seller = models.ForeignKey(User, on_delete=models.CASCADE)
+    order_items = models.ForeignKey(OrderItems, on_delete=models.CASCADE)
 
     def displayOrderSummary(self) -> None:
         # TODO: docstring

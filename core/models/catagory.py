@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Catagory(models.Models):
-    id = models.BigAutoField()
+    id = models.BigAutoField(primary_key=True)
     name = models.CharField()
     # TODO:
     # sub_categories = models.Array<Category>()

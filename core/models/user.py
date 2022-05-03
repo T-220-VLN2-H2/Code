@@ -2,12 +2,12 @@ from django.db import models
 
 
 class User(models.Models):
-    id = models.BigAutoField()
+    id = models.BigAutoField(primary_key=True)
     full_name = models.CharField()
     user_name = models.CharField()
     email = models.EmailField()
     password = models.CharField()
-    created = models.DateTimeField()
+    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         """

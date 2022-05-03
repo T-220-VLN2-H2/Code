@@ -3,11 +3,11 @@ from .user import User
 
 
 class Notification(models.Models):
-    id = models.BigAutoField()
+    id = models.BigAutoField(primary_key=True)
     title = models.CharField()
     message = models.CharField()
     timestamp = models.DateTimeField()
-    user_id = models.User()
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         """

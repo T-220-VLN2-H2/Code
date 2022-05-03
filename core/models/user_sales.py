@@ -1,9 +1,10 @@
 from django.db import models
-# TODO: models.imprt item
+from .user import User
+# TODO: import item
 
 
 class UserSales(models.Models):
-    user_id = models.BigIntergerField()
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     # TODO:
     # items = models.Array<Item>
 

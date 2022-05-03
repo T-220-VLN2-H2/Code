@@ -1,8 +1,10 @@
 from django.db import models
+from .user import User
 # import order
 
+
 class OrderHistory(models.Models):
-    user_id = models.BigIntergerField()
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     # TODO: add orderArray
     # order_array: Array<Order>
 
