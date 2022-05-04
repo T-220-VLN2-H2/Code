@@ -1,6 +1,9 @@
 from django.contrib.auth import authenticate
 
 user = authenticate(username="siggi", password="testpassword")
+user.save()
+user.profile.description = "Frekar flottur gæji"
+user.save()
 categories = [
     {"id": 1, "name": "Electronics", "parent": None},
     {"id": 2, "name": "Furniture", "parent": None},
@@ -25,7 +28,7 @@ items = [
         "id": 2,
         "name": "A good chair",
         "price": 250.00,
-        "category": 2,
+        "category": 7,
         "condition": "Refurbished",
         "auction": False,
     },
