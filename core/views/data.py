@@ -1,9 +1,10 @@
 from django.contrib.auth import authenticate
+
 user = None
-#user = authenticate(username="siggi", password="testpassword")
-#user.save()
-#user.profile.description = "Frekar flottur gæji"
-#user.save()
+# user = authenticate(username="siggi", password="testpassword")
+# user.save()
+# user.profile.description = "Frekar flottur gæji"
+# user.save()
 categories = [
     {"id": 1, "name": "Electronics", "parent": None},
     {"id": 2, "name": "Furniture", "parent": None},

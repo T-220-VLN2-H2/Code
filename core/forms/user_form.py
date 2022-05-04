@@ -13,13 +13,18 @@ class UserCreateForm(ModelForm):
             "user_permissions",
             "is_staff",
             "is_active",
-            "date_joined"]
+            "date_joined",
+        ]
         widgets = {
             "username": widgets.TextInput(attrs={"class": "form-control"}),
             "first_name": widgets.TextInput(attrs={"class": "form-control"}),
             "last_name": widgets.TextInput(attrs={"class": "form-control"}),
-            "email": widgets.TextInput(attrs={"class": "form-control", "type": "email"}),
-            "password": widgets.TextInput(attrs={"class": "form-control", "type": "password"}),
+            "email": widgets.TextInput(
+                attrs={"class": "form-control", "type": "email"}
+            ),
+            "password": widgets.TextInput(
+                attrs={"class": "form-control", "type": "password"}
+            ),
         }
 
 
@@ -39,5 +44,7 @@ class UserLoginForm(ModelForm):
         fields = ["username", "password"]
         widgets = {
             "username": widgets.TextInput(attrs={"class": "form-control"}),
-            "password": widgets.TextInput(attrs={"class": "form-control", "type": "password"}),
+            "password": widgets.TextInput(
+                attrs={"class": "form-control", "type": "password"}
+            ),
         }
