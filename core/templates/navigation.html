@@ -4,14 +4,16 @@
         <a class="navbar-brand" href="/">FireSale!</a>
         <div class="row justify-content-end">
             <div class="col">
-            {% if user.is_loggedin %}
+            {% if user %}
                 <p>Active sales</p>
+                <p>Active bids</p>
             {% endif %}
-            {% if not user.is_loggedin %}
-                <p>Login</p>
-                <p>Register</p>
+            {% if not user %}
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
             {% endif %}
             </div>
+            {% if user %}
             <div class="col">
                 <div class="dropdown">
                     <img id="profileImg" class="dropdown-toggle" src="{% static '/images/profile.jpg' %}" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,6 +24,7 @@
                     </ul>
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 </nav>
