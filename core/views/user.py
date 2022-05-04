@@ -15,13 +15,12 @@ ctx = {
 
 
 def home(request):
-    return render(request, f"{folder_path}/index.html", context=ctx)
-
-
-def edit(request):
     if user is None:
         return redirect("/login")
-    return render(request, f"{folder_path}/edit.html")
+    return render(request, f"{folder_path}/index.html", context=ctx)
+
+def edit(request):
+    return render(request, f"{folder_path}/edit.html", context=ctx)
 
 
 def profile(request, id):

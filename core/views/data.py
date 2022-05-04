@@ -127,85 +127,45 @@ ratings = [{
 }]
 
 user_messages = [{
-  "sender": "Edik Arnoldi",
-  "message": "amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum",
-  "title": "Tarzan's Greatest Adventure"
+  "sender": "Chaddie Cordes",
+  "message": "lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non",
+  "title": "By the Gun"
 }, {
-  "sender": "Tori Scholler",
-  "message": "imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis",
-  "title": "Big Fella"
+  "sender": "Kira Kobsch",
+  "message": "luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis",
+  "title": "Johnny Suede"
 }, {
-  "sender": "Elwood Sappson",
-  "message": "faucibus cursus urna ut tellus nulla ut erat id mauris vulputate",
-  "title": "Alphabet"
+  "sender": "Fenelia Sessions",
+  "message": "sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer",
+  "title": "Rocket Singh: Salesman of the Year"
 }, {
-  "sender": "Hailey Drugan",
-  "message": "orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a",
-  "title": "Prince of Egypt, The"
+  "sender": "Annecorinne Facchini",
+  "message": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam",
+  "title": "Saint Ange (House of Voices)"
 }, {
-  "sender": "Jillayne Melanaphy",
-  "message": "natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam",
-  "title": "Guru, The"
+  "sender": "Liuka Bellard",
+  "message": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum",
+  "title": "Deception"
 }, {
-  "sender": "Shara Bagenal",
-  "message": "non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus",
-  "title": "A Most Violent Year"
+  "sender": "Heather Kilmaster",
+  "message": "at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis",
+  "title": "Romance on the High Seas"
 }, {
-  "sender": "Chalmers Kilner",
-  "message": "adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien",
-  "title": "What Will You Do When You Catch Me? (Co mi zrobisz jak mnie zlapiesz?)"
+  "sender": "Chaim Tankard",
+  "message": "id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam",
+  "title": "Incredible Hulk, The"
 }, {
-  "sender": "Leta Buey",
-  "message": "amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis",
-  "title": "Butterfly on a Wheel (Shattered)"
+  "sender": "Kin Morehall",
+  "message": "hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit",
+  "title": "Adventures of Food Boy, The (aka High School Superhero)"
 }, {
-  "sender": "Traci Mannion",
-  "message": "aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut",
-  "title": "Silences of the Palace, The (Saimt el Qusur)"
+  "sender": "Byron Manjot",
+  "message": "potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis",
+  "title": "Descent, The"
 }, {
-  "sender": "Ddene Spellacey",
-  "message": "duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in",
-  "title": "College Road Trip"
-}, {
-  "sender": "Gabbey Bracchi",
-  "message": "eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo",
-  "title": "Nutty Professor, The"
-}, {
-  "sender": "Queenie Tootin",
-  "message": "nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
-  "title": "Dirty Story"
-}, {
-  "sender": "Harmonie Goch",
-  "message": "sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti",
-  "title": "Think Like a Man"
-}, {
-  "sender": "Wilt Goligher",
-  "message": "turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at",
-  "title": "Singh Is Kinng"
-}, {
-  "sender": "Che Bartleman",
-  "message": "diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat",
-  "title": "Henry: Portrait of a Serial Killer"
-}, {
-  "sender": "Boy Ielden",
-  "message": "elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo",
-  "title": "Wyrmwood"
-}, {
-  "sender": "Richie Perell",
-  "message": "morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam",
-  "title": "Cheetah"
-}, {
-  "sender": "Avram Dunlea",
-  "message": "libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas",
-  "title": "Comandante"
-}, {
-  "sender": "Dasya Hindrick",
-  "message": "aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien",
-  "title": "Seraphim Falls"
-}, {
-  "sender": "Dal Brech",
-  "message": "nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam",
-  "title": "March of the Movies (Film Parade, The)"
+  "sender": "Erroll Rigmond",
+  "message": "sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis",
+  "title": "She Wouldn't Say Yes"
 }]
 
 # print(categories_with_parents)
