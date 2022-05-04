@@ -1,5 +1,12 @@
 from django.shortcuts import render, redirect
-from .data import categories, user, categories_with_parents, items, ratings, user_messages
+from .data import (
+    categories,
+    user,
+    categories_with_parents,
+    items,
+    ratings,
+    user_messages,
+)
 
 folder_path = "../templates/user"
 
@@ -10,7 +17,7 @@ ctx = {
     "sub_categories": categories_with_parents,
     "ratings": ratings,
     "items": items,
-    "user_messages": user_messages
+    "user_messages": user_messages,
 }
 
 
@@ -18,6 +25,7 @@ def home(request):
     if user is None:
         return redirect("/login")
     return render(request, f"{folder_path}/index.html", context=ctx)
+
 
 def edit(request):
     return render(request, f"{folder_path}/edit.html", context=ctx)
