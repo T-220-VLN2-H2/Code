@@ -94,4 +94,36 @@ for cat in categories:
         else:
             categories_with_parents[cat["parent"]] = [cat]
 
-print(categories_with_parents)
+ratings = [{
+  "name": "Ronnie Harsent",
+  "rating": 1.3
+}, {
+  "name": "Arabella Riggeard",
+  "rating": 2.5
+}, {
+  "name": "Abelard Jonathon",
+  "rating": 1.5
+}, {
+  "name": "Rutherford Trubshawe",
+  "rating": 3.4
+}, {
+  "name": "Putnam Wheatman",
+  "rating": 3.9
+}, {
+  "name": "Teodoro Skedge",
+  "rating": 3.8
+}, {
+  "name": "Hurlee Baine",
+  "rating": 2.3
+}, {
+  "name": "Stephen Keiley",
+  "rating": 1.2
+}, {
+  "name": "Cheslie Erdely",
+  "rating": 3.3
+}, {
+  "name": "Becki Lyall",
+  "rating": 2.1
+}]
+
+# print(categories_with_parents)
