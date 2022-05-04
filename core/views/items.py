@@ -8,7 +8,6 @@ def items_page(request):
         "items": items,
         "sub_categories": categories_with_parents,
     }
-    print(ctx)
     return render(request, "../templates/items/items.html", context=ctx)
 
 
