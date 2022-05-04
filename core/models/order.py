@@ -7,7 +7,7 @@ from .user import User
 
 class Order(models.Model):
     id = models.BigAutoField(primary_key=True)
-    users = models.ManyToManyField(User, through='OrderUser')
+    users = models.ManyToManyField(User, through="OrderUser")
     # order_items = models.ForeignKey(OrderItems, on_delete=models.CASCADE)
 
     def displayOrderSummary(self) -> None:
@@ -29,6 +29,7 @@ class OrderUser(models.Model):
     class UserType(models.TextChoices):
         BUYER = "Buyer", _("")
         SELLER = "Seller", _("")
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     type = models.CharField(choices=UserType.choices, max_length=128)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)

@@ -23,6 +23,7 @@ class RatingUsers(models.Model):
     class UserType(models.TextChoices):
         RATER = "Rater", _("")
         RATEE = "Ratee", _("")
+
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     type = models.CharField(choices=UserType.choices, max_length=128)
     user_rating = models.ForeignKey(UserRatings, on_delete=models.CASCADE)
