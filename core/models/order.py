@@ -1,4 +1,5 @@
 from django.db import models
+
 # from .order_items import OrderItems
 from .user import User
 
@@ -19,5 +20,6 @@ class Order(models.Model):
         For models split into separate files, specify table name and app name.
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
+
         db_table = "core_order"
         app_label = "core"
