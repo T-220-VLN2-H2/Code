@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .data import categories, user, categories_with_parents, items, ratings
+from .data import categories, user, categories_with_parents, items, ratings, user_messages
 
 folder_path = "../templates/user"
 
@@ -9,7 +9,8 @@ ctx = {
     "user": user,
     "sub_categories": categories_with_parents,
     "ratings": ratings,
-    "items": items
+    "items": items,
+    "user_messages": user_messages
 }
 
 
@@ -33,7 +34,3 @@ def history(request):
 
 def messages(request):
     return render(request, f"{folder_path}/messages.html", context=ctx)
-
-
-def messages(request):
-    return render(request, f"{folder_path}/messages.html")
