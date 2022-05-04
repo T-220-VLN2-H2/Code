@@ -1,20 +1,25 @@
 class ItemService:
-    pass
 
     def create_item(self):
-        pass
+        print('Do something')
+        #TODO
 
     def delete_item(self):
-        pass
+        print('Do something')
+        #TODO
 
     def update_item(self):
-        pass
+        print('Do something')
+        #TODO
 
     def get_all_items(self):
-        pass
+        print('Do something')
+        #TODO
 
     def get_all_images(self):
-        pass
+        print('Do something')
+        #TODO
 
     def sort_items(self):
-        pass
+        print('Do something')
+        #TODO

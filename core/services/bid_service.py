@@ -1,11 +1,13 @@
 class BidService:
-    pass
 
     def add_bid(self):
-        pass
+        print('Do something')
+        #TODO add bid to DB with item ID 
 
     def retract_bid(self):
-        pass
+        print('Do something')
+        #TODO remove bid from DB with item ID
 
     def accept_bid(self):
-        pass
+        print('Do something')
+        #TODO mark bid in DB 'accepted' as true

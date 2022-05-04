@@ -2,16 +2,21 @@ from django.shortcuts import redirect, render
 from Code.core.forms.user_form import UserCreateForm
 
 class UserService:
-    pass
-
-    def get_user_info(self):
-        pass
+    def get_user_info(request):
+        if request.method == 'GET':
+            print('do something')
+            #TODO validate the request, find the corresponding user in DB and return object. Else raise error.
     
-    def set_user_info(self):
-        pass
+    def set_user_info(request):
+        if request.method == 'PATCH':
+            print('do something')
+            #TODO validate the request, find the corresponding user in DB and update information. Else raise error.
 
-    def delete_user(self):
-        pass
+    def delete_user(request):
+        if request.method == 'DELETE':
+            print(1)
+            #TODO validate the request, forward to DB to remove information, return success. Else raise error.
+        
 
     def create_user(request):
         if request.method == 'POST':

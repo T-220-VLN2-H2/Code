@@ -1,9 +1,10 @@
 class NotificationService:
-    pass
 
-    def send_notification(self, user, notification):
-        pass
+    def send_notification(user, notification):
+        print('Do something')
+        #TODO update users notification list
 
     def mark_notification_read(self):
-        pass
+        print('Do something')
+        #TODO set DB notification 'read' as true
     
