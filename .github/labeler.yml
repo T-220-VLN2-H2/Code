@@ -21,8 +21,8 @@ urls:
 - '**/urls.py'
 - '**/urls/**'
 view:
-- '**/view.py'
-- '**/view/**'
+- '**/views.py'
+- '**/views/**'
 
 # all dotfiles, all files in dotdirs, and all .md files in root
 meta:
