@@ -4,16 +4,16 @@
         <a class="navbar-brand" href="/">FireSale!</a>
         <div class="row justify-content-end align-items-center">
         <div class="col-md-auto">
-            {% if user %}
+            {% if user.is_authenticated %}
             <a href="/user/history#active-sales">Active sales</a>
             <a href="/user/history#bids">Active bids</a>
             {% endif %}
-            {% if not user %}
-                <a href="/login">Login</a>
+            {% if not user.is_authenticated %}
+                <a href="{% url 'login' %}">Login</a>
                 <a href="/register">Register</a>
             {% endif %}
-            {% if user %}
         </div>
+        {% if user.is_authenticated %}
         <div class="col-md-auto">
             <div class="dropdown me-2">
                 <img id="profileImg" class="dropdown-toggle" src="{% static '/images/profile.jpg' %}" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,6 +22,7 @@
                     <li><a class="dropdown-item" href="/user">My profile</a></li>
                     <li><a class="dropdown-item" href="/user/history">History</a></li>
                     <li><a class="dropdown-item" href="/user/messages">Messages</a></li>
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                 </ul>
             </div>
         </div>

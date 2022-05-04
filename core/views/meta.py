@@ -4,17 +4,17 @@ from django.contrib.auth import login
 
 
 from .data import categories, items, categories_with_parents, user
-from core.forms.user_form import UserCreateForm
+from core.forms.user_form import UserCreateForm, UserLoginForm
 folder_path = "../templates/"
 
 ctx = {
     "categories": categories,
     "sub_categories": categories_with_parents,
-    "user": user,
 }
 
 
 def home(request):
+    ctx['user'] = request.user
     return render(request, f"{folder_path}/index.html", context=ctx)
 
 
@@ -42,6 +42,12 @@ def register(request):
 def login_page(request):
     if request.user:
         ctx['user'] = request.user
-    if request.method == "POST":
-        print("Why are you requesting me???")
+    if request.method == 'POST':
+        form = UserLoginForm(request.POST)
+
+        if form.is_valid():
+            print("valid")
+    else:
+        ctx['form'] = UserLoginForm()
+
     return render(request, f"{folder_path}/login.html", context=ctx)

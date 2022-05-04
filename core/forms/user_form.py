@@ -36,8 +36,8 @@ class UserUpdateForm(ModelForm):
 class UserLoginForm(ModelForm):
     class Meta:
         model = User
-        exclude = ["id", "email", "name", "bio"]
+        fields = ["username", "password"]
         widgets = {
             "username": widgets.TextInput(attrs={"class": "form-control"}),
-            "password": widgets.TextInput(attrs={"class": "form-control"}),
+            "password": widgets.TextInput(attrs={"class": "form-control", "type": "password"}),
         }

@@ -5,15 +5,16 @@ from .data import categories, items, categories_with_parents, user
 ctx = {
     "categories": categories,
     "sub_categories": categories_with_parents,
-    "user": user
 }
 
 
 def home(request):
+    ctx['user'] = request.user
     return render(request, "../templates/categories/home.html", context=ctx)
 
 
 def category_page(request, cat_id):
+    ctx['user'] = request.user
     for cat in categories:
         if cat["id"] == int(cat_id):
             ctx["selected_category"] = cat

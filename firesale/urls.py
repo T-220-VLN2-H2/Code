@@ -23,4 +23,6 @@ urlpatterns = [
     path("", include("core.urls.user")),
     path("", include("core.urls.items")),
     path("", include("core.urls.meta")),
+    path("accounts/", include("django.contrib.auth.urls")),  # new
+
 ]
