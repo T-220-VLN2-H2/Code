@@ -8,6 +8,7 @@ rectangle "FireSale! models" as models{
         user_name: CharField
         email: EmailField
         password: CharField
+        created: DateTimeField
     }
     class Order {
         id: BigAutoField
@@ -83,8 +84,11 @@ rectangle "FireSale! models" as models{
         rating: DecimalField
     }
     class Notfications {
-        id: BigAutoField
+        id: BigAutoFiel
+        title: CharField
         message: CharField
+        timestamp: DateTimeField
+        user_id: User
     }
     enum DeliveryType {
         DELIVERY
@@ -106,7 +110,7 @@ rectangle "FireSale! models" as models{
     Item -d- Category
     Item -d- DeliveryType
 
-    Order -l- PaymentInformation
+    Order -r- PaymentInformation
     Order -d- ShippingDetails
 
     User -l- Notfications
