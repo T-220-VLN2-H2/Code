@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .data import categories, user
+
 folder_path = "../templates/user"
 
 
@@ -15,9 +16,7 @@ def edit(request):
 
 
 def profile(request, id):
-    ctx = {
-        "user": user
-    }
+    ctx = {"user": user}
     return render(request, f"{folder_path}/user.html", context=ctx)
 
 

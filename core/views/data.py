@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate
+
 user = authenticate(username="siggi", password="testpassword")
 categories = [
     {"id": 1, "name": "Electronics", "parent": None},
