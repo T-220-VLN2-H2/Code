@@ -1,8 +1,7 @@
 from django.shortcuts import render
+from .data import categories, user
 
 folder_path = "../templates/user"
-
-categories = [{"id": 1, "name": "Electronics"}, {"id": 2, "name": "Furniture"}]
 
 
 def home(request):
@@ -17,16 +16,7 @@ def edit(request):
 
 
 def profile(request, id):
-    users = [
-        {"id": 1, "name": "John Doe"},
-        {"id": 2, "name": "Helgi Hak"},
-    ]
-    ctx = None
-    for user in users:
-        if user["id"] == int(id):
-            ctx = user
-            break
-
+    ctx = {"user": user}
     return render(request, f"{folder_path}/user.html", context=ctx)
 
 
