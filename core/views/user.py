@@ -4,7 +4,11 @@ from .data import categories, user, categories_with_parents
 folder_path = "../templates/user"
 
 
-ctx = {"categories": categories, "user": user, "sub_categories": categories_with_parents}
+ctx = {
+    "categories": categories,
+    "user": user,
+    "sub_categories": categories_with_parents,
+}
 
 
 def home(request):
