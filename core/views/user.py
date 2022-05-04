@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .data import categories, user, categories_with_parents
 
 folder_path = "../templates/user"
@@ -16,7 +16,8 @@ def home(request):
 
 
 def edit(request):
-
+    if user is None:
+        return redirect("/login")
     return render(request, f"{folder_path}/edit.html")
 
 
