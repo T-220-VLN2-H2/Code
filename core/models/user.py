@@ -14,5 +14,6 @@ class User(models.Model):
         For models split into separate files, specify table name and app name.
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
+
         db_table = "core_user"
         app_label = "core"
