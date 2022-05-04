@@ -3,7 +3,9 @@
     <div class="row">
     {% for cat in categories %}
         <div class="col">
-            <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'">
+            <a href="/category/{{cat.id}}">
+                <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'">
+            </a>
             <p>{{cat.name}}</p>
         </div>
     {% endfor %}

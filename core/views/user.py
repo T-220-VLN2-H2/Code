@@ -1,21 +1,24 @@
 from django.shortcuts import render
 
-folder_path = '../templates/user'
+folder_path = "../templates/user"
 
-categories = [
-        {"id": 1, "name": "Electronics"},
-        {"id": 2, "name": "Furniture"}
-    ]
+categories = [{"id": 1, "name": "Electronics"}, {"id": 2, "name": "Furniture"}]
+
 
 def home(request):
-    ctx = {
-        "categories": categories
-    }
+    ctx = {"categories": categories}
 
-    return render(request, f'{folder_path}/index.html', context=ctx)
+    return render(request, f"{folder_path}/index.html", context=ctx)
+
 
 def edit(request):
+<<<<<<< HEAD
     return render(request, f'{folder_path}/edit.html')
+=======
+
+    return render(request, f"{folder_path}/edit.html")
+
+>>>>>>> main
 
 def profile(request, id):
     users = [
@@ -28,11 +31,22 @@ def profile(request, id):
             ctx = user
             break
 
-    return render(request, f'{folder_path}/user.html', context=ctx)
+    return render(request, f"{folder_path}/user.html", context=ctx)
 
+
+<<<<<<< HEAD
 def history(request):
     return render(request, f'{folder_path}/history.html')
 
 def messages(request):
     return render(request, f'{folder_path}/messages.html')
+=======
+def history(request, id):
+    ctx = {"categories": categories}
 
+    return render(request, f"{folder_path}/history.html", context=ctx)
+
+>>>>>>> main
+
+def messages(request, id):
+    return render(request, f"{folder_path}/messages.html")
