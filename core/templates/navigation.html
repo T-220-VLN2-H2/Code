@@ -1,5 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{% load static %}
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">FireSale!</a>
+        <div class="row justify-content-end">
+            <div class="col">
+            {% if user %}
+                <p>Active sales</p>
+                <p>Active bids</p>
+            {% endif %}
+            {% if not user %}
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            {% endif %}
+            </div>
+            {% if user %}
+            <div class="col">
+                <div class="dropdown">
+                    <img id="profileImg" class="dropdown-toggle" src="{% static '/images/profile.jpg' %}" data-bs-toggle="dropdown" aria-expanded="false">
+                      <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="profileImg" >
+                        <li><a class="dropdown-item" href="/user">My profile</a></li>
+                        <li><a class="dropdown-item" href="/user/{{user.id}}/history">History</a></li>
+                        <li><a class="dropdown-item" href="/user/{{user.id}}/messages">Messages</a></li>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+        </div>
     </div>
 </nav>

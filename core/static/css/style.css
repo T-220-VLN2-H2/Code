@@ -12,3 +12,8 @@ a:hover{
 #item-description {
     height: 100%;
 }
+#profileImg{
+    border-radius: 45px;
+    height: 64px;
+    width: 64px;
+}

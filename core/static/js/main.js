@@ -1,1 +1,2 @@
-console.log("hello eslint");
+const profile = document.getElementById('profileImg');
+console.log(profile);

@@ -7,7 +7,7 @@ class CategoryStatusAndContentTest(TestCase):
         print("Adding test categories")
         cls.categories = [
             {"id": 1, "name": "Electronics"},
-            {"id": 2, "name": "Furniture"}
+            {"id": 2, "name": "Furniture"},
         ]
 
     # def setUp(self) -> None:
@@ -15,12 +15,10 @@ class CategoryStatusAndContentTest(TestCase):
     #    pass
 
     def test_category_returns_200(self):
-        response = self.client.get('/category')
+        response = self.client.get("/category")
         self.assertEqual(response.status_code, 200)
 
     def test_category_contains_category_names(self):
-        response = self.client.get('/category')
+        response = self.client.get("/category")
         for cat in self.categories:
             self.assertContains(response, f'<p>{cat["name"]}</p>')
-
-
