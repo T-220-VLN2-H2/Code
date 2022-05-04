@@ -15,7 +15,6 @@ def home(request):
     return render(request, f'{folder_path}/index.html', context=ctx)
 
 def edit(request):
-
     return render(request, f'{folder_path}/edit.html')
 
 def profile(request, id):
@@ -31,13 +30,9 @@ def profile(request, id):
 
     return render(request, f'{folder_path}/user.html', context=ctx)
 
-def history(request, id):
-    ctx = {
-        "categories": categories
-    }
+def history(request):
+    return render(request, f'{folder_path}/history.html')
 
-    return render(request, f'{folder_path}/history.html', context=ctx)
-
-def messages(request, id):
+def messages(request):
     return render(request, f'{folder_path}/messages.html')
 
