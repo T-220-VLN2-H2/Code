@@ -5,7 +5,7 @@ folder_path = "../templates/user"
 
 
 def home(request):
-    ctx = {"categories": categories}
+    ctx = {"categories": categories, "user": "John Doe"}
 
     return render(request, f"{folder_path}/index.html", context=ctx)
 
@@ -20,10 +20,12 @@ def profile(request, id):
     return render(request, f"{folder_path}/user.html", context=ctx)
 
 
-def history(request, id):
-    ctx = {"categories": categories}
+def history(request):
+    return render(request, f"{folder_path}/history.html")
 
-    return render(request, f"{folder_path}/history.html", context=ctx)
+
+def messages(request):
+    return render(request, f"{folder_path}/messages.html")
 
 
 def messages(request, id):
