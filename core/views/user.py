@@ -21,12 +21,12 @@ def profile(request, id):
 
 
 def history(request):
-    return render(request, f"{folder_path}/history.html")
+    return render(request, f"{folder_path}/history.html", context=ctx)
 
 
 def messages(request):
-    return render(request, f"{folder_path}/messages.html")
+    return render(request, f"{folder_path}/messages.html", context=ctx)
 
 
 def messages(request):
-    return render(request, f"{folder_path}/messages.html")
+    return render(request, f"{folder_path}/messages.html", context=ctx)
