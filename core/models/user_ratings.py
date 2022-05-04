@@ -4,8 +4,8 @@ from .order import Order
 
 
 class UserRatings(models.Model):
-    rater = models.ForeignKey(User, on_delete=models.CASCADE)
-    ratee = models.ForeignKey(User, on_delete=models.CASCADE)
+    # rater = models.ForeignKey(User, on_delete=models.CASCADE)
+    # ratee = models.ForeignKey(User, on_delete=models.CASCADE)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=1, decimal_places=0)
 

@@ -1,4 +1,4 @@
-from django.forms import ModelForm, widgets
+from django.forms import widgets
 from core.models import Item
 
 class ItemCreateForm(ModelForm):
@@ -6,9 +6,8 @@ class ItemCreateForm(ModelForm):
         model = Item
         exclude = ['id']
         widgets = {
-            'Price': widgets.TextInput(attrs={'class': 'form-control'}),
-            'Condition': widgets.TextInput(attrs={'class': 'form-control'}),
-            'Category': widgets.TextInput(attrs={'class': 'form-control'})
+            'Price': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'Condition': widgets.CheckboxInput(attrs={'class': 'form-control'}),
+            'Category': widgets.Select(attrs={'class': 'form-control'}),
+            'Delivery_Options': widgets.Select(attrs={'class': 'form-control'})
         }
-
-class 
