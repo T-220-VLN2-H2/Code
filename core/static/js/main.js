@@ -1,6 +1,3 @@
-const profile = document.getElementById('profileImg');
-console.log(profile);
-
 // Tab selector
 // author: Patrekur
 // const activeSales = document.getElementById("active-sales-button");
@@ -33,3 +30,4 @@ console.log(profile);
 //     bidsTab.classList.add("active");
 //     bidsContent.classList.add("active", "show");
 // };
+

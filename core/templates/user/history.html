@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <h1 class="m-5"> My History!</h1>
 <div class="container d-flex justify-content-center">
     <div class="col-10">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="active-sales-tab" data-bs-toggle="tab"
+                <a href="#active-sales"><button class="nav-link active" id="active-sales-tab" data-bs-toggle="tab"
                     data-bs-target="#active-sales" type="button" role="tab" aria-controls="active-sales"
-                    aria-selected="true">Active Sales</button>
+                    aria-selected="true">Active Sales</button></a>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="active-bids-tab" data-bs-toggle="tab" data-bs-target="#active-bids"
-                    type="button" role="tab" aria-controls="active-bids" aria-selected="false">Active Bids</button>
+                <a href="#bids"><button class="nav-link" id="active-bids-tab" data-bs-toggle="tab" data-bs-target="#active-bids"
+                    type="button" role="tab" aria-controls="active-bids" aria-selected="false">Active Bids</button></a>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button"
-                    role="tab" aria-controls="sales" aria-selected="false">Sales</button>
+                <a href="#sales"><button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button"
+                    role="tab" aria-controls="sales" aria-selected="false">Sales</button></a>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="purchases-tab" data-bs-toggle="tab" data-bs-target="#purchases"
-                    type="button" role="tab" aria-controls="purchases" aria-selected="false">Purchases</button>
+                <a href="#purchases"><button class="nav-link" id="purchases-tab" data-bs-toggle="tab" data-bs-target="#purchases"
+                    type="button" role="tab" aria-controls="purchases" aria-selected="false">Purchases</button></a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -82,5 +83,5 @@
         </div>
     </div>
 </div>
-
+<script src="{% static 'js/tabSelector.js'%}"></script>
 {% endblock %}
