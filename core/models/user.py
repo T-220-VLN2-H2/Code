@@ -1,13 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
-class User(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    full_name = models.CharField(max_length=128)
-    user_name = models.CharField(max_length=128)
-    email = models.EmailField()
-    password = models.CharField(max_length=128)
-    created = models.DateTimeField(auto_now_add=True)
+class Profile(models.Model):
+    # Inherit from the django User model and add extra fields as required
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    description = models.TextField(max_length=500, blank=True)
 
     class Meta:
         """
@@ -17,3 +17,14 @@ class User(models.Model):
 
         db_table = "core_user"
         app_label = "core"
+
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
