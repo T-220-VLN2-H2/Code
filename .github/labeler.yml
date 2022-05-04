@@ -1,25 +1,34 @@
 # If a file in layer dir changed lable PR with code tag
-code:
-- 'firesale/**/*'
-- 'db/**/*'
+core:
+- 'core/**/*'
+
+checkout:
+- 'checkout/**'
+
+firesale:
+- 'firesale/**'
 
 # If any file under design or its sub dirs is chagned append the design lable
 doc:
-- 'docs/**/*'
+- 'docs/**'
+- '**/*.md'
 
 # TODO: fix paths when coding starts
-api:
-- 'firesale/**/*'
-db:
-- 'db/**/*'
-web:
-- 'firesale/**/*'
+model:
+- '**/model.py'
+- '**/model/**'
+urls:
+- '**/urls.py'
+- '**/urls/**'
+view:
+- '**/view.py'
+- '**/view/**'
 
 # all dotfiles, all files in dotdirs, and all .md files in root
 meta:
 - '.*/**/*'
 - '.*'
-- '*.md'
 
+# changes to any file in dir called test or its subdirs
 tests:
-- 'tests/**/*'
+- '**/tests/**/*'
