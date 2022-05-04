@@ -1,12 +1,12 @@
 from django.db import models
 
 
-class User(models.Models):
+class User(models.Model):
     id = models.BigAutoField(primary_key=True)
-    full_name = models.CharField()
-    user_name = models.CharField()
+    full_name = models.CharField(max_length=128)
+    user_name = models.CharField(max_length=128)
     email = models.EmailField()
-    password = models.CharField()
+    password = models.CharField(max_length=128)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -14,5 +14,5 @@ class User(models.Models):
         For models split into separate files, specify table name and app name.
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
-        db_table = "firesale_user"
-        app_label = "firesale"
+        db_table = "core_user"
+        app_label = "core"

@@ -2,7 +2,7 @@ from django.db import models
 from .user import User
 
 
-class Notification(models.Models):
+class Notification(models.Model):
     id = models.BigAutoField(primary_key=True)
     title = models.CharField()
     message = models.CharField()

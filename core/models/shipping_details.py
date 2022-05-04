@@ -1,16 +1,16 @@
 from django.db import models
 
 
-class ShippingDetails(models.Models):
-    full_name = models.CharField()
-    address = models.CharField()
+class ShippingDetails(models.Model):
+    full_name = models.CharField(max_length=128)
+    address = models.CharField(max_length=128)
     postal_code = models.SmallIntegerField()
-    city = models.CharField()
+    city = models.CharField(max_length=128)
 
     class Meta:
         """
         For models split into separate files, specify table name and app name.
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
-        db_table = "firesale_shipping_details"
-        app_label = "firesale"
+        db_table = "core_shipping_details"
+        app_label = "core"
