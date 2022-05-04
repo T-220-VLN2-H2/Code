@@ -8,3 +8,7 @@ a:hover{
 .selected a{
     color: orange !important;
 }
+
+#item-description {
+    height: 100%;
+}
