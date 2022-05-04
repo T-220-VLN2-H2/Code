@@ -28,5 +28,5 @@ def messages(request):
     return render(request, f"{folder_path}/messages.html")
 
 
-def messages(request, id):
+def messages(request):
     return render(request, f"{folder_path}/messages.html")
