@@ -3,7 +3,7 @@
 <div class="container" style="background-color: bisque;">
     <div class="d-flex py-5">
         <h1>My Profile!</h1>
-        <a class="btn btn-primary" href="/user/edit" role="button">
+        <a class="btn btn-primary mx-3" href="/user/edit" role="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-pencil-square" viewBox="0 0 16 16">
                 <path
@@ -14,8 +14,33 @@
             Edit
         </a>
     </div>
-    <div class="d-flex">
-        <img src="../../static/images/profile.jpg" class="img-thumbnail" alt="..." />
+    <div class="row">
+        <div class="col-4 p-1" style="background-color: aqua;">
+            <img src="../../static/images/profile.jpg" class="img-thumbnail img-fluid w-100" alt="..." />
+        </div>
+        <div class="col-8 mt-2">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="user-name" aria-describedby="user-name" disabled
+                            value="{{ user }}">
+                        <label for="item-name" class="form-label">Display Name</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="user-name" aria-describedby="user-name" disabled
+                            value="{{ user }}">
+                        <label for="item-name" class="form-label">Display Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="user-name" aria-describedby="user-name" disabled
+                    value="{{ user }}">
+                <label for="item-name" class="form-label">Display Name</label>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
