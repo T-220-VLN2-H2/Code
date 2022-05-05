@@ -10,10 +10,14 @@ class Item(models.Model):
         HANDOFF = "HANDOFF", _("Inperson handoff")
 
     class ConditionType(models.TextChoices):
-        NEW = "NEW", _("A brand-new, unused, unopened, undamaged item in its original packaging.")
+        NEW = "NEW", _(
+            "A brand-new, unused, unopened, undamaged item in its original packaging."
+        )
         USED = "USED", _("An item that has been used previously.")
         USED_NEW = "USED_LIKE_NEW", _("Seller referbished.")
-        PARTS = "FOR_PARTS", _("An item that does not function as intended and is not fully operational. ")
+        PARTS = "FOR_PARTS", _(
+            "An item that does not function as intended and is not fully operational. "
+        )
 
     id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=128)

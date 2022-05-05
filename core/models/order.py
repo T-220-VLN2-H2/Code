@@ -6,7 +6,7 @@ from .user import User
 class Order(models.Model):
     id = models.BigAutoField(primary_key=True)
     users = models.ManyToManyField(User, through="OrderUser")
-    order_items = models.ForeignKey('OrderItems', on_delete=models.CASCADE)
+    order_items = models.ForeignKey("OrderItems", on_delete=models.CASCADE)
 
     def __str__(self):
         return self.id
