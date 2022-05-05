@@ -1,6 +1,6 @@
 # file split up according to guide
 # https://cpske.github.io/ISP/django/separate-model-classes
-from .catagory import Catagory
+from .category import Category
 from .item import Item
 from .notifications import Notification
 from .order_history import OrderHistory

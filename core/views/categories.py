@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from .data import categories, items, categories_with_parents, user
+from core.services.category_service import CategoryService
 
-
+cat_service = CategoryService()
 ctx = {
-    "categories": categories,
-    "sub_categories": categories_with_parents,
+    "categories": cat_service.get_all_category_items(),
+    "sub_categories": cat_service.categories_with_parents(),
 }
 
 

@@ -1,21 +1,19 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-
+from core.services.category_service import CategoryService
 from .data import (
-    categories,
     user,
-    categories_with_parents,
     items,
     ratings,
     user_messages,
 )
-
+cat_service = CategoryService()
 folder_path = "../templates/user"
 
 
 ctx = {
-    "categories": categories,
-    "sub_categories": categories_with_parents,
+    "categories": cat_service.get_all_category_items(),
+    "sub_categories": cat_service.categories_with_parents(),
     "ratings": ratings,
     "items": items,
     "user_messages": user_messages,
