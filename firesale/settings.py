@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 
 LOGOUT_REDIRECT_URL = "/"
 
+# Load default data
+FIXTURE_DIRS = [os.path.join(BASE_DIR, '/core/fixtures')]
+FILE_UPLOAD_TEMP_DIR = None
 # Application definition
 
 INSTALLED_APPS = [

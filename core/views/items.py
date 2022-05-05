@@ -1,18 +1,20 @@
 from django.shortcuts import render
-from .data import categories, items, categories_with_parents
+from .data import items
+from core.services.category_service import CategoryService
+
+cat_service = CategoryService()
+ctx = {
+    "categories": cat_service.get_all_category_items(),
+    "sub_categories": cat_service.categories_with_parents(),
+}
 
 
 def items_page(request):
-    ctx = {
-        "categories": categories,
-        "items": items,
-        "sub_categories": categories_with_parents,
-    }
+    ctx["items"] = items
     return render(request, "../templates/items/items.html", context=ctx)
 
 
 def item_details(request, item_id):
-    ctx = {"categories": categories, "sub_categories": categories_with_parents}
     for item in items:
         if item["id"] == int(item_id):
             ctx["item"] = item

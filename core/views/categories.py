@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .data import categories, items, categories_with_parents, user
+from .data import items, user
+from core.services.category_service import CategoryService
 
-
+cat_service = CategoryService()
 ctx = {
-    "categories": categories,
-    "sub_categories": categories_with_parents,
+    "categories": cat_service.get_all_category_items(),
+    "sub_categories": cat_service.categories_with_parents(),
 }
 
 
@@ -15,15 +16,15 @@ def home(request):
 
 def category_page(request, cat_id):
     ctx["user"] = request.user
-    for cat in categories:
-        if cat["id"] == int(cat_id):
+    for cat in ctx['categories']:
+        if cat.id == int(cat_id):
             ctx["selected_category"] = cat
             ctx["category_items"] = [
-                item for item in items if item["category"] == cat["id"]
+                item for item in items if item["category"] == cat.id
             ]
-            if cat["id"] in categories_with_parents:
-                for sub_cat in categories_with_parents[cat["id"]]:
+            if cat.id in ctx['sub_categories']:
+                for sub_cat in ctx['sub_categories'][cat.id]:
                     ctx["category_items"] += [
-                        item for item in items if item["category"] == sub_cat["id"]
+                        item for item in items if item["category"] == sub_cat.id
                     ]
     return render(request, "../templates/categories/category_page.html", context=ctx)

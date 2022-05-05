@@ -1,11 +1,15 @@
 from django.db import models
 
 
-class Catagory(models.Model):
+class Category(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=128)
+    parent = models.BigIntegerField(default=None, null=True)
     # TODO:
     # sub_categories = models.Array<Category>()
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         """
@@ -13,5 +17,5 @@ class Catagory(models.Model):
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
 
-        db_table = "core_catagory"
+        db_table = "core_category"
         app_label = "core"
