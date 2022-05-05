@@ -1,14 +1,15 @@
 from django.forms import widgets
+from django import forms
 from core.models import Item
-
 
 class ItemCreateForm(ModelForm):
     class Meta:
         model = Item
-        exclude = ["id"]
+        exclude = ['id']
+        image = forms.CharField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
         widgets = {
-            "Price": widgets.NumberInput(attrs={"class": "form-control"}),
-            "Condition": widgets.CheckboxInput(attrs={"class": "form-control"}),
-            "Category": widgets.Select(attrs={"class": "form-control"}),
-            "Delivery_Options": widgets.Select(attrs={"class": "form-control"}),
+            'Price': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'Condition': widgets.CheckboxInput(attrs={'class': 'form-control'}),
+            'Category': widgets.Select(attrs={'class': 'form-control'}),
+            'Delivery_Options': widgets.Select(attrs={'class': 'form-control'})
         }
