@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from .catagory import Catagory
+from .category import Category
 
 
 # TODO: add display text
@@ -23,7 +23,7 @@ class Item(models.Model):
     id = models.BigAutoField(primary_key=True)
     price = models.DecimalField(decimal_places=2, max_digits=10)
     condition = models.CharField(choices=ConditionType.choices, max_length=128)
-    category = models.ForeignKey(Catagory, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     # TODO: add delivery options
     # delivery_Options = models.Array<DeliveryType>()
 
