@@ -16,14 +16,14 @@ def home(request):
 
 def category_page(request, cat_id):
     ctx["user"] = request.user
-    for cat in ctx['categories']:
+    for cat in ctx["categories"]:
         if cat.id == int(cat_id):
             ctx["selected_category"] = cat
             ctx["category_items"] = [
                 item for item in items if item["category"] == cat.id
             ]
-            if cat.id in ctx['sub_categories']:
-                for sub_cat in ctx['sub_categories'][cat.id]:
+            if cat.id in ctx["sub_categories"]:
+                for sub_cat in ctx["sub_categories"][cat.id]:
                     ctx["category_items"] += [
                         item for item in items if item["category"] == sub_cat.id
                     ]
