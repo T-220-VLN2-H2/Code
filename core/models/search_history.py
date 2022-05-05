@@ -7,6 +7,9 @@ class SearchHistory(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.search_string
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.

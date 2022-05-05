@@ -8,6 +8,9 @@ class UserRatings(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=1, decimal_places=0)
 
+    def __str__(self):
+        return self
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.

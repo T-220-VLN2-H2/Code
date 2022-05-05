@@ -8,6 +8,9 @@ class PaymentInfo(models.Model):
     expiry_month = models.IntegerField()
     expiry_year = models.IntegerField()
 
+    def __str__(self):
+        return self.cardholder_name
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.
