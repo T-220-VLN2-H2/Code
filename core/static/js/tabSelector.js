@@ -6,7 +6,8 @@
 // Get tabs items
 const tabs = document.getElementsByClassName('nav-link');
 
-// When the tab is clicked, remove all active classes and give the target the active class
+// When the tab is clicked,
+// remove all active classes and give the target the active class
 const clearActive = (e) => {
   for (let i = 0; i < tabs.length; i++) {
     tabs[i].classList.remove('active');
@@ -14,7 +15,8 @@ const clearActive = (e) => {
   e.target.classList.add('active');
 };
 
-// Checks if the url provided has the tab names and sets that tab as active
+// Checks if the url provided has the tab names
+// and sets that tab as active
 const setActive = () => {
   console.log(window.location.hash);
   switch (window.location.hash) {
