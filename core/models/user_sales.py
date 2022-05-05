@@ -1,13 +1,11 @@
 from django.db import models
 from .user import User
-
-# TODO: from .item import item
+from .item import Item
 
 
 class UserSales(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    # TODO:
-    # items = models.Array<Item>
+    items = models.ManyToManyField(Item)
 
     def __str__(self):
         return self

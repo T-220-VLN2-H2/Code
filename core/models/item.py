@@ -20,8 +20,7 @@ class Item(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=10)
     condition = models.CharField(choices=ConditionType.choices, max_length=128)
     category = models.ForeignKey(Catagory, on_delete=models.CASCADE)
-    # TODO: add delivery options
-    # delivery_Options = models.Array<DeliveryType>()
+    delivery_Option = models.CharField(choices=DeliveryType.choises, max_length=128)
 
     def __str__(self):
         return self.title

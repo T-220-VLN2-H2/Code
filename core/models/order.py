@@ -9,7 +9,7 @@ class Order(models.Model):
     order_items = models.ForeignKey('OrderItems', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self
+        return self.id
 
     def displayOrderSummary(self) -> None:
         # TODO: docstring
