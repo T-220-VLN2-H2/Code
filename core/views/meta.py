@@ -1,16 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
-
-
-from .data import categories, items, categories_with_parents, user
 from core.forms.user_form import UserCreateForm, UserLoginForm
+from core.services.category_service import CategoryService
 
 folder_path = "../templates/"
 
+cat_service = CategoryService()
 ctx = {
-    "categories": categories,
-    "sub_categories": categories_with_parents,
+    "categories": cat_service.get_all_category_items(),
+    "sub_categories": cat_service.categories_with_parents(),
 }
 
 

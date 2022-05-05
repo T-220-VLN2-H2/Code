@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from .catagory import Catagory
+from .category import Category
 
 
 class Item(models.Model):
@@ -19,7 +19,7 @@ class Item(models.Model):
     title = models.CharField(max_length=128)
     price = models.DecimalField(decimal_places=2, max_digits=10)
     condition = models.CharField(choices=ConditionType.choices, max_length=128)
-    category = models.ForeignKey(Catagory, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     delivery_Option = models.CharField(choices=DeliveryType.choises, max_length=128)
 
     def __str__(self):
