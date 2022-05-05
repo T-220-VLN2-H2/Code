@@ -10,6 +10,7 @@ from .payment_info import PaymentInfo
 from .search_history import SearchHistory
 from .shipping_details import ShippingDetails
 from .user_bids import UserBids
-from .user import User
+from .user import Profile
+from django.contrib.auth.models import User
 from .user_ratings import UserRatings
 from .user_sales import UserSales

@@ -1,14 +1,14 @@
 from django.db import models
-from .user import User
-from .item import Item
-
+from django.contrib.auth.models import User
+import core.models as core
 
 class UserSales(models.Model):
+    id = models.BigAutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    items = models.ManyToManyField(Item)
+    items = models.ManyToManyField(core.Item)
 
     def __str__(self):
-        return self
+        return self.user_id.first_name
 
     class Meta:
         """

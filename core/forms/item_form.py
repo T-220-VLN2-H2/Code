@@ -1,4 +1,4 @@
-from django.forms import widgets
+from django.forms import widgets, ModelForm
 from core.models import Item
 
 

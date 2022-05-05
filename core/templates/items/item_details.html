@@ -37,7 +37,7 @@
                             <div class="col-8">
                                 <div class="input-group-fluid mb-3">
                                     <div class="form-floating">
-                                    <input type="text" class="form-control" id="item-name" aria-describedby="item-name" disabled value="{{item.name}}">
+                                    <input type="text" class="form-control" id="item-name" aria-describedby="item-name" disabled value="{{item.title}}">
                                     <label for="item-name" class="form-label">Name</label>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <p id="item-description" class="form-control" disabled></p>
+                                    <p id="item-description" class="form-control" disabled>{{item.description}}</p>
                                     <label for="item-description">Description</label>
                                 </div>
                             </div>
