@@ -1,7 +1,8 @@
 from core.models.user import Profile
 
 class UserService:
-    def get_user_info(user_id):
+
+    def get_user_info(self, user_id):
         user = Profile.objects.filter(id = user_id)
         return user
 
@@ -20,8 +21,7 @@ class UserService:
     #     print(1)
     #     #TODO validate the request, forward to DB to remove information, return success. Else raise error.
         
-
-    def create_user(username, first_name, last_name, email, password):
+    def create_user(self, username, first_name, last_name, email, password):
         new_user = Profile(username, first_name, last_name, email, password)
         new_user.save()
         #return redirect() #finna url til að redirecta
