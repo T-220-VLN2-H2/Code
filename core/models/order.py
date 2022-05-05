@@ -1,18 +1,19 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
-# from .order_items import OrderItems
 from .user import User
 
 
 class Order(models.Model):
     id = models.BigAutoField(primary_key=True)
     users = models.ManyToManyField(User, through="OrderUser")
-    # order_items = models.ForeignKey(OrderItems, on_delete=models.CASCADE)
+    order_items = models.ForeignKey("OrderItems", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.id
 
     def displayOrderSummary(self) -> None:
         # TODO: docstring
-        # TODO: implement
+        # TODO: implement, Should this be __sum__?
         pass
 
     class Meta:

@@ -9,6 +9,9 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     description = models.TextField(max_length=500, blank=True)
 
+    def __str__(self):
+        return self.user.username
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.

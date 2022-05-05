@@ -1,13 +1,13 @@
 from django.db import models
-
-# from .item import Item
-from .order import Order
+from .item import Item
 
 
 class OrderItems(models.Model):
-    order_id = models.ForeignKey(Order, on_delete=models.CASCADE)
-    # TODO: add items to model
-    # items: array<Item>
+    order_id = models.ForeignKey("Order", on_delete=models.CASCADE)
+    items = models.ManyToManyField(Item)
+
+    def __str__(self):
+        return self
 
     def getTotal(self) -> models.DecimalField:
         pass

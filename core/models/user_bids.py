@@ -10,6 +10,9 @@ class UserBids(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     expires = models.DateTimeField()
 
+    def __str__(self):
+        return self
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.
