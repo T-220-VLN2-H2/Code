@@ -7,6 +7,7 @@ from .data import (
     ratings,
     user_messages,
 )
+
 cat_service = CategoryService()
 folder_path = "../templates/user"
 
