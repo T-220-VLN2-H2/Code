@@ -7,12 +7,7 @@ from .user import User
 
 class Order(models.Model):
     id = models.BigAutoField(primary_key=True)
-<<<<<<< HEAD
-    # buyer = models.ForeignKey(User, on_delete=models.CASCADE)
-    # seller = models.ForeignKey(User, on_delete=models.CASCADE)
-=======
     users = models.ManyToManyField(User, through="OrderUser")
->>>>>>> origin/main
     # order_items = models.ForeignKey(OrderItems, on_delete=models.CASCADE)
 
     def displayOrderSummary(self) -> None:
