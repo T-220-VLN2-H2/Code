@@ -31,7 +31,6 @@ class ItemService:
         items = Item.objects.all()
         return items
 
-
     def get_active_sales(self, user):
         active_sales = Item.objects.filter()
 

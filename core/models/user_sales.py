@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 import core.models as core
 
+
 class UserSales(models.Model):
     id = models.BigAutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)

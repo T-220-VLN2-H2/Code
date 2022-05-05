@@ -24,7 +24,9 @@ class Item(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=10)
     condition = models.CharField(choices=ConditionType.choices, max_length=128)
     category = models.ForeignKey(core.Category, on_delete=models.CASCADE)
-    delivery_Option = models.CharField(choices=DeliveryType.choices, max_length=128, default=DeliveryType.PICKUP)
+    delivery_Option = models.CharField(
+        choices=DeliveryType.choices, max_length=128, default=DeliveryType.PICKUP
+    )
     description = models.TextField(max_length=1800, null=True)
 
     def __str__(self):
@@ -38,4 +40,3 @@ class Item(models.Model):
 
         db_table = "core_item"
         app_label = "core"
-
