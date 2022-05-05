@@ -7,6 +7,9 @@ class ShippingDetails(models.Model):
     postal_code = models.SmallIntegerField()
     city = models.CharField(max_length=128)
 
+    def __str__(self):
+        return self.full_clean
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.

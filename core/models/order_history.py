@@ -1,13 +1,16 @@
 from django.db import models
 from .user import User
 
-# import order
+# from .order import order
 
 
 class OrderHistory(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     # TODO: add orderArray
     # order_array: Array<Order>
+
+    def __str__(self):
+        return self
 
     class Meta:
         """

@@ -7,6 +7,9 @@ class Catagory(models.Model):
     # TODO:
     # sub_categories = models.Array<Category>()
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         """
         For models split into separate files, specify table name and app name.
