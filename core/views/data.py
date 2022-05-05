@@ -90,13 +90,6 @@ items = [
         "auction": False,
     },
 ]
-categories_with_parents = {}
-for cat in categories:
-    if cat["parent"] is not None:
-        if cat["parent"] in categories_with_parents:
-            categories_with_parents[cat["parent"]].append(cat)
-        else:
-            categories_with_parents[cat["parent"]] = [cat]
 
 ratings = [
     {"name": "Ronnie Harsent", "rating": 1.3},
