@@ -5,7 +5,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class UserRatings(models.Model):
-    users = models.ManyToManyField(User, through="RatingUsers")
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=1, decimal_places=0)
 
