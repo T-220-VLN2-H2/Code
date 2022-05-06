@@ -1,5 +1,6 @@
 from core.models.item import Item
 
+
 class SearchService:
     @staticmethod
     def item_search():
