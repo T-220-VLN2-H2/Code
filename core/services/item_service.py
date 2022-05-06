@@ -31,9 +31,12 @@ class ItemService:
         items = Item.objects.all()
         return items
 
+    @staticmethod
+    def get_active_sales(user):
+        active_sales = UserSales.objects.get(user_id=user)
+        sale_items = active_sales.items.all()
+        return sale_items
 
-    def get_active_sales(self, user):
-        active_sales = Item.objects.filter()
 
     def get_all_images(self):
         print("Do something")
