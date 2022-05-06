@@ -7,14 +7,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0005_item_is_sold'),
+        ("core", "0005_item_is_sold"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='item',
-            name='date_created',
-            field=models.DateTimeField(auto_now_add=True, default=datetime.datetime(2022, 5, 6, 3, 15, 2, 254966)),
+            model_name="item",
+            name="date_created",
+            field=models.DateTimeField(
+                auto_now_add=True,
+                default=datetime.datetime(2022, 5, 6, 3, 15, 2, 254966),
+            ),
             preserve_default=False,
         ),
     ]
