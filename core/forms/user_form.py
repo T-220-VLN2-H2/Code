@@ -49,6 +49,7 @@ class UserLoginForm(ModelForm):
             ),
         }
 
+
 # class UserRatingForm(ModelForm):
 #     class Meta:
 #         model = UserRatings
