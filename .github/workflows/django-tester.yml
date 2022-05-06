@@ -13,11 +13,12 @@ jobs:
     strategy:
       matrix:
         db: [postgres]
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.9", "3.10"]
         include:
           - db: postgres
             db_user: runner
             db_password: ''
+            db_host: ''
 
     steps:
     - uses: actions/checkout@v2
