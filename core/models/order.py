@@ -1,12 +1,13 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from .user import User
+import core.models as core
+from django.contrib.auth.models import User
 
 
 class Order(models.Model):
     id = models.BigAutoField(primary_key=True)
     users = models.ManyToManyField(User, through="OrderUser")
-    order_items = models.ForeignKey("OrderItems", on_delete=models.CASCADE)
+    order_items = models.ForeignKey("OrderItems", on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.id
