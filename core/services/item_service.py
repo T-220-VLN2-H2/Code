@@ -27,8 +27,8 @@ class ItemService:
         # TODO
 
     @staticmethod
-    def get_all_items():
-        items = Item.objects.all()
+    def get_all_items(is_sold=False):
+        items = Item.objects.filter(is_sold=is_sold)
         return items
 
     @staticmethod
