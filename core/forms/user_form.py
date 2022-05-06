@@ -27,6 +27,7 @@ class UserCreateForm(ModelForm):
             ),
         }
 
+
 class UserUpdateForm(ModelForm):
     class Meta:
         model = User

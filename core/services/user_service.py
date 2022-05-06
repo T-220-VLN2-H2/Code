@@ -1,5 +1,7 @@
 from django.shortcuts import redirect
-from core.models.user import Profile
+from core.models import Profile, UserRatings
+from django.db.models import Avg
+from models.user import User
 
 class UserService:
 
@@ -9,26 +11,21 @@ class UserService:
 
     def set_user_info(self, user_id, first_name = None, last_name = None, bio = None):
         user = self.get_user_info(user_id)
+        if not user:
+            return '404: User not found.'
         if first_name:
             user.first_name = first_name
         if last_name:
             user.last_name = last_name
         if bio:
             user.bio = bio
-        #TODO find the corresponding user in DB and update information. Else raise 404 error.
-
-    # nauðsynlegt?
-    # def delete_user(user_id):
-    #     print(1)
-    #     #TODO forward to DB to remove information, return success. Else raise error.
         
-    def create_user(self, username, first_name, last_name, email, password):
-        new_user = Profile(username, first_name, last_name, email, password)
-        new_user.save()
-        return redirect("accounts/profile/") #finna url til að redirecta
+    def create_user(form):
+        pass
 
-def main():
-    new_user = UserService.create_user('Hellibelli', 'Helgi', 'Hákonarson', 'Helgihak@gmail.com', 'abc123')
+    def get_user_rating(user_id):
+        rating = UserRatings.objects.all().filter(ratee_id = user_id).aggregate(Avg('rating'))
+        if not rating:
+            rating = "Not rated."
+        return rating
 
-if __name__ == "__main__":
-    main()
