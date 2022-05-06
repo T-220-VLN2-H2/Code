@@ -37,6 +37,11 @@ class ItemService:
         sale_items = active_sales.items.filter(is_sold=is_sold)
         return sale_items
 
+    @staticmethod
+    def get_recently_added_items():
+        recent_items = Item.objects.all().order_by('-id')[:12]
+        return recent_items
+
     def get_all_images(self):
         print("Do something")
         # TODO
