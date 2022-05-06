@@ -1,6 +1,5 @@
 from django.forms import ModelForm, widgets
 from django.contrib.auth.models import User
-from models.user_ratings import UserRatings
 
 
 class UserCreateForm(ModelForm):
@@ -49,10 +48,10 @@ class UserLoginForm(ModelForm):
             ),
         }
 
-class UserRatingForm(ModelForm):
-    class Meta:
-        model = UserRatings
-        field = ["Rating"]
-        widgets = {
-            "Rating": widgets.NumberInput(attrs={'class': 'Stars'})
-        }
+# class UserRatingForm(ModelForm):
+#     class Meta:
+#         model = UserRatings
+#         field = ["Rating"]
+#         widgets = {
+#             "Rating": widgets.NumberInput(attrs={'class': 'Stars'})
+#         }
