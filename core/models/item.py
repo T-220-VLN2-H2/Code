@@ -23,10 +23,6 @@ class Item(models.Model):
     title = models.CharField(max_length=128, default="Item")
     price = models.DecimalField(decimal_places=2, max_digits=10)
     condition = models.CharField(choices=ConditionType.choices, max_length=128)
-<<<<<<< HEAD
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    delivery_Option = models.CharField(choices=DeliveryType.choices, max_length=128)
-=======
     category = models.ForeignKey(core.Category, on_delete=models.CASCADE)
     delivery_Option = models.CharField(
         choices=DeliveryType.choices, max_length=128, default=DeliveryType.PICKUP
@@ -34,7 +30,6 @@ class Item(models.Model):
     description = models.TextField(max_length=1800, null=True)
     is_sold = models.BooleanField(default=False)
     date_created = models.DateTimeField(auto_now_add=True, blank=True)
->>>>>>> origin/main
 
     def __str__(self):
         return self.title
