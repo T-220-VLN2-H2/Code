@@ -5,8 +5,6 @@ from core.services.item_service import ItemService
 cat_service = CategoryService()
 item_service = ItemService()
 ctx = {
-    "categories": cat_service.get_all_category_items(),
-    "sub_categories": cat_service.categories_with_parents(),
     "items": item_service.get_all_items(),
 }
 
@@ -18,14 +16,16 @@ def home(request):
 
 def category_page(request, cat_id):
     ctx["user"] = request.user
-    for cat in ctx["categories"]:
+    categories = cat_service.get_all_category_items()
+    sub_categories = cat_service.categories_with_parents()
+    for cat in categories:
         if cat.id == int(cat_id):
             ctx["selected_category"] = cat
             ctx["category_items"] = [
                 item for item in ctx["items"] if item.category.id == cat.id
             ]
-            if cat.id in ctx["sub_categories"]:
-                for sub_cat in ctx["sub_categories"][cat.id]:
+            if cat.id in sub_categories:
+                for sub_cat in sub_categories[cat.id]:
                     ctx["category_items"] += [
                         item for item in ctx["items"] if item.category.id == sub_cat.id
                     ]

@@ -14,8 +14,6 @@ folder_path = "../templates/user"
 
 
 ctx = {
-    "categories": cat_service.get_all_category_items(),
-    "sub_categories": cat_service.categories_with_parents(),
     "ratings": ratings,
     "items": item_service.get_all_items(),
     "user_messages": user_messages,

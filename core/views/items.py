@@ -8,8 +8,6 @@ from core.services.item_service import ItemService
 cat_service = CategoryService()
 item_service = ItemService()
 ctx = {
-    "categories": cat_service.get_all_category_items(),
-    "sub_categories": cat_service.categories_with_parents(),
     "items": item_service.get_all_items(),
 }
 

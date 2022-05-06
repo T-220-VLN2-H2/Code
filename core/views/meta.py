@@ -10,8 +10,6 @@ folder_path = "../templates/"
 cat_service = CategoryService()
 item_service = ItemService()
 ctx = {
-    "categories": cat_service.get_all_category_items(),
-    "sub_categories": cat_service.categories_with_parents(),
     "recent_items": item_service.get_recently_added_items(),
 }
 
