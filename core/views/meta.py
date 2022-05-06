@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from core.forms.user_form import UserCreateForm, UserLoginForm
 from core.services.category_service import CategoryService
 from core.services.item_service import ItemService
+
 folder_path = "../templates/"
 
 cat_service = CategoryService()
@@ -11,7 +12,7 @@ item_service = ItemService()
 ctx = {
     "categories": cat_service.get_all_category_items(),
     "sub_categories": cat_service.categories_with_parents(),
-    "recent_items": item_service.get_recently_added_items()
+    "recent_items": item_service.get_recently_added_items(),
 }
 
 

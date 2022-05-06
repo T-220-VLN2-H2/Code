@@ -39,7 +39,7 @@ class ItemService:
 
     @staticmethod
     def get_recently_added_items():
-        recent_items = Item.objects.all().order_by('-id')[:12]
+        recent_items = Item.objects.all().order_by("-id")[:12]
         return recent_items
 
     def get_all_images(self):
