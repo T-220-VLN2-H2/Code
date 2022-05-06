@@ -37,7 +37,7 @@ def register(request):
             ctx["user"] = new_user
             login(request, new_user)
             return redirect("user_home")
-        ctx['form'] = form
+        ctx["form"] = form
     else:
         ctx["form"] = UserCreationForm
     return render(request, f"{folder_path}/register.html", context=ctx)
