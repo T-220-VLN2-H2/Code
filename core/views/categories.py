@@ -22,11 +22,11 @@ def category_page(request, cat_id):
         if cat.id == int(cat_id):
             ctx["selected_category"] = cat
             ctx["category_items"] = [
-                item for item in ctx['items'] if item.category.id == cat.id
+                item for item in ctx["items"] if item.category.id == cat.id
             ]
             if cat.id in ctx["sub_categories"]:
                 for sub_cat in ctx["sub_categories"][cat.id]:
                     ctx["category_items"] += [
-                        item for item in ctx['items'] if item.category.id == sub_cat.id
+                        item for item in ctx["items"] if item.category.id == sub_cat.id
                     ]
     return render(request, "../templates/categories/category_page.html", context=ctx)

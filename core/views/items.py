@@ -19,20 +19,20 @@ def items_page(request):
 
 
 def item_details(request, item_id):
-    for item in ctx['items']:
+    for item in ctx["items"]:
         if item.id == int(item_id):
             ctx["item"] = item
             return render(request, "../templates/items/item_details.html", context=ctx)
-    return redirect('index_page')
+    return redirect("index_page")
 
 
 @login_required
 def item_create(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ItemCreateForm(request.POST)
         if form.is_valid():
             result = item_service.create_item(form, request.user)
             print(result)
     else:
-        ctx['form'] = ItemCreateForm()
+        ctx["form"] = ItemCreateForm()
     return render(request, "../templates/items/items_create.html", context=ctx)

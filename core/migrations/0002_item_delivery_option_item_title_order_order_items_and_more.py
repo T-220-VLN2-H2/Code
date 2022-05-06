@@ -9,56 +9,88 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='item',
-            name='delivery_Option',
-            field=models.CharField(choices=[('DELIVERY', 'Home delivery'), ('PICKUP', 'Self pickup'), ('HANDOFF', 'Inperson handoff')], default='PICKUP', max_length=128),
+            model_name="item",
+            name="delivery_Option",
+            field=models.CharField(
+                choices=[
+                    ("DELIVERY", "Home delivery"),
+                    ("PICKUP", "Self pickup"),
+                    ("HANDOFF", "Inperson handoff"),
+                ],
+                default="PICKUP",
+                max_length=128,
+            ),
         ),
         migrations.AddField(
-            model_name='item',
-            name='title',
-            field=models.CharField(default='Item', max_length=128),
+            model_name="item",
+            name="title",
+            field=models.CharField(default="Item", max_length=128),
         ),
         migrations.AddField(
-            model_name='order',
-            name='order_items',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='core.orderitems'),
+            model_name="order",
+            name="order_items",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="core.orderitems",
+            ),
         ),
         migrations.AddField(
-            model_name='orderhistory',
-            name='order_array',
-            field=models.ManyToManyField(to='core.order'),
+            model_name="orderhistory",
+            name="order_array",
+            field=models.ManyToManyField(to="core.order"),
         ),
         migrations.AddField(
-            model_name='orderitems',
-            name='items',
-            field=models.ManyToManyField(to='core.item'),
+            model_name="orderitems",
+            name="items",
+            field=models.ManyToManyField(to="core.item"),
         ),
         migrations.AddField(
-            model_name='usersales',
-            name='items',
-            field=models.ManyToManyField(to='core.item'),
+            model_name="usersales",
+            name="items",
+            field=models.ManyToManyField(to="core.item"),
         ),
         migrations.AlterField(
-            model_name='item',
-            name='condition',
-            field=models.CharField(choices=[('NEW', 'A brand-new, unused, unopened, undamaged item in its original packaging.'), ('USED', 'An item that has been used previously.'), ('USED_LIKE_NEW', 'Seller referbished.'), ('FOR_PARTS', 'An item that does not function as intended and is not fully operational. ')], max_length=128),
+            model_name="item",
+            name="condition",
+            field=models.CharField(
+                choices=[
+                    (
+                        "NEW",
+                        "A brand-new, unused, unopened, undamaged item in its original packaging.",
+                    ),
+                    ("USED", "An item that has been used previously."),
+                    ("USED_LIKE_NEW", "Seller referbished."),
+                    (
+                        "FOR_PARTS",
+                        "An item that does not function as intended and is not fully operational. ",
+                    ),
+                ],
+                max_length=128,
+            ),
         ),
         migrations.CreateModel(
-            name='Notification',
+            name="Notification",
             fields=[
-                ('id', models.BigAutoField(primary_key=True, serialize=False)),
-                ('title', models.CharField(max_length=128)),
-                ('message', models.CharField(max_length=128)),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('user_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ("id", models.BigAutoField(primary_key=True, serialize=False)),
+                ("title", models.CharField(max_length=128)),
+                ("message", models.CharField(max_length=128)),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                (
+                    "user_id",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'db_table': 'core_question',
+                "db_table": "core_question",
             },
         ),
     ]
