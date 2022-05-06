@@ -28,7 +28,7 @@
             <div class="list-group tab-pane fade show active" id="active-sales" role="tabpanel"
                 aria-labelledby="active-sales-tab">
                 {% for item in active_sales %}
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                    <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{item.title}}</h5>
                         <small>{{item.price}}</small> <!-- Should be time since posting -->
@@ -65,7 +65,18 @@
                     <small class="text-muted">And some muted small print.</small>
                 </a>
             </div>
-            <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">...</div>
+            <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                {% for item in sold_items %}
+                    <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{item.title}}</h5>
+                        <small>{{item.price}}</small> <!-- Should be time since posting -->
+                    </div>
+                    <p class="mb-1">{{item.description}}.</p>
+                    <small>{{item.category}}</small>
+                </a>
+                {% endfor %}
+            </div>
             <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">...</div>
         </div>
     </div>

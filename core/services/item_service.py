@@ -32,10 +32,11 @@ class ItemService:
         return items
 
     @staticmethod
-    def get_active_sales(user):
+    def get_sale_items(user, is_sold=False):
         active_sales = UserSales.objects.get(user_id=user)
-        sale_items = active_sales.items.all()
+        sale_items = active_sales.items.filter(is_sold=is_sold)
         return sale_items
+
 
     def get_all_images(self):
         print("Do something")

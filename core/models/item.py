@@ -28,6 +28,7 @@ class Item(models.Model):
         choices=DeliveryType.choices, max_length=128, default=DeliveryType.PICKUP
     )
     description = models.TextField(max_length=1800, null=True)
+    is_sold = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

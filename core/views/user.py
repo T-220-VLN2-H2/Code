@@ -43,7 +43,8 @@ def profile(request, id):
 @login_required
 def history(request):
     ctx["user"] = request.user
-    ctx["active_sales"] = item_service.get_active_sales(request.user)
+    ctx["active_sales"] = item_service.get_sale_items(request.user)
+    ctx["sold_items"] = item_service.get_sale_items(request.user, is_sold=True)
     return render(request, f"{folder_path}/history.html", context=ctx)
 
 
