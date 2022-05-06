@@ -37,7 +37,6 @@ class ItemService:
         sale_items = active_sales.items.filter(is_sold=is_sold)
         return sale_items
 
-
     def get_all_images(self):
         print("Do something")
         # TODO
