@@ -43,5 +43,6 @@ jobs:
         DB_PASSWORD: ${{ matrix.db_password }}
         DB_NAME: ""
         SECRET_KEY: "supersecretkeyfortesting"
+        DB_HOST: ${{ matrix.db_host }}
       run: |
         coverage run manage.py test
