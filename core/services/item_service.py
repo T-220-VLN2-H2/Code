@@ -38,6 +38,11 @@ class ItemService:
         return sale_items
 
     @staticmethod
+    def get_item_by_id(item_id):
+        item = Item.objects.get(id=item_id)
+        return item
+
+    @staticmethod
     def get_recently_added_items():
         recent_items = Item.objects.all().order_by("-id")[:12]
         return recent_items

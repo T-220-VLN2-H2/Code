@@ -3,7 +3,7 @@
     "model": "core.category",
     "pk": 1,
     "fields": {
-      "name": "Electronics 2",
+      "name": "Electronics",
       "parent": null
     }
   },

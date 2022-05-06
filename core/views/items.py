@@ -19,11 +19,10 @@ def items_page(request):
 
 
 def item_details(request, item_id):
-    for item in ctx["items"]:
-        if item.id == int(item_id):
-            ctx["item"] = item
-            return render(request, "../templates/items/item_details.html", context=ctx)
-    return redirect("index_page")
+    ctx["item"] = item_service.get_item_by_id(item_id)
+    if ctx["item"] is None:
+        return redirect("index_page")
+    return render(request, "../templates/items/item_details.html", context=ctx)
 
 
 @login_required
