@@ -1,5 +1,7 @@
 from core.services.category_service import CategoryService
+
 cat_service = CategoryService()
+
 
 def categories(request):
     return {
