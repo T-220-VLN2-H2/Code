@@ -1,8 +1,9 @@
+from core.models.item import Item
+
 class SearchService:
-    def item_search(request):
-        print("Do something")
-        # TODO idea 1: impliment a way to check DB for related items to the search
-        # TODO idea 2: return items with the exact search term in their title.
+    @staticmethod
+    def item_search():
+        return Item.objects.filter().values()
 
     def category_search(request):
         print("Do something")
