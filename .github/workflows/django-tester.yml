@@ -36,6 +36,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install apprise braintree coverage coveralls
+        python manage.py loaddata categories
     - name: Run Tests
       env:
         DB: ${{ matrix.db }}
