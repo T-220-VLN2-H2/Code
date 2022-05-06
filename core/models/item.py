@@ -29,6 +29,7 @@ class Item(models.Model):
     )
     description = models.TextField(max_length=1800, null=True)
     is_sold = models.BooleanField(default=False)
+    date_created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
         return self.title
