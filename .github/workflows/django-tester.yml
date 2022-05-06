@@ -13,11 +13,12 @@ jobs:
     strategy:
       matrix:
         db: [postgres]
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.9", "3.10"]
         include:
           - db: postgres
             db_user: runner
             db_password: ''
+            db_host: ''
 
     steps:
     - uses: actions/checkout@v2
@@ -35,6 +36,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install apprise braintree coverage coveralls
+        python manage.py loaddata categories
     - name: Run Tests
       env:
         DB: ${{ matrix.db }}
@@ -42,5 +44,6 @@ jobs:
         DB_PASSWORD: ${{ matrix.db_password }}
         DB_NAME: ""
         SECRET_KEY: "supersecretkeyfortesting"
+        DB_HOST: ${{ matrix.db_host }}
       run: |
         coverage run manage.py test

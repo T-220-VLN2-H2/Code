@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 LOGOUT_REDIRECT_URL = "/"
 
 # Load default data
-FIXTURE_DIRS = [os.path.join(BASE_DIR, '/core/fixtures')]
+FIXTURE_DIRS = [os.path.join(BASE_DIR, "/core/fixtures")]
 FILE_UPLOAD_TEMP_DIR = None
 # Application definition
 
@@ -71,6 +71,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "core.category_context_processor.categories",
             ],
         },
     },

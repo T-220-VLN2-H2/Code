@@ -1,3 +1,4 @@
+from django.shortcuts import redirect
 from core.models.user import Profile
 
 class UserService:
@@ -11,20 +12,19 @@ class UserService:
         updated_information = []
         for item in kwargs.items():
             updated_information.append(item)
-        print(updated_information)
         for item in updated_information:
             user.item
-        #TODO validate the request, find the corresponding user in DB and update information. Else raise error.
+        #TODO find the corresponding user in DB and update information. Else raise 404 error.
 
     # nauðsynlegt?
     # def delete_user(user_id):
     #     print(1)
-    #     #TODO validate the request, forward to DB to remove information, return success. Else raise error.
+    #     #TODO forward to DB to remove information, return success. Else raise error.
         
     def create_user(self, username, first_name, last_name, email, password):
         new_user = Profile(username, first_name, last_name, email, password)
         new_user.save()
-        #return redirect() #finna url til að redirecta
+        #return redirect("accounts/profile/") #finna url til að redirecta
 
 def main():
     new_user = UserService.create_user('Hellibelli', 'Helgi', 'Hákonarson', 'Helgihak@gmail.com', 'abc123')
