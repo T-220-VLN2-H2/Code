@@ -28,6 +28,7 @@ class UserCreateForm(ModelForm):
             ),
         }
 
+
 class UserUpdateForm(ModelForm):
     class Meta:
         model = User
@@ -49,10 +50,9 @@ class UserLoginForm(ModelForm):
             ),
         }
 
+
 class UserRatingForm(ModelForm):
     class Meta:
         model = UserRatings
         field = ["Rating"]
-        widgets = {
-            "Rating": widgets.NumberInput(attrs={'class': 'Stars'})
-        }
+        widgets = {"Rating": widgets.NumberInput(attrs={"class": "Stars"})}
