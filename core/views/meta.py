@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate
-from django.contrib.auth import login
-from core.forms.user_form import UserCreateForm, UserLoginForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm
+from core.forms.user_form import UserLoginForm
 from core.services.category_service import CategoryService
 from core.services.item_service import ItemService
 
@@ -20,9 +20,11 @@ def home(request):
 
 
 def register(request):
+    if request.user.is_authenticated:
+        return redirect("user_home")
     if request.method == "POST":
         # create a form instance and populate it with data from the request:
-        form = UserCreateForm(request.POST)
+        form = UserCreationForm(request.POST)
         # check whether it's valid:
 
         if form.is_valid():
@@ -34,9 +36,10 @@ def register(request):
             new_user = authenticate(username=new_user.username, password=raw_password)
             ctx["user"] = new_user
             login(request, new_user)
-            return redirect("login_page")
+            return redirect("user_home")
+        ctx['form'] = form
     else:
-        ctx["form"] = UserCreateForm
+        ctx["form"] = UserCreationForm
     return render(request, f"{folder_path}/register.html", context=ctx)
 
 
