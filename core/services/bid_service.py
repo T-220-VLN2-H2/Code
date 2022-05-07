@@ -2,6 +2,7 @@ from django.db.models import Max
 from core.models.user_bids import UserBids
 from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
+
 # TODO: whatis
 from core.models.user_sales import UserSales
 
