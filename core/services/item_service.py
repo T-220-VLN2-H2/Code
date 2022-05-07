@@ -1,5 +1,5 @@
 from core.models.item import Item
-from core.models.user_sales import UserSales
+from core.models import UserSales
 from django.core.exceptions import ObjectDoesNotExist
 
 
