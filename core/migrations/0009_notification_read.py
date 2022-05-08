@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0008_alter_profile_table'),
+        ("core", "0008_alter_profile_table"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='notification',
-            name='read',
+            model_name="notification",
+            name="read",
             field=models.BooleanField(default=False),
         ),
     ]
