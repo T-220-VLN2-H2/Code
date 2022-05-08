@@ -7,13 +7,12 @@ class NotificationService:
         notification = Notification(title=title, message=message, user_id=user)
         notification.save()
 
-    def get_notifications(self, user, only_unread=False):
-        # TODO: remove nesting
+    @staticmethod
+    def get_notifications(user, only_unread=False):
         try:
+            notifications = Notification.objects.all().filter(user_id=user)
             if only_unread:
-                notifications = Notification.objects.get(user_id=user, read=False)
-            else:
-                notifications = Notification.objects.get(user_id=user)
+                notifications = notifications.filter(read=False)
         except ObjectDoesNotExist:
             return []
 
