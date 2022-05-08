@@ -41,8 +41,22 @@ class BidService:
         # TODO: pseudo-notify buyer
         # TODO: pseudo-notify losers
 
+    def get_user_bids(self, user, active=True):
+        """
+        get current users bids
+        """
+        try:
+            bids = UserBids.objects.filter(user_id=user, item_id__is_sold=not active).order_by("-timestamp")
+        except ObjectDoesNotExist:
+            return None
+
+        return bids
+
     @staticmethod
     def get_bids_for_user_items(user):
+        """
+        get bids on current users items
+        """
         bids = UserBids.objects.all().order_by("-timestamp")
         user_sales = UserSales.objects.get(user_id=user)
         my_bids = []

@@ -13,7 +13,7 @@ class UserBids(models.Model):
     expires = models.DateTimeField(blank=True)
 
     def __str__(self):
-        return "NOT_SURE_WHAT_THIS_SHOULD_RETURN"
+        return "This is a user bid"
 
     class Meta:
         """
