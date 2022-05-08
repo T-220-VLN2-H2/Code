@@ -37,9 +37,7 @@ def item_details(request, item_id):
     if ctx["item"] is None:
         return redirect("index_page")
 
-    ctx["bid_form"] = BidCreateForm(
-        initial={"amount": max_bid}
-    )
+    ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
     return render(request, "../templates/items/item_details.html", context=ctx)
 
 
