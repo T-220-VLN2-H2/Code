@@ -40,20 +40,19 @@ async function filterFunction() {
     } else {
       a[i].style.display = 'none';
     }
-
   }
 }
 
 window.onload = () => {
-    const searchDrop = document.getElementById('myInput');
-    searchDrop.addEventListener("focus", () => {
-        toggleSearchDrop();
-        search()
-    })
-    searchDrop.addEventListener("keyup",  () => {
-        const inputBox = document.getElementById("myInput");
+  const searchDrop = document.getElementById('myInput');
+  searchDrop.addEventListener('focus', () => {
+    toggleSearchDrop();
+    search();
+  });
+  searchDrop.addEventListener('keyup', () => {
+    const inputBox = document.getElementById('myInput');
 
-        filterFunction()
-    })
-}
+    filterFunction();
+  });
+};
 
