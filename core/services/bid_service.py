@@ -46,7 +46,9 @@ class BidService:
         get current users bids
         """
         try:
-            bids = UserBids.objects.filter(user_id=user, item_id__is_sold=not active).order_by("-timestamp")
+            bids = UserBids.objects.filter(
+                user_id=user, item_id__is_sold=not active
+            ).order_by("-timestamp")
         except ObjectDoesNotExist:
             return None
 

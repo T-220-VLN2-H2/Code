@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0007_alter_userbids_expires'),
+        ("core", "0007_alter_userbids_expires"),
     ]
 
     operations = [
         migrations.AlterModelTable(
-            name='profile',
-            table='core_profile',
+            name="profile",
+            table="core_profile",
         ),
     ]
