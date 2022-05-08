@@ -23,8 +23,10 @@ def items_page(request):
 def item_details(request, item_id):
     ctx["item"] = item_service.get_item_by_id(item_id)
     # TODO: fix late update when bidding
+    max_bid = bid_service.get_max_bid(item_id)
+    max_bid = max_bid.amount if max_bid is not None else 0
     ctx["bid_form"] = BidCreateForm(
-        initial={"amount": bid_service.get_max_bid(item_id).amount}
+        initial={"amount": max_bid}
     )
 
     if request.method == "POST":
