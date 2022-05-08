@@ -18,7 +18,7 @@ jobs:
           - db: postgres
             db_user: runner
             db_password: ''
-            db_host: ''
+            db_host: localhost
 
     steps:
     - uses: actions/checkout@v2
