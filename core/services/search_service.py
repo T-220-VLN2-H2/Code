@@ -3,8 +3,10 @@ from core.models.item import Item
 
 class SearchService:
     @staticmethod
-    def item_search():
-        return Item.objects.filter().values()
+    def item_search(q=None):
+        if q is None:
+            return Item.objects.all().values()
+        return Item.objects.filter(title__icontains=q)
 
     def category_search(request):
         print("Do something")

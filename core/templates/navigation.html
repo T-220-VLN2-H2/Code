@@ -2,14 +2,16 @@
 <nav class="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">FireSale!</a>
-        <form>
-        <div class="dropdown">
-          <input type="text" placeholder="Search.." id="myInput" onfocus="toggleSearchDrop();search()" onblur="toggleSearchDrop()" onkeyup="filterFunction()">
+        <form action="/search" method="POST">
+            {% csrf_token %}
+            <div class="dropdown">
+             <input type="text" name="search" placeholder="Search..." id="myInput" >
 
-            <button class="dropbtn">Search</button>
-          <div id="myDropdown" class="dropdown-content">
-          </div>
-        </div>
+                <button class="dropbtn" type="submit">Search</button>
+                <div id="myDropdown" class="dropdown-content">
+
+                </div>
+            </div>
         </form>
         <div class="row justify-content-end align-items-center">
         <div class="col-md-auto">
