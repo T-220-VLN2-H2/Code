@@ -25,9 +25,6 @@ def item_details(request, item_id):
     # TODO: fix late update when bidding
     max_bid = bid_service.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
-    ctx["bid_form"] = BidCreateForm(
-        initial={"amount": max_bid}
-    )
 
     if request.method == "POST":
         form = BidCreateForm(request.POST)
@@ -35,11 +32,14 @@ def item_details(request, item_id):
             result = bid_service.add_bid(form, request.user, ctx["item"])
         if result:
             # TODO: Some green bar or somethigng to validate users feelings
-            pass
+            max_bid = bid_service.get_max_bid(item_id).amount
 
     if ctx["item"] is None:
         return redirect("index_page")
 
+    ctx["bid_form"] = BidCreateForm(
+        initial={"amount": max_bid}
+    )
     return render(request, "../templates/items/item_details.html", context=ctx)
 
 
