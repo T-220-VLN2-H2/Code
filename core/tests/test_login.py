@@ -11,9 +11,9 @@ class CategoryStatusAndContentTest(TestCase):
     #    pass
 
     def test_get_login_is_200(self):
-        response = self.client.get("/login")
+        response = self.client.get("/accounts/login")
         self.assertEqual(response.status_code, 200)
 
     def test_post_login_returns_200(self):
-        response = self.client.post("/login")
+        response = self.client.post("/accounts/login")
         self.assertEqual(response.status_code, 200)
