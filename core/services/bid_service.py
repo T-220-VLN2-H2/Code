@@ -40,3 +40,15 @@ class BidService:
         item.save()
         # TODO: pseudo-notify buyer
         # TODO: pseudo-notify losers
+
+    @staticmethod
+    def get_bids_for_user_items(user):
+        bids = UserBids.objects.all().order_by("-timestamp")
+        user_sales = UserSales.objects.get(user_id=user)
+        my_bids = []
+        # TODO: Can this be optimized xD ???
+        for bid in bids:
+            for item in user_sales.items.all():
+                if bid.item_id.id == item.id and not item.is_sold:
+                    my_bids.append(bid)
+        return my_bids
