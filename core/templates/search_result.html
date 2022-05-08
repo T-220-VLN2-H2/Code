@@ -9,5 +9,8 @@
                 <p>{{item.title}}</p><p>{{item.price}}</p>
             </div>
         {% endfor %}
+        {% if items.count == 0 %}
+            <p>No items matched the search</p>
+        {% endif %}
     </div>
 {% endblock %}
