@@ -10,7 +10,7 @@ class CategoryService:
         print("Do something")
         # TODO remove category from DB, some validation is required here?
 
-    def update_category(self):
+    def update_category(category_id, **kwargs):
         print("Do something")
         # TODO update information in DB
 
