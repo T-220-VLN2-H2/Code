@@ -9,7 +9,13 @@
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
                           <div class="carousel-indicators">
                               {% for x in images %}
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop0.counter}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+
+                                {% if forloop.counter == 1 %}
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" class="active" ></button>
+                                {% endif %}
+                                {% if forloop.counter != 1 %}
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" class=""></button>
+                                {% endif %}
                               {% endfor %}
                           </div>
                           <div class="carousel-inner">
