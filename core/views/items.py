@@ -28,6 +28,7 @@ def item_details(request, item_id):
 
     if request.method == "POST":
         form = BidCreateForm(request.POST)
+        result = None
         if form.is_valid():
             result = bid_service.add_bid(form, request.user, ctx["item"])
         if result:

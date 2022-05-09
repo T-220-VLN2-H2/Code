@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Register page</h1>
+    <form action="/personal" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.errors %}
+          {% for field in form %}
+               {% for error in field.errors %}
+                    <p style="color:red">{{field.label}}: {{ error|escape }}</p>
+               {% endfor %}
+          {% endfor %}
+        {% endif %}
+        <button class="btn" type="submit">Register</button>
+    </form>
+{% endblock %}

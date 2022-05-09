@@ -14,12 +14,14 @@ class PaymentCreateForm(ModelForm):
         }
 
 
-class ShippingCreateForm(ModelForm):
+class PersonalInfoCreateForm(ModelForm):
     class Meta:
         model = ShippingDetails
         widgets = {
-            "full_name": widgets.TextInput(attrs={"class": "form-control"}),
+            "first_name": widgets.TextInput(attrs={"class": "form-control"}),
+            "last_name": widgets.TextInput(attrs={"class": "form-control"}),
             "address": widgets.TextInput(attrs={"class": "form-control"}),
-            "postal_code": widgets.NumberInput(attrs={"class": "form-control"}),
+            "Zip": widgets.NumberInput(attrs={"class": "form-control"}),
             "city": widgets.TextInput(attrs={"class": "form-control"}),
+            "Country": widgets.TextInput(attrs={"class": "form-control"}),
         }

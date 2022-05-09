@@ -9,6 +9,10 @@ from core.models.user_sales import UserSales
 
 class BidService:
     def add_bid(self, form, user, item) -> bool:
+        items = ItemService.get_item_by_id(item.id)
+        print(items)
+        if item in items:
+            return False
         new_bid = form.save(commit=False)
         new_bid.user_id = user
         new_bid.item_id = item
@@ -44,14 +48,13 @@ class BidService:
     def get_user_bids(self, user, active=True):
         """
         get current users bids
-        """
+        """       
         try:
             bids = UserBids.objects.filter(
                 user_id=user, item_id__is_sold=not active
             ).order_by("-timestamp")
         except ObjectDoesNotExist:
             return None
-
         return bids
 
     @staticmethod
