@@ -73,14 +73,10 @@ class BidService:
 
     @staticmethod
     def get_bids_for_user_items(user):
-<<<<<<< HEAD
         """
         get bids on current users items
         """
         bids = UserBids.objects.all().order_by("-timestamp")
-=======
-        bids = UserBids.objects.filter(user_id=user).order_by("-timestamp")
->>>>>>> origin/main
         user_sales = UserSales.objects.get(user_id=user)
         my_bids = []
         # TODO: Can this be optimized xD ???
