@@ -51,7 +51,7 @@ def item_create(request):
         form = ItemCreateForm(request.POST)
         if form.is_valid():
             item = item_service.create_item(form, request.user)
-            image_service.create_image(request.FILES.getlist('images'), item)
+            image_service.create_image(request.FILES.getlist("images"), item)
 
     else:
         ctx["form"] = ItemCreateForm()
