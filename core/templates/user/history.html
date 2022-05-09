@@ -40,30 +40,16 @@
             </div>
 
             <div class="list-group tab-pane fade" id="active-bids" role="tabpanel" aria-labelledby="active-bids-tab">
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Processor</h5>
-                        <small>3 days ago</small>
-                    </div>
-                    <p class="mb-1">Some placeholder content in a paragraph.</p>
-                    <small>And some small print.</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Lawn mower</h5>
-                        <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Some placeholder content in a paragraph.</p>
-                    <small class="text-muted">And some muted small print.</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Some placeholder content in a paragraph.</p>
-                    <small class="text-muted">And some muted small print.</small>
-                </a>
+                {% for bid in bids %}
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{bid.item_id}}</h5>
+                            <small>{{bid.timestamp}} | {{bid.expires}}</small>
+                        </div>
+                        <p class="mb-1">{{bid.amount}}</p>
+                        <small>{{bid.user_id}}</small>
+                    </a>
+                {% endfor %}
             </div>
             <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
                 {% for item in sold_items %}

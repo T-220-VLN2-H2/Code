@@ -1,7 +1,7 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 async function search() {
-  const search = async (q) => {
+  const searchRequest = async (q) => {
     const result = await fetch(`/search`, {
       method: 'GET',
     }).then((r) => r.json());
@@ -15,7 +15,7 @@ async function search() {
   const searchDrop = document.getElementById('myDropdown');
   await clearChildren(searchDrop);
   const searchInput = document.getElementById('myInput');
-  const searchResult = await search(searchInput.value);
+  const searchResult = await searchRequest(searchInput.value);
   for (let i = 0; i < searchResult.length; i++) {
     const a = document.createElement('a');
     a.text = `${searchResult[i].title} price: ${searchResult[i].price}`;
@@ -28,7 +28,7 @@ const toggleSearchDrop = () => {
   searchDrop.classList.toggle('show');
 };
 async function filterFunction() {
-  let input; let filter; let ul; let li; let a; let i;
+  let input; let filter; let a; let i;
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
   const div = document.getElementById('myDropdown');
@@ -42,3 +42,17 @@ async function filterFunction() {
     }
   }
 }
+
+window.onload = () => {
+  const searchDrop = document.getElementById('myInput');
+  searchDrop.addEventListener('focus', () => {
+    toggleSearchDrop();
+    search();
+  });
+  searchDrop.addEventListener('keyup', () => {
+    const inputBox = document.getElementById('myInput');
+
+    filterFunction();
+  });
+};
+
