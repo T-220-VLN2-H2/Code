@@ -47,8 +47,15 @@ def edit(request):
 
         return HttpResponseRedirect(reverse("user_home"))
     else:
-        ctx["user_form"] = UserUpdateForm(initial={"first_name": request.user.first_name, "last_name": request.user.last_name})
-        ctx["profile_form"] = ProfileUpdateForm(initial={"description": request.user.profile.description})
+        ctx["user_form"] = UserUpdateForm(
+            initial={
+                "first_name": request.user.first_name,
+                "last_name": request.user.last_name,
+            }
+        )
+        ctx["profile_form"] = ProfileUpdateForm(
+            initial={"description": request.user.profile.description}
+        )
     return render(request, f"{folder_path}/edit.html", context=ctx)
 
 

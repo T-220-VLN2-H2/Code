@@ -39,6 +39,7 @@ class UserUpdateForm(ModelForm):
             "last_name": widgets.TextInput(attrs={"class": "form-control"}),
         }
 
+
 class ProfileUpdateForm(ModelForm):
     class Meta:
         model = Profile
@@ -46,6 +47,7 @@ class ProfileUpdateForm(ModelForm):
         widgets = {
             "description": widgets.Textarea(attrs={"class": "form-control"}),
         }
+
 
 class UserLoginForm(ModelForm):
     class Meta:
