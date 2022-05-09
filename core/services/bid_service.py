@@ -11,7 +11,7 @@ class BidService:
         new_bid.item_id = item
         # TODO: don't hardcode experation or remove alltogether
         new_bid.expires = "2000-11-20 20:20"
-        if item.is_sold:
+        if item.is_sold or user.id == item.seller_id:
             return False
         max_bid = self.get_max_bid(item)
         if max_bid is None or new_bid.amount > max_bid.amount:
