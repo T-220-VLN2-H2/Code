@@ -16,8 +16,8 @@
         <div class="row justify-content-end align-items-center">
         <div class="col-md-auto">
             {% if user.is_authenticated %}
-            <a href="/user/history#active-sales">Active sales</a>
-            <a href="/user/history#bids">Active bids</a>
+            <a href="/user/history#active-sales">My sales</a>
+            <a href="/user/history#bids">My bids</a>
             {% endif %}
             {% if not user.is_authenticated %}
                 <a href="{% url 'login' %}">Login</a>

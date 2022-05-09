@@ -16,7 +16,7 @@ class CategoryService:
 
     @staticmethod
     def get_all_category_items():
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by("id")
         return categories
 
     def categories_with_parents(self):

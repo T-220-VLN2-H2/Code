@@ -32,8 +32,9 @@ def item_details(request, item_id):
     ctx["similar_items"] = item_service.get_similar_items(ctx["item"])
     if request.method == "POST":
         form = BidCreateForm(request.POST)
+        result = None
         if form.is_valid():
-            result = bid_service.add_bid(form, request.user, ctx["item"])
+            result = bid_service.add_bid(form, request.user, ctx["item"], item_id)
         if result:
             # TODO: Some green bar or somethigng to validate users feelings
             max_bid = bid_service.get_max_bid(item_id).amount
