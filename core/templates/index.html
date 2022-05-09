@@ -4,15 +4,9 @@
     <h1>Firesale homepage</h1>
     <div class="row">
     <h4>Recently added items</h4>
-    {% for item in recent_items %}
-        <div class="col">
-            <a href="/items/{{item.id}}">
-                <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'">
-            </a>
-            <p>{{item.title}}</p><p>{{item.price}}</p>
-            <p>{{item.category}}</p>
-        </div>
-        {% endfor %}
+    {% for item, image in recent_items %}
+        {% include 'items/item_list.html' %}
+    {% endfor %}
     </div>
 </div>
 
