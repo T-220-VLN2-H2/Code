@@ -3,6 +3,8 @@ from core.models import UserSales
 from django.core.exceptions import ObjectDoesNotExist
 from core.services.image_service import ImageService
 
+image_service = ImageService()
+
 
 class ItemService:
     @staticmethod
@@ -46,13 +48,13 @@ class ItemService:
     @staticmethod
     def get_recently_added_items():
         recent_items = Item.objects.all().order_by("-id")[:12]
-        image_service = ImageService()
         recent_item = [(item, image_service.get_images(item)) for item in recent_items]
         return recent_item
 
-    def get_all_images(self):
-        print("Do something")
-        # TODO get all images with itemID and return
+    def get_similar_items(self, item):
+        similar_items = Item.objects.filter(category=item.category)[:4]
+        similar_items = [(item, image_service.get_images(item)) for item in similar_items]
+        return similar_items
 
     def sort_items(**kwargs):
         print("Do something")
