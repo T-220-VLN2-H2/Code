@@ -26,6 +26,7 @@
         <div class="tab-content" id="myTabContent">
             <div class="list-group tab-pane fade show active" id="active-sales" role="tabpanel"
                 aria-labelledby="active-sales-tab">
+                <p>Item name Highest bid </p>
                 {% for item in active_sales %}
                     <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
@@ -35,6 +36,7 @@
                     <p class="mb-1">{{item.description}}.</p>
                     <small>{{item.category}}</small>
                 </a>
+                <button class="accept-bid">Accept bid</button>
                 {% endfor %}
             </div>
 

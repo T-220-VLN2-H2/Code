@@ -1,11 +1,11 @@
 class OrderService:
     def set_shipping_info(self):
         print("Do something")
-        # TODO: Validate that all informations are correct and forward to DB
+        # TODO: Validate that all information is correct and forward to DB
 
     def set_payment_info(self):
         print("Do something")
-        # TODO: Validate that all informations are correct and forward to DB
+        # TODO: Validate that all information is correct and forward to DB
 
     def create_invoice(self):
         print("Do something")

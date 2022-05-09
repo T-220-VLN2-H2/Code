@@ -1,11 +1,10 @@
-from django.db.models import Max
-from core.models.user_bids import UserBids
-from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
+from core.models.user_bids import UserBids
 from datetime import date, datetime
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Max
 
-# TODO: whatis
-from core.models.user_sales import UserSales
+from core.models.item import Item
 
 
 class BidService:
@@ -73,12 +72,9 @@ class BidService:
 
     @staticmethod
     def get_bids_for_user_items(user):
-        bids = UserBids.objects.filter(user_id=user).order_by("-timestamp")
-        user_sales = UserSales.objects.get(user_id=user)
-        my_bids = []
-        # TODO: Can this be optimized xD ???
-        for bid in bids:
-            for item in user_sales.items.all():
-                if bid.item_id.id == item.id and not item.is_sold:
-                    my_bids.append(bid)
-        return my_bids
+        """
+        get bids on current users items
+        """
+        users_items = Item.objects.filter(seller=user)
+        bids = UserBids.objects.filter(item_id__in=users_items).order_by("-timestamp")
+        return bids
