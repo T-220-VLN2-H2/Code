@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 import core.models as core
@@ -30,6 +31,7 @@ class Item(models.Model):
     )
     description = models.TextField(max_length=1800, null=True)
     is_sold = models.BooleanField(default=False)
+    seller = models.ForeignKey(User, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
