@@ -19,7 +19,7 @@ class Profile(models.Model):
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
 
-        db_table = "core_user"
+        db_table = "core_profile"
         app_label = "core"
 
 

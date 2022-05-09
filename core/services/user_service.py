@@ -12,19 +12,13 @@ class UserService:
         pass
         # probably won't need this
 
-    def delete_user(request):
-        if request.method == "DELETE":
-            print(1)
-            # TODO validate the request, forward to DB to remove information, return success. Else raise error.
+    def create_user(form):
+        pass
 
-    def create_user(request):
-        if request.method == "POST":
-            form = UserCreateForm(data=request.POST)
-            if form.is_valid():
-                user = form.save()
-                user_image = UserImage(image=request.POST["image"], user=user)
-                user_image.save()
-                return redirect("user-index")
-        else:
-            form = UserCreateForm()
-        return render(request, "user/create_user.html", {"form": form})
+    def get_user_rating(user_id):
+        rating = (
+            UserRatings.objects.all().filter(ratee_id=user_id).aggregate(Avg("rating"))
+        )
+        if not rating:
+            rating = "Not rated."
+        return rating

@@ -17,6 +17,7 @@ from .data import (
 user_service = UserService()
 cat_service = CategoryService()
 item_service = ItemService()
+bid_service = BidService()
 folder_path = "../templates/user"
 
 
@@ -65,6 +66,7 @@ def history(request):
     ctx["user"] = request.user
     ctx["active_sales"] = item_service.get_sale_items(request.user)
     ctx["sold_items"] = item_service.get_sale_items(request.user, is_sold=True)
+    ctx["bids"] = bid_service.get_bids_for_user_items(request.user)
     return render(request, f"{folder_path}/history.html", context=ctx)
 
 

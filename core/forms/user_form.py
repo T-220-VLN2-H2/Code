@@ -57,3 +57,12 @@ class UserLoginForm(ModelForm):
                 attrs={"class": "form-control", "type": "password"}
             ),
         }
+
+
+# class UserRatingForm(ModelForm):
+#     class Meta:
+#         model = UserRatings
+#         field = ["Rating"]
+#         widgets = {
+#             "Rating": widgets.NumberInput(attrs={'class': 'Stars'})
+#         }
