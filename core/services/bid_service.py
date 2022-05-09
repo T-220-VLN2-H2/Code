@@ -34,7 +34,7 @@ class BidService:
         user_bids = cls.get_user_bids(user)
         for user_bid in user_bids:
             if user_bid.item_id_id == item_id:
-                UserBids.objects.filter(id = user_bid.id).delete()
+                UserBids.objects.filter(id=user_bid.id).delete()
 
     @classmethod
     def get_bid_by_id(cls, bid_id):
