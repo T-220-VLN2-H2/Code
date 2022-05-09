@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% comment %} THIS IS A MISLEADING NAME, THIS PAGE IS FOR VIEWING PROFILES OTHERS THAN YOUR OWN {% endcomment %}
 {% block content %}
 <div class="container">
     <div class="d-flex py-5">
-        <h1>{{ user }}'s Profile!</h1>
+        <h1>{{ target_user }}'s Profile!</h1>
     </div>
     <div class="row">
         <div class="col-4 p-1">
@@ -11,7 +12,11 @@
         <div class="col-8 mt-2">
             <div class="row mb-4">
                 <div class="col">
-                    <h2> {{ user }}</h2>
+                    {% if target_user.first_name and target_user.last_name %}
+                    <h2> {{ target_user.first_name }} {{ target_user.last_name }}</h2>
+                    {% else %}
+                    <h2> {{ target_user }}</h2>
+                    {% endif %}
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <h3 class="mx-3 m-0">4.5 / 5</h3>
@@ -23,11 +28,11 @@
                 </div>
             </div>
             <h5>About Me</h5>
-            <p class="bg-white p-4 bg-opacity-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam odit
-                totam ipsum
-                maiores consectetur
-                praesentium provident vel aliquid deleniti velit tempora, enim culpa perspiciatis at possimus distinctio
-                consequatur doloribus dolores?</p>
+            {% if target_user.profile.description %}
+            <p class="bg-white p-4 bg-opacity-10">{{ target_user.profile.description }}</p>
+            {% else %}
+            <p class="bg-white p-4 bg-opacity-10 justify-content-center align-items-center"><b>{{ target_user }}</b> has not written anything yet.</p>
+            {% endif %}
         </div>
     </div>
     <div class="row">
@@ -53,13 +58,14 @@
         </div>
 
         <div class="col-5">
-            <h2>I'm currently selling</h2>
+            <h2>My recent posting</h2>
             <div class="list-group">
                 {% for item in items %}
                 <a href="/items/{{ item.id }}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{ item.name }}</h5>
+                        <h5 class="mb-1">{{ item.title }}</h5>
                         <small>${{ item.price }}</small>
+                        <small>${{ item.date_created }}</small>
                     </div>
                 </a>
                 {% endfor %}
