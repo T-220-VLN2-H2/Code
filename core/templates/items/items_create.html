@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Create items</h1>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
+        <label for="formFileMultiple" class="form-label">Add some images</label>
+        <input class="form-control" name="images" type="file" id="formFileMultiple" multiple />
         <button type="submit">Create</button>
     </form>
 {% endblock %}

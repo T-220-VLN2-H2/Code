@@ -6,11 +6,14 @@ from core.forms.item_form import ItemCreateForm
 from core.forms.bid_form import BidCreateForm
 from core.services.item_service import ItemService
 from core.services.bid_service import BidService
-
+from core.services.image_service import ImageService
+from django.core.files.storage import FileSystemStorage
 
 bid_service = BidService()
 cat_service = CategoryService()
 item_service = ItemService()
+image_service = ImageService()
+
 ctx = {
     "items": item_service.get_all_items(),
 }
@@ -25,7 +28,8 @@ def item_details(request, item_id):
     # TODO: fix late update when bidding
     max_bid = bid_service.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
-
+    ctx["images"] = image_service.get_images(ctx["item"])
+    ctx["similar_items"] = item_service.get_similar_items(ctx["item"])
     if request.method == "POST":
         form = BidCreateForm(request.POST)
         result = None
@@ -45,10 +49,12 @@ def item_details(request, item_id):
 @login_required
 def item_create(request):
     if request.method == "POST":
+        image_service = ImageService()
         form = ItemCreateForm(request.POST)
         if form.is_valid():
-            result = item_service.create_item(form, request.user)
-            print(result)
+            item = item_service.create_item(form, request.user)
+            image_service.create_image(request.FILES.getlist("images"), item)
+
     else:
         ctx["form"] = ItemCreateForm()
     return render(request, "../templates/items/items_create.html", context=ctx)

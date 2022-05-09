@@ -1,5 +1,8 @@
 from core.models.item import Item
 from django.core.exceptions import ObjectDoesNotExist
+from core.services.image_service import ImageService
+
+image_service = ImageService()
 
 
 class ItemService:
