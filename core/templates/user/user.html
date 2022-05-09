@@ -60,6 +60,7 @@
         <div class="col-5">
             <h2>My recent posting</h2>
             <div class="list-group">
+                {% if items %}
                 {% for item in items %}
                 <a href="/items/{{ item.id }}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
@@ -69,6 +70,9 @@
                     </div>
                 </a>
                 {% endfor %}
+                {% else %}
+                <p>Nothing Yet.</p>
+                {% endif %}
             </div>
         </div>
     </div>

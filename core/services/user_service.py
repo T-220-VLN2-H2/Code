@@ -5,7 +5,8 @@ from django.db.models import Avg
 
 class UserService:
     def get_user_info(self, user_id):
-        user = User.objects.filter(id=user_id)
+        # keep this as .get, id is unique we only expect to receive one result
+        user = User.objects.get(id=user_id)
         return user
 
     def set_user_info(self, user, first_name=None, last_name=None, bio=None):
