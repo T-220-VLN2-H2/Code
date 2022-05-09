@@ -19,9 +19,6 @@ class ItemService:
             user_sale.save()
         user_sale.items.add(item)
         user_sale.save()
-<<<<<<< HEAD
-        return True
-=======
         return item
 
     def delete_item(id):
@@ -31,7 +28,6 @@ class ItemService:
     def update_item(**kwargs):
         print("Do something")
         # TODO update item in DB
->>>>>>> origin/main
 
     @staticmethod
     def get_all_items(is_sold=False):
@@ -52,9 +48,6 @@ class ItemService:
     @staticmethod
     def get_recently_added_items():
         recent_items = Item.objects.all().order_by("-id")[:12]
-<<<<<<< HEAD
-        return recent_items
-=======
         recent_item = [(item, image_service.get_images(item)) for item in recent_items]
         return recent_item
 
@@ -68,4 +61,3 @@ class ItemService:
     def sort_items(**kwargs):
         print("Do something")
         # TODO sort items by name or price
->>>>>>> origin/main
