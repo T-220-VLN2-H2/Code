@@ -1,13 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="row">
-    {% for item in category_items %}
-        <div class="col">
-            <a href="/items/{{item.id}}">
-            <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'">
-            </a>
-            <p>{{item.title}}</p><p>{{item.price}}</p>
-        </div>
+    {% for item, image in category_items %}
+        {% include 'items/item_list.html' %}
     {% endfor %}
     </div>
 {% endblock %}

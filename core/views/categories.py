@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from core.services.category_service import CategoryService
 from core.services.item_service import ItemService
+from core.services.image_service import ImageService
 
 cat_service = CategoryService()
 item_service = ItemService()
+image_service = ImageService()
 ctx = {
     "items": item_service.get_all_items(),
 }
@@ -22,11 +24,15 @@ def category_page(request, cat_id):
         if cat.id == int(cat_id):
             ctx["selected_category"] = cat
             ctx["category_items"] = [
-                item for item in ctx["items"] if item.category.id == cat.id
+                (item, image_service.get_images(item))
+                for item in ctx["items"]
+                if item.category.id == cat.id
             ]
             if cat.id in sub_categories:
                 for sub_cat in sub_categories[cat.id]:
                     ctx["category_items"] += [
-                        item for item in ctx["items"] if item.category.id == sub_cat.id
+                        (item, image_service.get_images(item))
+                        for item in ctx["items"]
+                        if item.category.id == sub_cat.id
                     ]
     return render(request, "../templates/categories/category_page.html", context=ctx)
