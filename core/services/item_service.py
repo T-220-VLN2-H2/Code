@@ -23,8 +23,16 @@ class ItemService:
         # TODO update item in DB
 
     @staticmethod
-    def get_all_items(is_sold=False):
-        items = Item.objects.filter(is_sold=is_sold)
+    def get_all_items(is_sold=False, sort="default"):
+
+        if sort == "price_hi":
+            items = Item.objects.filter(is_sold=is_sold).order_by("-price")
+        elif sort == "price_lo":
+            items = Item.objects.filter(is_sold=is_sold).order_by("price")
+        elif sort == "name":
+            items = Item.objects.filter(is_sold=is_sold).order_by("title")
+        else:
+            items = Item.objects.filter(is_sold=is_sold)
         return items
 
     @staticmethod
@@ -39,12 +47,12 @@ class ItemService:
 
     @staticmethod
     def get_recently_added_items():
-        recent_items = Item.objects.all().order_by("-id")[:12]
+        recent_items = Item.objects.filter(is_sold=False).order_by("-id")[:12]
         recent_item = [(item, image_service.get_images(item)) for item in recent_items]
         return recent_item
 
     def get_similar_items(self, item):
-        similar_items = Item.objects.filter(category=item.category)[:4]
+        similar_items = Item.objects.filter(category=item.category, is_sold=False)[:4]
         similar_items = [
             (item, image_service.get_images(item)) for item in similar_items
         ]
