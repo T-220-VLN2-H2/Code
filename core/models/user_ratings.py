@@ -1,12 +1,22 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 from .user import User
 from .order import Order
 from django.utils.translation import gettext_lazy as _
 
 
 class UserRatings(models.Model):
+    RATING_CHOICES = (
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (4, 4),
+        (5, 5),
+    )
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    rating = models.DecimalField(max_digits=1, decimal_places=0)
+    rater = models.ForeignKey(User, on_delete=models.CASCADE, related_name="rater_users")
+    ratee = models.ForeignKey(User, on_delete=models.CASCADE, related_name="ratee_users")
+    rating = models.SmallIntegerField(choices=RATING_CHOICES)
 
     def __str__(self):
         return self
@@ -19,13 +29,3 @@ class UserRatings(models.Model):
 
         db_table = "core_user_ratings"
         app_label = "core"
-
-
-class RatingUsers(models.Model):
-    class UserType(models.TextChoices):
-        RATER = "Rater", _("")
-        RATEE = "Ratee", _("")
-
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    type = models.CharField(choices=UserType.choices, max_length=128)
-    user_rating = models.ForeignKey(UserRatings, on_delete=models.CASCADE)

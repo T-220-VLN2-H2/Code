@@ -12,13 +12,20 @@ class UserService:
         pass
         # probably won't need this
 
-    def create_user(form):
+    def create_user(self, form):
         pass
 
-    def get_user_rating(user_id):
+    def add_user_rating(self, form, user):
+        pass
+
+    def get_user_rating(self, user_id):
         rating = (
-            UserRatings.objects.all().filter(ratee_id=user_id).aggregate(Avg("rating"))
+            UserRatings.objects.filter(ratee_id=user_id).aggregate(Avg("rating"))
         )
         if not rating:
             rating = "Not rated."
         return rating
+
+    def get_user_ratings(self, user_id, count=12):
+        ratings = UserRatings.objects.filter(ratee_id=user_id).order_by("-id")[:12]
+        return ratings
