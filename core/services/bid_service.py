@@ -34,7 +34,7 @@ class BidService:
         user_bids = cls.get_user_bids(user)
         for user_bid in user_bids:
             if user_bid.item_id_id == item_id:
-                UserBids.objects.filter(id = user_bid.id).delete()
+                UserBids.objects.filter(id=user_bid.id).delete()
 
     @classmethod
     def get_bid_by_id(cls, bid_id):
@@ -57,7 +57,7 @@ class BidService:
         item.save()
         # TODO: pseudo-notify buyer
         # TODO: pseudo-notify losers
-    
+
     @classmethod
     def get_user_bids(cls, user, active=True):
         """
@@ -73,14 +73,7 @@ class BidService:
 
     @staticmethod
     def get_bids_for_user_items(user):
-<<<<<<< HEAD
-        """
-        get bids on current users items
-        """
-        bids = UserBids.objects.all().order_by("-timestamp")
-=======
         bids = UserBids.objects.filter(user_id=user).order_by("-timestamp")
->>>>>>> origin/main
         user_sales = UserSales.objects.get(user_id=user)
         my_bids = []
         # TODO: Can this be optimized xD ???
