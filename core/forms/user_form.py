@@ -1,5 +1,6 @@
 from django.forms import ModelForm, widgets
-from core.models.user import User, Profile
+from django.contrib.auth.models import User
+from core.models.user import Profile
 
 
 class UserCreateForm(ModelForm):
@@ -31,12 +32,20 @@ class UserCreateForm(ModelForm):
 class UserUpdateForm(ModelForm):
     class Meta:
         model = User
-        exclude = ["id", "user_name", "email", "password"]
+        fields = ["first_name", "last_name"]
+        # exclude = ["id", "user_name", "email", "password"]
         widgets = {
-            "name": widgets.TextInput(attrs={"class": "form-control"}),
-            "bio": widgets.TextInput(attrs={"class": "form-control"}),
+            "first_name": widgets.TextInput(attrs={"class": "form-control"}),
+            "last_name": widgets.TextInput(attrs={"class": "form-control"}),
         }
 
+class ProfileUpdateForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ["description"]
+        widgets = {
+            "description": widgets.Textarea(attrs={"class": "form-control"}),
+        }
 
 class UserLoginForm(ModelForm):
     class Meta:

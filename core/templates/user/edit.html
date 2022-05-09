@@ -1,21 +1,14 @@
 {% extends 'base.html' %} {% block content %}
-<h1 class="m-5">My Profile!</h1>
+<h1 class="m-5">Edit My Profile!</h1>
 
 <img src="../../static/images/profile.jpg" class="img-thumbnail" alt="..." />
-<form>
-    <div class="mb-3">
-        <label for="formFile" class="form-label">Profile Picture</label>
-        <input class="form-control" type="file" id="formFile" />
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Display Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" value="John Doe" />
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">This is my bio</textarea>
-    </div>
-    <a class="btn btn-secondary" href="/user" role="button">Back</a>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="username" class="form-label">Username</label>
+    <input class="form-control" id="username" type="text" name="username" value="{{ user }}" disabled>
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <a class="btn btn-secondary" href="{% url "user_home" %}" role="button">Back</a>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
 {% endblock %}

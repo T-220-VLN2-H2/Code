@@ -1,17 +1,16 @@
-from django.shortcuts import redirect, render
-from Code.core.forms.user_form import UserCreateForm
+from django.shortcuts import redirect
+from core.models import Profile, UserRatings
+from django.db.models import Avg
 
 
 class UserService:
-    def get_user_info(request):
-        if request.method == "GET":
-            print("do something")
-            # TODO validate the request, find the corresponding user in DB and return object. Else raise error.
+    def get_user_info(self, user_id):
+        user = Profile.objects.get(id=user_id)
+        return user
 
-    def set_user_info(request):
-        if request.method == "PATCH":
-            print("do something")
-            # TODO validate the request, find the corresponding user in DB and update information. Else raise error.
+    def set_user_info(self, user, first_name=None, last_name=None, bio=None):
+        pass
+        # probably won't need this
 
     def delete_user(request):
         if request.method == "DELETE":
