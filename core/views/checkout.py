@@ -32,6 +32,7 @@ ctx = {
 #         ctx["form"] = UserCreationForm
 #     return render(request, f"{folder_path}/register.html", context=ctx)
 
+
 def personal_info(request):
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.post)
@@ -39,11 +40,14 @@ def personal_info(request):
             new_personl_info = form.save()
     return render(request, "checkout/personal_info.html", context=ctx)
 
+
 def delivery_info(request):
     return render(request, "checkout/summary.html", context=ctx)
 
+
 def payment_info(request):
     return render(request, "checkout/payment_info.html", context=ctx)
+
 
 def summary_display(request):
     return render(request, "checkout/summary.html", context=ctx)

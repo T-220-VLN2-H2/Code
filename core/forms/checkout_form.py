@@ -5,7 +5,13 @@ from core.models import PaymentInfo, ShippingDetails
 class PaymentCreateForm(ModelForm):
     class Meta:
         model = PaymentInfo
-        fields = ["cardholder_name", "card_number", "cvc", "expiry_month", "expiry_year"]
+        fields = [
+            "cardholder_name",
+            "card_number",
+            "cvc",
+            "expiry_month",
+            "expiry_year",
+        ]
         widgets = {
             "name": widgets.TextInput(attrs={"class": "form-control"}),
             "card_number": widgets.TextInput(attrs={"class": "form-control"}),
