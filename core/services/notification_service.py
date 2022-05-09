@@ -3,7 +3,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 class NotificationService:
-    def send_notification(self, user, title, message):
+    def add_notification(self, user, title, message):
         notification = Notification(title=title, message=message, user_id=user)
         notification.save()
 
