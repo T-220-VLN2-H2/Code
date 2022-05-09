@@ -16,13 +16,7 @@ class ItemService:
             user_sale.save()
         user_sale.items.add(item)
         user_sale.save()
-        return True
-
-    def create_item(price, condition, category, delivery_option):
-        new_item = Item(price, condition, category, delivery_option)
-        new_item.save()
-        print("Do something")
-        # TODO validate that all item information is correct and add to the DB.
+        return item
 
     def delete_item(id):
         print("Do something")
