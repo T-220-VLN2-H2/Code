@@ -62,6 +62,9 @@ def edit(request):
 
 @login_required
 def profile(request, id):
+    # TODO validate id as an int
+    if int(id) == request.user.id:
+        return redirect("user_home")
     target_user = user_service.get_user_info(id)
     ctx["items"] = item_service.get_sale_items(target_user.id)[:7]
     ctx["target_user"] = target_user
