@@ -53,7 +53,9 @@ class ItemService:
 
     def get_similar_items(self, item):
         similar_items = Item.objects.filter(category=item.category)[:4]
-        similar_items = [(item, image_service.get_images(item)) for item in similar_items]
+        similar_items = [
+            (item, image_service.get_images(item)) for item in similar_items
+        ]
         return similar_items
 
     def sort_items(**kwargs):
