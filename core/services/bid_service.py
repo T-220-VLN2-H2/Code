@@ -62,7 +62,7 @@ class BidService:
     def get_user_bids(cls, user, active=True):
         """
         get current users bids
-        """       
+        """
         try:
             bids = UserBids.objects.filter(
                 user_id=user, item_id__is_sold=not active
