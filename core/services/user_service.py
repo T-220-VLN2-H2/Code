@@ -1,12 +1,11 @@
 from django.shortcuts import redirect
-from core.models import Profile, UserRatings
+from core.models import User, UserRatings
 from django.db.models import Avg
-from models.user import User
 
 
 class UserService:
     def get_user_info(self, user_id):
-        user = Profile.objects.filter(id=user_id)
+        user = User.objects.filter(id=user_id)
         return user
 
     def set_user_info(self, user_id, first_name=None, last_name=None, bio=None):

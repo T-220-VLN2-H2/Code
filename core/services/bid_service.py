@@ -2,32 +2,44 @@ from django.db.models import Max
 from core.models.user_bids import UserBids
 from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
+from datetime import date, datetime
 
 # TODO: whatis
 from core.models.user_sales import UserSales
 
 
 class BidService:
-    def add_bid(self, form, user, item) -> bool:
-        items = ItemService.get_item_by_id(item.id)
-        print(items)
-        if item in items:
-            return False
+    def add_bid(self, form, user, item, item_id) -> bool:
         new_bid = form.save(commit=False)
         new_bid.user_id = user
         new_bid.item_id = item
         # TODO: don't hardcode experation or remove alltogether
         new_bid.expires = "2000-11-20 20:20"
-
         if item.is_sold:
             return False
 
         max_bid = self.get_max_bid(item)
         if max_bid is None or new_bid.amount > max_bid.amount:
+            self.check_rebid(user, item_id)
             new_bid.save()
             return True
 
         return False
+
+    @classmethod
+    def check_rebid(cls, user, item_id):
+        """
+        Checks if the user has old bids on this item and removes them.
+        """
+        user_bids = cls.get_user_bids(user)
+        for user_bid in user_bids:
+            if user_bid.item_id_id == item_id:
+                UserBids.objects.filter(id = user_bid.id).delete()
+
+    @classmethod
+    def get_bid_by_id(cls, bid_id):
+        bid = UserBids.objects.get(id=bid_id)
+        return bid
 
     def get_max_bid(self, item_id):
         try:
@@ -37,6 +49,7 @@ class BidService:
 
         return max_bid
 
+    @classmethod
     def accept_bid(self, bid: UserBids):
         # TODO: auth user?
         item = bid.item_id
@@ -44,8 +57,9 @@ class BidService:
         item.save()
         # TODO: pseudo-notify buyer
         # TODO: pseudo-notify losers
-
-    def get_user_bids(self, user, active=True):
+    
+    @classmethod
+    def get_user_bids(cls, user, active=True):
         """
         get current users bids
         """       
