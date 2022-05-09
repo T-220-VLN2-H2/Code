@@ -1,6 +1,7 @@
 from core.models.item import Item
 from core.models import UserSales
 from django.core.exceptions import ObjectDoesNotExist
+from core.services.image_service import ImageService
 
 
 class ItemService:
@@ -45,7 +46,9 @@ class ItemService:
     @staticmethod
     def get_recently_added_items():
         recent_items = Item.objects.all().order_by("-id")[:12]
-        return recent_items
+        image_service = ImageService()
+        recent_item = [(item, image_service.get_images(item)) for item in recent_items]
+        return recent_item
 
     def get_all_images(self):
         print("Do something")

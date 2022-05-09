@@ -12,6 +12,8 @@ from django.core.files.storage import FileSystemStorage
 bid_service = BidService()
 cat_service = CategoryService()
 item_service = ItemService()
+image_service = ImageService()
+
 ctx = {
     "items": item_service.get_all_items(),
 }
@@ -26,7 +28,6 @@ def item_details(request, item_id):
     # TODO: fix late update when bidding
     max_bid = bid_service.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
-    image_service = ImageService()
     ctx["images"] = image_service.get_images(ctx["item"])
     if request.method == "POST":
         form = BidCreateForm(request.POST)

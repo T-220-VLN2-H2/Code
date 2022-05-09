@@ -22,5 +22,6 @@ class ImageService:
         images = ItemImages.objects.filter(item=item)
         if len(images) == 0:
             # TODO: return default image
-            return {}
+            default_image = Image.objects.filter(id=9)
+            return default_image
         return images[0].images.all()

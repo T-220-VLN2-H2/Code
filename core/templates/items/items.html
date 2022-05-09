@@ -3,14 +3,9 @@
     {% for cat in categories %}
     <div class="row">
         <h4>{{cat.name}}</h4>
-        {% for item in items %}
+        {% for item, image in items %}
             {% if item.category == cat.id %}
-                <div class="col">
-                    <a href="/items/{{item.id}}">
-                        <img src="https://via.placeholder.com/150/FF0000/FFFFFF/?Text='Down.com'">
-                    </a>
-                    <p>{{item.title}}</p><p>{{item.price}}</p>
-                </div>
+                {% include 'items/item_list.html' %}
             {% endif %}
         {% endfor %}
     </div>
