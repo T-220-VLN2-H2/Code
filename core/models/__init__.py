@@ -13,6 +13,5 @@ from .user_bids import UserBids
 from .user import Profile
 from django.contrib.auth.models import User
 from .user_ratings import UserRatings
-from .user_sales import UserSales
 from .image import Image
 from .image import ItemImages

@@ -2,7 +2,6 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.contrib.auth.models import User
-from core.models.user_sales import UserSales
 
 
 class Profile(models.Model):
@@ -27,7 +26,6 @@ class Profile(models.Model):
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
-        UserSales.objects.create(user_id=instance)
 
 
 @receiver(post_save, sender=User)

@@ -1,11 +1,10 @@
-from django.db.models import Max
-from core.models.user_bids import UserBids
-from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
+from core.models.user_bids import UserBids
 from datetime import date, datetime
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Max
 
-# TODO: whatis
-from core.models.user_sales import UserSales
+from core.models.item import Item
 
 
 class BidService:
@@ -77,6 +76,7 @@ class BidService:
         """
         get bids on current users items
         """
+<<<<<<< HEAD
         bids = UserBids.objects.all().order_by("-timestamp")
 =======
         bids = UserBids.objects.filter(user_id=user).order_by("-timestamp")
@@ -89,3 +89,8 @@ class BidService:
                 if bid.item_id.id == item.id and not item.is_sold:
                     my_bids.append(bid)
         return my_bids
+=======
+        users_items = Item.objects.filter(seller=user)
+        bids = UserBids.objects.filter(item_id__in=users_items).order_by("-timestamp")
+        return bids
+>>>>>>> f8d41ed441c8bea72d43079b8e7435713cb65aef

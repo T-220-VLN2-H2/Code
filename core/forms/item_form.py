@@ -5,7 +5,7 @@ from core.models import Item
 class ItemCreateForm(ModelForm):
     class Meta:
         model = Item
-        exclude = ["id", "is_sold", "date_created"]
+        exclude = ["id", "is_sold", "date_created", "seller"]
         widgets = {
             "Price": widgets.NumberInput(attrs={"class": "form-control"}),
             "Condition": widgets.CheckboxInput(attrs={"class": "form-control"}),
