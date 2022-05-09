@@ -86,3 +86,8 @@ def messages(request):
     ctx["user"] = request.user
     ctx["user_messages"] = notification_service.get_notifications(request.user)
     return render(request, f"{folder_path}/messages.html", context=ctx)
+
+@login_required
+def item_bids(request):
+    ctx["item_bids"] = bid_service.get_bids_for_user_items(request.user)
+    return render(request, f"{folder_path}/history.html", context=ctx)

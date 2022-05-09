@@ -1,5 +1,6 @@
 from django.db.models import Max
 from core.models.user_bids import UserBids
+from core.models.user_sales import UserSales
 from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
 from .user_service import UserService
