@@ -21,5 +21,6 @@ class ImageService:
     def get_images(item):
         images = ItemImages.objects.filter(item=item)
         if len(images) == 0:
+            # TODO: return default image
             return {}
         return images[0].images.all()
