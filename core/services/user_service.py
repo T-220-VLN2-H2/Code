@@ -4,7 +4,8 @@ from django.db.models import Avg
 
 
 class UserService:
-    def get_user_info(self, user_id):
+    @classmethod
+    def get_user_info(cls, user_id):
         user = User.objects.filter(id=user_id)
         return user
 
