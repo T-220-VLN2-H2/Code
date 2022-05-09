@@ -1,5 +1,4 @@
 from core.models.item import Item
-from core.models import UserSales
 from django.core.exceptions import ObjectDoesNotExist
 from core.services.image_service import ImageService
 
@@ -9,17 +8,11 @@ image_service = ImageService()
 class ItemService:
     @staticmethod
     def create_item(form, user):
-        form.save()
-        item = Item.objects.last()
-        try:
-            user_sale = UserSales.objects.get(user_id=user)
-        except ObjectDoesNotExist:
-            user_sale = UserSales()
-            user_sale.user_id = user
-            user_sale.save()
-        user_sale.items.add(item)
-        user_sale.save()
-        return item
+        new_item = form.save(commit=False)
+        new_item.seller = user
+        new_item.save()
+
+        return new_item
 
     def delete_item(id):
         print("Do something")
@@ -36,9 +29,8 @@ class ItemService:
 
     @staticmethod
     def get_sale_items(user, is_sold=False):
-        active_sales = UserSales.objects.get(user_id=user)
-        sale_items = active_sales.items.filter(is_sold=is_sold)
-        return sale_items
+        items = Item.objects.filter(seller=user, is_sold=is_sold)
+        return items
 
     @staticmethod
     def get_item_by_id(item_id):
