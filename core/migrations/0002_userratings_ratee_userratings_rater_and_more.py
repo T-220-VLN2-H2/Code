@@ -11,33 +11,49 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='userratings',
-            name='ratee',
-            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, related_name='ratee_users', to=settings.AUTH_USER_MODEL),
+            model_name="userratings",
+            name="ratee",
+            field=models.ForeignKey(
+                default=None,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="ratee_users",
+                to=settings.AUTH_USER_MODEL,
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='userratings',
-            name='rater',
-            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, related_name='rater_users', to=settings.AUTH_USER_MODEL),
+            model_name="userratings",
+            name="rater",
+            field=models.ForeignKey(
+                default=None,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="rater_users",
+                to=settings.AUTH_USER_MODEL,
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='userbids',
-            name='amount',
-            field=models.DecimalField(decimal_places=2, max_digits=10, validators=[django.core.validators.MinValueValidator(Decimal('0.01'))]),
+            model_name="userbids",
+            name="amount",
+            field=models.DecimalField(
+                decimal_places=2,
+                max_digits=10,
+                validators=[django.core.validators.MinValueValidator(Decimal("0.01"))],
+            ),
         ),
         migrations.AlterField(
-            model_name='userratings',
-            name='rating',
-            field=models.SmallIntegerField(choices=[(1, 1), (2, 2), (3, 3), (4, 4), (5, 5)]),
+            model_name="userratings",
+            name="rating",
+            field=models.SmallIntegerField(
+                choices=[(1, 1), (2, 2), (3, 3), (4, 4), (5, 5)]
+            ),
         ),
         migrations.DeleteModel(
-            name='RatingUsers',
+            name="RatingUsers",
         ),
     ]

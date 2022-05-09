@@ -20,9 +20,7 @@ class UserService:
         pass
 
     def get_user_rating(self, user_id):
-        rating = (
-            UserRatings.objects.filter(ratee_id=user_id).aggregate(Avg("rating"))
-        )
+        rating = UserRatings.objects.filter(ratee_id=user_id).aggregate(Avg("rating"))
         if not rating:
             rating = "Not rated."
         return rating

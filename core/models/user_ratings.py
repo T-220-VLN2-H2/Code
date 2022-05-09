@@ -14,8 +14,12 @@ class UserRatings(models.Model):
         (5, 5),
     )
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    rater = models.ForeignKey(User, on_delete=models.CASCADE, related_name="rater_users")
-    ratee = models.ForeignKey(User, on_delete=models.CASCADE, related_name="ratee_users")
+    rater = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="rater_users"
+    )
+    ratee = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="ratee_users"
+    )
     rating = models.SmallIntegerField(choices=RATING_CHOICES)
 
     def __str__(self):

@@ -4,6 +4,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
 from .user_service import UserService
 
+
 class BidService:
     def add_bid(self, form, user, item) -> bool:
         new_bid = form.save(commit=False)
