@@ -12,8 +12,11 @@ def user(request):
     }
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.post)
-        if form.is_valid():
-            new_personl_info = form.save()
+        request.session["full_name"] = form["full_name"] 
+        request.session["address"] = form["address"]
+        request.session["postal_code"] = form["postal_code"]
+        request.session["city"] = form["city"]
+        request.session.modified = True
     else:
         form = PersonalInfoCreateForm()
         ctx["form"] = form
@@ -29,8 +32,6 @@ def delivery(request):
     }
     if request.method == "POST":
         form = PaymentCreateForm(request.post)
-        if form.is_valid():
-            new_personl_info = form.save()
     else:
         form = PaymentCreateForm()
         ctx["form"] = form
@@ -45,9 +46,12 @@ def payment(request):
         "address": "",
     }
     if request.method == "POST":
+        request.session["cardholder_name"] = form["cardholder_name"]
+        request.session["card_number"] = form["card_number"]
+        request.session["cvc"] = form["cvc"]
+        request.session["expiry_month"] = form["expiry_year"]
+        request.session.modified = True
         form = PaymentCreateForm(request.post)
-        if form.is_valid():
-            new_personl_info = form.save()
     else:
         form = PaymentCreateForm()
         ctx["form"] = form
