@@ -3,7 +3,6 @@ from core.services.image_service import ImageService
 from django.core.exceptions import ObjectDoesNotExist
 
 
-
 class ItemService:
     @classmethod
     def create_item(cls, form, user):

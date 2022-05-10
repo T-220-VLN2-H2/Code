@@ -21,17 +21,13 @@ def item_details(request, item_id):
     max_bid = BidService.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
     ctx["images"] = ImageService.get_images(ctx["item"])
-    ctx["similar_items"] = ItemService.get_similar_items(
-        ctx["item"]
-    )
+    ctx["similar_items"] = ItemService.get_similar_items(ctx["item"])
     if request.method == "POST":
         if request.user.is_authenticated:
             form = BidCreateForm(request.POST)
             result = None
             if form.is_valid():
-                result = BidService.add_bid(
-                    form, request.user, ctx["item"]
-                )
+                result = BidService.add_bid(form, request.user, ctx["item"])
             if result:
                 # TODO: Some green bar or somethigng to validate users feelings
                 max_bid = BidService.get_max_bid(item_id).amount
