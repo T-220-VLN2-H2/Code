@@ -53,7 +53,9 @@
                 {% for rating in ratings %}
                 <li class="list-group-item p-3">
                     <span class="float-start">
-                        {{ rating.name }}
+                        <a href="../../user/{{ rating.rater}}">
+                            {{ rating.item }}
+                        </a>
                     </span>
                     <span class="float-end">
                         {{ rating.rating }} <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange"
