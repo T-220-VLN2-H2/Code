@@ -66,7 +66,8 @@ def edit(request):
 @login_required
 def profile(request, id):
     import re
-    id = re.sub('\D', '', id)  # removes all non digits
+
+    id = re.sub("\D", "", id)  # removes all non digits
     services = ContextServices()
 
     if int(id) == request.user.id:
