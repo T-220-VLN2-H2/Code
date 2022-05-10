@@ -20,13 +20,21 @@ class BidService:
         if max_bid is None or new_bid.amount > max_bid.amount:
             self.check_rebid(user, item.id)
             new_bid.save()
-            notify_service.add_notification(user, "Bid created", f"""
+            notify_service.add_notification(
+                user,
+                "Bid created",
+                f"""
 Your bid of {new_bid.amount} has been added to {item.title}
-""")
+""",
+            )
             return True
-        notify_service.add_notification(user, "Bid too low", f"""
+        notify_service.add_notification(
+            user,
+            "Bid too low",
+            f"""
         Your bid of {new_bid.amount} was not the highest for {item.title}
-        """)
+        """,
+        )
         return False
 
     @classmethod
@@ -59,18 +67,26 @@ Your bid of {new_bid.amount} has been added to {item.title}
         item.is_sold = True
         item.save()
 
-        notify_service.add_notification(bid.user_id, "Bid accepted", f"""
+        notify_service.add_notification(
+            bid.user_id,
+            "Bid accepted",
+            f"""
 Your bid for {bid.item_id} of {bid.amount} has been accepted by {bid.item_id.seller.username}.
 You can finish the checkout process by going to the purchases tab
-""")
+""",
+        )
         bid.status = "ACCEPTED"
         bid.save()
 
         all_loser_bids = UserBids.objects.filter(~Q(user_id=bid.user_id), item_id=item)
         for loser_bid in all_loser_bids:
-            notify_service.add_notification(loser_bid.user_id, "Bid rejected", f"""
+            notify_service.add_notification(
+                loser_bid.user_id,
+                "Bid rejected",
+                f"""
 Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {loser_bid.item_id.seller.username}
-""")
+""",
+            )
             loser_bid.status = "REJECTED"
             loser_bid.save()
 

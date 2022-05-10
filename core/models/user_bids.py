@@ -11,7 +11,7 @@ class UserBids(models.Model):
         ("REJECTED", "Rejected"),
         ("ACCEPTED", "Accepted"),
         ("PENDING", "Pending"),
-        ("COMPLETED", "Completed")
+        ("COMPLETED", "Completed"),
     )
     # TODO: remove id suffix?
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -21,7 +21,9 @@ class UserBids(models.Model):
     )
     timestamp = models.DateTimeField(auto_now_add=True)
     expires = models.DateTimeField(blank=True)
-    status = models.CharField(choices=BID_STATUS, default=BID_STATUS[2][0], max_length=128)
+    status = models.CharField(
+        choices=BID_STATUS, default=BID_STATUS[2][0], max_length=128
+    )
 
     def __str__(self):
         return f"{self.item_id.id} - {self.amount} - {self.status}"

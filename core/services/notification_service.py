@@ -10,7 +10,9 @@ class NotificationService:
     @staticmethod
     def get_notifications(user, only_unread=False):
         try:
-            notifications = Notification.objects.all().filter(user_id=user).order_by("-timestamp")
+            notifications = (
+                Notification.objects.all().filter(user_id=user).order_by("-timestamp")
+            )
             if only_unread:
                 notifications = notifications.filter(read=False)
         except ObjectDoesNotExist:
