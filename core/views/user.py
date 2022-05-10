@@ -40,7 +40,7 @@ def edit(request):
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
-        if request.FILES:
+        if "images" in request.FILES:
             services.image_service.update_profile_image(
                 request.user, request.FILES["images"]
             )

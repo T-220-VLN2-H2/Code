@@ -10,7 +10,7 @@ class ImageService:
         for idx, file in enumerate(images):
             file_name = "_".join([item.title, str(item.id), str(idx)])
             ext = file.name.split(".")[-1]
-            if ext not in self.ALLOWED_EXTENSTION:
+            if ext not in self.ALLOWED_EXTENSIONS:
                 break
             file.name = f"{file_name}.{ext}"
             temp = Image(name=file_name, image=file)
