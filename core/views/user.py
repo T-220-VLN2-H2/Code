@@ -72,7 +72,7 @@ def profile(request, id):
 
     target_user = services.user_service.get_user_info(id)
     services.ctx["ratings"] = services.user_service.get_user_ratings(target_user)
-    services.ctx["items"] = services.folder_path.get_sale_items(target_user.id)[:7]
+    services.ctx["items"] = services.item_service.get_sale_items(target_user.id)[:7]
     services.ctx["target_user"] = target_user
     services.ctx["user"] = request.user
 
