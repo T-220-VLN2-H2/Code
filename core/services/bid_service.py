@@ -1,30 +1,32 @@
-from django.db.models import Max
-from core.models.user_bids import UserBids
-from core.models.user_sales import UserSales
-from django.core.exceptions import ObjectDoesNotExist
 from .item_service import ItemService
-from .user_service import UserService
+from core.models.user_bids import UserBids
+from datetime import date, datetime
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Max
+
+from core.models.item import Item
 
 
 class BidService:
-    def add_bid(self, form, user, item) -> bool:
+    def add_bid(self, form, user, item, item_id) -> bool:
         new_bid = form.save(commit=False)
         new_bid.user_id = user
         new_bid.item_id = item
         # TODO: don't hardcode experation or remove alltogether
         new_bid.expires = "2000-11-20 20:20"
-        if item.is_sold or user.id == item.seller_id:
+        if item.is_sold:
             return False
+
         max_bid = self.get_max_bid(item)
         if max_bid is None or new_bid.amount > max_bid.amount:
-            self.check_user_rebid(user.id, item.id)
+            self.check_rebid(user, item_id)
             new_bid.save()
             return True
 
         return False
 
     @classmethod
-    def check_user_rebid(cls, user, item_id):
+    def check_rebid(cls, user, item_id):
         """
         Checks if the user has old bids on this item and removes them.
         """
@@ -70,12 +72,9 @@ class BidService:
 
     @staticmethod
     def get_bids_for_user_items(user):
-        bids = UserBids.objects.filter(user_id=user).order_by("-timestamp")
-        user_sales = UserSales.objects.get(user_id=user)
-        my_bids = []
-        # TODO: Can this be optimized xD ???
-        for bid in bids:
-            for item in user_sales.items.all():
-                if bid.item_id.id == item.id and not item.is_sold:
-                    my_bids.append(bid)
-        return my_bids
+        """
+        get bids on current users items
+        """
+        users_items = Item.objects.filter(seller=user)
+        bids = UserBids.objects.filter(item_id__in=users_items).order_by("-timestamp")
+        return bids

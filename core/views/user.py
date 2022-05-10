@@ -24,7 +24,6 @@ folder_path = "../templates/user"
 
 
 ctx = {
-    "ratings": ratings[:7],
     "items": item_service.get_all_items(),
 }
 
@@ -32,6 +31,8 @@ ctx = {
 @login_required
 def home(request):
     ctx["user"] = request.user
+    ctx["ratings"] = user_service.get_user_ratings(request.user)
+    # TODO: implement count for get_sale_items
     ctx["items"] = item_service.get_sale_items(request.user.id)[:7]
     return render(request, f"{folder_path}/index.html", context=ctx)
 
@@ -65,10 +66,14 @@ def profile(request, id):
     # TODO validate id as an int
     if int(id) == request.user.id:
         return redirect("user_home")
+
     target_user = user_service.get_user_info(id)
+    ctx["ratings"] = user_service.get_user_ratings(target_user)
+    print(ctx["ratings"])
     ctx["items"] = item_service.get_sale_items(target_user.id)[:7]
     ctx["target_user"] = target_user
     ctx["user"] = request.user
+
     return render(request, f"{folder_path}/user.html", context=ctx)
 
 

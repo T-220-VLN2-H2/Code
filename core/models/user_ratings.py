@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from .user import User
-from .order import Order
+from .item import Item
 from django.utils.translation import gettext_lazy as _
 
 
@@ -13,13 +13,13 @@ class UserRatings(models.Model):
         (4, 4),
         (5, 5),
     )
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     rater = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="rater_users"
     )
     ratee = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="ratee_users"
     )
+    item = models.ForeignKey(Item, on_delete=models.CASCADE)
     rating = models.SmallIntegerField(choices=RATING_CHOICES)
 
     def __str__(self):
