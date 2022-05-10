@@ -51,10 +51,11 @@ class ItemService:
         recent_item = [(item, image_service.get_images(item)) for item in recent_items]
         return recent_item
 
-    def get_similar_items(self, item):
-        similar_items = Item.objects.filter(category=item.category, is_sold=False)[:4]
+    def get_similar_items(self, current_item):
+        similar_items = Item.objects.filter(category=current_item.category, is_sold=False)[:4]
         similar_items = [
             (item, image_service.get_images(item)) for item in similar_items
+            if item != current_item
         ]
         return similar_items
 

@@ -1,12 +1,17 @@
 from core.models.item import Item
-
+from core.services.image_service import ImageService
 
 class SearchService:
     @staticmethod
     def item_search(q=None):
+        image_service = ImageService()
         if q is None:
-            return Item.objects.all().values()
-        return Item.objects.filter(title__icontains=q)
+            items = Item.objects.filter(is_sold=False).values()
+            return items
+        else:
+            items = Item.objects.filter(title__icontains=q).filter(is_sold=False)
+        result = [(item, image_service.get_images(item)) for item in items]
+        return result
 
     def category_search(category_id):
         print("Do something")

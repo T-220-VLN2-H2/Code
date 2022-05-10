@@ -51,7 +51,6 @@ window.onload = () => {
   });
   searchDrop.addEventListener('keyup', () => {
     const inputBox = document.getElementById('myInput');
-
     filterFunction();
   });
 };
