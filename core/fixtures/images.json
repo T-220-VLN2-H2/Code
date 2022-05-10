@@ -1,0 +1,10 @@
+[
+  {
+    "model": "core.image",
+    "pk": 1337,
+    "fields": {
+      "name": "Default profile",
+      "image": "images/profile.jpg"
+    }
+  }
+]

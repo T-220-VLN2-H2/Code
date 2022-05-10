@@ -5,6 +5,7 @@ from core.services.notification_service import NotificationService
 from core.services.item_service import ItemService
 from core.services.bid_service import BidService
 from core.services.user_service import UserService
+from core.services.image_service import ImageService
 from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -20,6 +21,7 @@ cat_service = CategoryService()
 item_service = ItemService()
 bid_service = BidService()
 notification_service = NotificationService()
+image_service = ImageService()
 folder_path = "../templates/user"
 
 
@@ -42,6 +44,7 @@ def edit(request):
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
+        image_service.update_profile_image(request.user, request.FILES["images"])
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
