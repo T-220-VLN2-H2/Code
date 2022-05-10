@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="d-flex m-5">
     <h1>My Profile!</h1>
@@ -16,7 +17,7 @@
 <div class="container">
     <div class="row">
         <div class="col-4 p-1">
-            <img src="../../static/images/profile.jpg" class="img-thumbnail img-fluid w-100" alt="..." />
+            <img src="{% static 'media' %}/{{user.profile.image.image}}" class="img-thumbnail img-fluid w-100" alt="..." />
         </div>
         <div class="col-8 mt-2">
             <div class="row mb-4">

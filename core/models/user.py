@@ -9,7 +9,7 @@ class Profile(models.Model):
     # Inherit from the django User model and add extra fields as required
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     description = models.TextField(max_length=500, blank=True)
-    image = models.ForeignKey(Image, on_delete=models.CASCADE, default="images/profile.jpg")
+    image = models.ForeignKey(Image, on_delete=models.CASCADE, default=1337)
 
     def __str__(self):
         return self.user.username
