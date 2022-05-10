@@ -62,5 +62,5 @@ def item_create(request):
             image_service.create_image(request.FILES.getlist("images"), item)
 
     else:
-        ctx["form"] = ItemCreateForm()
+        services.ctx["form"] = ItemCreateForm()
     return render(request, "../templates/items/items_create.html", context=services.ctx)
