@@ -42,7 +42,9 @@ def edit(request):
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
-        services.image_service.update_profile_image(request.user, request.FILES["images"])
+        services.image_service.update_profile_image(
+            request.user, request.FILES["images"]
+        )
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
@@ -82,7 +84,9 @@ def history(request):
     services = ContextServices()
     services.ctx["user"] = request.user
     services.ctx["active_sales"] = services.item_service.get_sale_items(request.user)
-    services.ctx["sold_items"] = services.item_service.get_sale_items(request.user, is_sold=True)
+    services.ctx["sold_items"] = services.item_service.get_sale_items(
+        request.user, is_sold=True
+    )
     services.ctx["bids"] = services.bid_service.get_user_bids(request.user)
     return render(request, f"{services.folder_path}/history.html", context=services.ctx)
 
@@ -91,12 +95,18 @@ def history(request):
 def messages(request):
     services = ContextServices()
     services.ctx["user"] = request.user
-    services.ctx["user_messages"] = services.notification_service.get_notifications(request.user)
-    return render(request, f"{services.folder_path}/messages.html", context=services.ctx)
+    services.ctx["user_messages"] = services.notification_service.get_notifications(
+        request.user
+    )
+    return render(
+        request, f"{services.folder_path}/messages.html", context=services.ctx
+    )
 
 
 @login_required
 def item_bids(request):
     services = ContextServices()
-    services.ctx["item_bids"] = services.bid_service.get_bids_for_user_items(request.user)
+    services.ctx["item_bids"] = services.bid_service.get_bids_for_user_items(
+        request.user
+    )
     return render(request, f"{services.folder_path}/history.html", context=services.ctx)

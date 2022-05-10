@@ -32,7 +32,9 @@ def item_details(request, item_id):
     max_bid = services.bid_service.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
     services.ctx["images"] = services.image_service.get_images(services.ctx["item"])
-    services.ctx["similar_items"] = services.item_service.get_similar_items(services.ctx["item"])
+    services.ctx["similar_items"] = services.item_service.get_similar_items(
+        services.ctx["item"]
+    )
     if request.method == "POST":
         form = BidCreateForm(request.POST)
         result = None
