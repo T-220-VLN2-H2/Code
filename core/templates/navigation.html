@@ -27,7 +27,7 @@
         {% if user.is_authenticated %}
         <div class="col-md-auto">
             <div class="dropdown me-2">
-                <img id="profileImg" class="dropdown-toggle" src="{% static '/images/profile.jpg' %}" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="profileImg" class="dropdown-toggle" src="{% static 'media' %}/{{user.profile.image.image}}" data-bs-toggle="dropdown" aria-expanded="false">
                   <p class="dropdown-toggle" data-bs-toggle="dropdown">{{user.username}}</p>
                   <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="profileImg" >
                     <li><a class="dropdown-item" href="{% url 'user_home' %}">My profile</a></li>
