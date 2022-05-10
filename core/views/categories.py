@@ -11,6 +11,7 @@ def home(request):
 
 
 def category_page(request, cat_id):
+    import re
     image_service = ImageService()
     item_service = ItemService()
     cat_service = CategoryService()
@@ -24,7 +25,9 @@ def category_page(request, cat_id):
     }
     categories = cat_service.get_all_category_items()
     sub_categories = cat_service.categories_with_parents()
+    # TODO: reduce nesting
     for cat in categories:
+        cat_id = re.sub('\D', '', cat_id)  # remove all non-digits
         if cat.id == int(cat_id):
             ctx["selected_category"] = cat
             ctx["category_items"] = [
