@@ -87,8 +87,8 @@ def history(request):
 def messages(request):
     ctx["user"] = request.user
     ctx["user_messages"] = NotificationService.get_notifications(request.user)
-    for message in services.ctx["user_messages"]:
-        services.notification_service.mark_notification_read(message)
+    for message in ctx["user_messages"]:
+        NotificationService.mark_notification_read(message)
     return render(request, f"{folder_path}/messages.html", context=ctx)
 
 
