@@ -13,7 +13,7 @@ class PaymentCreateForm(ModelForm):
             "expiry_year",
         ]
         widgets = {
-            "name": widgets.TextInput(attrs={"class": "form-control"}),
+            "cardholder_name": widgets.TextInput(attrs={"class": "form-control"}),
             "card_number": widgets.TextInput(attrs={"class": "form-control"}),
             "cvc": widgets.TextInput(attrs={"class": "form-control"}),
             "expiry_month": widgets.NumberInput(attrs={"class": "form-control"}),
@@ -24,12 +24,15 @@ class PaymentCreateForm(ModelForm):
 class PersonalInfoCreateForm(ModelForm):
     class Meta:
         model = ShippingDetails
-        fields = ["full_name", "address", "postal_code", "city"]
+        fields = [
+            "full_name", 
+            "address", 
+            "postal_code", 
+            "city"
+        ]
         widgets = {
-            "first_name": widgets.TextInput(attrs={"class": "form-control"}),
-            "last_name": widgets.TextInput(attrs={"class": "form-control"}),
+            "full_name": widgets.TextInput(attrs={"class": "form-control"}),
             "address": widgets.TextInput(attrs={"class": "form-control"}),
-            "Zip": widgets.NumberInput(attrs={"class": "form-control"}),
+            "postal_code": widgets.NumberInput(attrs={"class": "form-control"}),
             "city": widgets.TextInput(attrs={"class": "form-control"}),
-            "Country": widgets.TextInput(attrs={"class": "form-control"}),
         }
