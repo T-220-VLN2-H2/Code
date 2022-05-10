@@ -98,6 +98,9 @@ def messages(request):
     services.ctx["user_messages"] = services.notification_service.get_notifications(
         request.user
     )
+    for message in services.ctx["user_messages"]:
+        message.read = True
+        message.save()
     return render(
         request, f"{services.folder_path}/messages.html", context=services.ctx
     )

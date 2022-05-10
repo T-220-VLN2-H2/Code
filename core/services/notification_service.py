@@ -15,6 +15,8 @@ class NotificationService:
                 notifications = notifications.filter(read=False)
         except ObjectDoesNotExist:
             return []
+        except TypeError:
+            return []
 
         return notifications
 
