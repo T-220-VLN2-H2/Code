@@ -12,15 +12,10 @@ class Order(models.Model):
     seller = models.ForeignKey(
         User, related_name="seller_users", on_delete=models.CASCADE
     )
-    order_items = models.ForeignKey("OrderItems", on_delete=models.CASCADE, null=True)
+    item = models.ForeignKey(core.Item, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.id
-
-    def displayOrderSummary(self) -> None:
-        # TODO: docstring
-        # TODO: implement, Should this be __sum__?
-        pass
 
     class Meta:
         """
