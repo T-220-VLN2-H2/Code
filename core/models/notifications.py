@@ -6,7 +6,7 @@ class Notification(models.Model):
     # TODO: add notification method
     id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=128)
-    message = models.CharField(max_length=128)
+    message = models.CharField(max_length=280)
     timestamp = models.DateTimeField(auto_now_add=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     read = models.BooleanField(default=False)

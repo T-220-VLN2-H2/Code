@@ -70,12 +70,22 @@ def profile(request, id):
 
 @login_required
 def history(request):
+    if request.POST:
+        if request.POST["bid"]:
+            accepted_bid_id = request.POST["bid"]
+            accepted_bid = BidService.get_bid_by_id(int(accepted_bid_id))
+            BidService.accept_bid(accepted_bid)
+
     ctx["user"] = request.user
     ctx["active_sales"] = ItemService.get_sale_items(request.user)
     ctx["sold_items"] = ItemService.get_sale_items(
         request.user, is_sold=True
     )
     ctx["bids"] = BidService.get_user_bids(request.user)
+    ctx["accepted_bid"] = BidService.get_accepted_bids(request.user)
+    ctx["user_item_bids"] = BidService.get_bids_for_user_items(
+        request.user
+    )
     return render(request, f"{folder_path}/history.html", context=ctx)
 
 
@@ -85,6 +95,8 @@ def messages(request):
     ctx["user_messages"] = NotificationService.get_notifications(
         request.user
     )
+    for message in services.ctx["user_messages"]:
+        services.notification_service.mark_notification_read(message)
     return render(
         request, f"{folder_path}/messages.html", context=ctx
     )

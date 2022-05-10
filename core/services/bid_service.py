@@ -1,9 +1,9 @@
 from .item_service import ItemService
 from core.models.item import Item
+from core.services.notification_service import NotificationService
+from django.db.models import Max, Q
 from core.models.user_bids import UserBids
-from datetime import date, datetime
 from django.core.exceptions import ObjectDoesNotExist
-from django.db.models import Max
 
 
 class BidService:
@@ -21,8 +21,21 @@ class BidService:
         if max_bid is None or new_bid.amount > max_bid.amount:
             cls.check_rebid(user, item.id)
             new_bid.save()
+            NotificationService.add_notification(
+                user,
+                "Bid created",
+                f"""
+Your bid of {new_bid.amount} has been added to {item.title}
+""",
+            )
             return True
-
+        NotificationService.add_notification(
+            user,
+            "Bid too low",
+            f"""
+        Your bid of {new_bid.amount} was not the highest for {item.title}
+        """,
+        )
         return False
 
     @classmethod
@@ -51,12 +64,32 @@ class BidService:
 
     @classmethod
     def accept_bid(cls, bid: UserBids):
-        # TODO: auth user?
         item = bid.item_id
         item.is_sold = True
         item.save()
-        # TODO: pseudo-notify buyer
-        # TODO: pseudo-notify losers
+
+        NotificationService.add_notification(
+            bid.user_id,
+            "Bid accepted",
+            f"""
+Your bid for {bid.item_id} of {bid.amount} has been accepted by {bid.item_id.seller.username}.
+You can finish the checkout process by going to the purchases tab
+""",
+        )
+        bid.status = "ACCEPTED"
+        bid.save()
+
+        all_loser_bids = UserBids.objects.filter(~Q(user_id=bid.user_id), item_id=item)
+        for loser_bid in all_loser_bids:
+            NotificationService.add_notification(
+                loser_bid.user_id,
+                "Bid rejected",
+                f"""
+Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {loser_bid.item_id.seller.username}
+""",
+            )
+            loser_bid.status = "REJECTED"
+            loser_bid.save()
 
     @classmethod
     def get_user_bids(cls, user, active=True):
@@ -79,3 +112,7 @@ class BidService:
         users_items = Item.objects.filter(seller=user)
         bids = UserBids.objects.filter(item_id__in=users_items).order_by("-timestamp")
         return bids
+
+    @staticmethod
+    def get_accepted_bids(user):
+        pass
