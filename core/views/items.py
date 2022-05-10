@@ -38,7 +38,9 @@ def item_details(request, item_id):
         form = BidCreateForm(request.POST)
         result = None
         if form.is_valid():
-            result = services.bid_service.add_bid(form, request.user, services.ctx["item"])
+            result = services.bid_service.add_bid(
+                form, request.user, services.ctx["item"]
+            )
         if result:
             # TODO: Some green bar or somethigng to validate users feelings
             max_bid = services.bid_service.get_max_bid(item_id).amount
