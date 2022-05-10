@@ -24,12 +24,7 @@ class PaymentCreateForm(ModelForm):
 class PersonalInfoCreateForm(ModelForm):
     class Meta:
         model = ShippingDetails
-        fields = [
-            "full_name", 
-            "address", 
-            "postal_code", 
-            "city"
-        ]
+        fields = ["full_name", "address", "postal_code", "city"]
         widgets = {
             "full_name": widgets.TextInput(attrs={"class": "form-control"}),
             "address": widgets.TextInput(attrs={"class": "form-control"}),

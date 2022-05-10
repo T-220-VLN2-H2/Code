@@ -65,8 +65,11 @@ def edit(request):
 
 @login_required
 def profile(request, id):
+    import re
+
+    id = re.sub("\D", "", id)  # removes all non digits
     services = ContextServices()
-    # TODO validate id as an int
+
     if int(id) == request.user.id:
         return redirect("user_home")
 
