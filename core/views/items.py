@@ -1,4 +1,3 @@
-from decimal import Decimal
 from django.shortcuts import render, redirect
 from core.services.category_service import CategoryService
 from django.contrib.auth.decorators import login_required
@@ -7,7 +6,6 @@ from core.forms.bid_form import BidCreateForm
 from core.services.item_service import ItemService
 from core.services.bid_service import BidService
 from core.services.image_service import ImageService
-from django.core.files.storage import FileSystemStorage
 
 
 class ContextServices:
@@ -22,7 +20,8 @@ class ContextServices:
 
 
 def items_page(request):
-    return render(request, "../templates/items/items.html", context=ctx)
+    services = ContextServices()
+    return render(request, "../templates/items/items.html", context=services.ctx)
 
 
 def item_details(request, item_id):
@@ -39,7 +38,7 @@ def item_details(request, item_id):
         form = BidCreateForm(request.POST)
         result = None
         if form.is_valid():
-            result = services.bid_service.add_bid(form, request.user, ctx["item"])
+            result = services.bid_service.add_bid(form, request.user, services.ctx["item"])
         if result:
             # TODO: Some green bar or somethigng to validate users feelings
             max_bid = services.bid_service.get_max_bid(item_id).amount
