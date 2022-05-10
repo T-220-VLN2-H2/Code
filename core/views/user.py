@@ -6,7 +6,8 @@ from core.services.item_service import ItemService
 from core.services.bid_service import BidService
 from core.services.user_service import UserService
 from core.services.image_service import ImageService
-from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
+from core.services.order_service import OrderService
+from core.forms.user_form import UserUpdateForm, ProfileUpdateForm, UserRatingForm
 
 
 class ContextServices:
@@ -16,6 +17,7 @@ class ContextServices:
     bid_service = BidService()
     notification_service = NotificationService()
     image_service = ImageService()
+    order_service = OrderService()
     folder_path = "../templates/user"
 
     ctx = {
@@ -30,6 +32,7 @@ def home(request):
     services.ctx["ratings"] = services.user_service.get_user_ratings(request.user)
     # TODO: implement count for get_sale_items
     services.ctx["items"] = services.item_service.get_sale_items(request.user.id)[:7]
+    services.ctx["avg_rating"] = services.user_service.get_user_rating(request.user.id)['rating__avg']
     return render(request, f"{services.folder_path}/index.html", context=services.ctx)
 
 
@@ -88,7 +91,14 @@ def history(request):
         request.user, is_sold=True
     )
     services.ctx["bids"] = services.bid_service.get_user_bids(request.user)
-    return render(request, f"{services.folder_path}/history.html", context=services.ctx)
+    services.ctx["purchases"] = services.order_service.get_order_details() # TODO need orders
+
+    if request.method == "POST":
+        pass
+        # rating_form = UserRatingForm()
+    else:
+        services.ctx["rating_form"] = UserRatingForm()
+        return render(request, f"{services.folder_path}/history.html", context=services.ctx)
 
 
 @login_required

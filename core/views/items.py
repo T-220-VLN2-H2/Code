@@ -6,6 +6,7 @@ from core.forms.bid_form import BidCreateForm
 from core.services.item_service import ItemService
 from core.services.bid_service import BidService
 from core.services.image_service import ImageService
+from core.services.user_service import UserService
 
 
 class ContextServices:
@@ -13,6 +14,7 @@ class ContextServices:
     cat_service = CategoryService()
     item_service = ItemService()
     image_service = ImageService()
+    user_service = UserService()
 
     ctx = {
         "items": item_service.get_all_items(),
@@ -26,7 +28,8 @@ def items_page(request):
 
 def item_details(request, item_id):
     services = ContextServices()
-    services.ctx["item"] = services.item_service.get_item_by_id(item_id)
+    item = services.item_service.get_item_by_id(item_id)
+    services.ctx["item"] = item
     # TODO: fix late update when bidding
     max_bid = services.bid_service.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
@@ -34,6 +37,8 @@ def item_details(request, item_id):
     services.ctx["similar_items"] = services.item_service.get_similar_items(
         services.ctx["item"]
     )
+    services.ctx["seller_avg_rating"] = services.user_service.get_user_rating(item.seller.id)['rating__avg']
+    print(item.seller.profile.image)
     if request.method == "POST":
         form = BidCreateForm(request.POST)
         result = None
