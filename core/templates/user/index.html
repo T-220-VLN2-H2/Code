@@ -53,8 +53,8 @@
                 {% for rating in ratings %}
                 <li class="list-group-item p-3">
                     <span class="float-start">
-                        <a href="../../user/{{ rating.rater}}">
-                            {{ rating.item }}
+                        <a href="../../user/{{ rating.buyer.id}}">
+                            {{ rating.buyer }}
                         </a>
                     </span>
                     <span class="float-end">

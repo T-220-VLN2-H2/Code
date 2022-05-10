@@ -28,5 +28,5 @@ class UserService:
         return rating
 
     def get_user_ratings(self, user_id, count=12):
-        ratings = Order.objects.filter(seller=user_id).order_by("-id")[:count]
+        ratings = Order.objects.filter(seller=user_id, rating__isnull=False).order_by("-id")[:count]
         return ratings
