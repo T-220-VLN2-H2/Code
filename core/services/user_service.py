@@ -1,5 +1,5 @@
 from django.shortcuts import redirect
-from core.models import User, UserRatings
+from core.models import User, Order
 from django.db.models import Avg
 
 
@@ -20,11 +20,13 @@ class UserService:
         pass
 
     def get_user_rating(self, user_id):
-        rating = UserRatings.objects.filter(ratee_id=user_id).aggregate(Avg("rating"))
+        rating = Order.objects.filter(seller=user_id).aggregate(Avg("rating"))
+
         if not rating:
             rating = "Not rated."
+
         return rating
 
     def get_user_ratings(self, user_id, count=12):
-        ratings = UserRatings.objects.filter(ratee_id=user_id).order_by("-id")[:12]
+        ratings = Order.objects.filter(seller=user_id).order_by("-id")[:count]
         return ratings
