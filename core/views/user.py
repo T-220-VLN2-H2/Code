@@ -7,8 +7,6 @@ from core.services.bid_service import BidService
 from core.services.user_service import UserService
 from core.services.image_service import ImageService
 from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
-from django.http import HttpResponseRedirect
-from django.urls import reverse
 
 
 class ContextServices:
@@ -42,14 +40,16 @@ def edit(request):
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
-        services.image_service.update_profile_image(
-            request.user, request.FILES["images"]
-        )
+        if request.FILES:
+            services.image_service.update_profile_image(
+                request.user, request.FILES["images"]
+            )
+
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
 
-        return HttpResponseRedirect(reverse("user_home"))
+        return redirect("user_home")
     else:
         services.ctx["user_form"] = UserUpdateForm(
             initial={
