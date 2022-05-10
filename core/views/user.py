@@ -31,7 +31,7 @@ def home(request):
     services.ctx["user"] = request.user
     services.ctx["ratings"] = services.user_service.get_user_ratings(request.user)
     # TODO: implement count for get_sale_items
-    services.ctx["items"] = services.folder_path.get_sale_items(request.user.id)[:7]
+    services.ctx["items"] = services.item_service.get_sale_items(request.user.id)[:7]
     return render(request, f"{services.folder_path}/index.html", context=services.ctx)
 
 
