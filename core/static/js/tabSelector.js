@@ -43,8 +43,8 @@ const setActive = () => {
 };
 // Hack to set the correct page onload
 setTimeout(() => {
-    setActive()
-}, 1)
+  setActive();
+}, 1);
 
 // Add an eventlistener to each tab
 for (let i = 0; i < tabs.length; i++) {
