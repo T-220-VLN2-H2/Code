@@ -1,6 +1,7 @@
 from core.models.item import Item
 from core.services.image_service import ImageService
 
+
 class SearchService:
     @staticmethod
     def item_search(q=None):
