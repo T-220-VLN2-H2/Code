@@ -9,14 +9,16 @@ from core.services.bid_service import BidService
 from core.services.image_service import ImageService
 from django.core.files.storage import FileSystemStorage
 
-bid_service = BidService()
-cat_service = CategoryService()
-item_service = ItemService()
-image_service = ImageService()
 
-ctx = {
-    "items": item_service.get_all_items(),
-}
+class ContextServices:
+    bid_service = BidService()
+    cat_service = CategoryService()
+    item_service = ItemService()
+    image_service = ImageService()
+
+    ctx = {
+        "items": item_service.get_all_items(),
+    }
 
 
 def items_page(request):
@@ -24,37 +26,39 @@ def items_page(request):
 
 
 def item_details(request, item_id):
-    ctx["item"] = item_service.get_item_by_id(item_id)
+    services = ContextServices()
+    services.ctx["item"] = services.item_service.get_item_by_id(item_id)
     # TODO: fix late update when bidding
-    max_bid = bid_service.get_max_bid(item_id)
+    max_bid = services.bid_service.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
-    ctx["images"] = image_service.get_images(ctx["item"])
-    ctx["similar_items"] = item_service.get_similar_items(ctx["item"])
+    services.ctx["images"] = services.image_service.get_images(services.ctx["item"])
+    services.ctx["similar_items"] = services.item_service.get_similar_items(services.ctx["item"])
     if request.method == "POST":
         form = BidCreateForm(request.POST)
         result = None
         if form.is_valid():
-            result = bid_service.add_bid(form, request.user, ctx["item"])
+            result = services.bid_service.add_bid(form, request.user, ctx["item"])
         if result:
             # TODO: Some green bar or somethigng to validate users feelings
-            max_bid = bid_service.get_max_bid(item_id).amount
+            max_bid = services.bid_service.get_max_bid(item_id).amount
 
-    if ctx["item"] is None:
+    if services.ctx["item"] is None:
         return redirect("index_page")
 
-    ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
-    return render(request, "../templates/items/item_details.html", context=ctx)
+    services.ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
+    return render(request, "../templates/items/item_details.html", context=services.ctx)
 
 
 @login_required
 def item_create(request):
+    services = ContextServices()
     if request.method == "POST":
         image_service = ImageService()
         form = ItemCreateForm(request.POST)
         if form.is_valid():
-            item = item_service.create_item(form, request.user)
+            item = services.item_service.create_item(form, request.user)
             image_service.create_image(request.FILES.getlist("images"), item)
 
     else:
         ctx["form"] = ItemCreateForm()
-    return render(request, "../templates/items/items_create.html", context=ctx)
+    return render(request, "../templates/items/items_create.html", context=services.ctx)

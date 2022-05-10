@@ -2,24 +2,19 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from core.forms.user_form import UserLoginForm
-from core.services.category_service import CategoryService
 from core.services.item_service import ItemService
-
-folder_path = "../templates/"
-
-cat_service = CategoryService()
-item_service = ItemService()
-ctx = {
-    "recent_items": item_service.get_recently_added_items(),
-}
 
 
 def home(request):
-    ctx["user"] = request.user
+    folder_path = "../templates/"
+    item_service = ItemService()
+    ctx = {"recent_items": item_service.get_recently_added_items(), "user": request.user}
     return render(request, f"{folder_path}/index.html", context=ctx)
 
 
 def register(request):
+    folder_path = "../templates/"
+    ctx = {"user": request.user}
     if request.user.is_authenticated:
         return redirect("user_home")
     if request.method == "POST":
@@ -44,6 +39,8 @@ def register(request):
 
 
 def login_page(request):
+    folder_path = "../templates/"
+    ctx = {"user": request.user}
     if request.user:
         ctx["user"] = request.user
     if request.method == "POST":
