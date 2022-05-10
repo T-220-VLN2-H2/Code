@@ -82,12 +82,20 @@ def profile(request, id):
 @login_required
 def history(request):
     services = ContextServices()
+    if request.POST:
+        if request.POST['bid']:
+            accepted_bid_id = request.POST['bid']
+            accepted_bid = services.bid_service.get_bid_by_id(int(accepted_bid_id))
+            services.bid_service.accept_bid(accepted_bid)
+
     services.ctx["user"] = request.user
     services.ctx["active_sales"] = services.item_service.get_sale_items(request.user)
     services.ctx["sold_items"] = services.item_service.get_sale_items(
         request.user, is_sold=True
     )
     services.ctx["bids"] = services.bid_service.get_user_bids(request.user)
+    services.ctx["accepted_bid"] = services.bid_service.get_accepted_bids(request.user)
+    services.ctx["user_item_bids"] = services.bid_service.get_bids_for_user_items(request.user)
     return render(request, f"{services.folder_path}/history.html", context=services.ctx)
 
 
@@ -99,8 +107,7 @@ def messages(request):
         request.user
     )
     for message in services.ctx["user_messages"]:
-        message.read = True
-        message.save()
+        services.notification_service.mark_notification_read(message)
     return render(
         request, f"{services.folder_path}/messages.html", context=services.ctx
     )
