@@ -1,5 +1,6 @@
 from core.models.image import Image, ItemImages
 
+
 class ImageService:
     ALLOWED_EXTENSIONS = ("JPG", "jpg", "JPEG", "png", "PNG", "jpeg")
 
