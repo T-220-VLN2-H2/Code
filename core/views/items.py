@@ -25,17 +25,17 @@ def items_page(request):
 
 
 def item_details(request, item_id):
-    if request.user.is_authenticated:
-        services = ContextServices()
-        services.ctx["item"] = services.item_service.get_item_by_id(item_id)
-        # TODO: fix late update when bidding
-        max_bid = services.bid_service.get_max_bid(item_id)
-        max_bid = max_bid.amount if max_bid is not None else 0
-        services.ctx["images"] = services.image_service.get_images(services.ctx["item"])
-        services.ctx["similar_items"] = services.item_service.get_similar_items(
-            services.ctx["item"]
-        )
-        if request.method == "POST":
+    services = ContextServices()
+    services.ctx["item"] = services.item_service.get_item_by_id(item_id)
+    # TODO: fix late update when bidding
+    max_bid = services.bid_service.get_max_bid(item_id)
+    max_bid = max_bid.amount if max_bid is not None else 0
+    services.ctx["images"] = services.image_service.get_images(services.ctx["item"])
+    services.ctx["similar_items"] = services.item_service.get_similar_items(
+        services.ctx["item"]
+    )
+    if request.method == "POST":
+        if request.user.is_authenticated:
             form = BidCreateForm(request.POST)
             result = None
             if form.is_valid():
@@ -43,14 +43,14 @@ def item_details(request, item_id):
             if result:
                 # TODO: Some green bar or somethigng to validate users feelings
                 max_bid = services.bid_service.get_max_bid(item_id).amount
+        else:
+            return redirect("user_home")
 
         if services.ctx["item"] is None:
             return redirect("index_page")
 
-        services.ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
-        return render(request, "../templates/items/item_details.html", context=services.ctx)
-    else:
-        return redirect("user_home")
+    services.ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
+    return render(request, "../templates/items/item_details.html", context=services.ctx)
 
 
 @login_required
