@@ -8,7 +8,7 @@ from core.models.item import Item
 
 
 class BidService:
-    def add_bid(self, form, user, item, item_id) -> bool:
+    def add_bid(self, form, user, item) -> bool:
         new_bid = form.save(commit=False)
         new_bid.user_id = user
         new_bid.item_id = item
@@ -19,7 +19,7 @@ class BidService:
 
         max_bid = self.get_max_bid(item)
         if max_bid is None or new_bid.amount > max_bid.amount:
-            self.check_rebid(user, item_id)
+            self.check_rebid(user, item.id)
             new_bid.save()
             return True
 
