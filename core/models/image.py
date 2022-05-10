@@ -9,5 +9,5 @@ class Image(models.Model):
 
 
 class ItemImages(models.Model):
-    item = models.ForeignKey(core.Item, on_delete=models.CASCADE)
+    item = models.ForeignKey("Item", on_delete=models.CASCADE)
     images = models.ManyToManyField(Image)
