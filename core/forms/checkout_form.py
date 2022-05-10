@@ -32,6 +32,7 @@ class PersonalInfoCreateForm(ModelForm):
             "city": widgets.TextInput(attrs={"class": "form-control"}),
         }
 
+
 # class DeliveryInfoCreateForm(ModelForm):
 #     class Meta:
-#         model 
+#         model

@@ -12,7 +12,7 @@ def user(request):
     }
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.post)
-        request.session["full_name"] = form["full_name"] 
+        request.session["full_name"] = form["full_name"]
         request.session["address"] = form["address"]
         request.session["postal_code"] = form["postal_code"]
         request.session["city"] = form["city"]
