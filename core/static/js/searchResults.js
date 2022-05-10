@@ -45,13 +45,20 @@ async function filterFunction() {
 
 window.onload = () => {
   const searchDrop = document.getElementById('myInput');
+  const searchItems = document.getElementById('myDropdown');
   searchDrop.addEventListener('focus', () => {
     toggleSearchDrop();
     search();
   });
   searchDrop.addEventListener('keyup', () => {
-    const inputBox = document.getElementById('myInput');
     filterFunction();
+  });
+  window.addEventListener('click', (e) => {
+      console.log(e.target);
+      console.log(searchDrop)
+      if (e.target !== searchDrop){
+          toggleSearchDrop()
+      }
   });
 };
 
