@@ -3,26 +3,25 @@ from core.services.category_service import CategoryService
 from core.services.item_service import ItemService
 from core.services.image_service import ImageService
 
-cat_service = CategoryService()
-item_service = ItemService()
-image_service = ImageService()
-ctx = {
-    "items": item_service.get_all_items(),
-}
-
 
 def home(request):
-    ctx["user"] = request.user
+    item_service = ItemService()
+    ctx = {"items": item_service.get_all_items(), "user": request.user}
     return render(request, "../templates/categories/home.html", context=ctx)
 
 
 def category_page(request, cat_id):
+    image_service = ImageService()
+    item_service = ItemService()
+    cat_service = CategoryService()
     try:
         sort = request.GET["sort"]
     except:
         sort = "default"
-    ctx["items"] = item_service.get_all_items(sort=sort)
-    ctx["user"] = request.user
+    ctx = {
+        "items": item_service.get_all_items(sort=sort),
+        "user": request.user,
+    }
     categories = cat_service.get_all_category_items()
     sub_categories = cat_service.categories_with_parents()
     for cat in categories:
