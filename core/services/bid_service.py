@@ -1,14 +1,14 @@
 from .item_service import ItemService
+from core.models.item import Item
 from core.models.user_bids import UserBids
 from datetime import date, datetime
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Max
 
-from core.models.item import Item
-
 
 class BidService:
-    def add_bid(self, form, user, item) -> bool:
+    @classmethod
+    def add_bid(cls, form, user, item) -> bool:
         new_bid = form.save(commit=False)
         new_bid.user_id = user
         new_bid.item_id = item
@@ -17,9 +17,9 @@ class BidService:
         if item.is_sold:
             return False
 
-        max_bid = self.get_max_bid(item)
+        max_bid = cls.get_max_bid(item)
         if max_bid is None or new_bid.amount > max_bid.amount:
-            self.check_rebid(user, item.id)
+            cls.check_rebid(user, item.id)
             new_bid.save()
             return True
 
@@ -40,7 +40,8 @@ class BidService:
         bid = UserBids.objects.get(id=bid_id)
         return bid
 
-    def get_max_bid(self, item_id):
+    @classmethod
+    def get_max_bid(cls, item_id):
         try:
             max_bid = UserBids.objects.filter(item_id=item_id).latest("amount")
         except ObjectDoesNotExist:
@@ -49,7 +50,7 @@ class BidService:
         return max_bid
 
     @classmethod
-    def accept_bid(self, bid: UserBids):
+    def accept_bid(cls, bid: UserBids):
         # TODO: auth user?
         item = bid.item_id
         item.is_sold = True
@@ -70,8 +71,8 @@ class BidService:
             return None
         return bids
 
-    @staticmethod
-    def get_bids_for_user_items(user):
+    @classmethod
+    def get_bids_for_user_items(cls, user):
         """
         get bids on current users items
         """

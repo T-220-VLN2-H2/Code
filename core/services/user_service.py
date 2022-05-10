@@ -4,22 +4,27 @@ from django.db.models import Avg
 
 
 class UserService:
-    def get_user_info(self, user_id):
+    @classmethod
+    def get_user_info(cls, user_id):
         # keep this as .get, id is unique we only expect to receive one result
         user = User.objects.get(id=user_id)
         return user
 
-    def set_user_info(self, user, first_name=None, last_name=None, bio=None):
+    @classmethod
+    def set_user_info(cls, user, first_name=None, last_name=None, bio=None):
         pass
         # probably won't need this
 
-    def create_user(self, form):
+    @classmethod
+    def create_user(cls, form):
         pass
 
-    def add_user_rating(self, form, user):
+    @classmethod
+    def add_user_rating(cls, form, user):
         pass
 
-    def get_user_rating(self, user_id):
+    @classmethod
+    def get_user_rating(cls, user_id):
         rating = Order.objects.filter(seller=user_id).aggregate(Avg("rating"))
 
         if not rating:
@@ -27,7 +32,8 @@ class UserService:
 
         return rating
 
-    def get_user_ratings(self, user_id, count=12):
+    @classmethod
+    def get_user_ratings(cls, user_id, count=12):
         ratings = Order.objects.filter(seller=user_id, rating__isnull=False).order_by(
             "-id"
         )[:count]

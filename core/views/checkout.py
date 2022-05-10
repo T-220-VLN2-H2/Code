@@ -3,9 +3,10 @@ from core.forms.checkout_form import PaymentCreateForm, PersonalInfoCreateForm
 from core.services.checkout_service import CheckoutService
 
 
+folder_path = "../templates/"
+
+
 def user(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",
@@ -24,8 +25,6 @@ def user(request):
 
 
 def delivery(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",
@@ -39,8 +38,6 @@ def delivery(request):
 
 
 def payment(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",
@@ -59,8 +56,6 @@ def payment(request):
 
 
 def summary(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",
