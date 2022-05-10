@@ -38,7 +38,6 @@ def item_details(request, item_id):
         services.ctx["item"]
     )
     services.ctx["seller_avg_rating"] = services.user_service.get_user_rating(item.seller.id)['rating__avg']
-    print(item.seller.profile.image)
     if request.method == "POST":
         form = BidCreateForm(request.POST)
         result = None

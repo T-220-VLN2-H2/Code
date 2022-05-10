@@ -7,20 +7,22 @@
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <a href="#active-sales"><button class="nav-link active" id="active-sales-tab" data-bs-toggle="tab"
-                    data-bs-target="#active-sales" type="button" role="tab" aria-controls="active-sales"
-                    aria-selected="true">Active Sales</button></a>
+                        data-bs-target="#active-sales" type="button" role="tab" aria-controls="active-sales"
+                        aria-selected="true">Active Sales</button></a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="#bids"><button class="nav-link" id="active-bids-tab" data-bs-toggle="tab" data-bs-target="#active-bids"
-                    type="button" role="tab" aria-controls="active-bids" aria-selected="false">Active Bids</button></a>
+                <a href="#bids"><button class="nav-link" id="active-bids-tab" data-bs-toggle="tab"
+                        data-bs-target="#active-bids" type="button" role="tab" aria-controls="active-bids"
+                        aria-selected="false">Active Bids</button></a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="#sales"><button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button"
-                    role="tab" aria-controls="sales" aria-selected="false">Sales</button></a>
+                <a href="#sales"><button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales"
+                        type="button" role="tab" aria-controls="sales" aria-selected="false">Sales</button></a>
             </li>
             <li class="nav-item" role="presentation">
-                <a href="#purchases"><button class="nav-link" id="purchases-tab" data-bs-toggle="tab" data-bs-target="#purchases"
-                    type="button" role="tab" aria-controls="purchases" aria-selected="false">Purchases</button></a>
+                <a href="#purchases"><button class="nav-link" id="purchases-tab" data-bs-toggle="tab"
+                        data-bs-target="#purchases" type="button" role="tab" aria-controls="purchases"
+                        aria-selected="false">Purchases</button></a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -28,7 +30,7 @@
                 aria-labelledby="active-sales-tab">
                 <p>Item name Highest bid </p>
                 {% for item in active_sales %}
-                    <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
+                <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{item.title}}</h5>
                         <small>{{item.price}}</small> <!-- Should be time since posting -->
@@ -38,60 +40,66 @@
                 </a>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          $ 2300 Bid
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Hér sé ég fyrir mér clickable profile</strong> <button>Accept bid</button>
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                $ 2300 Bid
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Hér sé ég fyrir mér clickable profile</strong> <button>Accept bid</button>
+                            </div>
                         </div>
-                      </div>
                     </div>
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          $ 1280 Bid
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Hér sé ég fyrir mér clickable profile</strong> <button>Accept bid</button>
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                $ 1280 Bid
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Hér sé ég fyrir mér clickable profile</strong> <button>Accept bid</button>
+                            </div>
                         </div>
-                      </div>
                     </div>
                     <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          $ 1300 Bid
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Hér sé ég fyrir mér clickable profile</strong> <button>Accept bid</button>
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                $ 1300 Bid
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>Hér sé ég fyrir mér clickable profile</strong> <button>Accept bid</button>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
                 {% endfor %}
             </div>
 
             <div class="list-group tab-pane fade" id="active-bids" role="tabpanel" aria-labelledby="active-bids-tab">
                 {% for bid in bids %}
-                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{bid.item_id}}</h5>
-                            <small>{{bid.timestamp}} | {{bid.expires}}</small>
-                        </div>
-                        <p class="mb-1">{{bid.amount}}</p>
-                        <small>{{bid.user_id}}</small>
-                    </a>
+                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{bid.item_id}}</h5>
+                        <small>{{bid.timestamp}} | {{bid.expires}}</small>
+                    </div>
+                    <p class="mb-1">{{bid.amount}}</p>
+                    <small>{{bid.user_id}}</small>
+                </a>
                 {% endfor %}
             </div>
             <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
                 {% for item in sold_items %}
-                    <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
+                <a href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{item.title}}</h5>
                         <small>{{item.price}}</small> <!-- Should be time since posting ? -->
@@ -101,7 +109,36 @@
                 </a>
                 {% endfor %}
             </div>
-            <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">...</div>
+            <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
+                {% for purchase in purchases %}
+                <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <span class="mx-5">
+                        <input type="text" name="order_id" value="{{ purchase.id }}" hidden>
+                        {{ purchase.item }}
+                        {{ purchase.seller }}
+                        {{ purchase.buyer }}
+                        </span>
+                        <span class="float-right">
+                        {% if purchase.rating %}
+                        You rated this {{ purchase.rating }}
+                        {% else %}
+                        <input type="radio" name="rating" id="" value="1">1
+                        <input type="radio" name="rating" id="" value="2">2
+                        <input type="radio" name="rating" id="" value="3">3
+                        <input type="radio" name="rating" id="" value="4">4
+                        <input type="radio" name="rating" id="" value="5" checked>5
+                        <button class="btn btn-primary" type="submit">Rate</button>
+                        {% endif %}
+                        </span>
+                    </form>
+                </div>
+            </div>
+                {% endfor %}
+
+            </div>
         </div>
     </div>
 </div>

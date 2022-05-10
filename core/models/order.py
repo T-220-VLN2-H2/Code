@@ -20,10 +20,10 @@ class Order(models.Model):
         User, related_name="seller_users", on_delete=models.CASCADE
     )
     item = models.ForeignKey(core.Item, on_delete=models.CASCADE)
-    rating = models.SmallIntegerField(choices=RATING_CHOICES, null=True)
+    rating = models.SmallIntegerField(choices=RATING_CHOICES, blank=True, null=True)
 
     def __str__(self):
-        return self.id
+        return f'Order for item {self.item} with id {self.id}, buyer {self.buyer}, seller {self.seller}'
 
     class Meta:
         """

@@ -1,6 +1,6 @@
 from django.forms import ModelForm, widgets
 from django.contrib.auth.models import User
-from core.models import Profile, Order
+from core.models import Profile
 
 
 class UserCreateForm(ModelForm):
@@ -58,13 +58,4 @@ class UserLoginForm(ModelForm):
             "password": widgets.TextInput(
                 attrs={"class": "form-control", "type": "password"}
             ),
-        }
-
-
-class UserRatingForm(ModelForm):
-    class Meta:
-        model = Order
-        fields = ["rating"]
-        widgets = {
-            "rating": widgets.NumberInput(attrs={'class': 'Stars'})
         }

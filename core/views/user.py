@@ -7,7 +7,9 @@ from core.services.bid_service import BidService
 from core.services.user_service import UserService
 from core.services.image_service import ImageService
 from core.services.order_service import OrderService
-from core.forms.user_form import UserUpdateForm, ProfileUpdateForm, UserRatingForm
+from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
+from core.forms.order_form import OrderForm
+
 
 
 class ContextServices:
@@ -78,7 +80,10 @@ def profile(request, id):
     services.ctx["items"] = services.item_service.get_sale_items(target_user.id)[:7]
     services.ctx["target_user"] = target_user
     services.ctx["user"] = request.user
-
+    avg_rating = services.user_service.get_user_rating(target_user.id)['rating__avg']
+    if avg_rating and avg_rating.is_integer():
+        avg_rating = int(avg_rating)
+    services.ctx["avg_rating"] = avg_rating
     return render(request, f"{services.folder_path}/user.html", context=services.ctx)
 
 
@@ -91,13 +96,13 @@ def history(request):
         request.user, is_sold=True
     )
     services.ctx["bids"] = services.bid_service.get_user_bids(request.user)
-    services.ctx["purchases"] = services.order_service.get_order_details() # TODO need orders
-
+    services.ctx["purchases"] = services.order_service.get_orders(request.user)
     if request.method == "POST":
-        pass
+        print(request.POST)
         # rating_form = UserRatingForm()
     else:
-        services.ctx["rating_form"] = UserRatingForm()
+        orders = OrderForm(queryset=services.ctx["purchases"])
+        services.ctx["rating_forms"] = orders
         return render(request, f"{services.folder_path}/history.html", context=services.ctx)
 
 

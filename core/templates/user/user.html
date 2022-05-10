@@ -19,7 +19,11 @@
                     {% endif %}
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                    <h3 class="mx-3 m-0">4.5 / 5</h3>
+                    {% if avg_rating %}
+                    <h3 class="mx-3 m-0">{{ avg_rating }} / 5</h3>
+                    {% else %}
+                    <h3 class="mx-3 m-0"> I have no rating yet! </h3>
+                    {% endif %}
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange" class="bi bi-star-fill"
                         viewBox="0 0 16 16">
                         <path
