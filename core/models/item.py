@@ -1,3 +1,5 @@
+from django.core.validators import MinValueValidator
+from decimal import Decimal
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -23,7 +25,9 @@ class Item(models.Model):
     # TODO: add product image
     id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=128, default="Item")
-    price = models.DecimalField(decimal_places=2, max_digits=10)
+    price = models.DecimalField(
+        decimal_places=2, max_digits=10, validators=[MinValueValidator(Decimal("0.01"))]
+    )
     condition = models.CharField(choices=ConditionType.choices, max_length=128)
     category = models.ForeignKey(core.Category, on_delete=models.CASCADE)
     delivery_Option = models.CharField(
