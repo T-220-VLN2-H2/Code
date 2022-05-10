@@ -18,10 +18,10 @@ def home(request):
 
 def category_page(request, cat_id):
     try:
-        sort = request.GET['sort']
+        sort = request.GET["sort"]
     except:
         sort = "default"
-    ctx['items'] = item_service.get_all_items(sort=sort)
+    ctx["items"] = item_service.get_all_items(sort=sort)
     ctx["user"] = request.user
     categories = cat_service.get_all_category_items()
     sub_categories = cat_service.categories_with_parents()
