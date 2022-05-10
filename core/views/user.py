@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from core.services.category_service import CategoryService
 from core.services.notification_service import NotificationService
 from core.services.item_service import ItemService
@@ -8,8 +9,6 @@ from core.services.user_service import UserService
 from core.services.image_service import ImageService
 from core.services.order_service import OrderService
 from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
-from core.forms.order_form import OrderForm
-
 
 
 class ContextServices:
@@ -31,10 +30,13 @@ class ContextServices:
 def home(request):
     services = ContextServices()
     services.ctx["user"] = request.user
-    services.ctx["ratings"] = services.user_service.get_user_ratings(request.user)
+    services.ctx["ratings"] = services.user_service.get_user_ratings(
+        request.user)
     # TODO: implement count for get_sale_items
-    services.ctx["items"] = services.item_service.get_sale_items(request.user.id)[:7]
-    services.ctx["avg_rating"] = services.user_service.get_user_rating(request.user.id)['rating__avg']
+    services.ctx["items"] = services.item_service.get_sale_items(request.user.id)[
+        :7]
+    services.ctx["avg_rating"] = services.user_service.get_user_rating(request.user.id)[
+        'rating__avg']
     return render(request, f"{services.folder_path}/index.html", context=services.ctx)
 
 
@@ -44,7 +46,8 @@ def edit(request):
     services.ctx["user"] = request.user
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
-        profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
+        profile_form = ProfileUpdateForm(
+            request.POST, instance=request.user.profile)
         if "images" in request.FILES:
             services.image_service.update_profile_image(
                 request.user, request.FILES["images"]
@@ -76,11 +79,14 @@ def profile(request, id):
         return redirect("user_home")
 
     target_user = services.user_service.get_user_info(id)
-    services.ctx["ratings"] = services.user_service.get_user_ratings(target_user)
-    services.ctx["items"] = services.item_service.get_sale_items(target_user.id)[:7]
+    services.ctx["ratings"] = services.user_service.get_user_ratings(
+        target_user)
+    services.ctx["items"] = services.item_service.get_sale_items(target_user.id)[
+        :7]
     services.ctx["target_user"] = target_user
     services.ctx["user"] = request.user
-    avg_rating = services.user_service.get_user_rating(target_user.id)['rating__avg']
+    avg_rating = services.user_service.get_user_rating(target_user.id)[
+        'rating__avg']
     if avg_rating and avg_rating.is_integer():
         avg_rating = int(avg_rating)
     services.ctx["avg_rating"] = avg_rating
@@ -91,18 +97,22 @@ def profile(request, id):
 def history(request):
     services = ContextServices()
     services.ctx["user"] = request.user
-    services.ctx["active_sales"] = services.item_service.get_sale_items(request.user)
+    services.ctx["active_sales"] = services.item_service.get_sale_items(
+        request.user)
     services.ctx["sold_items"] = services.item_service.get_sale_items(
         request.user, is_sold=True
     )
     services.ctx["bids"] = services.bid_service.get_user_bids(request.user)
     services.ctx["purchases"] = services.order_service.get_orders(request.user)
     if request.method == "POST":
-        print(request.POST)
-        # rating_form = UserRatingForm()
+        order_id = request.POST['order_id']
+        rating = request.POST['rating']
+        order = services.order_service.get_order_details(order_id)
+        order.rating = rating
+        order.save()
+        return redirect(reverse("user_history") + "#purchases")
+
     else:
-        orders = OrderForm(queryset=services.ctx["purchases"])
-        services.ctx["rating_forms"] = orders
         return render(request, f"{services.folder_path}/history.html", context=services.ctx)
 
 

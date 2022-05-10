@@ -1,5 +1,6 @@
 from core.models import Order
 
+
 class OrderService:
     def set_shipping_info(self):
         print("Do something")
@@ -13,9 +14,9 @@ class OrderService:
         print("Do something")
         # TODO: retreive payment, buyer information and create invoice to store on DB, return to user(?)
 
-    def get_order_details(self):
-        orders = Order.objects.all()
-        return orders
+    def get_order_details(self, order_id):
+        order = Order.objects.get(id=order_id)
+        return order
         # TODO: retreive shipping & payment information and return. Return status 404 if not found.
 
     def get_orders(self, user):
