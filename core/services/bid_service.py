@@ -1,14 +1,14 @@
 from .item_service import ItemService
-from core.models.user_bids import UserBids
-from datetime import date, datetime
-from django.core.exceptions import ObjectDoesNotExist
-from django.db.models import Max
-
 from core.models.item import Item
+from core.services.notification_service import NotificationService
+from django.db.models import Max, Q
+from core.models.user_bids import UserBids
+from django.core.exceptions import ObjectDoesNotExist
 
 
 class BidService:
-    def add_bid(self, form, user, item) -> bool:
+    @classmethod
+    def add_bid(cls, form, user, item) -> bool:
         new_bid = form.save(commit=False)
         new_bid.user_id = user
         new_bid.item_id = item
@@ -17,12 +17,25 @@ class BidService:
         if item.is_sold:
             return False
 
-        max_bid = self.get_max_bid(item)
+        max_bid = cls.get_max_bid(item)
         if max_bid is None or new_bid.amount > max_bid.amount:
-            self.check_rebid(user, item.id)
+            cls.check_rebid(user, item.id)
             new_bid.save()
+            NotificationService.add_notification(
+                user,
+                "Bid created",
+                f"""
+Your bid of {new_bid.amount} has been added to {item.title}
+""",
+            )
             return True
-
+        NotificationService.add_notification(
+            user,
+            "Bid too low",
+            f"""
+        Your bid of {new_bid.amount} was not the highest for {item.title}
+        """,
+        )
         return False
 
     @classmethod
@@ -40,7 +53,8 @@ class BidService:
         bid = UserBids.objects.get(id=bid_id)
         return bid
 
-    def get_max_bid(self, item_id):
+    @classmethod
+    def get_max_bid(cls, item_id):
         try:
             max_bid = UserBids.objects.filter(item_id=item_id).latest("amount")
         except ObjectDoesNotExist:
@@ -49,13 +63,33 @@ class BidService:
         return max_bid
 
     @classmethod
-    def accept_bid(self, bid: UserBids):
-        # TODO: auth user?
+    def accept_bid(cls, bid: UserBids):
         item = bid.item_id
         item.is_sold = True
         item.save()
-        # TODO: pseudo-notify buyer
-        # TODO: pseudo-notify losers
+
+        NotificationService.add_notification(
+            bid.user_id,
+            "Bid accepted",
+            f"""
+Your bid for {bid.item_id} of {bid.amount} has been accepted by {bid.item_id.seller.username}.
+You can finish the checkout process by going to the purchases tab
+""",
+        )
+        bid.status = "ACCEPTED"
+        bid.save()
+
+        all_loser_bids = UserBids.objects.filter(~Q(user_id=bid.user_id), item_id=item)
+        for loser_bid in all_loser_bids:
+            NotificationService.add_notification(
+                loser_bid.user_id,
+                "Bid rejected",
+                f"""
+Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {loser_bid.item_id.seller.username}
+""",
+            )
+            loser_bid.status = "REJECTED"
+            loser_bid.save()
 
     @classmethod
     def get_user_bids(cls, user, active=True):
@@ -70,11 +104,15 @@ class BidService:
             return None
         return bids
 
-    @staticmethod
-    def get_bids_for_user_items(user):
+    @classmethod
+    def get_bids_for_user_items(cls, user):
         """
         get bids on current users items
         """
         users_items = Item.objects.filter(seller=user)
         bids = UserBids.objects.filter(item_id__in=users_items).order_by("-timestamp")
         return bids
+
+    @staticmethod
+    def get_accepted_bids(user):
+        pass

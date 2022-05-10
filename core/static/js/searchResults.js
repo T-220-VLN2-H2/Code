@@ -54,8 +54,6 @@ window.onload = () => {
     filterFunction();
   });
   window.addEventListener('click', (e) => {
-    console.log(e.target);
-    console.log(searchDrop);
     if (e.target !== searchDrop) {
       toggleSearchDrop();
     }

@@ -3,16 +3,22 @@ from core.forms.checkout_form import PaymentCreateForm, PersonalInfoCreateForm
 from core.services.checkout_service import CheckoutService
 
 
+folder_path = "../templates/"
+
+
 def user(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",
     }
     if request.method == "POST":
+<<<<<<< HEAD
         form = PersonalInfoCreateForm(request.POST)
         request.session["full_name"] = form["full_name"] 
+=======
+        form = PersonalInfoCreateForm(request.post)
+        request.session["full_name"] = form["full_name"]
+>>>>>>> d28903d24a871e705efa42554ea4f0e84964f158
         request.session["address"] = form["address"]
         request.session["postal_code"] = form["postal_code"]
         request.session["city"] = form["city"]
@@ -24,8 +30,6 @@ def user(request):
 
 
 def delivery(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",
@@ -39,8 +43,6 @@ def delivery(request):
 
 
 def payment(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "cardholder_name": "",
         "card_number": "",
@@ -61,8 +63,6 @@ def payment(request):
 
 
 def summary(request):
-    folder_path = "../templates/"
-    checkout_service = CheckoutService()
     ctx = {
         "full_name": "",
         "address": "",

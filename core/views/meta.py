@@ -7,9 +7,8 @@ from core.services.item_service import ItemService
 
 def home(request):
     folder_path = "../templates/"
-    item_service = ItemService()
     ctx = {
-        "recent_items": item_service.get_recently_added_items(),
+        "recent_items": ItemService.get_recently_added_items(),
         "user": request.user,
     }
     return render(request, f"{folder_path}/index.html", context=ctx)
