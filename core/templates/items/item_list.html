@@ -1,9 +1,10 @@
 {% load static %}
-<div class="col">
+<div class="col-3 item justify-content-center text-center">
     <a href="/items/{{item.id}}" class="itemLink">
+        <div class="itemTitle"><span>{{item.title}}</span></div>
         {% with image.all|first as image %}
         <img src="{% static 'media' %}/{{image.image}}" class="itemImage" style="width:150px; height:120px;">
         {% endwith %}
+    <div class="itemPrice"><span>${{item.price}}</span></div>
     </a>
-    <p class="itemTitle">{{item.title}}</p><p class="itemPrice">{{item.price}}</p>
 </div>
