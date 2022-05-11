@@ -109,12 +109,19 @@
                         <p class="mb-1">{{bid.amount}}</p>
                         <small>{{bid.user_id}}</small>
                         <small>{{bid.status}}</small>
+                        {% if bid.status == "ACCEPTED" %}
+                            <form action="{% url 'checkout_user' %}" method="POST">
+                                {% csrf_token %}
+                                <small>{{bid.status}}</small>
+                                <input name="bid" value="{{bid}}" hidden>
+                                <button class="btn btn-success" type="submit">Checkout</button>
+                            </form>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>
             <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
                 {% for item in sold_items %}
-                {% if item.seller != user %}
                 <div href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{item.title}}</h5>
@@ -123,18 +130,8 @@
                     </div>
                     <p class="mb-1">{{item.description}}</p>
                     <small>{{item.category}}</small>
-                    {% for bid in item_bids %}
-                        {% if bid.item_id == item and bid.status == "ACCEPTED" %}
-                            <form action="{% url 'checkout_user' %}" method="POST">
-                                {% csrf_token %}
-                                <small>{{bid.status}}</small>
-                                <input name="bid" value="{{bid}}" hidden>
-                                <button class="btn btn-success" type="submit">Checkout</button>
-                            </form>
-                        {% endif %}
-                    {% endfor %}
+
                 </div>
-                {% endif %}
                 {% endfor %}
             </div>
             <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">

@@ -75,7 +75,7 @@ def history(request):
     ctx["user"] = request.user
     ctx["active_sales"] = ItemService.get_sale_items(request.user)
     ctx["sold_items"] = ItemService.get_sale_items(request.user, is_sold=True)
-    ctx["bids"] = BidService.get_user_bids(request.user)
+    ctx["bids"] = BidService.get_user_bids(request.user, False)
     ctx["purchases"] = OrderService.get_orders(request.user)
     ctx["user_item_bids"] = BidService.get_bids_for_user_items(request.user)
     ctx["item_bids"] = BidService.get_all_bids()
