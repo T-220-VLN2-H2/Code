@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <div class="container">
-                <div class="row">
+                <div class="row" id="itemDetails">
                     <div class="col-4">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
                           <div class="carousel-indicators">
@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-8">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-4">
                                 <div class="input-group-fluid mb-3">
                                     <div class="form-floating">
                                     <input type="text" class="form-control" id="item-name" aria-describedby="item-name" disabled value="{{item.title}}">
@@ -107,4 +107,6 @@
             </div>
         </div>
     </div>
+</div>
+
 {% endblock %}

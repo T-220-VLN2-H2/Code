@@ -33,6 +33,19 @@ body {
 /* End of mini item view
 -------------------------
 Item details page */
+#itemDetails{
+    margin-top: 20px;
+}
+#itemDetails input {
+    background-color: white;
+    opacity: 58%;
+    color: var(--primary-color)
+}
+#item-description {
+    background-color: white;
+    opacity: 58%;
+    color: black;
+}
 .similarItems {
     background-color: var(--accent-color);
 }
