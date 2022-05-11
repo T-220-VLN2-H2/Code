@@ -1,5 +1,6 @@
 from django.forms import ModelForm, widgets
 from core.models import PaymentInfo, ShippingDetails
+from core.models.delivery_details import DeliveryMethod
 
 
 class PaymentCreateForm(ModelForm):
@@ -28,13 +29,10 @@ class PersonalInfoCreateForm(ModelForm):
 
 class DeliveryInfoCreateForm(ModelForm):
     class Meta:
+        model = DeliveryMethod
         choices = ["Delivery service", "Pick up", "Postbox", "Speak with seller"]
-        exclude = ["id", "user"]
+        exclude = ["bid_id"]
         widgets = {
-            "delivery_choice": widgets.RadioSelect(choices=choices)
+            "del_choice": widgets.RadioSelect(choices=choices)
         }
 
-
-# class DeliveryInfoCreateForm(ModelForm):
-#     class Meta:
-#         model

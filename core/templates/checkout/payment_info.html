@@ -11,7 +11,9 @@
                 {% endfor %}
             {% endfor %}
         {% endif %}
-        <button class="btn btn-primary" type="back">Go back to delivery method</button>
         <button class="btn btn-primary" type="next">Make payment</button>
+    </form>
+    <form action="/checkout/delivery" method="PATCH">
+        <button class="btn btn-primary" type="back">Go back to delivery method</button>
     </form>
 {% endblock %}
