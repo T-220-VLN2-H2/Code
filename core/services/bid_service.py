@@ -105,6 +105,14 @@ Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {los
         return bids
 
     @classmethod
+    def get_all_bids(cls):
+        """
+        :return: QuerySet of UserBid objects
+        """
+        bids = UserBids.objects.all()
+        return bids
+
+    @classmethod
     def get_bids_for_user_items(cls, user):
         """
         get bids on current users items
