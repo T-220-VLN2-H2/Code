@@ -29,7 +29,8 @@ def edit(request):
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
-        ImageService.update_profile_image(request.user, request.FILES["images"])
+        if "images" in request.FILES:
+            ImageService.update_profile_image(request.user, request.FILES["images"])
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
@@ -72,12 +73,12 @@ def profile(request, id):
 @login_required
 def history(request):
     ctx["user"] = request.user
-    ctx["active_sales"] = ItemService.item_service.get_sale_items(
+    ctx["active_sales"] = ItemService.get_sale_items(
         request.user)
-    ctx["sold_items"] = ItemService.item_service.get_sale_items(
+    ctx["sold_items"] = ItemService.get_sale_items(
         request.user, is_sold=True)
-    ctx["bids"] = BidService.bid_service.get_user_bids(request.user)
-    ctx["purchases"] = BidService.order_service.get_orders(request.user)
+    ctx["bids"] = BidService.get_user_bids(request.user)
+    ctx["purchases"] = OrderService.get_orders(request.user)
     if request.method == "POST":
         if request.POST['order_id']:
             order_id = request.POST['order_id']
