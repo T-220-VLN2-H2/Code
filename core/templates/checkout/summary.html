@@ -1,9 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Payment details</h1>
-    <form method="POST">
+    <h1>Order summary</h1>
         {% csrf_token %}
-        {{ form.as_p}}
+        <div class="card">
+            <div class="card-body mx-4">
+              <div class="container">
+                <p class="my-5 mx-5" style="font-size: 30px;">Thank for your purchase!</p>
+                <div class="row">
+                  <ul class="list-unstyled">
+                    <li class="text-black">{{ summary.full_name }}</li>
+                    <li class="text-black mt-1">{{ date }}</li>
+                  </ul>
+                  <hr>
+                  <div class="col-xl-10">
+                    <p>Triforce</p>
+                  </div>
+                  <div class="col-xl-2">
+                    <p class="float-end">$199.00
+                    </p>
+                  </div>
+                  <hr>
+                </div>
+                <div class="row text-black">
+                  <div class="col-xl-12">
+                    <p class="float-end fw-bold">Total: $199.00
+                    </p>
+                  </div>
+                  <hr style="border: 2px solid black;">
+                </div>
+
+              </div>
+            </div>
+          </div>
         <button class="btn btn-primary" type="next">Home</button>
-    </form>
 {% endblock %}

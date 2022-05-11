@@ -1,17 +1,12 @@
 from django.forms import ModelForm, widgets
 from core.models import PaymentInfo, ShippingDetails
+from core.models.delivery_details import DeliveryMethod
 
 
 class PaymentCreateForm(ModelForm):
     class Meta:
         model = PaymentInfo
-        fields = [
-            "cardholder_name",
-            "card_number",
-            "cvc",
-            "expiry_month",
-            "expiry_year",
-        ]
+        exclude = ["id"]
         widgets = {
             "cardholder_name": widgets.TextInput(attrs={"class": "form-control"}),
             "card_number": widgets.TextInput(attrs={"class": "form-control"}),
@@ -24,7 +19,7 @@ class PaymentCreateForm(ModelForm):
 class PersonalInfoCreateForm(ModelForm):
     class Meta:
         model = ShippingDetails
-        fields = ["full_name", "address", "postal_code", "city"]
+        exclude = ["id", "user"]
         widgets = {
             "full_name": widgets.TextInput(attrs={"class": "form-control"}),
             "address": widgets.TextInput(attrs={"class": "form-control"}),
@@ -33,6 +28,11 @@ class PersonalInfoCreateForm(ModelForm):
         }
 
 
-# class DeliveryInfoCreateForm(ModelForm):
-#     class Meta:
-#         model
+class DeliveryInfoCreateForm(ModelForm):
+    class Meta:
+        model = DeliveryMethod
+        choices = ["Delivery service", "Pick up", "Postbox", "Speak with seller"]
+        exclude = ["bid_id"]
+        widgets = {
+            "del_choice": widgets.RadioSelect(choices=choices),
+        }
