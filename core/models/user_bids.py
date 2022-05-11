@@ -7,6 +7,12 @@ from .user import User
 
 # TODO: rename offer?
 class UserBids(models.Model):
+    BID_STATUS = (
+        ("REJECTED", "Rejected"),
+        ("ACCEPTED", "Accepted"),
+        ("PENDING", "Pending"),
+        ("COMPLETED", "Completed"),
+    )
     # TODO: remove id suffix?
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     item_id = models.ForeignKey(Item, on_delete=models.CASCADE)
@@ -15,9 +21,12 @@ class UserBids(models.Model):
     )
     timestamp = models.DateTimeField(auto_now_add=True)
     expires = models.DateTimeField(blank=True)
+    status = models.CharField(
+        choices=BID_STATUS, default=BID_STATUS[2][0], max_length=128
+    )
 
     def __str__(self):
-        return "This is a user bid"
+        return f"{self.item_id.id} - {self.amount} - {self.status}"
 
     class Meta:
         """

@@ -2,25 +2,29 @@ from core.models.category import Category
 
 
 class CategoryService:
-    def create_category(self, request):
+    @classmethod
+    def create_category(cls, request):
         print("Do something")
         # TODO validate category request and store in DB
 
-    def delete_category(self, request):
+    @classmethod
+    def delete_category(cls, request):
         print("Do something")
         # TODO remove category from DB, some validation is required here?
 
-    def update_category(category_id, **kwargs):
+    @classmethod
+    def update_category(cls, category_id, **kwargs):
         print("Do something")
         # TODO update information in DB
 
-    @staticmethod
-    def get_all_category_items():
+    @classmethod
+    def get_all_category_items(cls):
         categories = Category.objects.all().order_by("id")
         return categories
 
-    def categories_with_parents(self):
-        categories = self.get_all_category_items()
+    @classmethod
+    def categories_with_parents(cls):
+        categories = cls.get_all_category_items()
         sub_categories = {}
         for cat in categories:
             if cat.parent is not None:

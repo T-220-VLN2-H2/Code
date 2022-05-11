@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>Payment details</h1>
-    <form method="POST">
+    <form action="/checkout/payment" method="POST">
         {% csrf_token %}
         {{ form.as_p}}
-        <button class="btn btn-primary" type="next">Go back to personal details</button>
+        {% if form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <p style="color:red">{{field.label}}: {{ error|escape }}</p>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+        <button class="btn btn-primary" type="back">Go back to delivery method</button>
         <button class="btn btn-primary" type="next">Make payment</button>
     </form>
 {% endblock %}

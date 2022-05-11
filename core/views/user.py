@@ -1,137 +1,118 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
-from django.urls import reverse
-from core.services.category_service import CategoryService
-from core.services.notification_service import NotificationService
-from core.services.item_service import ItemService
-from core.services.bid_service import BidService
-from core.services.user_service import UserService
-from core.services.image_service import ImageService
-from core.services.order_service import OrderService
 from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from core.services.bid_service import BidService
+from core.services.category_service import CategoryService
+from core.services.image_service import ImageService
+from core.services.item_service import ItemService
+from core.services.notification_service import NotificationService
+from core.services.order_service import OrderService
+from core.services.user_service import UserService
 
-
-class ContextServices:
-    user_service = UserService()
-    cat_service = CategoryService()
-    item_service = ItemService()
-    bid_service = BidService()
-    notification_service = NotificationService()
-    image_service = ImageService()
-    order_service = OrderService()
-    folder_path = "../templates/user"
-
-    ctx = {
-        "items": item_service.get_all_items(),
-    }
+folder_path = "../templates/user"
+ctx = {}
 
 
 @login_required
 def home(request):
-    services = ContextServices()
-    services.ctx["user"] = request.user
-    services.ctx["ratings"] = services.user_service.get_user_ratings(
-        request.user)
+    ctx["user"] = request.user
+    ctx["ratings"] = UserService.get_user_ratings(request.user)
     # TODO: implement count for get_sale_items
-    services.ctx["items"] = services.item_service.get_sale_items(request.user.id)[
-        :7]
-    services.ctx["avg_rating"] = services.user_service.get_user_rating(request.user.id)[
-        'rating__avg']
-    return render(request, f"{services.folder_path}/index.html", context=services.ctx)
+    ctx["items"] = ItemService.get_sale_items(request.user.id)[:7]
+    return render(request, f"{folder_path}/index.html", context=ctx)
 
 
 @login_required
 def edit(request):
-    services = ContextServices()
-    services.ctx["user"] = request.user
+    ctx["user"] = request.user
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
-        profile_form = ProfileUpdateForm(
-            request.POST, instance=request.user.profile)
-        if "images" in request.FILES:
-            services.image_service.update_profile_image(
-                request.user, request.FILES["images"]
-            )
-
+        profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
+        ImageService.update_profile_image(request.user, request.FILES["images"])
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
 
         return redirect("user_home")
     else:
-        services.ctx["user_form"] = UserUpdateForm(
+        ctx["user_form"] = UserUpdateForm(
             initial={
                 "first_name": request.user.first_name,
                 "last_name": request.user.last_name,
             }
         )
-        services.ctx["profile_form"] = ProfileUpdateForm(
+        ctx["profile_form"] = ProfileUpdateForm(
             initial={"description": request.user.profile.description}
         )
-    return render(request, f"{services.folder_path}/edit.html", context=services.ctx)
+    return render(request, f"{folder_path}/edit.html", context=ctx)
 
 
 @login_required
 def profile(request, id):
-    services = ContextServices()
-    # TODO validate id as an int
+    import re
+
+    id = re.sub("\D", "", id)  # removes all non digits
+
     if int(id) == request.user.id:
         return redirect("user_home")
 
-    target_user = services.user_service.get_user_info(id)
-    services.ctx["ratings"] = services.user_service.get_user_ratings(
-        target_user)
-    services.ctx["items"] = services.item_service.get_sale_items(target_user.id)[
-        :7]
-    services.ctx["target_user"] = target_user
-    services.ctx["user"] = request.user
-    avg_rating = services.user_service.get_user_rating(target_user.id)[
-        'rating__avg']
+    target_user = UserService.get_user_info(id)
+    ctx["ratings"] = UserService.get_user_ratings(target_user)
+    ctx["items"] = ItemService.get_sale_items(target_user.id)[:7]
+    ctx["target_user"] = target_user
+    ctx["user"] = request.user
+    avg_rating = UserService.get_user_rating(target_user.id)['rating__avg']
     if avg_rating and avg_rating.is_integer():
         avg_rating = int(avg_rating)
-    services.ctx["avg_rating"] = avg_rating
-    return render(request, f"{services.folder_path}/user.html", context=services.ctx)
+    ctx["avg_rating"] = avg_rating
+    return render(request, f"{folder_path}/user.html", context=ctx)
 
 
 @login_required
 def history(request):
-    services = ContextServices()
-    services.ctx["user"] = request.user
-    services.ctx["active_sales"] = services.item_service.get_sale_items(
+    ctx["user"] = request.user
+    ctx["active_sales"] = ItemService.item_service.get_sale_items(
         request.user)
-    services.ctx["sold_items"] = services.item_service.get_sale_items(
-        request.user, is_sold=True
-    )
-    services.ctx["bids"] = services.bid_service.get_user_bids(request.user)
-    services.ctx["purchases"] = services.order_service.get_orders(request.user)
+    ctx["sold_items"] = ItemService.item_service.get_sale_items(
+        request.user, is_sold=True)
+    ctx["bids"] = BidService.bid_service.get_user_bids(request.user)
+    ctx["purchases"] = BidService.order_service.get_orders(request.user)
     if request.method == "POST":
-        order_id = request.POST['order_id']
-        rating = request.POST['rating']
-        order = services.order_service.get_order_details(order_id)
-        order.rating = rating
-        order.save()
-        return redirect(reverse("user_history") + "#purchases")
-
+        if request.POST['order_id']:
+            order_id = request.POST['order_id']
+            rating = request.POST['rating']
+            order = OrderService.get_order_details(order_id)
+            order.rating = rating
+            order.save()
+            return redirect(reverse("user_history") + "#purchases")
+        if request.POST["bid"]:
+            accepted_bid_id = request.POST["bid"]
+            accepted_bid = BidService.get_bid_by_id(int(accepted_bid_id))
+            BidService.accept_bid(accepted_bid)
     else:
-        return render(request, f"{services.folder_path}/history.html", context=services.ctx)
+        return render(request, f"{folder_path}/history.html", context=ctx)
+
+
+    ctx["user"] = request.user
+    ctx["active_sales"] = ItemService.get_sale_items(request.user)
+    ctx["sold_items"] = ItemService.get_sale_items(request.user, is_sold=True)
+    ctx["bids"] = BidService.get_user_bids(request.user)
+    ctx["accepted_bid"] = BidService.get_accepted_bids(request.user)
+    ctx["user_item_bids"] = BidService.get_bids_for_user_items(request.user)
+    return render(request, f"{folder_path}/history.html", context=ctx)
 
 
 @login_required
 def messages(request):
-    services = ContextServices()
-    services.ctx["user"] = request.user
-    services.ctx["user_messages"] = services.notification_service.get_notifications(
-        request.user
-    )
-    return render(
-        request, f"{services.folder_path}/messages.html", context=services.ctx
-    )
+    ctx["user"] = request.user
+    ctx["user_messages"] = NotificationService.get_notifications(request.user)
+    for message in ctx["user_messages"]:
+        NotificationService.mark_notification_read(message)
+    return render(request, f"{folder_path}/messages.html", context=ctx)
 
 
 @login_required
 def item_bids(request):
-    services = ContextServices()
-    services.ctx["item_bids"] = services.bid_service.get_bids_for_user_items(
-        request.user
-    )
-    return render(request, f"{services.folder_path}/history.html", context=services.ctx)
+    ctx["item_bids"] = BidService.get_bids_for_user_items(request.user)
+    return render(request, f"{folder_path}/history.html", context=ctx)
