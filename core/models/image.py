@@ -11,3 +11,6 @@ class Image(models.Model):
 class ItemImages(models.Model):
     item = models.ForeignKey("Item", on_delete=models.CASCADE)
     images = models.ManyToManyField(Image)
+
+    def __len__(self):
+        return len(self.images.all())
