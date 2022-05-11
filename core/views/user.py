@@ -63,7 +63,7 @@ def profile(request, id):
     ctx["items"] = ItemService.get_sale_items(target_user.id)[:7]
     ctx["target_user"] = target_user
     ctx["user"] = request.user
-    avg_rating = UserService.get_user_rating(target_user.id)['rating__avg']
+    avg_rating = UserService.get_user_rating(target_user.id)["rating__avg"]
     if avg_rating and avg_rating.is_integer():
         avg_rating = int(avg_rating)
     ctx["avg_rating"] = avg_rating
@@ -73,16 +73,14 @@ def profile(request, id):
 @login_required
 def history(request):
     ctx["user"] = request.user
-    ctx["active_sales"] = ItemService.get_sale_items(
-        request.user)
-    ctx["sold_items"] = ItemService.get_sale_items(
-        request.user, is_sold=True)
+    ctx["active_sales"] = ItemService.get_sale_items(request.user)
+    ctx["sold_items"] = ItemService.get_sale_items(request.user, is_sold=True)
     ctx["bids"] = BidService.get_user_bids(request.user)
     ctx["purchases"] = OrderService.get_orders(request.user)
     if request.method == "POST":
-        if request.POST['order_id']:
-            order_id = request.POST['order_id']
-            rating = request.POST['rating']
+        if request.POST["order_id"]:
+            order_id = request.POST["order_id"]
+            rating = request.POST["rating"]
             order = OrderService.get_order_details(order_id)
             order.rating = rating
             order.save()
@@ -93,7 +91,6 @@ def history(request):
             BidService.accept_bid(accepted_bid)
     else:
         return render(request, f"{folder_path}/history.html", context=ctx)
-
 
     ctx["user"] = request.user
     ctx["active_sales"] = ItemService.get_sale_items(request.user)

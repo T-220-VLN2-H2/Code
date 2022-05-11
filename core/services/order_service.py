@@ -25,6 +25,6 @@ class OrderService:
 
     @classmethod
     def get_orders(self, user):
-        ''' Returns given users orders '''
+        """Returns given users orders"""
         orders = Order.objects.filter(buyer=user)
         return orders
