@@ -1,9 +1,5 @@
 from django.shortcuts import render, redirect
-from core.forms.checkout_form import (
-    PaymentCreateForm,
-    PersonalInfoCreateForm,
-    DeliveryInfoCreateForm,
-)
+from core.forms.checkout_form import PaymentCreateForm, PersonalInfoCreateForm, DeliveryInfoCreateForm
 from core.services.checkout_service import CheckoutService
 from core.services.bid_service import BidService
 from core.services.item_service import ItemService
@@ -14,6 +10,7 @@ from datetime import date
 
 def user(request):
     ctx = {}
+    request.session["bid_id"] = 11
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -22,9 +19,8 @@ def user(request):
             request.session["postal_code"] = form.cleaned_data["postal_code"]
             request.session["city"] = form.cleaned_data["city"]
             request.session.modified = True
-            return redirect("/checkout/delivery")
+            return redirect('/checkout/delivery')
     elif request.method == "GET":
-        print(request.session.keys())
         if len(request.session.keys()) > 3:
             form_init = {}
             form_init["full_name"] = request.session["full_name"]
@@ -51,7 +47,7 @@ def payment(request):
             request.session["expiry_month"] = form.cleaned_data["expiry_month"]
             request.session["expiry_year"] = form.cleaned_data["expiry_year"]
             request.session.modified = True
-            return process_payment(request, 10)
+            return process_payment(request)
     elif request.method == "GET":
         if "cardholder_name" in request.session.keys():
             form_init = {}
@@ -88,25 +84,20 @@ def delivery(request):
         ctx["form"] = form
         return render(request, "checkout/delivery_info.html", context=ctx)
 
-
 def process_payment(request):
-    # bid = BidService.get_bid_by_id(bid_id)
-    # bid.status = "COMPLETED"
-    # bid.save()
+    bid = BidService.get_bid_by_id(request.session["bid_id"])
+    bid.status = "COMPLETED"
+    bid.save()
     if request.method == "POST":
-        shipping_details = ShippingDetails(
-            full_name=request.session["full_name"],
-            address=request.session["address"],
-            postal_code=request.session["postal_code"],
-            city=request.session["city"],
-        )
-        payment_details = PaymentInfo(
-            cardholder_name=request.session["cardholder_name"],
-            card_number=request.session["card_number"],
-            cvc=request.session["cvc"],
-            expiry_month=request.session["expiry_month"],
-            expiry_year=request.session["expiry_year"],
-        )
+        shipping_details = ShippingDetails(full_name = request.session["full_name"],
+                                            address = request.session["address"],
+                                            postal_code = request.session["postal_code"],
+                                            city = request.session["city"])
+        payment_details = PaymentInfo(cardholder_name = request.session["cardholder_name"],
+                                        card_number = request.session["card_number"],
+                                        cvc = request.session["cvc"],
+                                        expiry_month = request.session["expiry_month"],
+                                        expiry_year = request.session["expiry_year"])
         shipping_details.save()
         payment_details.save()
         summary_details_dict = {}
@@ -118,17 +109,19 @@ def process_payment(request):
         request.session["summary_details"] = summary_details_dict
         return redirect("/checkout/summary")
 
-
 def summary(request):
+    ctx = {}
     summary_details = request.session["summary_details"]
     date_today = date.today()
-    bid = BidService.get_bid_by_id(bid_id)
+    bid = BidService.get_bid_by_id(request.session["bid_id"])
+    print(bid.item_id_id)
     item = ItemService.get_item_by_id(bid.item_id_id)
+    print(item.title)
     ctx["price"] = bid.amount
     ctx["item_name"] = item.title
-    ctx = {}
     ctx["summary"] = summary_details
     ctx["date"] = date_today
+    print(ctx.keys())
     if request.method == "POST":
         return redirect("index_page")
     return render(request, "checkout/summary.html", context=ctx)
