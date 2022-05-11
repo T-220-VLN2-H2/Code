@@ -4,6 +4,7 @@ from core.services.bid_service import BidService
 from core.services.category_service import CategoryService
 from core.services.image_service import ImageService
 from core.services.item_service import ItemService
+from core.services.user_service import UserService
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
@@ -16,10 +17,14 @@ def items_page(request):
 
 
 def item_details(request, item_id):
-    ctx["item"] = ItemService.get_item_by_id(item_id)
+    item = ItemService.get_item_by_id(item_id)
+    ctx["item"] = item
     # TODO: fix late update when bidding
     max_bid = BidService.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
+    ctx["seller_avg_rating"] = UserService.get_user_rating(item.seller.id)[
+        "rating__avg"
+    ]
     ctx["images"] = ImageService.get_images(ctx["item"])
     ctx["similar_items"] = ItemService.get_similar_items(ctx["item"])
     if request.method == "POST":

@@ -1,6 +1,5 @@
 from core.forms.user_form import UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from core.services.bid_service import BidService
@@ -8,6 +7,7 @@ from core.services.category_service import CategoryService
 from core.services.image_service import ImageService
 from core.services.item_service import ItemService
 from core.services.notification_service import NotificationService
+from core.services.order_service import OrderService
 from core.services.user_service import UserService
 
 folder_path = "../templates/user"
@@ -29,12 +29,13 @@ def edit(request):
     if request.method == "POST":
         user_form = UserUpdateForm(request.POST, instance=request.user)
         profile_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
-        ImageService.update_profile_image(request.user, request.FILES["images"])
+        if "images" in request.FILES:
+            ImageService.update_profile_image(request.user, request.FILES["images"])
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
 
-        return HttpResponseRedirect(reverse("user_home"))
+        return redirect("user_home")
     else:
         ctx["user_form"] = UserUpdateForm(
             initial={
@@ -62,17 +63,34 @@ def profile(request, id):
     ctx["items"] = ItemService.get_sale_items(target_user.id)[:7]
     ctx["target_user"] = target_user
     ctx["user"] = request.user
-
+    avg_rating = UserService.get_user_rating(target_user.id)["rating__avg"]
+    if avg_rating and avg_rating.is_integer():
+        avg_rating = int(avg_rating)
+    ctx["avg_rating"] = avg_rating
     return render(request, f"{folder_path}/user.html", context=ctx)
 
 
 @login_required
 def history(request):
-    if request.POST:
+    ctx["user"] = request.user
+    ctx["active_sales"] = ItemService.get_sale_items(request.user)
+    ctx["sold_items"] = ItemService.get_sale_items(request.user, is_sold=True)
+    ctx["bids"] = BidService.get_user_bids(request.user)
+    ctx["purchases"] = OrderService.get_orders(request.user)
+    if request.method == "POST":
+        if request.POST["order_id"]:
+            order_id = request.POST["order_id"]
+            rating = request.POST["rating"]
+            order = OrderService.get_order_details(order_id)
+            order.rating = rating
+            order.save()
+            return redirect(reverse("user_history") + "#purchases")
         if request.POST["bid"]:
             accepted_bid_id = request.POST["bid"]
             accepted_bid = BidService.get_bid_by_id(int(accepted_bid_id))
             BidService.accept_bid(accepted_bid)
+    else:
+        return render(request, f"{folder_path}/history.html", context=ctx)
 
     ctx["user"] = request.user
     ctx["active_sales"] = ItemService.get_sale_items(request.user)

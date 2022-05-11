@@ -22,14 +22,18 @@
         <div class="col-8 mt-2">
             <div class="row mb-4">
                 <div class="col">
-                    {% if user.first_name and user.last_name %}
+                    {% if user.first_name or user.last_name %}
                     <h2> {{ user.first_name }} {{ user.last_name }}</h2>
                     {% else %}
                     <h2> {{ user }}</h2>
                     {% endif %}
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                    <h3 class="mx-3 m-0">4.5 / 5</h3>
+                    {% if avg_rating %}
+                    <h3 class="mx-3 m-0">{{ avg_rating }} / 5</h3>
+                    {% else %}
+                    <h3 class="mx-3 m-0"> I have no rating yet! </h3>
+                    {% endif %}
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange" class="bi bi-star-fill"
                         viewBox="0 0 16 16">
                         <path
