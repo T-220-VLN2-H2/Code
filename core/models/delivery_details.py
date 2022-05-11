@@ -10,7 +10,7 @@ class DeliveryMethod(models.Model):
         ("PB", "Postbox"),
         ("SWS", "Speak with seller"),
     )
-    bid_id =  models.ForeignKey(UserBids, on_delete=models.CASCADE)
+    bid_id = models.ForeignKey(UserBids, on_delete=models.CASCADE)
     del_choice = models.CharField(choices=DEL_METHOD, max_length=128)
 
     def __str__(self):
