@@ -37,6 +37,7 @@ class Item(models.Model):
     is_sold = models.BooleanField(default=False)
     seller = models.ForeignKey(User, on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True, blank=True)
+    images = models.ManyToManyField(core.Image)
 
     def __str__(self):
         return self.title
