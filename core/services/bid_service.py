@@ -98,9 +98,7 @@ Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {los
         """
         try:
             bids = UserBids.objects.filter(
-                ~Q(status="COMPLETED"),
-                ~Q(status="REJECTED"),
-                user_id=user
+                ~Q(status="COMPLETED"), ~Q(status="REJECTED"), user_id=user
             ).order_by("-timestamp")
         except ObjectDoesNotExist:
             return None

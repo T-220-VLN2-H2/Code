@@ -6,13 +6,21 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0002_alter_notification_message'),
+        ("core", "0002_alter_notification_message"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='userbids',
-            name='status',
-            field=models.CharField(choices=[('REJECTED', 'Rejected'), ('ACCEPTED', 'Accepted'), ('PENDING', 'Pending')], default='PENDING', max_length=128),
+            model_name="userbids",
+            name="status",
+            field=models.CharField(
+                choices=[
+                    ("REJECTED", "Rejected"),
+                    ("ACCEPTED", "Accepted"),
+                    ("PENDING", "Pending"),
+                ],
+                default="PENDING",
+                max_length=128,
+            ),
         ),
     ]
