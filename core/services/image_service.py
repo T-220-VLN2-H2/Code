@@ -26,8 +26,6 @@ class ImageService:
             default_image = Image.objects.get(id=1)
             return default_image
 
-        return item.images.all()
-
     @classmethod
     def update_profile_image(cls, user, image):
         file_name = "_".join([user.username])
