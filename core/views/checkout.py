@@ -10,7 +10,7 @@ from datetime import date
 
 def user(request):
     ctx = {}
-    request.session["bid_id"] = 11
+    request.session["bid_id"] = request.POST.get("bid")
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -20,6 +20,10 @@ def user(request):
             request.session["city"] = form.cleaned_data["city"]
             request.session.modified = True
             return redirect('/checkout/delivery')
+        else:
+            form = PersonalInfoCreateForm()
+            ctx["form"] = form
+        return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
         if len(request.session.keys()) > 3:
             form_init = {}
@@ -28,10 +32,6 @@ def user(request):
             form_init["postal_code"] = request.session["postal_code"]
             form_init["city"] = request.session["city"]
             form = PersonalInfoCreateForm(form_init)
-            ctx["form"] = form
-            return render(request, "checkout/user_details.html", context=ctx)
-        else:
-            form = PersonalInfoCreateForm()
             ctx["form"] = form
             return render(request, "checkout/user_details.html", context=ctx)
 
@@ -86,6 +86,7 @@ def delivery(request):
 
 def process_payment(request):
     bid = BidService.get_bid_by_id(request.session["bid_id"])
+    print(bid)
     bid.status = "COMPLETED"
     bid.save()
     if request.method == "POST":

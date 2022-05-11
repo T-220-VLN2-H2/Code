@@ -26,7 +26,7 @@ class UserBids(models.Model):
     )
 
     def __str__(self):
-        return f"{self.item_id.id} - {self.amount} - {self.status}"
+        return f"{self.item_id.id}"
 
     class Meta:
         """
