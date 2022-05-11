@@ -2,7 +2,6 @@
 # https://cpske.github.io/ISP/django/separate-model-classes
 from .category import Category
 from .image import Image
-from .image import ItemImages
 from .item import Item
 from .notifications import Notification
 from .order import Order
