@@ -96,8 +96,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <h1>Similar Items</h1>
+                <div class="row similarItems">
+                    <div>
+                        <div class="similarTitle"><span id="similarTitle">Similar Items</span></div>
+                    </div>
                     {% for item, image in similar_items %}
                     {% include 'items/item_list.html' %}
                     {% endfor %}
