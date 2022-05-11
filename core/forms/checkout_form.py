@@ -33,6 +33,6 @@ class DeliveryInfoCreateForm(ModelForm):
         choices = ["Delivery service", "Pick up", "Postbox", "Speak with seller"]
         exclude = ["bid_id"]
         widgets = {
-            "del_choice": widgets.RadioSelect(choices=choices)
+            "del_choice": widgets.RadioSelect(choices=choices),
         }
 
