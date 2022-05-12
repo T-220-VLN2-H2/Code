@@ -27,6 +27,7 @@ class PersonalInfoCreateForm(ModelForm):
             "city": widgets.TextInput(attrs={"class": "form-control"}),
         }
 
+
 class DeliveryInfoCreateForm(ModelForm):
     class Meta:
         model = DeliveryMethod
@@ -35,4 +36,3 @@ class DeliveryInfoCreateForm(ModelForm):
         widgets = {
             "del_choice": widgets.RadioSelect(choices=choices),
         }
-

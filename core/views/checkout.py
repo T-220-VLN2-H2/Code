@@ -1,11 +1,16 @@
 from django.shortcuts import render, redirect
-from core.forms.checkout_form import PaymentCreateForm, PersonalInfoCreateForm, DeliveryInfoCreateForm
+from core.forms.checkout_form import (
+    PaymentCreateForm,
+    PersonalInfoCreateForm,
+    DeliveryInfoCreateForm,
+)
 from core.services.checkout_service import CheckoutService
 from core.services.bid_service import BidService
 from core.services.item_service import ItemService
 from core.models.shipping_details import ShippingDetails
 from core.models.payment_info import PaymentInfo
 from datetime import date
+
 
 def user(request, bid_id=None):
     if request.method == "POST":
@@ -37,6 +42,7 @@ def user(request, bid_id=None):
             ctx["form"] = form
             return render(request, "checkout/user_details.html", context=ctx)
 
+
 def delivery(request):
     print(request.session["bid_id"])
     if request.method == "POST":
@@ -56,6 +62,7 @@ def delivery(request):
         form = DeliveryInfoCreateForm()
         ctx["form"] = form
         return render(request, "checkout/delivery_info.html", context=ctx)
+
 
 def payment(request):
     print(request.session["bid_id"])
@@ -92,15 +99,19 @@ def process_payment(request):
     bid.status = "COMPLETED"
     bid.save()
     if request.method == "POST":
-        shipping_details = ShippingDetails(full_name = request.session["full_name"],
-                                            address = request.session["address"],
-                                            postal_code = request.session["postal_code"],
-                                            city = request.session["city"])
-        payment_details = PaymentInfo(cardholder_name = request.session["cardholder_name"],
-                                        card_number = request.session["card_number"],
-                                        cvc = request.session["cvc"],
-                                        expiry_month = request.session["expiry_month"],
-                                        expiry_year = request.session["expiry_year"])
+        shipping_details = ShippingDetails(
+            full_name=request.session["full_name"],
+            address=request.session["address"],
+            postal_code=request.session["postal_code"],
+            city=request.session["city"],
+        )
+        payment_details = PaymentInfo(
+            cardholder_name=request.session["cardholder_name"],
+            card_number=request.session["card_number"],
+            cvc=request.session["cvc"],
+            expiry_month=request.session["expiry_month"],
+            expiry_year=request.session["expiry_year"],
+        )
         shipping_details.save()
         payment_details.save()
         summary_details_dict = {}
@@ -111,6 +122,7 @@ def process_payment(request):
         summary_details_dict["city"] = request.session["city"]
         request.session["summary_details"] = summary_details_dict
         return redirect("/checkout/summary")
+
 
 def summary(request):
     print(request.session["bid_id"])
