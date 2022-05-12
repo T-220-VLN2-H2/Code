@@ -1,0 +1,23 @@
+{% if bids.count == 0 %}
+    <p>You have not bid on any items</p>
+{% else %}
+{% for bid in bids %}
+    <div href="#" class="list-group-item list-group-item-action" aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{bid.item_id}}</h5>
+            <small>{{bid.timestamp}} | {{bid.expires}}</small>
+        </div>
+        <p class="mb-1">{{bid.amount}}</p>
+        <small>{{bid.user_id}}</small>
+        <small>{{bid.status}}</small>
+        {% if bid.status == "ACCEPTED" %}
+            <form action="{% url 'checkout_user' %}" method="POST">
+                {% csrf_token %}
+                <small>{{bid.status}}</small>
+                <input name="bid" value="{{bid}}" hidden>
+                <button class="btn btn-success" type="submit">Checkout</button>
+            </form>
+        {% endif %}
+    </div>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,32 @@
+<div class="accordion" id="bidsAccordion">
+    {% for item, bids in active_listings %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{item.id}}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{item.id}}" aria-expanded="false" aria-controls="collapseThree">
+                {{item.title}}
+              </button>
+            </h2>
+            <div id="collapse{{item.id}}" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    {% if bids.count == 0 %}
+                        <p>No bids for this items</p>
+                    {% else %}
+                    {% for bid in bids %}
+                    {% if bid.item_id == item %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            <input name="bid" value="{{bid.id}}" hidden>{{bid.amount}} {{bid.user_id}}
+                            {% if bid.status == "ACCEPTED" %}
+                                <p>was accepted, waiting for payment</p>
+                            {% else %}
+                                <button class="btn btn-primary" type="submit">Accept bid</button>
+                            {% endif %}
+                        </form>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

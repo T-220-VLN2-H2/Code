@@ -73,31 +73,27 @@ def profile(request, id):
 @login_required
 def history(request):
     ctx["user"] = request.user
-    ctx["active_sales"] = ItemService.get_sale_items(request.user)
-    ctx["sold_items"] = ItemService.get_sale_items(request.user, is_sold=True)
-    ctx["bids"] = BidService.get_user_bids(request.user)
+    # Active listings is a tuple of items and bids for that item
+    ctx["active_listings"] = ItemService.get_user_items_with_bids(request.user)
+    ctx["bids"] = BidService.get_user_bids(request.user, False)
+
+    ctx["sold_items"] = ItemService.get_sold_items(request.user)
     ctx["purchases"] = OrderService.get_orders(request.user)
     if request.method == "POST":
-        if request.POST["order_id"]:
+        order_id = request.POST.getlist("order_id")
+        bid_id = request.POST.getlist("bid")
+        if order_id:
             order_id = request.POST["order_id"]
             rating = request.POST["rating"]
             order = OrderService.get_order_details(order_id)
             order.rating = rating
             order.save()
             return redirect(reverse("user_history") + "#purchases")
-        if request.POST["bid"]:
+        if bid_id:
             accepted_bid_id = request.POST["bid"]
             accepted_bid = BidService.get_bid_by_id(int(accepted_bid_id))
             BidService.accept_bid(accepted_bid)
-    else:
-        return render(request, f"{folder_path}/history.html", context=ctx)
 
-    ctx["user"] = request.user
-    ctx["active_sales"] = ItemService.get_sale_items(request.user)
-    ctx["sold_items"] = ItemService.get_sale_items(request.user, is_sold=True)
-    ctx["bids"] = BidService.get_user_bids(request.user)
-    ctx["accepted_bid"] = BidService.get_accepted_bids(request.user)
-    ctx["user_item_bids"] = BidService.get_bids_for_user_items(request.user)
     return render(request, f"{folder_path}/history.html", context=ctx)
 
 

@@ -9,7 +9,6 @@
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
                           <div class="carousel-indicators">
                               {% for x in images %}
-
                                 {% if forloop.counter == 1 %}
                                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" class="active" ></button>
                                 {% endif %}
