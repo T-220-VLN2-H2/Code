@@ -5,7 +5,12 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 def get_sort(x):
-    sort = {"default": "price", "price_hi": "-price", "price_lo": "price", "name": "title"}
+    sort = {
+        "default": "price",
+        "price_hi": "-price",
+        "price_lo": "price",
+        "name": "title",
+    }
     if x not in sort:
         x = "default"
     return sort[x]
@@ -33,11 +38,12 @@ class ItemService:
     @classmethod
     def get_all_items(cls, is_sold=False, category=None, sort="default"):
         if category is not None:
-            items = Item.objects.filter(is_sold=is_sold, category=category).order_by(get_sort(sort))
+            items = Item.objects.filter(is_sold=is_sold, category=category).order_by(
+                get_sort(sort)
+            )
         else:
             items = Item.objects.filter(is_sold=is_sold).order_by(get_sort(sort))
         return items
-
 
     @classmethod
     def get_user_items_with_bids(cls, user):
