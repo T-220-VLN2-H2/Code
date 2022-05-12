@@ -3,23 +3,15 @@
     "model": "core.category",
     "pk": 1,
     "fields": {
-      "name": "Electronics",
+      "name": "Rare",
       "parent": null
-    }
-  },
-  {
-    "model": "core.category",
-    "pk": 5,
-    "fields": {
-      "name": "Processors",
-      "parent": 1
     }
   },
   {
     "model": "core.category",
     "pk": 2,
     "fields": {
-      "name": "Furniture",
+      "name": "Component",
       "parent": null
     }
   },
@@ -27,7 +19,7 @@
     "model": "core.category",
     "pk": 3,
     "fields": {
-      "name": "Clothing",
+      "name": "Consumable",
       "parent": null
     }
   },
@@ -35,7 +27,15 @@
     "model": "core.category",
     "pk": 4,
     "fields": {
-      "name": "Other",
+      "name": "Common",
+      "parent": null
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 5,
+    "fields": {
+      "name": "Epic",
       "parent": null
     }
   },
@@ -43,24 +43,17 @@
     "model": "core.category",
     "pk": 6,
     "fields": {
-      "name": "Graphics Cards",
-      "parent": 1
-    }
-  },
-  {
-    "model": "core.category",
-    "pk": 8,
-    "fields": {
-      "name": "Sound",
-      "parent": 1
+      "name": "Artifact",
+      "parent": null
+
     }
   },
   {
     "model": "core.category",
     "pk": 7,
     "fields": {
-      "name": "Chairs",
-      "parent": 2
+      "name": "secret_shop",
+      "parent": null
     }
   }
 ]
