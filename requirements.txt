@@ -3,3 +3,4 @@ django-environ==0.8.1
 psycopg2==2.9.3
 configparser==5.2.0
 pillow==9.1.0
+django-countries
