@@ -39,21 +39,22 @@ class ItemService:
     @classmethod
     def get_user_items_with_bids(cls, user):
         items = Item.objects.filter(seller=user)
-        items_with_bids = [(item, BidService.get_bids_for_item(item))
-                           for item in items]
+        items_with_bids = [(item, BidService.get_bids_for_item(item)) for item in items]
         return items_with_bids
 
     @classmethod
     def get_sold_items(cls, user):
         items = Item.objects.filter(seller=user, is_sold=True)
-        items = [(item, BidService.get_bids_for_item(item, "COMPLETED"))
-                 for item in items]
+        items = [
+            (item, BidService.get_bids_for_item(item, "COMPLETED")) for item in items
+        ]
         return items
 
     @classmethod
     def get_sale_items(cls, user):
         items = Item.objects.filter(seller=user)
         return items
+
     @classmethod
     def get_item_by_id(cls, item_id):
         item = Item.objects.get(id=item_id)
