@@ -9,7 +9,10 @@
             "description": "The fabled dagger used by the fastest assassin ever to walk the lands.",
             "seller": 1,
             "price": 2250,
-            "date_created": "2022-05-12 10:47:06.867895"
+            "date_created": "2022-05-12 11:13:05.236167",
+            "images": [
+                1
+            ]
         }
     },
     {
@@ -22,7 +25,10 @@
             "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 10:47:06.867901"
+            "date_created": "2022-05-12 11:13:05.236177",
+            "images": [
+                2
+            ]
         }
     },
     {
@@ -35,7 +41,10 @@
             "description": "A cunning blade able to anticipate and enable its bearer's movements.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 10:47:06.867903"
+            "date_created": "2022-05-12 11:13:05.236180",
+            "images": [
+                3
+            ]
         }
     },
     {
@@ -48,7 +57,10 @@
             "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 10:47:06.867904"
+            "date_created": "2022-05-12 11:13:05.236182",
+            "images": [
+                4
+            ]
         }
     },
     {
@@ -61,7 +73,10 @@
             "description": "The damage of these small, concealable blades should not be underestimated.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.867947"
+            "date_created": "2022-05-12 11:13:05.236231",
+            "images": [
+                8
+            ]
         }
     },
     {
@@ -74,7 +89,10 @@
             "description": "The classic weapon of choice for knights, this blade is sturdy and reliable for slaying enemies.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.867949"
+            "date_created": "2022-05-12 11:13:05.236234",
+            "images": [
+                9
+            ]
         }
     },
     {
@@ -87,7 +105,10 @@
             "description": "A medium weave of metal chains.",
             "seller": 1,
             "price": 550,
-            "date_created": "2022-05-12 10:47:06.867950"
+            "date_created": "2022-05-12 11:13:05.236236",
+            "images": [
+                10
+            ]
         }
     },
     {
@@ -100,7 +121,10 @@
             "description": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.",
             "seller": 1,
             "price": 1350,
-            "date_created": "2022-05-12 10:47:06.867951"
+            "date_created": "2022-05-12 11:13:05.236237",
+            "images": [
+                11
+            ]
         }
     },
     {
@@ -113,7 +137,10 @@
             "description": "The helmet of a legendary warrior who fell in battle.",
             "seller": 1,
             "price": 975,
-            "date_created": "2022-05-12 10:47:06.867952"
+            "date_created": "2022-05-12 11:13:05.236239",
+            "images": [
+                12
+            ]
         }
     },
     {
@@ -126,7 +153,10 @@
             "description": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack.",
             "seller": 1,
             "price": 1100,
-            "date_created": "2022-05-12 10:47:06.867953"
+            "date_created": "2022-05-12 11:13:05.236243",
+            "images": [
+                13
+            ]
         }
     },
     {
@@ -139,7 +169,10 @@
             "description": "A hammer forged of pure mithril.",
             "seller": 1,
             "price": 1600,
-            "date_created": "2022-05-12 10:47:06.867954"
+            "date_created": "2022-05-12 11:13:05.236245",
+            "images": [
+                14
+            ]
         }
     },
     {
@@ -152,7 +185,10 @@
             "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 10:47:06.867956"
+            "date_created": "2022-05-12 11:13:05.236247",
+            "images": [
+                15
+            ]
         }
     },
     {
@@ -165,7 +201,10 @@
             "description": "A basic staff that allows you to strike quickly.",
             "seller": 1,
             "price": 875,
-            "date_created": "2022-05-12 10:47:06.867957"
+            "date_created": "2022-05-12 11:13:05.236249",
+            "images": [
+                16
+            ]
         }
     },
     {
@@ -178,7 +217,10 @@
             "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 10:47:06.867958"
+            "date_created": "2022-05-12 11:13:05.236251",
+            "images": [
+                17
+            ]
         }
     },
     {
@@ -191,7 +233,10 @@
             "description": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
             "seller": 1,
             "price": 70,
-            "date_created": "2022-05-12 10:47:06.867959"
+            "date_created": "2022-05-12 11:13:05.236253",
+            "images": [
+                18
+            ]
         }
     },
     {
@@ -204,7 +249,10 @@
             "description": "Elemental protection from magical assaults.",
             "seller": 1,
             "price": 225,
-            "date_created": "2022-05-12 10:47:06.867960"
+            "date_created": "2022-05-12 11:13:05.236255",
+            "images": [
+                19
+            ]
         }
     },
     {
@@ -217,7 +265,10 @@
             "description": "Hasten to battle on wind-touched heels.",
             "seller": 1,
             "price": 250,
-            "date_created": "2022-05-12 10:47:06.867961"
+            "date_created": "2022-05-12 11:13:05.236256",
+            "images": [
+                20
+            ]
         }
     },
     {
@@ -230,7 +281,10 @@
             "description": "A glimmering ring that defends its bearer.",
             "seller": 1,
             "price": 175,
-            "date_created": "2022-05-12 10:47:06.867962"
+            "date_created": "2022-05-12 11:13:05.236258",
+            "images": [
+                21
+            ]
         }
     },
     {
@@ -243,7 +297,10 @@
             "description": "One man's wine barrel bottom is another man's shield.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 10:47:06.867963"
+            "date_created": "2022-05-12 11:13:05.236260",
+            "images": [
+                22
+            ]
         }
     },
     {
@@ -256,7 +313,10 @@
             "description": "Said to be a tear from the lunar goddess Selemene.",
             "seller": 1,
             "price": 4000,
-            "date_created": "2022-05-12 10:47:06.867964"
+            "date_created": "2022-05-12 11:13:05.236262",
+            "images": [
+                23
+            ]
         }
     },
     {
@@ -269,7 +329,10 @@
             "description": "Studded leather gloves that add brute strength.",
             "seller": 1,
             "price": 140,
-            "date_created": "2022-05-12 10:47:06.867965"
+            "date_created": "2022-05-12 11:13:05.236264",
+            "images": [
+                24
+            ]
         }
     },
     {
@@ -282,7 +345,10 @@
             "description": "Light boots made from spider skin that tingles your senses.",
             "seller": 1,
             "price": 140,
-            "date_created": "2022-05-12 10:47:06.867966"
+            "date_created": "2022-05-12 11:13:05.236266",
+            "images": [
+                25
+            ]
         }
     },
     {
@@ -295,7 +361,10 @@
             "description": "A beautiful sapphire mantle worn by generations of queens.",
             "seller": 1,
             "price": 140,
-            "date_created": "2022-05-12 10:47:06.867968"
+            "date_created": "2022-05-12 11:13:05.236268",
+            "images": [
+                26
+            ]
         }
     },
     {
@@ -308,7 +377,10 @@
             "description": "A seemingly ordinary branch, its ironlike qualities are bestowed upon the bearer.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 10:47:06.867969"
+            "date_created": "2022-05-12 11:13:05.236269",
+            "images": [
+                27
+            ]
         }
     },
     {
@@ -321,7 +393,10 @@
             "description": "A valued accessory for improving vitality.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.867970"
+            "date_created": "2022-05-12 11:13:05.236273",
+            "images": [
+                28
+            ]
         }
     },
     {
@@ -334,7 +409,10 @@
             "description": "A tensile fabric often used for its light weight and ease of movement.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.867971"
+            "date_created": "2022-05-12 11:13:05.236275",
+            "images": [
+                29
+            ]
         }
     },
     {
@@ -347,7 +425,10 @@
             "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.867972"
+            "date_created": "2022-05-12 11:13:05.236277",
+            "images": [
+                30
+            ]
         }
     },
     {
@@ -360,7 +441,10 @@
             "description": "An elegant circlet designed for human princesses.",
             "seller": 1,
             "price": 155,
-            "date_created": "2022-05-12 10:47:06.867973"
+            "date_created": "2022-05-12 11:13:05.236279",
+            "images": [
+                31
+            ]
         }
     },
     {
@@ -373,7 +457,10 @@
             "description": "A stately crown created to ensure a well-meaning but ungifted heir could fend off usurpers and govern with a strong hand.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.867974"
+            "date_created": "2022-05-12 11:13:05.236280",
+            "images": [
+                32
+            ]
         }
     },
     {
@@ -386,7 +473,10 @@
             "description": "You grow stronger just by holding it.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.867975"
+            "date_created": "2022-05-12 11:13:05.236282",
+            "images": [
+                33
+            ]
         }
     },
     {
@@ -399,7 +489,10 @@
             "description": "A long blade imbued with time magic.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.867976"
+            "date_created": "2022-05-12 11:13:05.236284",
+            "images": [
+                34
+            ]
         }
     },
     {
@@ -412,7 +505,10 @@
             "description": "A staff of magical powers passed down from the eldest mages.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.867979"
+            "date_created": "2022-05-12 11:13:05.236286",
+            "images": [
+                35
+            ]
         }
     },
     {
@@ -425,7 +521,10 @@
             "description": "A mystical orb containing the essence of life.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 10:47:06.867980"
+            "date_created": "2022-05-12 11:13:05.236288",
+            "images": [
+                36
+            ]
         }
     },
     {
@@ -438,7 +537,10 @@
             "description": "A pair of magical gloves that seems to render weapons weightless.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.867981"
+            "date_created": "2022-05-12 11:13:05.236325",
+            "images": [
+                37
+            ]
         }
     },
     {
@@ -451,7 +553,10 @@
             "description": "An underground arcanist's update of a back-alley classic.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.867982"
+            "date_created": "2022-05-12 11:13:05.236327",
+            "images": [
+                38
+            ]
         }
     },
     {
@@ -464,7 +569,10 @@
             "description": "A mask that drains the energy of those caught in its gaze.",
             "seller": 1,
             "price": 900,
-            "date_created": "2022-05-12 10:47:06.867983"
+            "date_created": "2022-05-12 11:13:05.236329",
+            "images": [
+                39
+            ]
         }
     },
     {
@@ -477,7 +585,10 @@
             "description": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
             "seller": 1,
             "price": 700,
-            "date_created": "2022-05-12 10:47:06.867984"
+            "date_created": "2022-05-12 11:13:05.236331",
+            "images": [
+                40
+            ]
         }
     },
     {
@@ -490,7 +601,10 @@
             "description": "This ring is considered a good luck charm among the Gnomes.",
             "seller": 1,
             "price": 175,
-            "date_created": "2022-05-12 10:47:06.867985"
+            "date_created": "2022-05-12 11:13:05.236333",
+            "images": [
+                41
+            ]
         }
     },
     {
@@ -503,7 +617,10 @@
             "description": "An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component.",
             "seller": 1,
             "price": 650,
-            "date_created": "2022-05-12 10:47:06.867986"
+            "date_created": "2022-05-12 11:13:05.236336",
+            "images": [
+                42
+            ]
         }
     },
     {
@@ -516,7 +633,10 @@
             "description": "A mask commonly used by mages and warlocks for various rituals.",
             "seller": 1,
             "price": 175,
-            "date_created": "2022-05-12 10:47:06.867987"
+            "date_created": "2022-05-12 11:13:05.236338",
+            "images": [
+                43
+            ]
         }
     },
     {
@@ -529,7 +649,10 @@
             "description": "Fleet footwear, increasing movement.",
             "seller": 1,
             "price": 500,
-            "date_created": "2022-05-12 10:47:06.867989"
+            "date_created": "2022-05-12 11:13:05.236340",
+            "images": [
+                44
+            ]
         }
     },
     {
@@ -542,7 +665,10 @@
             "description": "Not one thrall creature of the depths,\r\nNor spirit bound in drowning's keep,\r\nNor Maelrawn the Tentacular,\r\nShall rest till seas, gem comes to sleep.",
             "seller": 1,
             "price": 900,
-            "date_created": "2022-05-12 10:47:06.867990"
+            "date_created": "2022-05-12 11:13:05.236342",
+            "images": [
+                45
+            ]
         }
     },
     {
@@ -555,7 +681,10 @@
             "description": "A cloak made of a magical material that works to dispel any magic cast on it.",
             "seller": 1,
             "price": 500,
-            "date_created": "2022-05-12 10:47:06.867991"
+            "date_created": "2022-05-12 11:13:05.236344",
+            "images": [
+                46
+            ]
         }
     },
     {
@@ -568,7 +697,10 @@
             "description": "A necklace that allows you to anticipate enemy attacks.",
             "seller": 1,
             "price": 1300,
-            "date_created": "2022-05-12 10:47:06.867992"
+            "date_created": "2022-05-12 11:13:05.236346",
+            "images": [
+                47
+            ]
         }
     },
     {
@@ -581,7 +713,10 @@
             "description": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.867993"
+            "date_created": "2022-05-12 11:13:05.236348",
+            "images": [
+                48
+            ]
         }
     },
     {
@@ -594,7 +729,10 @@
             "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
             "seller": 1,
             "price": 200,
-            "date_created": "2022-05-12 10:47:06.867994"
+            "date_created": "2022-05-12 11:13:05.236350",
+            "images": [
+                49
+            ]
         }
     },
     {
@@ -607,7 +745,10 @@
             "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 10:47:06.868000"
+            "date_created": "2022-05-12 11:13:05.236357",
+            "images": [
+                51
+            ]
         }
     },
     {
@@ -620,7 +761,10 @@
             "description": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 10:47:06.868002"
+            "date_created": "2022-05-12 11:13:05.236361",
+            "images": [
+                52
+            ]
         }
     },
     {
@@ -633,7 +777,10 @@
             "description": "Clear water that enhances the ability to meditate.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 10:47:06.868003"
+            "date_created": "2022-05-12 11:13:05.236363",
+            "images": [
+                53
+            ]
         }
     },
     {
@@ -646,7 +793,10 @@
             "description": "The bittersweet flavors of Jidi Isle are irresistible to amphibians.",
             "seller": 1,
             "price": 65,
-            "date_created": "2022-05-12 10:47:06.868004"
+            "date_created": "2022-05-12 11:13:05.236364",
+            "images": [
+                54
+            ]
         }
     },
     {
@@ -659,7 +809,10 @@
             "description": "A magical salve that can quickly mend even the deepest of wounds.",
             "seller": 1,
             "price": 110,
-            "date_created": "2022-05-12 10:47:06.868005"
+            "date_created": "2022-05-12 11:13:05.236366",
+            "images": [
+                55
+            ]
         }
     },
     {
@@ -672,7 +825,10 @@
             "description": "One may hide visage, but never volume.",
             "seller": 1,
             "price": 80,
-            "date_created": "2022-05-12 10:47:06.868006"
+            "date_created": "2022-05-12 11:13:05.236368",
+            "images": [
+                56
+            ]
         }
     },
     {
@@ -685,7 +841,10 @@
             "description": "An old bottle that survived the ages, the contents placed inside become enchanted.",
             "seller": 1,
             "price": 675,
-            "date_created": "2022-05-12 10:47:06.868007"
+            "date_created": "2022-05-12 11:13:05.236370",
+            "images": [
+                57
+            ]
         }
     },
     {
@@ -698,7 +857,10 @@
             "description": "A form of half-sentient plant, often cultivated by apprentice wizards.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.868008"
+            "date_created": "2022-05-12 11:13:05.236372",
+            "images": [
+                58
+            ]
         }
     },
     {
@@ -711,7 +873,10 @@
             "description": "A form of plant originally grown in the garden of a fearful king.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 10:47:06.868009"
+            "date_created": "2022-05-12 11:13:05.236374",
+            "images": [
+                59
+            ]
         }
     },
     {
@@ -724,7 +889,10 @@
             "description": "Advancements in stacking efficiency have made wards easier to carry than ever.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 10:47:06.868010"
+            "date_created": "2022-05-12 11:13:05.236376",
+            "images": [
+                60
+            ]
         }
     },
     {
@@ -737,7 +905,10 @@
             "description": "Forage to survive on the battlefield.",
             "seller": 1,
             "price": 90,
-            "date_created": "2022-05-12 10:47:06.868011"
+            "date_created": "2022-05-12 11:13:05.236377",
+            "images": [
+                61
+            ]
         }
     },
     {
@@ -750,7 +921,10 @@
             "description": "Om nom nom.",
             "seller": 1,
             "price": 30,
-            "date_created": "2022-05-12 10:47:06.868014"
+            "date_created": "2022-05-12 11:13:05.236379",
+            "images": [
+                62
+            ]
         }
     },
     {
@@ -763,7 +937,10 @@
             "description": "Losing the courier is punishable by death.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 10:47:06.868015"
+            "date_created": "2022-05-12 11:13:05.236381",
+            "images": [
+                63
+            ]
         }
     },
     {
@@ -776,7 +953,10 @@
             "description": "The faithful mount upon which soar the fortunes of battle.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 10:47:06.868016"
+            "date_created": "2022-05-12 11:13:05.236383",
+            "images": [
+                64
+            ]
         }
     },
     {
@@ -789,7 +969,10 @@
             "description": "What a hero truly needs.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 10:47:06.868017"
+            "date_created": "2022-05-12 11:13:05.236384",
+            "images": [
+                65
+            ]
         }
     },
     {
@@ -802,7 +985,10 @@
             "description": "Winged boots that grant omnipresence.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 10:47:06.868023"
+            "date_created": "2022-05-12 11:13:05.236391",
+            "images": [
+                67
+            ]
         }
     },
     {
@@ -815,7 +1001,10 @@
             "description": "Winged boots that grant omnipresence.",
             "seller": 1,
             "price": 4500,
-            "date_created": "2022-05-12 10:47:06.868024"
+            "date_created": "2022-05-12 11:13:05.236393",
+            "images": [
+                68
+            ]
         }
     },
     {
@@ -828,7 +1017,10 @@
             "description": "Boots that allow the wearer to travel between the ether.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 10:47:06.868025"
+            "date_created": "2022-05-12 11:13:05.236396",
+            "images": [
+                69
+            ]
         }
     },
     {
@@ -841,7 +1033,10 @@
             "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
             "seller": 1,
             "price": 2200,
-            "date_created": "2022-05-12 10:47:06.868026"
+            "date_created": "2022-05-12 11:13:05.236398",
+            "images": [
+                70
+            ]
         }
     },
     {
@@ -854,7 +1049,10 @@
             "description": "Capturing the majestic call of an eagle, this mystical horn brings limitless dexterity to those who hear it.",
             "seller": 1,
             "price": 2800,
-            "date_created": "2022-05-12 10:47:06.868027"
+            "date_created": "2022-05-12 11:13:05.236400",
+            "images": [
+                71
+            ]
         }
     },
     {
@@ -867,7 +1065,10 @@
             "description": "A massive axe capable of tearing whole mountains down.",
             "seller": 1,
             "price": 2800,
-            "date_created": "2022-05-12 10:47:06.868028"
+            "date_created": "2022-05-12 11:13:05.236402",
+            "images": [
+                72
+            ]
         }
     },
     {
@@ -880,7 +1081,10 @@
             "description": "An ancient weapon that often turns the tides of war.",
             "seller": 1,
             "price": 3750,
-            "date_created": "2022-05-12 10:47:06.868030"
+            "date_created": "2022-05-12 11:13:05.236404",
+            "images": [
+                73
+            ]
         }
     },
     {
@@ -893,7 +1097,10 @@
             "description": "A mystical, carved stone that boosts the fervor of the holder.",
             "seller": 1,
             "price": 2000,
-            "date_created": "2022-05-12 10:47:06.868031"
+            "date_created": "2022-05-12 11:13:05.236406",
+            "images": [
+                74
+            ]
         }
     },
     {
@@ -906,7 +1113,10 @@
             "description": "A shiny ring found beneath a fat halfling's corpse.",
             "seller": 1,
             "price": 825,
-            "date_created": "2022-05-12 10:47:06.868032"
+            "date_created": "2022-05-12 11:13:05.236407",
+            "images": [
+                75
+            ]
         }
     },
     {
@@ -919,7 +1129,10 @@
             "description": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy.",
             "seller": 1,
             "price": 825,
-            "date_created": "2022-05-12 10:47:06.868033"
+            "date_created": "2022-05-12 11:13:05.236409",
+            "images": [
+                76
+            ]
         }
     },
     {
@@ -932,7 +1145,10 @@
             "description": "Enigmatic staff made of only the most expensive crystals.",
             "seller": 1,
             "price": 2800,
-            "date_created": "2022-05-12 10:47:06.868034"
+            "date_created": "2022-05-12 11:13:05.236411",
+            "images": [
+                77
+            ]
         }
     },
     {
@@ -945,7 +1161,10 @@
             "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
             "seller": 1,
             "price": 800,
-            "date_created": "2022-05-12 10:47:06.868035"
+            "date_created": "2022-05-12 11:13:05.236413",
+            "images": [
+                78
+            ]
         }
     },
     {
@@ -958,7 +1177,10 @@
             "description": "A perfectly formed amethyst that nourishes body and mind when held.",
             "seller": 1,
             "price": 1200,
-            "date_created": "2022-05-12 10:47:06.868036"
+            "date_created": "2022-05-12 11:13:05.236414",
+            "images": [
+                79
+            ]
         }
     },
     {
@@ -971,7 +1193,10 @@
             "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.868037"
+            "date_created": "2022-05-12 11:13:05.236416",
+            "images": [
+                80
+            ]
         }
     },
     {
@@ -984,7 +1209,10 @@
             "description": "Fine and functional foppery for the fashion-forward fighter.",
             "seller": 1,
             "price": 250,
-            "date_created": "2022-05-12 10:47:06.868038"
+            "date_created": "2022-05-12 11:13:05.236418",
+            "images": [
+                81
+            ]
         }
     },
     {
@@ -997,7 +1225,10 @@
             "description": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 10:47:06.868039"
+            "date_created": "2022-05-12 11:13:05.236420",
+            "images": [
+                82
+            ]
         }
     },
     {
@@ -1010,7 +1241,10 @@
             "description": "",
             "seller": 1,
             "price": 5000,
-            "date_created": "2022-05-12 10:47:06.868041"
+            "date_created": "2022-05-12 11:13:05.236422",
+            "images": [
+                83
+            ]
         }
     },
     {
@@ -1023,7 +1257,10 @@
             "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
             "seller": 1,
             "price": 2200,
-            "date_created": "2022-05-12 10:47:06.868048"
+            "date_created": "2022-05-12 11:13:05.236431",
+            "images": [
+                85
+            ]
         }
     },
     {
@@ -1036,7 +1273,10 @@
             "description": "Deceptively hidden as an ordinary staff, it is actually very powerful, much like the Eldritch who originally possessed it.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 10:47:06.868049"
+            "date_created": "2022-05-12 11:13:05.236433",
+            "images": [
+                86
+            ]
         }
     },
     {
@@ -1049,7 +1289,10 @@
             "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
             "seller": 1,
             "price": 2600,
-            "date_created": "2022-05-12 10:47:06.868089"
+            "date_created": "2022-05-12 11:13:05.236439",
+            "images": [
+                88
+            ]
         }
     },
     {
@@ -1062,7 +1305,10 @@
             "description": "A gem that grants heart to the bearer.",
             "seller": 1,
             "price": 1650,
-            "date_created": "2022-05-12 10:47:06.868090"
+            "date_created": "2022-05-12 11:13:05.236440",
+            "images": [
+                89
+            ]
         }
     },
     {
@@ -1075,7 +1321,10 @@
             "description": "A busted old shield that seems to block more than it should.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.868091"
+            "date_created": "2022-05-12 11:13:05.236442",
+            "images": [
+                90
+            ]
         }
     },
     {
@@ -1088,7 +1337,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.868092"
+            "date_created": "2022-05-12 11:13:05.236444",
+            "images": [
+                91
+            ]
         }
     },
     {
@@ -1101,7 +1353,10 @@
             "description": "The bracer is a common choice to toughen up defenses and increase longevity.",
             "seller": 1,
             "price": 505,
-            "date_created": "2022-05-12 10:47:06.868151"
+            "date_created": "2022-05-12 11:13:05.236470",
+            "images": [
+                93
+            ]
         }
     },
     {
@@ -1114,7 +1369,10 @@
             "description": "A circlet with faint whispers echoing about it.",
             "seller": 1,
             "price": 505,
-            "date_created": "2022-05-12 10:47:06.868168"
+            "date_created": "2022-05-12 11:13:05.236476",
+            "images": [
+                95
+            ]
         }
     },
     {
@@ -1127,7 +1385,10 @@
             "description": "A small gemstone attached to several chains.",
             "seller": 1,
             "price": 505,
-            "date_created": "2022-05-12 10:47:06.868174"
+            "date_created": "2022-05-12 11:13:05.236482",
+            "images": [
+                97
+            ]
         }
     },
     {
@@ -1140,7 +1401,10 @@
             "description": "A glowing jewel formed out of assorted parts that somehow fit together perfectly.",
             "seller": 1,
             "price": 1875,
-            "date_created": "2022-05-12 10:47:06.868181"
+            "date_created": "2022-05-12 11:13:05.236488",
+            "images": [
+                99
+            ]
         }
     },
     {
@@ -1153,7 +1417,10 @@
             "description": "An eerie mask that is haunted with the malice of a fallen vampire.",
             "seller": 1,
             "price": 2450,
-            "date_created": "2022-05-12 10:47:06.868187"
+            "date_created": "2022-05-12 11:13:05.236521",
+            "images": [
+                101
+            ]
         }
     },
     {
@@ -1166,7 +1433,10 @@
             "description": "A sentient amulet whose animus shakes the courage of even the strongest foes.",
             "seller": 1,
             "price": 4050,
-            "date_created": "2022-05-12 10:47:06.868192"
+            "date_created": "2022-05-12 11:13:05.236527",
+            "images": [
+                103
+            ]
         }
     },
     {
@@ -1179,7 +1449,10 @@
             "description": "A powerful shield that imbues the bearer with the strength of heroes past, it is capable of protecting entire armies in battle.",
             "seller": 1,
             "price": 425,
-            "date_created": "2022-05-12 10:47:06.868197"
+            "date_created": "2022-05-12 11:13:05.236534",
+            "images": [
+                105
+            ]
         }
     },
     {
@@ -1192,7 +1465,10 @@
             "description": "Ring given as a reward to the greatest mages.",
             "seller": 1,
             "price": 425,
-            "date_created": "2022-05-12 10:47:06.868213"
+            "date_created": "2022-05-12 11:13:05.236541",
+            "images": [
+                107
+            ]
         }
     },
     {
@@ -1205,7 +1481,10 @@
             "description": "A prized relic long thought lost forever in a failed crusade.",
             "seller": 1,
             "price": 2400,
-            "date_created": "2022-05-12 10:47:06.868219"
+            "date_created": "2022-05-12 11:13:05.236592",
+            "images": [
+                109
+            ]
         }
     },
     {
@@ -1218,7 +1497,10 @@
             "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
             "seller": 1,
             "price": 3475,
-            "date_created": "2022-05-12 10:47:06.868225"
+            "date_created": "2022-05-12 11:13:05.236599",
+            "images": [
+                111
+            ]
         }
     },
     {
@@ -1231,7 +1513,10 @@
             "description": "Contains the ashes of powerful demons.",
             "seller": 1,
             "price": 880,
-            "date_created": "2022-05-12 10:47:06.868230"
+            "date_created": "2022-05-12 11:13:05.236604",
+            "images": [
+                113
+            ]
         }
     },
     {
@@ -1244,7 +1529,10 @@
             "description": "Creates a soothing aura that restores allies in battle.",
             "seller": 1,
             "price": 425,
-            "date_created": "2022-05-12 10:47:06.868258"
+            "date_created": "2022-05-12 11:13:05.236610",
+            "images": [
+                115
+            ]
         }
     },
     {
@@ -1257,7 +1545,10 @@
             "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
             "seller": 1,
             "price": 5675,
-            "date_created": "2022-05-12 10:47:06.868259"
+            "date_created": "2022-05-12 11:13:05.236612",
+            "images": [
+                116
+            ]
         }
     },
     {
@@ -1270,7 +1561,10 @@
             "description": "A garnet rod constructed from the essence of a fire demon.",
             "seller": 1,
             "price": 3475,
-            "date_created": "2022-05-12 10:47:06.868265"
+            "date_created": "2022-05-12 11:13:05.236631",
+            "images": [
+                118
+            ]
         }
     },
     {
@@ -1283,7 +1577,10 @@
             "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 10:47:06.868270"
+            "date_created": "2022-05-12 11:13:05.236637",
+            "images": [
+                120
+            ]
         }
     },
     {
@@ -1296,7 +1593,10 @@
             "description": "A deceptively swift blade imbued with resonant magic.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 10:47:06.868271"
+            "date_created": "2022-05-12 11:13:05.236639",
+            "images": [
+                121
+            ]
         }
     },
     {
@@ -1309,7 +1609,10 @@
             "description": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil.",
             "seller": 1,
             "price": 2725,
-            "date_created": "2022-05-12 10:47:06.868276"
+            "date_created": "2022-05-12 11:13:05.236645",
+            "images": [
+                123
+            ]
         }
     },
     {
@@ -1322,7 +1625,10 @@
             "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
             "seller": 1,
             "price": 6825,
-            "date_created": "2022-05-12 10:47:06.868290"
+            "date_created": "2022-05-12 11:13:05.236655",
+            "images": [
+                125
+            ]
         }
     },
     {
@@ -1335,7 +1641,10 @@
             "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
             "seller": 1,
             "price": 2275,
-            "date_created": "2022-05-12 10:47:06.868295"
+            "date_created": "2022-05-12 11:13:05.236661",
+            "images": [
+                127
+            ]
         }
     },
     {
@@ -1348,7 +1657,10 @@
             "description": "Allows you to manipulate others, for good or evil.",
             "seller": 1,
             "price": 2200,
-            "date_created": "2022-05-12 10:47:06.868305"
+            "date_created": "2022-05-12 11:13:05.236668",
+            "images": [
+                129
+            ]
         }
     },
     {
@@ -1361,7 +1673,10 @@
             "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
             "seller": 1,
             "price": 4450,
-            "date_created": "2022-05-12 10:47:06.868311"
+            "date_created": "2022-05-12 11:13:05.236674",
+            "images": [
+                131
+            ]
         }
     },
     {
@@ -1374,7 +1689,10 @@
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 2700,
-            "date_created": "2022-05-12 10:47:06.868320"
+            "date_created": "2022-05-12 11:13:05.236680",
+            "images": [
+                133
+            ]
         }
     },
     {
@@ -1387,7 +1705,10 @@
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 3950,
-            "date_created": "2022-05-12 10:47:06.868322"
+            "date_created": "2022-05-12 11:13:05.236682",
+            "images": [
+                134
+            ]
         }
     },
     {
@@ -1400,7 +1721,10 @@
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 5200,
-            "date_created": "2022-05-12 10:47:06.868323"
+            "date_created": "2022-05-12 11:13:05.236684",
+            "images": [
+                135
+            ]
         }
     },
     {
@@ -1413,7 +1737,10 @@
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 6450,
-            "date_created": "2022-05-12 10:47:06.868324"
+            "date_created": "2022-05-12 11:13:05.236686",
+            "images": [
+                136
+            ]
         }
     },
     {
@@ -1426,7 +1753,10 @@
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 7700,
-            "date_created": "2022-05-12 10:47:06.868327"
+            "date_created": "2022-05-12 11:13:05.236689",
+            "images": [
+                137
+            ]
         }
     },
     {
@@ -1439,7 +1769,10 @@
             "description": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 10:47:06.868332"
+            "date_created": "2022-05-12 11:13:05.236695",
+            "images": [
+                139
+            ]
         }
     },
     {
@@ -1452,7 +1785,10 @@
             "description": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages.",
             "seller": 1,
             "price": 3300,
-            "date_created": "2022-05-12 10:47:06.868333"
+            "date_created": "2022-05-12 11:13:05.236697",
+            "images": [
+                140
+            ]
         }
     },
     {
@@ -1465,7 +1801,10 @@
             "description": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages.",
             "seller": 1,
             "price": 4550,
-            "date_created": "2022-05-12 10:47:06.868335"
+            "date_created": "2022-05-12 11:13:05.236699",
+            "images": [
+                141
+            ]
         }
     },
     {
@@ -1478,7 +1817,10 @@
             "description": "The scepter of a wizard with demigod-like powers.",
             "seller": 1,
             "price": 4200,
-            "date_created": "2022-05-12 10:47:06.868336"
+            "date_created": "2022-05-12 11:13:05.236701",
+            "images": [
+                142
+            ]
         }
     },
     {
@@ -1491,7 +1833,10 @@
             "description": "The scepter of a wizard with demigod-like powers.",
             "seller": 1,
             "price": 5800,
-            "date_created": "2022-05-12 10:47:06.868341"
+            "date_created": "2022-05-12 11:13:05.236707",
+            "images": [
+                144
+            ]
         }
     },
     {
@@ -1504,7 +1849,10 @@
             "description": "The scepter of a wizard with demigod-like powers.",
             "seller": 1,
             "price": 5800,
-            "date_created": "2022-05-12 10:47:06.868342"
+            "date_created": "2022-05-12 11:13:05.236709",
+            "images": [
+                145
+            ]
         }
     },
     {
@@ -1517,7 +1865,10 @@
             "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 10:47:06.868343"
+            "date_created": "2022-05-12 11:13:05.236713",
+            "images": [
+                146
+            ]
         }
     },
     {
@@ -1530,7 +1881,10 @@
             "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 10:47:06.868344"
+            "date_created": "2022-05-12 11:13:05.236715",
+            "images": [
+                147
+            ]
         }
     },
     {
@@ -1543,7 +1897,10 @@
             "description": "A powerful artifact created for wizards.",
             "seller": 1,
             "price": 5000,
-            "date_created": "2022-05-12 10:47:06.868349"
+            "date_created": "2022-05-12 11:13:05.236722",
+            "images": [
+                149
+            ]
         }
     },
     {
@@ -1556,7 +1913,10 @@
             "description": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
             "seller": 1,
             "price": 5125,
-            "date_created": "2022-05-12 10:47:06.868355"
+            "date_created": "2022-05-12 11:13:05.236728",
+            "images": [
+                151
+            ]
         }
     },
     {
@@ -1569,7 +1929,10 @@
             "description": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
             "seller": 1,
             "price": 5000,
-            "date_created": "2022-05-12 10:47:06.868360"
+            "date_created": "2022-05-12 11:13:05.236796",
+            "images": [
+                153
+            ]
         }
     },
     {
@@ -1582,7 +1945,10 @@
             "description": "A powerful staff imbued with the strength of giants.",
             "seller": 1,
             "price": 4050,
-            "date_created": "2022-05-12 10:47:06.868365"
+            "date_created": "2022-05-12 11:13:05.236815",
+            "images": [
+                155
+            ]
         }
     },
     {
@@ -1595,7 +1961,10 @@
             "description": "The Immortal was said to own a shield that protected him from death itself.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.868366"
+            "date_created": "2022-05-12 11:13:05.236818",
+            "images": [
+                156
+            ]
         }
     },
     {
@@ -1608,7 +1977,10 @@
             "description": "Said to have belonged to a goddess, today it retains much of its former power.",
             "seller": 1,
             "price": 4850,
-            "date_created": "2022-05-12 10:47:06.868408"
+            "date_created": "2022-05-12 11:13:05.236825",
+            "images": [
+                158
+            ]
         }
     },
     {
@@ -1621,7 +1993,10 @@
             "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
             "seller": 1,
             "price": 4600,
-            "date_created": "2022-05-12 10:47:06.868415"
+            "date_created": "2022-05-12 11:13:05.236832",
+            "images": [
+                160
+            ]
         }
     },
     {
@@ -1634,7 +2009,10 @@
             "description": "This magical sphere once protected one of the most famous heroes in history.",
             "seller": 1,
             "price": 4600,
-            "date_created": "2022-05-12 10:47:06.868421"
+            "date_created": "2022-05-12 11:13:05.236839",
+            "images": [
+                162
+            ]
         }
     },
     {
@@ -1647,7 +2025,10 @@
             "description": "The jewel at its center still reflects a pale image of its creator.",
             "seller": 1,
             "price": 3850,
-            "date_created": "2022-05-12 10:47:06.868422"
+            "date_created": "2022-05-12 11:13:05.236841",
+            "images": [
+                163
+            ]
         }
     },
     {
@@ -1660,7 +2041,10 @@
             "description": "",
             "seller": 1,
             "price": 2350,
-            "date_created": "2022-05-12 10:47:06.868427"
+            "date_created": "2022-05-12 11:13:05.236847",
+            "images": [
+                165
+            ]
         }
     },
     {
@@ -1673,7 +2057,10 @@
             "description": "",
             "seller": 1,
             "price": 4725,
-            "date_created": "2022-05-12 10:47:06.868428"
+            "date_created": "2022-05-12 11:13:05.236852",
+            "images": [
+                166
+            ]
         }
     },
     {
@@ -1686,7 +2073,10 @@
             "description": "",
             "seller": 1,
             "price": 3000,
-            "date_created": "2022-05-12 10:47:06.868434"
+            "date_created": "2022-05-12 11:13:05.236863",
+            "images": [
+                168
+            ]
         }
     },
     {
@@ -1699,7 +2089,10 @@
             "description": "",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 10:47:06.868440"
+            "date_created": "2022-05-12 11:13:05.236869",
+            "images": [
+                170
+            ]
         }
     },
     {
@@ -1712,7 +2105,10 @@
             "description": "",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.868487"
+            "date_created": "2022-05-12 11:13:05.236934",
+            "images": [
+                173
+            ]
         }
     },
     {
@@ -1725,7 +2121,10 @@
             "description": "",
             "seller": 1,
             "price": 2980,
-            "date_created": "2022-05-12 10:47:06.868963"
+            "date_created": "2022-05-12 11:13:05.236941",
+            "images": [
+                175
+            ]
         }
     },
     {
@@ -1738,7 +2137,10 @@
             "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
             "seller": 1,
             "price": 1825,
-            "date_created": "2022-05-12 10:47:06.868973"
+            "date_created": "2022-05-12 11:13:05.236943",
+            "images": [
+                176
+            ]
         }
     },
     {
@@ -1751,7 +2153,10 @@
             "description": "A cuirass originally built to protect against the dreaded Year Beast.",
             "seller": 1,
             "price": 3600,
-            "date_created": "2022-05-12 10:47:06.869017"
+            "date_created": "2022-05-12 11:13:05.236949",
+            "images": [
+                178
+            ]
         }
     },
     {
@@ -1764,7 +2169,10 @@
             "description": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
             "seller": 1,
             "price": 2100,
-            "date_created": "2022-05-12 10:47:06.869035"
+            "date_created": "2022-05-12 11:13:05.236968",
+            "images": [
+                180
+            ]
         }
     },
     {
@@ -1777,7 +2185,10 @@
             "description": "Regain lost courage.",
             "seller": 1,
             "price": 3000,
-            "date_created": "2022-05-12 10:47:06.869037"
+            "date_created": "2022-05-12 11:13:05.236970",
+            "images": [
+                181
+            ]
         }
     },
     {
@@ -1790,7 +2201,10 @@
             "description": "A furred, magic resistant headpiece that is feared by wizards.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 10:47:06.869043"
+            "date_created": "2022-05-12 11:13:05.236976",
+            "images": [
+                183
+            ]
         }
     },
     {
@@ -1803,7 +2217,10 @@
             "description": "A pristine hood that feeds upon strife to empower its owner.",
             "seller": 1,
             "price": 3300,
-            "date_created": "2022-05-12 10:47:06.869050"
+            "date_created": "2022-05-12 11:13:05.236982",
+            "images": [
+                185
+            ]
         }
     },
     {
@@ -1816,7 +2233,10 @@
             "description": "So powerful, it cannot have a single owner.",
             "seller": 1,
             "price": 5950,
-            "date_created": "2022-05-12 10:47:06.869051"
+            "date_created": "2022-05-12 11:13:05.236984",
+            "images": [
+                186
+            ]
         }
     },
     {
@@ -1829,7 +2249,10 @@
             "description": "A powerful staff used by a master warrior.",
             "seller": 1,
             "price": 4975,
-            "date_created": "2022-05-12 10:47:06.869056"
+            "date_created": "2022-05-12 11:13:05.236990",
+            "images": [
+                188
+            ]
         }
     },
     {
@@ -1842,7 +2265,10 @@
             "description": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
             "seller": 1,
             "price": 5050,
-            "date_created": "2022-05-12 10:47:06.869058"
+            "date_created": "2022-05-12 11:13:05.236994",
+            "images": [
+                189
+            ]
         }
     },
     {
@@ -1855,7 +2281,10 @@
             "description": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
             "seller": 1,
             "price": 4975,
-            "date_created": "2022-05-12 10:47:06.869059"
+            "date_created": "2022-05-12 11:13:05.236996",
+            "images": [
+                190
+            ]
         }
     },
     {
@@ -1868,7 +2297,10 @@
             "description": "A weapon of incredible power that is difficult for even the strongest of warriors to control.",
             "seller": 1,
             "price": 5150,
-            "date_created": "2022-05-12 10:47:06.869146"
+            "date_created": "2022-05-12 11:13:05.237003",
+            "images": [
+                192
+            ]
         }
     },
     {
@@ -1881,7 +2313,10 @@
             "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
             "seller": 1,
             "price": 2875,
-            "date_created": "2022-05-12 10:47:06.869222"
+            "date_created": "2022-05-12 11:13:05.237009",
+            "images": [
+                194
+            ]
         }
     },
     {
@@ -1894,7 +2329,10 @@
             "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 10:47:06.869225"
+            "date_created": "2022-05-12 11:13:05.237011",
+            "images": [
+                195
+            ]
         }
     },
     {
@@ -1907,7 +2345,10 @@
             "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
             "seller": 1,
             "price": 4600,
-            "date_created": "2022-05-12 10:47:06.869234"
+            "date_created": "2022-05-12 11:13:05.237017",
+            "images": [
+                197
+            ]
         }
     },
     {
@@ -1920,7 +2361,10 @@
             "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
             "seller": 1,
             "price": 1950,
-            "date_created": "2022-05-12 10:47:06.869240"
+            "date_created": "2022-05-12 11:13:05.237023",
+            "images": [
+                199
+            ]
         }
     },
     {
@@ -1933,7 +2377,10 @@
             "description": "The forward charge of the wyvern host grants no quarter.",
             "seller": 1,
             "price": 1900,
-            "date_created": "2022-05-12 10:47:06.869241"
+            "date_created": "2022-05-12 11:13:05.237025",
+            "images": [
+                200
+            ]
         }
     },
     {
@@ -1946,7 +2393,10 @@
             "description": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 10:47:06.869248"
+            "date_created": "2022-05-12 11:13:05.237032",
+            "images": [
+                202
+            ]
         }
     },
     {
@@ -1959,7 +2409,10 @@
             "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
             "seller": 1,
             "price": 3000,
-            "date_created": "2022-05-12 10:47:06.869249"
+            "date_created": "2022-05-12 11:13:05.237034",
+            "images": [
+                203
+            ]
         }
     },
     {
@@ -1972,7 +2425,10 @@
             "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
             "seller": 1,
             "price": 5450,
-            "date_created": "2022-05-12 10:47:06.869254"
+            "date_created": "2022-05-12 11:13:05.237040",
+            "images": [
+                205
+            ]
         }
     },
     {
@@ -1985,7 +2441,10 @@
             "description": "Sange and Yasha, when attuned by the moonlight and used together, become a very powerful combination.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 10:47:06.869255"
+            "date_created": "2022-05-12 11:13:05.237042",
+            "images": [
+                206
+            ]
         }
     },
     {
@@ -1998,7 +2457,10 @@
             "description": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 10:47:06.869256"
+            "date_created": "2022-05-12 11:13:05.237044",
+            "images": [
+                207
+            ]
         }
     },
     {
@@ -2011,7 +2473,10 @@
             "description": "Yasha and Kaya when paired together share a natural resonance.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 10:47:06.869257"
+            "date_created": "2022-05-12 11:13:05.237048",
+            "images": [
+                208
+            ]
         }
     },
     {
@@ -2024,7 +2489,10 @@
             "description": "Immense power at the cost of your soul.",
             "seller": 1,
             "price": 5050,
-            "date_created": "2022-05-12 10:47:06.869258"
+            "date_created": "2022-05-12 11:13:05.237050",
+            "images": [
+                209
+            ]
         }
     },
     {
@@ -2037,7 +2505,10 @@
             "description": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
             "seller": 1,
             "price": 5600,
-            "date_created": "2022-05-12 10:47:06.869340"
+            "date_created": "2022-05-12 11:13:05.237056",
+            "images": [
+                211
+            ]
         }
     },
     {
@@ -2050,7 +2521,10 @@
             "description": "Extremely rare artifact, guarded by the azure dragons.",
             "seller": 1,
             "price": 5300,
-            "date_created": "2022-05-12 10:47:06.869346"
+            "date_created": "2022-05-12 11:13:05.237058",
+            "images": [
+                212
+            ]
         }
     },
     {
@@ -2063,7 +2537,10 @@
             "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 10:47:06.869386"
+            "date_created": "2022-05-12 11:13:05.237064",
+            "images": [
+                214
+            ]
         }
     },
     {
@@ -2076,7 +2553,10 @@
             "description": "The powerful headpiece of a dead necromancer.",
             "seller": 1,
             "price": 2400,
-            "date_created": "2022-05-12 10:47:06.869406"
+            "date_created": "2022-05-12 11:13:05.237916",
+            "images": [
+                216
+            ]
         }
     },
     {
@@ -2089,7 +2569,10 @@
             "description": "The powerful headpiece of a dead necromancer.",
             "seller": 1,
             "price": 6175,
-            "date_created": "2022-05-12 10:47:06.869446"
+            "date_created": "2022-05-12 11:13:05.237930",
+            "images": [
+                218
+            ]
         }
     },
     {
@@ -2102,7 +2585,10 @@
             "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
             "seller": 1,
             "price": 2700,
-            "date_created": "2022-05-12 10:47:06.869449"
+            "date_created": "2022-05-12 11:13:05.237933",
+            "images": [
+                219
+            ]
         }
     },
     {
@@ -2115,7 +2601,10 @@
             "description": "Bindings forged by impossible means to leash an ancient evil.",
             "seller": 1,
             "price": 6150,
-            "date_created": "2022-05-12 10:47:06.869459"
+            "date_created": "2022-05-12 11:13:05.237940",
+            "images": [
+                221
+            ]
         }
     },
     {
@@ -2128,7 +2617,10 @@
             "description": "A wicked weapon, used in torturing political criminals.",
             "seller": 1,
             "price": 3500,
-            "date_created": "2022-05-12 10:47:06.869461"
+            "date_created": "2022-05-12 11:13:05.237942",
+            "images": [
+                222
+            ]
         }
     },
     {
@@ -2141,7 +2633,10 @@
             "description": "Yasha is regarded as the swiftest weapon ever created.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 10:47:06.869468"
+            "date_created": "2022-05-12 11:13:05.237948",
+            "images": [
+                224
+            ]
         }
     },
     {
@@ -2154,7 +2649,10 @@
             "description": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
             "seller": 1,
             "price": 1775,
-            "date_created": "2022-05-12 10:47:06.869469"
+            "date_created": "2022-05-12 11:13:05.237950",
+            "images": [
+                225
+            ]
         }
     },
     {
@@ -2167,7 +2665,10 @@
             "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 10:47:06.869476"
+            "date_created": "2022-05-12 11:13:05.237959",
+            "images": [
+                227
+            ]
         }
     },
     {
@@ -2180,7 +2681,10 @@
             "description": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
             "seller": 1,
             "price": 4650,
-            "date_created": "2022-05-12 10:47:06.869482"
+            "date_created": "2022-05-12 11:13:05.237965",
+            "images": [
+                229
+            ]
         }
     },
     {
@@ -2193,7 +2697,10 @@
             "description": "A ring that feeds on the souls of those who wear it.",
             "seller": 1,
             "price": 700,
-            "date_created": "2022-05-12 10:47:06.869487"
+            "date_created": "2022-05-12 11:13:05.237984",
+            "images": [
+                231
+            ]
         }
     },
     {
@@ -2206,7 +2713,10 @@
             "description": "Magi equipped with these boots are valued in battle.",
             "seller": 1,
             "price": 1300,
-            "date_created": "2022-05-12 10:47:06.869488"
+            "date_created": "2022-05-12 11:13:05.237988",
+            "images": [
+                232
+            ]
         }
     },
     {
@@ -2219,7 +2729,10 @@
             "description": "At the core of spellcraft are spectrums only the very gifted can sense.",
             "seller": 1,
             "price": 5275,
-            "date_created": "2022-05-12 10:47:06.869489"
+            "date_created": "2022-05-12 11:13:05.237990",
+            "images": [
+                233
+            ]
         }
     },
     {
@@ -2232,7 +2745,10 @@
             "description": "Envenoms your veapon with the venom of a venomous viper.",
             "seller": 1,
             "price": 275,
-            "date_created": "2022-05-12 10:47:06.869490"
+            "date_created": "2022-05-12 11:13:05.237991",
+            "images": [
+                234
+            ]
         }
     },
     {
@@ -2245,7 +2761,10 @@
             "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
             "seller": 1,
             "price": 300,
-            "date_created": "2022-05-12 10:47:06.869491"
+            "date_created": "2022-05-12 11:13:05.237993",
+            "images": [
+                235
+            ]
         }
     },
     {
@@ -2258,7 +2777,10 @@
             "description": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
             "seller": 1,
             "price": 925,
-            "date_created": "2022-05-12 10:47:06.869599"
+            "date_created": "2022-05-12 11:13:05.238032",
+            "images": [
+                237
+            ]
         }
     },
     {
@@ -2271,7 +2793,10 @@
             "description": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
             "seller": 1,
             "price": 1125,
-            "date_created": "2022-05-12 10:47:06.869607"
+            "date_created": "2022-05-12 11:13:05.238039",
+            "images": [
+                239
+            ]
         }
     },
     {
@@ -2284,7 +2809,10 @@
             "description": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
             "seller": 1,
             "price": 2400,
-            "date_created": "2022-05-12 10:47:06.869613"
+            "date_created": "2022-05-12 11:13:05.238045",
+            "images": [
+                241
+            ]
         }
     },
     {
@@ -2297,7 +2825,10 @@
             "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
             "seller": 1,
             "price": 1700,
-            "date_created": "2022-05-12 10:47:06.869618"
+            "date_created": "2022-05-12 11:13:05.238051",
+            "images": [
+                243
+            ]
         }
     },
     {
@@ -2310,7 +2841,10 @@
             "description": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim.",
             "seller": 1,
             "price": 4125,
-            "date_created": "2022-05-12 10:47:06.869651"
+            "date_created": "2022-05-12 11:13:05.238058",
+            "images": [
+                245
+            ]
         }
     },
     {
@@ -2323,7 +2857,10 @@
             "description": "The bearer has no fear of combat.",
             "seller": 1,
             "price": 1025,
-            "date_created": "2022-05-12 10:47:06.869653"
+            "date_created": "2022-05-12 11:13:05.238062",
+            "images": [
+                246
+            ]
         }
     },
     {
@@ -2336,7 +2873,10 @@
             "description": "A talisman forged to honor the daytime sky.",
             "seller": 1,
             "price": 2625,
-            "date_created": "2022-05-12 10:47:06.869661"
+            "date_created": "2022-05-12 11:13:05.238069",
+            "images": [
+                248
+            ]
         }
     },
     {
@@ -2349,7 +2889,10 @@
             "description": "The charlatan wizard Myrddin's only true contribution to the arcane arts.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 10:47:06.869662"
+            "date_created": "2022-05-12 11:13:05.238071",
+            "images": [
+                249
+            ]
         }
     },
     {
@@ -2362,7 +2905,10 @@
             "description": "That which raises beast to man and man to god.",
             "seller": 1,
             "price": 75,
-            "date_created": "2022-05-12 10:47:06.869663"
+            "date_created": "2022-05-12 11:13:05.238073",
+            "images": [
+                250
+            ]
         }
     },
     {
@@ -2375,7 +2921,10 @@
             "description": "The headwear of corrupt magi.",
             "seller": 1,
             "price": 1525,
-            "date_created": "2022-05-12 10:47:06.869668"
+            "date_created": "2022-05-12 11:13:05.238079",
+            "images": [
+                252
+            ]
         }
     },
     {
@@ -2388,7 +2937,10 @@
             "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
             "seller": 1,
             "price": 6200,
-            "date_created": "2022-05-12 10:47:06.869674"
+            "date_created": "2022-05-12 11:13:05.238085",
+            "images": [
+                254
+            ]
         }
     },
     {
@@ -2401,7 +2953,10 @@
             "description": "One of many holy instruments constructed to honor the Omniscience.",
             "seller": 1,
             "price": 5100,
-            "date_created": "2022-05-12 10:47:06.869733"
+            "date_created": "2022-05-12 11:13:05.238091",
+            "images": [
+                256
+            ]
         }
     },
     {
@@ -2414,7 +2969,10 @@
             "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
             "seller": 1,
             "price": 2750,
-            "date_created": "2022-05-12 10:47:06.869764"
+            "date_created": "2022-05-12 11:13:05.238097",
+            "images": [
+                258
+            ]
         }
     },
     {
@@ -2427,7 +2985,10 @@
             "description": "A simple but effective weapon devised to quell a great Hellbear uprising.",
             "seller": 1,
             "price": 301,
-            "date_created": "2022-05-12 10:47:06.869822"
+            "date_created": "2022-05-12 11:13:05.238103",
+            "images": [
+                260
+            ]
         }
     },
     {
@@ -2440,7 +3001,10 @@
             "description": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
             "seller": 1,
             "price": 6250,
-            "date_created": "2022-05-12 10:47:06.869839"
+            "date_created": "2022-05-12 11:13:05.238109",
+            "images": [
+                262
+            ]
         }
     },
     {
@@ -2453,7 +3017,10 @@
             "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
             "seller": 1,
             "price": 3550,
-            "date_created": "2022-05-12 10:47:06.869851"
+            "date_created": "2022-05-12 11:13:05.238115",
+            "images": [
+                264
+            ]
         }
     },
     {
@@ -2466,7 +3033,10 @@
             "description": "The ring of the fallen Warlord Aquila continues to support armies in battle.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869854"
+            "date_created": "2022-05-12 11:13:05.238117",
+            "images": [
+                265
+            ]
         }
     },
     {
@@ -2479,7 +3049,10 @@
             "description": "While they increase the longevity of the wearer, this boot is not particularly reliable.",
             "seller": 1,
             "price": 925,
-            "date_created": "2022-05-12 10:47:06.869856"
+            "date_created": "2022-05-12 11:13:05.238119",
+            "images": [
+                266
+            ]
         }
     },
     {
@@ -2492,7 +3065,10 @@
             "description": "The stolen cape of a master illusionist.",
             "seller": 1,
             "price": 1950,
-            "date_created": "2022-05-12 10:47:06.869920"
+            "date_created": "2022-05-12 11:13:05.238143",
+            "images": [
+                269
+            ]
         }
     },
     {
@@ -2505,7 +3081,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869924"
+            "date_created": "2022-05-12 11:13:05.238145",
+            "images": [
+                270
+            ]
         }
     },
     {
@@ -2518,7 +3097,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869926"
+            "date_created": "2022-05-12 11:13:05.238147",
+            "images": [
+                271
+            ]
         }
     },
     {
@@ -2531,7 +3113,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869928"
+            "date_created": "2022-05-12 11:13:05.238149",
+            "images": [
+                272
+            ]
         }
     },
     {
@@ -2544,7 +3129,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869930"
+            "date_created": "2022-05-12 11:13:05.238151",
+            "images": [
+                273
+            ]
         }
     },
     {
@@ -2557,7 +3145,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869932"
+            "date_created": "2022-05-12 11:13:05.238153",
+            "images": [
+                274
+            ]
         }
     },
     {
@@ -2570,7 +3161,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869935"
+            "date_created": "2022-05-12 11:13:05.238155",
+            "images": [
+                275
+            ]
         }
     },
     {
@@ -2583,7 +3177,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869937"
+            "date_created": "2022-05-12 11:13:05.238157",
+            "images": [
+                276
+            ]
         }
     },
     {
@@ -2596,7 +3193,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.869939"
+            "date_created": "2022-05-12 11:13:05.238159",
+            "images": [
+                277
+            ]
         }
     },
     {
@@ -2609,7 +3209,10 @@
             "description": "",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 10:47:06.869968"
+            "date_created": "2022-05-12 11:13:05.238175",
+            "images": [
+                280
+            ]
         }
     },
     {
@@ -2622,7 +3225,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.870294"
+            "date_created": "2022-05-12 11:13:05.238460",
+            "images": [
+                296
+            ]
         }
     },
     {
@@ -2635,7 +3241,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.870431"
+            "date_created": "2022-05-12 11:13:05.238524",
+            "images": [
+                301
+            ]
         }
     },
     {
@@ -2648,7 +3257,10 @@
             "description": "To those who harvest olgru jelly, success serves more than mere profit--it's often the means to survival--for only the jelly itself can cure the ravages that follow a sting from the vigilant denizens of the giant hives.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.870435"
+            "date_created": "2022-05-12 11:13:05.238527",
+            "images": [
+                302
+            ]
         }
     },
     {
@@ -2661,7 +3273,10 @@
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.870467"
+            "date_created": "2022-05-12 11:13:05.238541",
+            "images": [
+                305
+            ]
         }
     },
     {
@@ -2674,7 +3289,10 @@
             "description": "The coveted treasure that divided the heirs of Queen Raiya upon her death, resulting in the eventual downfall of her kingdom.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 10:47:06.870697"
+            "date_created": "2022-05-12 11:13:05.238702",
+            "images": [
+                316
+            ]
         }
     },
     {
@@ -2687,7 +3305,10 @@
             "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
             "seller": 1,
             "price": 3850,
-            "date_created": "2022-05-12 10:47:06.872494"
+            "date_created": "2022-05-12 11:13:05.241290",
+            "images": [
+                383
+            ]
         }
     }
 ]

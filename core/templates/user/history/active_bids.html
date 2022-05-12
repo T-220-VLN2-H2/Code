@@ -11,7 +11,7 @@
         <small>{{bid.user_id}}</small>
         <small>{{bid.status}}</small>
         {% if bid.status == "ACCEPTED" %}
-            <form action="{% url 'checkout_user' %}" method="GET">
+            <form action="{% url 'checkout_user' %}" method="POST">
                 {% csrf_token %}
                 <small>{{bid.status}}</small>
                 <input name="bid" value="{{bid}}" hidden>

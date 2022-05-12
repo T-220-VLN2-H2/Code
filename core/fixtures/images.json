@@ -1,6 +1,6 @@
 [
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 1,
         "fields": {
             "name": "blink",
@@ -8,7 +8,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 2,
         "fields": {
             "name": "overwhelming_blink",
@@ -16,7 +16,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 3,
         "fields": {
             "name": "swift_blink",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 4,
         "fields": {
             "name": "arcane_blink",
@@ -32,7 +32,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 8,
         "fields": {
             "name": "blades_of_attack",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 9,
         "fields": {
             "name": "broadsword",
@@ -48,7 +48,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 10,
         "fields": {
             "name": "chainmail",
@@ -56,7 +56,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 11,
         "fields": {
             "name": "claymore",
@@ -64,7 +64,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 12,
         "fields": {
             "name": "helm_of_iron_will",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 13,
         "fields": {
             "name": "javelin",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 14,
         "fields": {
             "name": "mithril_hammer",
@@ -88,7 +88,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 15,
         "fields": {
             "name": "platemail",
@@ -96,7 +96,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 16,
         "fields": {
             "name": "quarterstaff",
@@ -104,7 +104,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 17,
         "fields": {
             "name": "quelling_blade",
@@ -112,7 +112,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 18,
         "fields": {
             "name": "faerie_fire",
@@ -120,7 +120,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 19,
         "fields": {
             "name": "infused_raindrop",
@@ -128,7 +128,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 20,
         "fields": {
             "name": "wind_lace",
@@ -136,7 +136,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 21,
         "fields": {
             "name": "ring_of_protection",
@@ -144,7 +144,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 22,
         "fields": {
             "name": "stout_shield",
@@ -152,7 +152,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 23,
         "fields": {
             "name": "moon_shard",
@@ -160,7 +160,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 24,
         "fields": {
             "name": "gauntlets",
@@ -168,7 +168,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 25,
         "fields": {
             "name": "slippers",
@@ -176,7 +176,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 26,
         "fields": {
             "name": "mantle",
@@ -184,7 +184,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 27,
         "fields": {
             "name": "branches",
@@ -192,7 +192,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 28,
         "fields": {
             "name": "belt_of_strength",
@@ -200,7 +200,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 29,
         "fields": {
             "name": "boots_of_elves",
@@ -208,7 +208,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 30,
         "fields": {
             "name": "robe",
@@ -216,7 +216,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 31,
         "fields": {
             "name": "circlet",
@@ -224,7 +224,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 32,
         "fields": {
             "name": "crown",
@@ -232,7 +232,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 33,
         "fields": {
             "name": "ogre_axe",
@@ -240,7 +240,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 34,
         "fields": {
             "name": "blade_of_alacrity",
@@ -248,7 +248,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 35,
         "fields": {
             "name": "staff_of_wizardry",
@@ -256,7 +256,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 36,
         "fields": {
             "name": "ultimate_orb",
@@ -264,7 +264,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 37,
         "fields": {
             "name": "gloves",
@@ -272,7 +272,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 38,
         "fields": {
             "name": "blitz_knuckles",
@@ -280,7 +280,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 39,
         "fields": {
             "name": "lifesteal",
@@ -288,7 +288,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 40,
         "fields": {
             "name": "voodoo_mask",
@@ -296,7 +296,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 41,
         "fields": {
             "name": "ring_of_regen",
@@ -304,7 +304,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 42,
         "fields": {
             "name": "ring_of_tarrasque",
@@ -312,7 +312,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 43,
         "fields": {
             "name": "sobi_mask",
@@ -320,7 +320,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 44,
         "fields": {
             "name": "boots",
@@ -328,7 +328,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 45,
         "fields": {
             "name": "gem",
@@ -336,7 +336,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 46,
         "fields": {
             "name": "cloak",
@@ -344,7 +344,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 47,
         "fields": {
             "name": "talisman_of_evasion",
@@ -352,7 +352,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 48,
         "fields": {
             "name": "cheese",
@@ -360,7 +360,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 49,
         "fields": {
             "name": "magic_stick",
@@ -368,7 +368,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 51,
         "fields": {
             "name": "magic_wand",
@@ -376,7 +376,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 52,
         "fields": {
             "name": "ghost",
@@ -384,7 +384,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 53,
         "fields": {
             "name": "clarity",
@@ -392,7 +392,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 54,
         "fields": {
             "name": "enchanted_mango",
@@ -400,7 +400,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 55,
         "fields": {
             "name": "flask",
@@ -408,7 +408,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 56,
         "fields": {
             "name": "dust",
@@ -416,7 +416,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 57,
         "fields": {
             "name": "bottle",
@@ -424,7 +424,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 58,
         "fields": {
             "name": "ward_observer",
@@ -432,7 +432,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 59,
         "fields": {
             "name": "ward_sentry",
@@ -440,7 +440,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 60,
         "fields": {
             "name": "ward_dispenser",
@@ -448,7 +448,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 61,
         "fields": {
             "name": "tango",
@@ -456,7 +456,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 62,
         "fields": {
             "name": "tango_single",
@@ -464,7 +464,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 63,
         "fields": {
             "name": "courier",
@@ -472,7 +472,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 64,
         "fields": {
             "name": "flying_courier",
@@ -480,7 +480,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 65,
         "fields": {
             "name": "tpscroll",
@@ -488,7 +488,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 67,
         "fields": {
             "name": "travel_boots",
@@ -496,7 +496,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 68,
         "fields": {
             "name": "travel_boots_2",
@@ -504,7 +504,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 69,
         "fields": {
             "name": "phase_boots",
@@ -512,7 +512,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 70,
         "fields": {
             "name": "demon_edge",
@@ -520,7 +520,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 71,
         "fields": {
             "name": "eagle",
@@ -528,7 +528,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 72,
         "fields": {
             "name": "reaver",
@@ -536,7 +536,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 73,
         "fields": {
             "name": "relic",
@@ -544,7 +544,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 74,
         "fields": {
             "name": "hyperstone",
@@ -552,7 +552,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 75,
         "fields": {
             "name": "ring_of_health",
@@ -560,7 +560,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 76,
         "fields": {
             "name": "void_stone",
@@ -568,7 +568,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 77,
         "fields": {
             "name": "mystic_staff",
@@ -576,7 +576,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 78,
         "fields": {
             "name": "energy_booster",
@@ -584,7 +584,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 79,
         "fields": {
             "name": "point_booster",
@@ -592,7 +592,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 80,
         "fields": {
             "name": "vitality_booster",
@@ -600,7 +600,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 81,
         "fields": {
             "name": "fluffy_hat",
@@ -608,7 +608,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 82,
         "fields": {
             "name": "power_treads",
@@ -616,7 +616,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 83,
         "fields": {
             "name": "grandmasters_glaive",
@@ -624,7 +624,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 85,
         "fields": {
             "name": "hand_of_midas",
@@ -632,7 +632,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 86,
         "fields": {
             "name": "oblivion_staff",
@@ -640,7 +640,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 88,
         "fields": {
             "name": "witch_blade",
@@ -648,7 +648,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 89,
         "fields": {
             "name": "pers",
@@ -656,7 +656,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 90,
         "fields": {
             "name": "poor_mans_shield",
@@ -664,7 +664,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 91,
         "fields": {
             "name": "satchel",
@@ -672,7 +672,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 93,
         "fields": {
             "name": "bracer",
@@ -680,7 +680,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 95,
         "fields": {
             "name": "wraith_band",
@@ -688,7 +688,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 97,
         "fields": {
             "name": "null_talisman",
@@ -696,7 +696,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 99,
         "fields": {
             "name": "mekansm",
@@ -704,7 +704,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 101,
         "fields": {
             "name": "vladmir",
@@ -712,7 +712,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 103,
         "fields": {
             "name": "wraith_pact",
@@ -720,7 +720,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 105,
         "fields": {
             "name": "buckler",
@@ -728,7 +728,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 107,
         "fields": {
             "name": "ring_of_basilius",
@@ -736,7 +736,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 109,
         "fields": {
             "name": "holy_locket",
@@ -744,7 +744,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 111,
         "fields": {
             "name": "pipe",
@@ -752,7 +752,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 113,
         "fields": {
             "name": "urn_of_shadows",
@@ -760,7 +760,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 115,
         "fields": {
             "name": "headdress",
@@ -768,7 +768,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 116,
         "fields": {
             "name": "sheepstick",
@@ -776,7 +776,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 118,
         "fields": {
             "name": "orchid",
@@ -784,7 +784,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 120,
         "fields": {
             "name": "bloodthorn",
@@ -792,7 +792,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 121,
         "fields": {
             "name": "echo_sabre",
@@ -800,7 +800,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 123,
         "fields": {
             "name": "cyclone",
@@ -808,7 +808,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 125,
         "fields": {
             "name": "wind_waker",
@@ -816,7 +816,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 127,
         "fields": {
             "name": "aether_lens",
@@ -824,7 +824,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 129,
         "fields": {
             "name": "force_staff",
@@ -832,7 +832,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 131,
         "fields": {
             "name": "hurricane_pike",
@@ -840,7 +840,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 133,
         "fields": {
             "name": "dagon",
@@ -848,7 +848,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 134,
         "fields": {
             "name": "dagon_2",
@@ -856,7 +856,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 135,
         "fields": {
             "name": "dagon_3",
@@ -864,7 +864,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 136,
         "fields": {
             "name": "dagon_4",
@@ -872,7 +872,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 137,
         "fields": {
             "name": "dagon_5",
@@ -880,7 +880,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 139,
         "fields": {
             "name": "necronomicon",
@@ -888,7 +888,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 140,
         "fields": {
             "name": "necronomicon_2",
@@ -896,7 +896,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 141,
         "fields": {
             "name": "necronomicon_3",
@@ -904,7 +904,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 142,
         "fields": {
             "name": "ultimate_scepter",
@@ -912,7 +912,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 144,
         "fields": {
             "name": "ultimate_scepter_2",
@@ -920,7 +920,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 145,
         "fields": {
             "name": "ultimate_scepter_roshan",
@@ -928,7 +928,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 146,
         "fields": {
             "name": "aghanims_shard",
@@ -936,7 +936,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 147,
         "fields": {
             "name": "aghanims_shard_roshan",
@@ -944,7 +944,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 149,
         "fields": {
             "name": "refresher",
@@ -952,7 +952,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 151,
         "fields": {
             "name": "assault",
@@ -960,7 +960,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 153,
         "fields": {
             "name": "heart",
@@ -968,7 +968,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 155,
         "fields": {
             "name": "black_king_bar",
@@ -976,7 +976,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 156,
         "fields": {
             "name": "aegis",
@@ -984,7 +984,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 158,
         "fields": {
             "name": "shivas_guard",
@@ -992,7 +992,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 160,
         "fields": {
             "name": "bloodstone",
@@ -1000,7 +1000,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 162,
         "fields": {
             "name": "sphere",
@@ -1008,7 +1008,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 163,
         "fields": {
             "name": "lotus_orb",
@@ -1016,7 +1016,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 165,
         "fields": {
             "name": "meteor_hammer",
@@ -1024,7 +1024,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 166,
         "fields": {
             "name": "nullifier",
@@ -1032,7 +1032,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 168,
         "fields": {
             "name": "aeon_disk",
@@ -1040,7 +1040,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 170,
         "fields": {
             "name": "kaya",
@@ -1048,7 +1048,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 173,
         "fields": {
             "name": "refresher_shard",
@@ -1056,7 +1056,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 175,
         "fields": {
             "name": "spirit_vessel",
@@ -1064,7 +1064,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 176,
         "fields": {
             "name": "vanguard",
@@ -1072,7 +1072,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 178,
         "fields": {
             "name": "crimson_guard",
@@ -1080,7 +1080,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 180,
         "fields": {
             "name": "blade_mail",
@@ -1088,7 +1088,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 181,
         "fields": {
             "name": "soul_booster",
@@ -1096,7 +1096,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 183,
         "fields": {
             "name": "hood_of_defiance",
@@ -1104,7 +1104,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 185,
         "fields": {
             "name": "eternal_shroud",
@@ -1112,7 +1112,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 186,
         "fields": {
             "name": "rapier",
@@ -1120,7 +1120,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 188,
         "fields": {
             "name": "monkey_king_bar",
@@ -1128,7 +1128,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 189,
         "fields": {
             "name": "radiance",
@@ -1136,7 +1136,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 190,
         "fields": {
             "name": "butterfly",
@@ -1144,7 +1144,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 192,
         "fields": {
             "name": "greater_crit",
@@ -1152,7 +1152,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 194,
         "fields": {
             "name": "basher",
@@ -1160,7 +1160,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 195,
         "fields": {
             "name": "bfury",
@@ -1168,7 +1168,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 197,
         "fields": {
             "name": "manta",
@@ -1176,7 +1176,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 199,
         "fields": {
             "name": "lesser_crit",
@@ -1184,7 +1184,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 200,
         "fields": {
             "name": "dragon_lance",
@@ -1192,7 +1192,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 202,
         "fields": {
             "name": "armlet",
@@ -1200,7 +1200,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 203,
         "fields": {
             "name": "invis_sword",
@@ -1208,7 +1208,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 205,
         "fields": {
             "name": "silver_edge",
@@ -1216,7 +1216,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 206,
         "fields": {
             "name": "sange_and_yasha",
@@ -1224,7 +1224,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 207,
         "fields": {
             "name": "kaya_and_sange",
@@ -1232,7 +1232,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 208,
         "fields": {
             "name": "yasha_and_kaya",
@@ -1240,7 +1240,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 209,
         "fields": {
             "name": "satanic",
@@ -1248,7 +1248,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 211,
         "fields": {
             "name": "mjollnir",
@@ -1256,7 +1256,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 212,
         "fields": {
             "name": "skadi",
@@ -1264,7 +1264,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 214,
         "fields": {
             "name": "sange",
@@ -1272,7 +1272,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 216,
         "fields": {
             "name": "helm_of_the_dominator",
@@ -1280,7 +1280,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 218,
         "fields": {
             "name": "helm_of_the_overlord",
@@ -1288,7 +1288,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 219,
         "fields": {
             "name": "maelstrom",
@@ -1296,7 +1296,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 221,
         "fields": {
             "name": "gungir",
@@ -1304,7 +1304,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 222,
         "fields": {
             "name": "desolator",
@@ -1312,7 +1312,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 224,
         "fields": {
             "name": "yasha",
@@ -1320,7 +1320,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 225,
         "fields": {
             "name": "mask_of_madness",
@@ -1328,7 +1328,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 227,
         "fields": {
             "name": "diffusal_blade",
@@ -1336,7 +1336,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 229,
         "fields": {
             "name": "ethereal_blade",
@@ -1344,7 +1344,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 231,
         "fields": {
             "name": "soul_ring",
@@ -1352,7 +1352,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 232,
         "fields": {
             "name": "arcane_boots",
@@ -1360,7 +1360,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 233,
         "fields": {
             "name": "octarine_core",
@@ -1368,7 +1368,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 234,
         "fields": {
             "name": "orb_of_venom",
@@ -1376,7 +1376,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 235,
         "fields": {
             "name": "blight_stone",
@@ -1384,7 +1384,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 237,
         "fields": {
             "name": "orb_of_corrosion",
@@ -1392,7 +1392,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 239,
         "fields": {
             "name": "falcon_blade",
@@ -1400,7 +1400,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 241,
         "fields": {
             "name": "mage_slayer",
@@ -1408,7 +1408,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 243,
         "fields": {
             "name": "ancient_janggo",
@@ -1416,7 +1416,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 245,
         "fields": {
             "name": "boots_of_bearing",
@@ -1424,7 +1424,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 246,
         "fields": {
             "name": "medallion_of_courage",
@@ -1432,7 +1432,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 248,
         "fields": {
             "name": "solar_crest",
@@ -1440,7 +1440,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 249,
         "fields": {
             "name": "smoke_of_deceit",
@@ -1448,7 +1448,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 250,
         "fields": {
             "name": "tome_of_knowledge",
@@ -1456,7 +1456,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 252,
         "fields": {
             "name": "veil_of_discord",
@@ -1464,7 +1464,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 254,
         "fields": {
             "name": "revenants_brooch",
@@ -1472,7 +1472,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 256,
         "fields": {
             "name": "guardian_greaves",
@@ -1480,7 +1480,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 258,
         "fields": {
             "name": "rod_of_atos",
@@ -1488,7 +1488,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 260,
         "fields": {
             "name": "iron_talon",
@@ -1496,7 +1496,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 262,
         "fields": {
             "name": "abyssal_blade",
@@ -1504,7 +1504,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 264,
         "fields": {
             "name": "heavens_halberd",
@@ -1512,7 +1512,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 265,
         "fields": {
             "name": "ring_of_aquila",
@@ -1520,7 +1520,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 266,
         "fields": {
             "name": "tranquil_boots",
@@ -1528,7 +1528,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 269,
         "fields": {
             "name": "glimmer_cape",
@@ -1536,7 +1536,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 270,
         "fields": {
             "name": "river_painter",
@@ -1544,7 +1544,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 271,
         "fields": {
             "name": "river_painter2",
@@ -1552,7 +1552,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 272,
         "fields": {
             "name": "river_painter3",
@@ -1560,7 +1560,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 273,
         "fields": {
             "name": "river_painter4",
@@ -1568,7 +1568,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 274,
         "fields": {
             "name": "river_painter5",
@@ -1576,7 +1576,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 275,
         "fields": {
             "name": "river_painter6",
@@ -1584,7 +1584,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 276,
         "fields": {
             "name": "river_painter7",
@@ -1592,7 +1592,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 277,
         "fields": {
             "name": "mutation_tombstone",
@@ -1600,7 +1600,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 280,
         "fields": {
             "name": "pocket_roshan",
@@ -1608,7 +1608,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 296,
         "fields": {
             "name": "greater_faerie_fire",
@@ -1616,7 +1616,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 301,
         "fields": {
             "name": "mango_tree",
@@ -1624,7 +1624,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 302,
         "fields": {
             "name": "royal_jelly",
@@ -1632,7 +1632,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 305,
         "fields": {
             "name": "repair_kit",
@@ -1640,7 +1640,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 316,
         "fields": {
             "name": "vambrace",
@@ -1648,7 +1648,7 @@
         }
     },
     {
-        "models": "core.image",
+        "model": "core.image",
         "pk": 383,
         "fields": {
             "name": "diffusal_blade_2",
