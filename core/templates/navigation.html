@@ -39,7 +39,7 @@
         <div class="col-md-auto">
             <div class="dropdown me-2">
                 <img id="profileImg" class="dropdown-toggle" src="{% static 'media' %}/{{user.profile.image.image}}" data-bs-toggle="dropdown" aria-expanded="false">
-                  <p class="dropdown-toggle" data-bs-toggle="dropdown">{{user.username}}</p>
+                  <p class="dropdown-toggle" data-bs-toggle="dropdown">{{logged_in_user_rating}}</p>
                   <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="profileImg" >
                     <li><a class="dropdown-item" href="{% url 'user_home' %}">My profile</a></li>
                     <li><a class="dropdown-item" href="{% url 'user_history' %}">History</a></li>

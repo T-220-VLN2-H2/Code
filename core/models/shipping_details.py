@@ -1,4 +1,5 @@
 from django.db import models
+from django_countries.fields import CountryField
 
 
 class ShippingDetails(models.Model):
@@ -6,6 +7,7 @@ class ShippingDetails(models.Model):
     address = models.CharField(max_length=128)
     postal_code = models.SmallIntegerField()
     city = models.CharField(max_length=128)
+    country = CountryField()
 
     def __str__(self):
         return self.full_clean
