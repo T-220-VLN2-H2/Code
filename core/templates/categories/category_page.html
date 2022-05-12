@@ -6,5 +6,14 @@
     {% for item in items %}
         {% include 'items/item_list.html' %}
     {% endfor %}
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+          {% with ''|center:max_page as range %}
+          {% for _ in range %}
+            <li class="page-item"><a class="page-link" href="?page={{forloop.counter}}">{{forloop.counter}}</a></li>
+          {% endfor %}
+          {% endwith %}
+      </ul>
+    </nav>
     </div>
 {% endblock %}
