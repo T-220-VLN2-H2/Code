@@ -12,8 +12,7 @@ from core.models.payment_info import PaymentInfo
 from datetime import date
 
 
-def user(request):
-    ctx = {}
+def user(request, bid_id=None):
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -22,54 +21,30 @@ def user(request):
             request.session["postal_code"] = form.cleaned_data["postal_code"]
             request.session["city"] = form.cleaned_data["city"]
             request.session.modified = True
-            return redirect("/checkout/delivery")
+            return redirect("/checkout/delivery", bid_id)
+        else:
+            form = PersonalInfoCreateForm()
+            ctx = {}
+            ctx["form"] = form
+            request.session["bid_id"] = request.POST.get("bid")
+            request.session.modified = True
+        return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
-        print(request.session.keys())
         if len(request.session.keys()) > 3:
+            print(request.session["bid_id"])
             form_init = {}
             form_init["full_name"] = request.session["full_name"]
             form_init["address"] = request.session["address"]
             form_init["postal_code"] = request.session["postal_code"]
             form_init["city"] = request.session["city"]
             form = PersonalInfoCreateForm(form_init)
+            ctx = {}
             ctx["form"] = form
             return render(request, "checkout/user_details.html", context=ctx)
-        else:
-            form = PersonalInfoCreateForm()
-            ctx["form"] = form
-            return render(request, "checkout/user_details.html", context=ctx)
-
-
-def payment(request):
-    ctx = {}
-    if request.method == "POST":
-        form = PaymentCreateForm(request.POST)
-        if form.is_valid():
-            request.session["cardholder_name"] = form.cleaned_data["cardholder_name"]
-            request.session["card_number"] = form.cleaned_data["card_number"]
-            request.session["cvc"] = form.cleaned_data["cvc"]
-            request.session["expiry_month"] = form.cleaned_data["expiry_month"]
-            request.session["expiry_year"] = form.cleaned_data["expiry_year"]
-            request.session.modified = True
-            return process_payment(request, 10)
-    elif request.method == "GET":
-        if "cardholder_name" in request.session.keys():
-            form_init = {}
-            form_init["cardholder_name"] = request.session["cardholder_name"]
-            form_init["card_number"] = request.session["card_number"]
-            form_init["cvc"] = request.session["cvc"]
-            form_init["expiry_month"] = request.session["expiry_month"]
-            form_init["expiry_year"] = request.session["expiry_year"]
-            form = PaymentCreateForm(form_init)
-            ctx["form"] = form
-            return render(request, "checkout/payment_info.html", context=ctx)
-        else:
-            form = PaymentCreateForm()
-            ctx["form"] = form
-            return render(request, "checkout/payment_info.html", context=ctx)
 
 
 def delivery(request):
+    print(request.session["bid_id"])
     ctx = {}
     if request.method == "POST":
         form = DeliveryInfoCreateForm(request.POST)
@@ -89,10 +64,40 @@ def delivery(request):
         return render(request, "checkout/delivery_info.html", context=ctx)
 
 
+def payment(request):
+    print(request.session["bid_id"])
+    ctx = {}
+    if request.method == "POST":
+        form = PaymentCreateForm(request.POST)
+        if form.is_valid():
+            request.session["cardholder_name"] = form.cleaned_data["cardholder_name"]
+            request.session["card_number"] = form.cleaned_data["card_number"]
+            request.session["cvc"] = form.cleaned_data["cvc"]
+            request.session["expiry_month"] = form.cleaned_data["expiry_month"]
+            request.session["expiry_year"] = form.cleaned_data["expiry_year"]
+            request.session.modified = True
+            return process_payment(request)
+    elif request.method == "GET":
+        if "cardholder_name" in request.session.keys():
+            form_init = {}
+            form_init["cardholder_name"] = request.session["cardholder_name"]
+            form_init["card_number"] = request.session["card_number"]
+            form_init["cvc"] = request.session["cvc"]
+            form_init["expiry_month"] = request.session["expiry_month"]
+            form_init["expiry_year"] = request.session["expiry_year"]
+            form = PaymentCreateForm(form_init)
+            ctx["form"] = form
+            return render(request, "checkout/payment_info.html", context=ctx)
+        else:
+            form = PaymentCreateForm()
+            ctx["form"] = form
+            return render(request, "checkout/payment_info.html", context=ctx)
+
+
 def process_payment(request):
-    # bid = BidService.get_bid_by_id(bid_id)
-    # bid.status = "COMPLETED"
-    # bid.save()
+    bid = BidService.get_bid_by_item_id(int(request.session["bid_id"]))
+    bid.status = "COMPLETED"
+    bid.save()
     if request.method == "POST":
         shipping_details = ShippingDetails(
             full_name=request.session["full_name"],
@@ -120,13 +125,14 @@ def process_payment(request):
 
 
 def summary(request):
+    print(request.session["bid_id"])
+    ctx = {}
     summary_details = request.session["summary_details"]
     date_today = date.today()
-    bid = BidService.get_bid_by_id(bid_id)
-    item = ItemService.get_item_by_id(bid.item_id_id)
+    bid = BidService.get_bid_by_item_id(request.session["bid_id"])
+    item = ItemService.get_item_by_id(request.session["bid_id"])
     ctx["price"] = bid.amount
     ctx["item_name"] = item.title
-    ctx = {}
     ctx["summary"] = summary_details
     ctx["date"] = date_today
     if request.method == "POST":
