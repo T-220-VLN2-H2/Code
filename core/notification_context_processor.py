@@ -10,5 +10,5 @@ def notifications(request):
         "notifications": NotificationService.get_notifications(
             request.user, only_unread=True
         ),
-        "logged_in_user_rating": rating
+        "logged_in_user_rating": rating,
     }

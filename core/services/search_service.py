@@ -10,7 +10,11 @@ class SearchService:
             items = Item.objects.filter(is_sold=False).values()
             return items
         else:
-            items = Item.objects.filter(title__icontains=q).filter(is_sold=False).order_by(ItemService.get_sort(sort))
+            items = (
+                Item.objects.filter(title__icontains=q)
+                .filter(is_sold=False)
+                .order_by(ItemService.get_sort(sort))
+            )
         result = [(item, ImageService.get_images(item)) for item in items]
         return result
 
