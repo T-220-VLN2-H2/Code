@@ -5,6 +5,7 @@ on:
       - main
 jobs:
     deploy:
+        runs-on: ubuntu-20.04
         steps:
           # Step 1: Checkout
           - uses: actions/checkout@v2
