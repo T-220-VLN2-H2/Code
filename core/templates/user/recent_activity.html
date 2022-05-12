@@ -1,7 +1,8 @@
+{% load static %}
 <div class="row">
     <div class="col-5">
         <h2>Recent ratings</h2>
-        <ul class="list-group">
+        <ul class="list-group overflow-auto recents">
             {% for rating in ratings %}
             <li class="list-group-item p-3">
                 <span class="float-start">
@@ -23,7 +24,7 @@
 
     <div class="col-5">
         <h2>Recent posting</h2>
-        <div class="list-group">
+        <div class="list-group overflow-auto recents">
             {% for item in items %}
             <a href="/items/{{ item.id }}" class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">

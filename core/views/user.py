@@ -13,13 +13,15 @@ from core.services.user_service import UserService
 folder_path = "../templates/user"
 ctx = {}
 
+def item_time_since(items):
+    pass
 
 @login_required
 def home(request):
     ctx["user"] = request.user
     ctx["ratings"] = UserService.get_user_ratings(request.user)
     # TODO: implement count for get_sale_items
-    ctx["items"] = ItemService.get_sale_items(request.user.id)[:7]
+    ctx["items"] = ItemService.get_sale_items(request.user.id)
     return render(request, f"{folder_path}/index.html", context=ctx)
 
 
@@ -60,7 +62,7 @@ def profile(request, id):
 
     target_user = UserService.get_user_info(id)
     ctx["ratings"] = UserService.get_user_ratings(target_user)
-    ctx["items"] = ItemService.get_sale_items(target_user.id)[:7]
+    ctx["items"] = ItemService.get_sale_items(target_user.id)
     ctx["target_user"] = target_user
     ctx["user"] = request.user
     avg_rating = UserService.get_user_rating(target_user.id)["rating__avg"]
