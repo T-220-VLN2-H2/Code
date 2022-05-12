@@ -15,7 +15,7 @@ from core.models.order import Order
 from datetime import date
 
 
-def user(request, bid_id=None):
+def user(request, item_id=None):
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -25,12 +25,12 @@ def user(request, bid_id=None):
             request.session["city"] = form.cleaned_data["city"]
             request.session["country"] = form.cleaned_data["country"]
             request.session.modified = True
-            return redirect("/checkout/delivery", bid_id)
+            return redirect("/checkout/payment", item_id)
         else:
             form = PersonalInfoCreateForm()
             ctx = {}
             ctx["form"] = form
-            request.session["bid_id"] = request.POST.get("bid")
+            request.session["item_id"] = request.POST.get("bid")
             request.session.modified = True
         return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
@@ -40,6 +40,7 @@ def user(request, bid_id=None):
             form_init["address"] = request.session["address"]
             form_init["postal_code"] = request.session["postal_code"]
             form_init["city"] = request.session["city"]
+            form_init["country"] = request.session["country"]
             form = PersonalInfoCreateForm(form_init)
             ctx = {}
             ctx["form"] = form
@@ -47,6 +48,7 @@ def user(request, bid_id=None):
 
 
 def delivery(request):
+    # scrapped?
     ctx = {}
     if request.method == "POST":
         form = DeliveryInfoCreateForm(request.POST)
@@ -78,6 +80,7 @@ def payment(request):
             request.session["expiry_month"] = form.cleaned_data["expiry_month"]
             request.session["expiry_year"] = form.cleaned_data["expiry_year"]
             request.session.modified = True
+            print(1)
             return process_payment(request)
     elif request.method == "GET":
         if "cardholder_name" in request.session.keys():
@@ -97,9 +100,6 @@ def payment(request):
 
 
 def process_payment(request):
-    bid = BidService.get_bid_by_item_id(int(request.session["bid_id"]))
-    bid.status = "COMPLETED"
-    bid.save()
     if request.method == "POST":
         shipping_details = ShippingDetails(
             full_name=request.session["full_name"],
@@ -132,19 +132,23 @@ def process_payment(request):
 
 def summary(request):
     ctx = {}
-    summary_details = request.session["summary_details"]
-    date_today = date.today()
-    bid = BidService.get_bid_by_item_id(request.session["bid_id"])
-    item = ItemService.get_item_by_id(request.session["bid_id"])
-    order = OrderService.create_order(bid.user_id_id, item.id, item.seller_id)
-    ctx["price"] = bid.amount
-    ctx["item_name"] = item.title
-    ctx["summary"] = summary_details
-    ctx["date"] = date_today
-    ctx["del_choice"] = request.session["del_choice"]
-    for key in list(request.session.keys()):
-        if not key.startswith("_"): # skip keys set by the django system
-            del request.session[key]
-    if request.method == "POST":
+    if request.method == "GET":
+        summary_details = request.session["summary_details"]
+        date_today = date.today()
+        bid = BidService.get_bid_by_id(request.session["bid_id"])
+        item = ItemService.get_item_by_id(request.session["item_id"])
+        ctx["price"] = bid.amount
+        ctx["item_name"] = item.title
+        ctx["summary"] = summary_details
+        ctx["date"] = date_today
+        return render(request, "checkout/summary.html", context=ctx)
+    else:
+        OrderService.create_order(bid.user_id_id, item.id, item.seller_id)
+        bid = BidService.get_accepted_bid_by_item_id(int(request.session["item_id"]))
+        request.session["bid_id"] = bid.id
+        bid.status = "COMPLETED"
+        bid.save()
+        for key in list(request.session.keys()):
+            if not key.startswith("_"): # skip keys set by the django system
+                del request.session[key]
         return redirect("index_page")
-    return render(request, "checkout/summary.html", context=ctx)

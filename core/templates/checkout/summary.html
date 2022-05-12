@@ -18,11 +18,6 @@
                     </div>
                     <hr>
                     <div class="col-xl-10">
-                        <h3>Shipping method</h3>
-                        <li class="text-black"><b>Delivery method:</b> {{ summary.del_choice }}</li>
-                    </div>
-                    <hr>
-                    <div class="col-xl-10">
                         <h3>Payment info</h3>
                         <li class="text-black"><b>Card owner:</b> {{ summary.cardholder_name }}</li>
                         <li class="text-black"><b>Card number:</b> {{ summary.card_number }}</li>
@@ -50,7 +45,10 @@
               </div>
             </div>
           </div>
-        <form action="/user/history#bids" method="GET">
-            <button class="btn btn-primary" type="home">Home</button>
+        <form action="/checkout/summary" method="GET">
+            <button class="btn btn-primary" type="home">Confirm</button>
+        </form>
+        <form action="/checkout/payment" method="PATCH">
+            <button class="btn btn-primary" type="Confirm">Back</button>
         </form>
 {% endblock %}
