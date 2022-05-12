@@ -11,19 +11,6 @@ class UserService:
         return user
 
     @classmethod
-    def set_user_info(cls, user, first_name=None, last_name=None, bio=None):
-        pass
-        # probably won't need this
-
-    @classmethod
-    def create_user(cls, form):
-        pass
-
-    @classmethod
-    def add_user_rating(cls, form, user):
-        pass
-
-    @classmethod
     def get_user_rating(cls, user_id):
         rating = Order.objects.filter(seller=user_id).aggregate(Avg("rating"))
 
