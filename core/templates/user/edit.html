@@ -12,14 +12,6 @@
         <div class="col-8 mt-2">
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {% comment %} <div class="row">
-                    <div class="col-6">
-                        <label for="username" class="form-label">Username</label>
-                        <input class="form-control" id="username" type="text" name="username" value="{{ user }}" disabled>
-                    </div>
-                </div> {% endcomment %}
-
-                {% comment %} {{ user_form.username }} {% endcomment %}
                 <div class="row d-flex justify-content-start mb-2">
                     <div class="col-5">
                         {{ user_form.first_name.label_tag }}
