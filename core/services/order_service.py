@@ -3,19 +3,13 @@ from core.models import Order
 
 class OrderService:
     @classmethod
-    def set_shipping_info(cls):
-        print("Do something")
-        # TODO: Validate that all information is correct and forward to DB
-
-    @classmethod
-    def set_payment_info(cls):
-        print("Do something")
-        # TODO: Validate that all information is correct and forward to DB
-
-    @classmethod
-    def create_invoice(cls):
-        print("Do something")
-        # TODO: retreive payment, buyer information and create invoice to store on DB, return to user(?)
+    def create_order(cls, buyer_id, item_id, seller_id):
+        new_order = Order()
+        new_order.buyer_id = buyer_id
+        new_order.item_id = item_id
+        new_order.seller_id = seller_id
+        new_order.save()
+        return new_order
 
     @classmethod
     def get_order_details(self, order_id):
