@@ -4,9 +4,7 @@ from core.forms.checkout_form import (
     PersonalInfoCreateForm,
     DeliveryInfoCreateForm,
 )
-from core.services.checkout_service import CheckoutService
 from core.services.bid_service import BidService
-from core.services.item_service import ItemService
 from core.models.shipping_details import ShippingDetails
 from core.models.payment_info import PaymentInfo
 from datetime import date
@@ -31,7 +29,6 @@ def user(request, bid_id=None):
         return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
         if len(request.session.keys()) > 3:
-            print(request.session["bid_id"])
             form_init = {}
             form_init["full_name"] = request.session["full_name"]
             form_init["address"] = request.session["address"]
@@ -44,7 +41,6 @@ def user(request, bid_id=None):
 
 
 def delivery(request):
-    print(request.session["bid_id"])
     ctx = {}
     if request.method == "POST":
         form = DeliveryInfoCreateForm(request.POST)
@@ -65,7 +61,6 @@ def delivery(request):
 
 
 def payment(request):
-    print(request.session["bid_id"])
     ctx = {}
     if request.method == "POST":
         form = PaymentCreateForm(request.POST)
@@ -95,7 +90,7 @@ def payment(request):
 
 
 def process_payment(request):
-    bid = BidService.get_bid_by_item_id(int(request.session["bid_id"]))
+    bid = BidService.get_bid_by_id(int(request.session["bid_id"]))
     bid.status = "COMPLETED"
     bid.save()
     if request.method == "POST":
@@ -125,12 +120,11 @@ def process_payment(request):
 
 
 def summary(request):
-    print(request.session["bid_id"])
     ctx = {}
     summary_details = request.session["summary_details"]
     date_today = date.today()
-    bid = BidService.get_bid_by_item_id(request.session["bid_id"])
-    item = ItemService.get_item_by_id(request.session["bid_id"])
+    bid = BidService.get_bid_by_id(request.session["bid_id"])
+    item = bid.item_id
     ctx["price"] = bid.amount
     ctx["item_name"] = item.title
     ctx["summary"] = summary_details
