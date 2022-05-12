@@ -15,7 +15,7 @@
                         aria-controls="active-sales"
                         aria-selected="true"
                     >
-                        Active Sales
+                        Active listings
                     </button></a
                 >
             </li>
@@ -47,7 +47,7 @@
                         aria-controls="sales"
                         aria-selected="false"
                     >
-                        Sales
+                        Sold items
                     </button></a
                 >
             </li>
@@ -63,7 +63,7 @@
                         aria-controls="purchases"
                         aria-selected="false"
                     >
-                        Purchases
+                        Bought items
                     </button></a
                 >
             </li>
@@ -72,90 +72,17 @@
             <div class="list-group tab-pane fade show active" id="active-sales" role="tabpanel"
                 aria-labelledby="active-sales-tab">
                 <p>Item name Highest bid </p>
-                <div class="accordion" id="bidsAccordion">
-
-                {% for item in active_sales %}
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading{{item.id}}">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{item.id}}" aria-expanded="false" aria-controls="collapseThree">
-                            {{item.title}}
-                          </button>
-                        </h2>
-                        <div id="collapse{{item.id}}" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                {% for bid in user_item_bids %}
-                                {% if bid.item_id == item %}
-                                    <form method="POST">
-                                        {% csrf_token %}
-                                        <input name="bid" value="{{bid.id}}" hidden>{{bid.amount}} {{bid.user_id}}
-                                        <button class="btn btn-primary" type="submit">Accept bid</button>
-                                    </form>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-                </div>
+                {% include 'user/history/active_listings.html' %}
             </div>
 
             <div class="list-group tab-pane fade" id="active-bids" role="tabpanel" aria-labelledby="active-bids-tab">
-                {% for bid in bids %}
-                    <div href="#" class="list-group-item list-group-item-action" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">{{bid.item_id}}</h5>
-                            <small>{{bid.timestamp}} | {{bid.expires}}</small>
-                        </div>
-                        <p class="mb-1">{{bid.amount}}</p>
-                        <small>{{bid.user_id}}</small>
-                        <small>{{bid.status}}</small>
-                        {% if bid.status == "ACCEPTED" %}
-                            <form action="{% url 'checkout_user' %}" method="POST">
-                                {% csrf_token %}
-                                <small>{{bid.status}}</small>
-                                <input name="bid" value="{{bid}}" hidden>
-                                <button class="btn btn-success" type="submit">Checkout</button>
-                            </form>
-                        {% endif %}
-                    </div>
-                {% endfor %}
+                {% include 'user/history/active_bids.html' %}
             </div>
             <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
-                {% for item in sold_items %}
-                <div href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{item.title}}</h5>
-                        <small>{{item.price}}</small>
-                        <!-- Should be time since posting ? -->
-                    </div>
-                    <p class="mb-1">{{item.description}}</p>
-                    <small>{{item.category}}</small>
-
-                </div>
-                {% endfor %}
+                {% include 'user/history/sold_items.html' %}
             </div>
             <div class="tab-pane fade" id="purchases" role="tabpanel" aria-labelledby="purchases-tab">
-                {% for purchase in purchases %}
-                <div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <span class="mx-5"> {{ purchase.item }} {{ purchase.seller }} {{ purchase.buyer }} </span>
-                        <span class="float-right">
-                            <form action="" method="post">
-                                {% csrf_token %}
-                                <input type="text" name="order_id" value="{{ purchase.id }}" hidden />
-                                {% if purchase.rating %} You rated this {{ purchase.rating }} {% else %}
-                                <input type="radio" name="rating" id="" value="1" />1
-                                <input type="radio" name="rating" id="" value="2" />2
-                                <input type="radio" name="rating" id="" value="3" />3
-                                <input type="radio" name="rating" id="" value="4" />4
-                                <input type="radio" name="rating" id="" value="5" checked />5
-                                <button class="btn btn-primary" type="submit">Rate</button>
-                                {% endif %}
-                            </form>
-                        </span>
-                    </div>
-                </div>
-                {% endfor %}
+                {% include 'user/history/bought_items.html' %}
             </div>
         </div>
     </div>

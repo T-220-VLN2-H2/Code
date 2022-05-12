@@ -1,0 +1,25 @@
+{% if purchases.count == 0 %}
+<p>You have not bought any items</p>
+{% else %}
+{% for purchase in purchases %}
+    <div class="list-group-item">
+        <div class="d-flex w-100 justify-content-between">
+            <span class="mx-5"> {{ purchase.item }} {{ purchase.seller }} {{ purchase.buyer }} </span>
+            <span class="float-right">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="order_id" value="{{ purchase.id }}" hidden />
+                    {% if purchase.rating %} You rated this {{ purchase.rating }} {% else %}
+                    <input type="radio" name="rating" id="" value="1" />1
+                    <input type="radio" name="rating" id="" value="2" />2
+                    <input type="radio" name="rating" id="" value="3" />3
+                    <input type="radio" name="rating" id="" value="4" />4
+                    <input type="radio" name="rating" id="" value="5" checked />5
+                    <button class="btn btn-primary" type="submit">Rate</button>
+                    {% endif %}
+                </form>
+            </span>
+        </div>
+    </div>
+{% endfor %}
+{% endif %}

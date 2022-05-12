@@ -1,4 +1,3 @@
-from .item_service import ItemService
 from core.models.item import Item
 from core.services.notification_service import NotificationService
 from django.db.models import Max, Q
@@ -95,16 +94,30 @@ Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {los
     def get_user_bids(cls, user, active=True):
         """
         get current users bids
+        Q negation means filter out any item that matches the criteria
         """
-        try:
-            bids = UserBids.objects.filter(
-                ~Q(status="COMPLETED"),
-                ~Q(status="REJECTED"),
-                user_id=user
-            ).order_by("-timestamp")
-        except ObjectDoesNotExist:
-            return None
+
+        bids = UserBids.objects.filter(
+            ~Q(status="COMPLETED"),
+            ~Q(status="REJECTED"),
+            user_id=user
+        ).order_by("-timestamp")
         return bids
+
+    @classmethod
+    def get_bids_for_item(cls, item, status=None):
+        if status is None:
+            bids = UserBids.objects.filter(
+                Q(status="PENDING") | Q(status="ACCEPTED"),
+                item_id=item
+            )
+        else:
+            bids = UserBids.objects.filter(
+                status=status,
+                item_id=item
+            )
+        return bids
+
 
     @classmethod
     def get_all_bids(cls):
