@@ -1,0 +1,14 @@
+{% load static %}
+<div class="row">
+        <div class="col-2">
+            <p style="text-align: right">Order by</p>
+        </div>
+        <div class="col-2">
+            <select id="orderBy">
+                <option value="price_hi">Price (hi)</option>
+                <option value="price_lo">Price (lo)</option>
+                <option value="name">Name</option>
+            </select>
+        </div>
+    </div>
+<script src="{% static 'js/itemOrdering.js' %}"></script>
