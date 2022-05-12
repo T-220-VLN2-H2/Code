@@ -92,6 +92,12 @@ class ItemService:
         return similar_items
 
     @classmethod
-    def sort_items(cls, **kwargs):
-        print("Do something")
-        # TODO sort items by name or price
+    def get_items_offset(cls, category=None, sort="default", offset=0, count=12):
+        print(offset, count)
+        items = Item.objects.filter(is_sold=False, category=category).order_by(cls.get_sort(sort))[offset:count+offset]
+        return items
+
+    @classmethod
+    def get_all_items_count(cls, category=None):
+        items_count = Item.objects.filter(category=category).count()
+        return items_count
