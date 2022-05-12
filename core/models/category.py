@@ -4,9 +4,6 @@ from django.db import models
 class Category(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=128)
-    parent = models.BigIntegerField(default=None, null=True)
-    # TODO:
-    # sub_categories = models.Array<Category>()
 
     def __str__(self):
         return self.name

@@ -24,17 +24,23 @@ class ItemService:
         # TODO update item in DB
 
     @classmethod
-    def get_all_items(cls, is_sold=False, sort="default"):
+    def get_all_items(cls, is_sold=False, category=None, sort="default"):
+        items = Item.objects.filter(is_sold=is_sold)
+
+        if category is not None:
+            items.filter(category=category)
 
         if sort == "price_hi":
-            items = Item.objects.filter(is_sold=is_sold).order_by("-price")
+            items.order_by("-price")
+
         elif sort == "price_lo":
-            items = Item.objects.filter(is_sold=is_sold).order_by("price")
+            items.order_by("price")
+
         elif sort == "name":
-            items = Item.objects.filter(is_sold=is_sold).order_by("title")
-        else:
-            items = Item.objects.filter(is_sold=is_sold)
+            items.order_by("title")
+
         return items
+
 
     @classmethod
     def get_user_items_with_bids(cls, user):
