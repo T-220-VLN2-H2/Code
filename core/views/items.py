@@ -7,6 +7,7 @@ from core.services.item_service import ItemService
 from core.services.user_service import UserService
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.urls import reverse
 
 
 ctx = {}
@@ -54,7 +55,7 @@ def item_create(request):
         if form.is_valid():
             item = ItemService.create_item(form, request.user)
             ImageService.create_image(request.FILES.getlist("images"), item)
-
+            return redirect(reverse("item_details", args=[item.id]))
     else:
         ctx["form"] = ItemCreateForm()
     return render(request, "../templates/items/items_create.html", context=ctx)
