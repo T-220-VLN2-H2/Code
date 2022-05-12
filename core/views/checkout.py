@@ -45,6 +45,7 @@ def user(request, bid_id=None):
 
 def delivery(request):
     print(request.session["bid_id"])
+    ctx = {}
     if request.method == "POST":
         form = DeliveryInfoCreateForm(request.POST)
         if form.is_valid():
@@ -56,7 +57,6 @@ def delivery(request):
             form_init = {}
             form_init["del_choice"] = request.session["del_choice"]
             form = DeliveryInfoCreateForm(form_init)
-            ctx = {}
             ctx["form"] = form
             return render(request, "checkout/delivery_info.html", context=ctx)
         form = DeliveryInfoCreateForm()
