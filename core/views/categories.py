@@ -12,6 +12,7 @@ def home(request):
 def category_page(request, cat_id):
     import re
 
+    cat_id = re.sub("\D", "", cat_id)  # remove all non-digits
     try:
         sort = request.GET["sort"]
     except:
@@ -20,12 +21,4 @@ def category_page(request, cat_id):
         "items": ItemService.get_all_items(sort=sort, category=cat_id),
         "user": request.user,
     }
-
-    cat_id = re.sub("\D", "", cat_id)  # remove all non-digits
-    cat = CategoryService.get_category(cat_id)
-
-    if cat.id == int(cat_id):
-        ctx["selected_category"] = cat
-        ctx["category_item"] = ctx["items"]
-
     return render(request, "../templates/categories/category_page.html", context=ctx)

@@ -25,10 +25,10 @@ class ItemService:
 
     @classmethod
     def get_all_items(cls, is_sold=False, category=None, sort="default"):
-        items = Item.objects.filter(is_sold=is_sold)
-
         if category is not None:
-            items.filter(category=category)
+            items = Item.objects.filter(is_sold=is_sold, category=category)
+        else:
+            items = Item.objects.filter(is_sold=is_sold)
 
         if sort == "price_hi":
             items.order_by("-price")
