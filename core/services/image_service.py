@@ -24,7 +24,9 @@ class ImageService:
     def get_images(cls, item):
         if item.images.count() == 0:
             default_image = Image.objects.get(id=1)
-            return default_image
+            return [default_image]
+
+        return item.images.all()
 
     @classmethod
     def update_profile_image(cls, user, image):
