@@ -23,6 +23,7 @@ def user(request, bid_id=None):
             request.session["address"] = form.cleaned_data["address"]
             request.session["postal_code"] = form.cleaned_data["postal_code"]
             request.session["city"] = form.cleaned_data["city"]
+            request.session["country"] = form.cleaned_data["country"]
             request.session.modified = True
             return redirect("/checkout/delivery", bid_id)
         else:
@@ -34,7 +35,6 @@ def user(request, bid_id=None):
         return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
         if len(request.session.keys()) > 3:
-            print(request.session["bid_id"])
             form_init = {}
             form_init["full_name"] = request.session["full_name"]
             form_init["address"] = request.session["address"]
@@ -106,6 +106,7 @@ def process_payment(request):
             address=request.session["address"],
             postal_code=request.session["postal_code"],
             city=request.session["city"],
+            country=request.session["country"],
         )
         payment_details = PaymentInfo(
             cardholder_name=request.session["cardholder_name"],
@@ -127,7 +128,6 @@ def process_payment(request):
         summary_details_dict["expiry_month"] = request.session["expiry_month"]
         summary_details_dict["expiry_year"] = request.session["expiry_year"]
         request.session["summary_details"] = summary_details_dict
-        print(request.session["del_choice"])
         return redirect("/checkout/summary")
 
 def summary(request):
@@ -141,7 +141,6 @@ def summary(request):
     ctx["item_name"] = item.title
     ctx["summary"] = summary_details
     ctx["date"] = date_today
-    print(request.session["del_choice"])
     ctx["del_choice"] = request.session["del_choice"]
     for key in list(request.session.keys()):
         if not key.startswith("_"): # skip keys set by the django system
