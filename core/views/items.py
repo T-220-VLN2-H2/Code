@@ -43,6 +43,7 @@ def item_details(request, item_id):
             return redirect("index_page")
 
     ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
+    ctx['max_bid'] = max_bid
     return render(request, "../templates/items/item_details.html", context=ctx)
 
 
