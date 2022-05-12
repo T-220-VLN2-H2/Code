@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% include 'items/filter.html' %}
     <div class="row">
         {% for item, image in items %}
             {% include 'items/item_list.html' %}

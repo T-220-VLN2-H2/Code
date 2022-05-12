@@ -3,13 +3,13 @@
         "model": "core.item",
         "pk": 1,
         "fields": {
-            "title": "blink",
+            "title": "Blink",
             "condition": "NEW",
             "category": 2,
             "description": "The fabled dagger used by the fastest assassin ever to walk the lands.",
             "seller": 1,
             "price": 2250,
-            "date_created": "2022-05-12 11:13:05.236167",
+            "date_created": "2022-05-12 15:49:15.778645",
             "images": [
                 1
             ]
@@ -19,13 +19,13 @@
         "model": "core.item",
         "pk": 2,
         "fields": {
-            "title": "overwhelming_blink",
+            "title": "Overwhelming blink",
             "condition": "NEW",
             "category": 2,
             "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 11:13:05.236177",
+            "date_created": "2022-05-12 15:49:15.778653",
             "images": [
                 2
             ]
@@ -35,13 +35,13 @@
         "model": "core.item",
         "pk": 3,
         "fields": {
-            "title": "swift_blink",
+            "title": "Swift blink",
             "condition": "NEW",
             "category": 2,
             "description": "A cunning blade able to anticipate and enable its bearer's movements.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 11:13:05.236180",
+            "date_created": "2022-05-12 15:49:15.778655",
             "images": [
                 3
             ]
@@ -51,13 +51,13 @@
         "model": "core.item",
         "pk": 4,
         "fields": {
-            "title": "arcane_blink",
+            "title": "Arcane blink",
             "condition": "NEW",
             "category": 2,
             "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 11:13:05.236182",
+            "date_created": "2022-05-12 15:49:15.778657",
             "images": [
                 4
             ]
@@ -67,13 +67,13 @@
         "model": "core.item",
         "pk": 8,
         "fields": {
-            "title": "blades_of_attack",
+            "title": "Blades of attack",
             "condition": "NEW",
             "category": 2,
             "description": "The damage of these small, concealable blades should not be underestimated.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236231",
+            "date_created": "2022-05-12 15:49:15.778687",
             "images": [
                 8
             ]
@@ -83,13 +83,13 @@
         "model": "core.item",
         "pk": 9,
         "fields": {
-            "title": "broadsword",
+            "title": "Broadsword",
             "condition": "NEW",
             "category": 2,
             "description": "The classic weapon of choice for knights, this blade is sturdy and reliable for slaying enemies.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236234",
+            "date_created": "2022-05-12 15:49:15.778689",
             "images": [
                 9
             ]
@@ -99,13 +99,13 @@
         "model": "core.item",
         "pk": 10,
         "fields": {
-            "title": "chainmail",
+            "title": "Chainmail",
             "condition": "NEW",
             "category": 2,
             "description": "A medium weave of metal chains.",
             "seller": 1,
             "price": 550,
-            "date_created": "2022-05-12 11:13:05.236236",
+            "date_created": "2022-05-12 15:49:15.778691",
             "images": [
                 10
             ]
@@ -115,13 +115,13 @@
         "model": "core.item",
         "pk": 11,
         "fields": {
-            "title": "claymore",
+            "title": "Claymore",
             "condition": "NEW",
             "category": 2,
             "description": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.",
             "seller": 1,
             "price": 1350,
-            "date_created": "2022-05-12 11:13:05.236237",
+            "date_created": "2022-05-12 15:49:15.778692",
             "images": [
                 11
             ]
@@ -131,13 +131,13 @@
         "model": "core.item",
         "pk": 12,
         "fields": {
-            "title": "helm_of_iron_will",
+            "title": "Helm of iron will",
             "condition": "NEW",
             "category": 2,
             "description": "The helmet of a legendary warrior who fell in battle.",
             "seller": 1,
             "price": 975,
-            "date_created": "2022-05-12 11:13:05.236239",
+            "date_created": "2022-05-12 15:49:15.778694",
             "images": [
                 12
             ]
@@ -147,13 +147,13 @@
         "model": "core.item",
         "pk": 13,
         "fields": {
-            "title": "javelin",
+            "title": "Javelin",
             "condition": "NEW",
             "category": 2,
             "description": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack.",
             "seller": 1,
             "price": 1100,
-            "date_created": "2022-05-12 11:13:05.236243",
+            "date_created": "2022-05-12 15:49:15.778695",
             "images": [
                 13
             ]
@@ -163,13 +163,13 @@
         "model": "core.item",
         "pk": 14,
         "fields": {
-            "title": "mithril_hammer",
+            "title": "Mithril hammer",
             "condition": "NEW",
             "category": 2,
             "description": "A hammer forged of pure mithril.",
             "seller": 1,
             "price": 1600,
-            "date_created": "2022-05-12 11:13:05.236245",
+            "date_created": "2022-05-12 15:49:15.778697",
             "images": [
                 14
             ]
@@ -179,13 +179,13 @@
         "model": "core.item",
         "pk": 15,
         "fields": {
-            "title": "platemail",
+            "title": "Platemail",
             "condition": "NEW",
             "category": 7,
             "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 11:13:05.236247",
+            "date_created": "2022-05-12 15:49:15.778698",
             "images": [
                 15
             ]
@@ -195,13 +195,13 @@
         "model": "core.item",
         "pk": 16,
         "fields": {
-            "title": "quarterstaff",
+            "title": "Quarterstaff",
             "condition": "NEW",
             "category": 2,
             "description": "A basic staff that allows you to strike quickly.",
             "seller": 1,
             "price": 875,
-            "date_created": "2022-05-12 11:13:05.236249",
+            "date_created": "2022-05-12 15:49:15.778699",
             "images": [
                 16
             ]
@@ -211,13 +211,13 @@
         "model": "core.item",
         "pk": 17,
         "fields": {
-            "title": "quelling_blade",
+            "title": "Quelling blade",
             "condition": "NEW",
             "category": 2,
             "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 11:13:05.236251",
+            "date_created": "2022-05-12 15:49:15.778702",
             "images": [
                 17
             ]
@@ -227,13 +227,13 @@
         "model": "core.item",
         "pk": 18,
         "fields": {
-            "title": "faerie_fire",
+            "title": "Faerie fire",
             "condition": "NEW",
             "category": 3,
             "description": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
             "seller": 1,
             "price": 70,
-            "date_created": "2022-05-12 11:13:05.236253",
+            "date_created": "2022-05-12 15:49:15.778703",
             "images": [
                 18
             ]
@@ -243,13 +243,13 @@
         "model": "core.item",
         "pk": 19,
         "fields": {
-            "title": "infused_raindrop",
+            "title": "Infused raindrop",
             "condition": "NEW",
             "category": 2,
             "description": "Elemental protection from magical assaults.",
             "seller": 1,
             "price": 225,
-            "date_created": "2022-05-12 11:13:05.236255",
+            "date_created": "2022-05-12 15:49:15.778705",
             "images": [
                 19
             ]
@@ -259,13 +259,13 @@
         "model": "core.item",
         "pk": 20,
         "fields": {
-            "title": "wind_lace",
+            "title": "Wind lace",
             "condition": "NEW",
             "category": 2,
             "description": "Hasten to battle on wind-touched heels.",
             "seller": 1,
             "price": 250,
-            "date_created": "2022-05-12 11:13:05.236256",
+            "date_created": "2022-05-12 15:49:15.778706",
             "images": [
                 20
             ]
@@ -275,13 +275,13 @@
         "model": "core.item",
         "pk": 21,
         "fields": {
-            "title": "ring_of_protection",
+            "title": "Ring of protection",
             "condition": "NEW",
             "category": 2,
             "description": "A glimmering ring that defends its bearer.",
             "seller": 1,
             "price": 175,
-            "date_created": "2022-05-12 11:13:05.236258",
+            "date_created": "2022-05-12 15:49:15.778708",
             "images": [
                 21
             ]
@@ -291,13 +291,13 @@
         "model": "core.item",
         "pk": 22,
         "fields": {
-            "title": "stout_shield",
+            "title": "Stout shield",
             "condition": "NEW",
             "category": 2,
             "description": "One man's wine barrel bottom is another man's shield.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 11:13:05.236260",
+            "date_created": "2022-05-12 15:49:15.778709",
             "images": [
                 22
             ]
@@ -307,13 +307,13 @@
         "model": "core.item",
         "pk": 23,
         "fields": {
-            "title": "moon_shard",
+            "title": "Moon shard",
             "condition": "NEW",
             "category": 3,
             "description": "Said to be a tear from the lunar goddess Selemene.",
             "seller": 1,
             "price": 4000,
-            "date_created": "2022-05-12 11:13:05.236262",
+            "date_created": "2022-05-12 15:49:15.778710",
             "images": [
                 23
             ]
@@ -323,13 +323,13 @@
         "model": "core.item",
         "pk": 24,
         "fields": {
-            "title": "gauntlets",
+            "title": "Gauntlets",
             "condition": "NEW",
             "category": 2,
             "description": "Studded leather gloves that add brute strength.",
             "seller": 1,
             "price": 140,
-            "date_created": "2022-05-12 11:13:05.236264",
+            "date_created": "2022-05-12 15:49:15.778712",
             "images": [
                 24
             ]
@@ -339,13 +339,13 @@
         "model": "core.item",
         "pk": 25,
         "fields": {
-            "title": "slippers",
+            "title": "Slippers",
             "condition": "NEW",
             "category": 2,
             "description": "Light boots made from spider skin that tingles your senses.",
             "seller": 1,
             "price": 140,
-            "date_created": "2022-05-12 11:13:05.236266",
+            "date_created": "2022-05-12 15:49:15.778713",
             "images": [
                 25
             ]
@@ -355,13 +355,13 @@
         "model": "core.item",
         "pk": 26,
         "fields": {
-            "title": "mantle",
+            "title": "Mantle",
             "condition": "NEW",
             "category": 2,
             "description": "A beautiful sapphire mantle worn by generations of queens.",
             "seller": 1,
             "price": 140,
-            "date_created": "2022-05-12 11:13:05.236268",
+            "date_created": "2022-05-12 15:49:15.778714",
             "images": [
                 26
             ]
@@ -371,13 +371,13 @@
         "model": "core.item",
         "pk": 27,
         "fields": {
-            "title": "branches",
+            "title": "Branches",
             "condition": "NEW",
             "category": 3,
             "description": "A seemingly ordinary branch, its ironlike qualities are bestowed upon the bearer.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 11:13:05.236269",
+            "date_created": "2022-05-12 15:49:15.778716",
             "images": [
                 27
             ]
@@ -387,13 +387,13 @@
         "model": "core.item",
         "pk": 28,
         "fields": {
-            "title": "belt_of_strength",
+            "title": "Belt of strength",
             "condition": "NEW",
             "category": 2,
             "description": "A valued accessory for improving vitality.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236273",
+            "date_created": "2022-05-12 15:49:15.778718",
             "images": [
                 28
             ]
@@ -403,13 +403,13 @@
         "model": "core.item",
         "pk": 29,
         "fields": {
-            "title": "boots_of_elves",
+            "title": "Boots of elves",
             "condition": "NEW",
             "category": 2,
             "description": "A tensile fabric often used for its light weight and ease of movement.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236275",
+            "date_created": "2022-05-12 15:49:15.778720",
             "images": [
                 29
             ]
@@ -419,13 +419,13 @@
         "model": "core.item",
         "pk": 30,
         "fields": {
-            "title": "robe",
+            "title": "Robe",
             "condition": "NEW",
             "category": 2,
             "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236277",
+            "date_created": "2022-05-12 15:49:15.778721",
             "images": [
                 30
             ]
@@ -435,13 +435,13 @@
         "model": "core.item",
         "pk": 31,
         "fields": {
-            "title": "circlet",
+            "title": "Circlet",
             "condition": "NEW",
             "category": 2,
             "description": "An elegant circlet designed for human princesses.",
             "seller": 1,
             "price": 155,
-            "date_created": "2022-05-12 11:13:05.236279",
+            "date_created": "2022-05-12 15:49:15.778723",
             "images": [
                 31
             ]
@@ -451,13 +451,13 @@
         "model": "core.item",
         "pk": 32,
         "fields": {
-            "title": "crown",
+            "title": "Crown",
             "condition": "NEW",
             "category": 2,
             "description": "A stately crown created to ensure a well-meaning but ungifted heir could fend off usurpers and govern with a strong hand.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236280",
+            "date_created": "2022-05-12 15:49:15.778748",
             "images": [
                 32
             ]
@@ -467,13 +467,13 @@
         "model": "core.item",
         "pk": 33,
         "fields": {
-            "title": "ogre_axe",
+            "title": "Ogre axe",
             "condition": "NEW",
             "category": 2,
             "description": "You grow stronger just by holding it.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236282",
+            "date_created": "2022-05-12 15:49:15.778749",
             "images": [
                 33
             ]
@@ -483,13 +483,13 @@
         "model": "core.item",
         "pk": 34,
         "fields": {
-            "title": "blade_of_alacrity",
+            "title": "Blade of alacrity",
             "condition": "NEW",
             "category": 2,
             "description": "A long blade imbued with time magic.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236284",
+            "date_created": "2022-05-12 15:49:15.778751",
             "images": [
                 34
             ]
@@ -499,13 +499,13 @@
         "model": "core.item",
         "pk": 35,
         "fields": {
-            "title": "staff_of_wizardry",
+            "title": "Staff of wizardry",
             "condition": "NEW",
             "category": 2,
             "description": "A staff of magical powers passed down from the eldest mages.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236286",
+            "date_created": "2022-05-12 15:49:15.778752",
             "images": [
                 35
             ]
@@ -515,13 +515,13 @@
         "model": "core.item",
         "pk": 36,
         "fields": {
-            "title": "ultimate_orb",
+            "title": "Ultimate orb",
             "condition": "NEW",
             "category": 7,
             "description": "A mystical orb containing the essence of life.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 11:13:05.236288",
+            "date_created": "2022-05-12 15:49:15.778754",
             "images": [
                 36
             ]
@@ -531,13 +531,13 @@
         "model": "core.item",
         "pk": 37,
         "fields": {
-            "title": "gloves",
+            "title": "Gloves",
             "condition": "NEW",
             "category": 2,
             "description": "A pair of magical gloves that seems to render weapons weightless.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236325",
+            "date_created": "2022-05-12 15:49:15.778755",
             "images": [
                 37
             ]
@@ -547,13 +547,13 @@
         "model": "core.item",
         "pk": 38,
         "fields": {
-            "title": "blitz_knuckles",
+            "title": "Blitz knuckles",
             "condition": "NEW",
             "category": 2,
             "description": "An underground arcanist's update of a back-alley classic.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236327",
+            "date_created": "2022-05-12 15:49:15.778757",
             "images": [
                 38
             ]
@@ -563,13 +563,13 @@
         "model": "core.item",
         "pk": 39,
         "fields": {
-            "title": "lifesteal",
+            "title": "Lifesteal",
             "condition": "NEW",
             "category": 2,
             "description": "A mask that drains the energy of those caught in its gaze.",
             "seller": 1,
             "price": 900,
-            "date_created": "2022-05-12 11:13:05.236329",
+            "date_created": "2022-05-12 15:49:15.778758",
             "images": [
                 39
             ]
@@ -579,13 +579,13 @@
         "model": "core.item",
         "pk": 40,
         "fields": {
-            "title": "voodoo_mask",
+            "title": "Voodoo mask",
             "condition": "NEW",
             "category": 2,
             "description": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
             "seller": 1,
             "price": 700,
-            "date_created": "2022-05-12 11:13:05.236331",
+            "date_created": "2022-05-12 15:49:15.778760",
             "images": [
                 40
             ]
@@ -595,13 +595,13 @@
         "model": "core.item",
         "pk": 41,
         "fields": {
-            "title": "ring_of_regen",
+            "title": "Ring of regen",
             "condition": "NEW",
             "category": 2,
             "description": "This ring is considered a good luck charm among the Gnomes.",
             "seller": 1,
             "price": 175,
-            "date_created": "2022-05-12 11:13:05.236333",
+            "date_created": "2022-05-12 15:49:15.778762",
             "images": [
                 41
             ]
@@ -611,13 +611,13 @@
         "model": "core.item",
         "pk": 42,
         "fields": {
-            "title": "ring_of_tarrasque",
+            "title": "Ring of tarrasque",
             "condition": "NEW",
             "category": 2,
             "description": "An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component.",
             "seller": 1,
             "price": 650,
-            "date_created": "2022-05-12 11:13:05.236336",
+            "date_created": "2022-05-12 15:49:15.778763",
             "images": [
                 42
             ]
@@ -627,13 +627,13 @@
         "model": "core.item",
         "pk": 43,
         "fields": {
-            "title": "sobi_mask",
+            "title": "Sobi mask",
             "condition": "NEW",
             "category": 2,
             "description": "A mask commonly used by mages and warlocks for various rituals.",
             "seller": 1,
             "price": 175,
-            "date_created": "2022-05-12 11:13:05.236338",
+            "date_created": "2022-05-12 15:49:15.778764",
             "images": [
                 43
             ]
@@ -643,13 +643,13 @@
         "model": "core.item",
         "pk": 44,
         "fields": {
-            "title": "boots",
+            "title": "Boots",
             "condition": "NEW",
             "category": 2,
             "description": "Fleet footwear, increasing movement.",
             "seller": 1,
             "price": 500,
-            "date_created": "2022-05-12 11:13:05.236340",
+            "date_created": "2022-05-12 15:49:15.778766",
             "images": [
                 44
             ]
@@ -659,13 +659,13 @@
         "model": "core.item",
         "pk": 45,
         "fields": {
-            "title": "gem",
+            "title": "Gem",
             "condition": "NEW",
             "category": 2,
             "description": "Not one thrall creature of the depths,\r\nNor spirit bound in drowning's keep,\r\nNor Maelrawn the Tentacular,\r\nShall rest till seas, gem comes to sleep.",
             "seller": 1,
             "price": 900,
-            "date_created": "2022-05-12 11:13:05.236342",
+            "date_created": "2022-05-12 15:49:15.778767",
             "images": [
                 45
             ]
@@ -675,13 +675,13 @@
         "model": "core.item",
         "pk": 46,
         "fields": {
-            "title": "cloak",
+            "title": "Cloak",
             "condition": "NEW",
             "category": 2,
             "description": "A cloak made of a magical material that works to dispel any magic cast on it.",
             "seller": 1,
             "price": 500,
-            "date_created": "2022-05-12 11:13:05.236344",
+            "date_created": "2022-05-12 15:49:15.778768",
             "images": [
                 46
             ]
@@ -691,13 +691,13 @@
         "model": "core.item",
         "pk": 47,
         "fields": {
-            "title": "talisman_of_evasion",
+            "title": "Talisman of evasion",
             "condition": "NEW",
             "category": 7,
             "description": "A necklace that allows you to anticipate enemy attacks.",
             "seller": 1,
             "price": 1300,
-            "date_created": "2022-05-12 11:13:05.236346",
+            "date_created": "2022-05-12 15:49:15.778770",
             "images": [
                 47
             ]
@@ -707,13 +707,13 @@
         "model": "core.item",
         "pk": 48,
         "fields": {
-            "title": "cheese",
+            "title": "Cheese",
             "condition": "NEW",
             "category": 3,
             "description": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236348",
+            "date_created": "2022-05-12 15:49:15.778771",
             "images": [
                 48
             ]
@@ -723,13 +723,13 @@
         "model": "core.item",
         "pk": 49,
         "fields": {
-            "title": "magic_stick",
+            "title": "Magic stick",
             "condition": "NEW",
             "category": 2,
             "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
             "seller": 1,
             "price": 200,
-            "date_created": "2022-05-12 11:13:05.236350",
+            "date_created": "2022-05-12 15:49:15.778773",
             "images": [
                 49
             ]
@@ -739,13 +739,13 @@
         "model": "core.item",
         "pk": 51,
         "fields": {
-            "title": "magic_wand",
+            "title": "Magic wand",
             "condition": "NEW",
             "category": 4,
             "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
             "seller": 1,
             "price": 450,
-            "date_created": "2022-05-12 11:13:05.236357",
+            "date_created": "2022-05-12 15:49:15.778779",
             "images": [
                 51
             ]
@@ -755,13 +755,13 @@
         "model": "core.item",
         "pk": 52,
         "fields": {
-            "title": "ghost",
+            "title": "Ghost",
             "condition": "NEW",
             "category": 2,
             "description": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 11:13:05.236361",
+            "date_created": "2022-05-12 15:49:15.778781",
             "images": [
                 52
             ]
@@ -771,13 +771,13 @@
         "model": "core.item",
         "pk": 53,
         "fields": {
-            "title": "clarity",
+            "title": "Clarity",
             "condition": "NEW",
             "category": 3,
             "description": "Clear water that enhances the ability to meditate.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 11:13:05.236363",
+            "date_created": "2022-05-12 15:49:15.778782",
             "images": [
                 53
             ]
@@ -787,13 +787,13 @@
         "model": "core.item",
         "pk": 54,
         "fields": {
-            "title": "enchanted_mango",
+            "title": "Enchanted mango",
             "condition": "NEW",
             "category": 3,
             "description": "The bittersweet flavors of Jidi Isle are irresistible to amphibians.",
             "seller": 1,
             "price": 65,
-            "date_created": "2022-05-12 11:13:05.236364",
+            "date_created": "2022-05-12 15:49:15.778783",
             "images": [
                 54
             ]
@@ -803,13 +803,13 @@
         "model": "core.item",
         "pk": 55,
         "fields": {
-            "title": "flask",
+            "title": "Flask",
             "condition": "NEW",
             "category": 3,
             "description": "A magical salve that can quickly mend even the deepest of wounds.",
             "seller": 1,
             "price": 110,
-            "date_created": "2022-05-12 11:13:05.236366",
+            "date_created": "2022-05-12 15:49:15.778785",
             "images": [
                 55
             ]
@@ -819,13 +819,13 @@
         "model": "core.item",
         "pk": 56,
         "fields": {
-            "title": "dust",
+            "title": "Dust",
             "condition": "NEW",
             "category": 3,
             "description": "One may hide visage, but never volume.",
             "seller": 1,
             "price": 80,
-            "date_created": "2022-05-12 11:13:05.236368",
+            "date_created": "2022-05-12 15:49:15.778786",
             "images": [
                 56
             ]
@@ -835,13 +835,13 @@
         "model": "core.item",
         "pk": 57,
         "fields": {
-            "title": "bottle",
+            "title": "Bottle",
             "condition": "NEW",
             "category": 4,
             "description": "An old bottle that survived the ages, the contents placed inside become enchanted.",
             "seller": 1,
             "price": 675,
-            "date_created": "2022-05-12 11:13:05.236370",
+            "date_created": "2022-05-12 15:49:15.778787",
             "images": [
                 57
             ]
@@ -851,13 +851,13 @@
         "model": "core.item",
         "pk": 58,
         "fields": {
-            "title": "ward_observer",
+            "title": "Ward observer",
             "condition": "NEW",
             "category": 3,
             "description": "A form of half-sentient plant, often cultivated by apprentice wizards.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.236372",
+            "date_created": "2022-05-12 15:49:15.778789",
             "images": [
                 58
             ]
@@ -867,13 +867,13 @@
         "model": "core.item",
         "pk": 59,
         "fields": {
-            "title": "ward_sentry",
+            "title": "Ward sentry",
             "condition": "NEW",
             "category": 3,
             "description": "A form of plant originally grown in the garden of a fearful king.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 11:13:05.236374",
+            "date_created": "2022-05-12 15:49:15.778790",
             "images": [
                 59
             ]
@@ -883,13 +883,13 @@
         "model": "core.item",
         "pk": 60,
         "fields": {
-            "title": "ward_dispenser",
+            "title": "Ward dispenser",
             "condition": "NEW",
             "category": 4,
             "description": "Advancements in stacking efficiency have made wards easier to carry than ever.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 11:13:05.236376",
+            "date_created": "2022-05-12 15:49:15.778791",
             "images": [
                 60
             ]
@@ -899,13 +899,13 @@
         "model": "core.item",
         "pk": 61,
         "fields": {
-            "title": "tango",
+            "title": "Tango",
             "condition": "NEW",
             "category": 3,
             "description": "Forage to survive on the battlefield.",
             "seller": 1,
             "price": 90,
-            "date_created": "2022-05-12 11:13:05.236377",
+            "date_created": "2022-05-12 15:49:15.778793",
             "images": [
                 61
             ]
@@ -915,13 +915,13 @@
         "model": "core.item",
         "pk": 62,
         "fields": {
-            "title": "tango_single",
+            "title": "Tango single",
             "condition": "NEW",
             "category": 3,
             "description": "Om nom nom.",
             "seller": 1,
             "price": 30,
-            "date_created": "2022-05-12 11:13:05.236379",
+            "date_created": "2022-05-12 15:49:15.778794",
             "images": [
                 62
             ]
@@ -931,13 +931,13 @@
         "model": "core.item",
         "pk": 63,
         "fields": {
-            "title": "courier",
+            "title": "Courier",
             "condition": "NEW",
             "category": 3,
             "description": "Losing the courier is punishable by death.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 11:13:05.236381",
+            "date_created": "2022-05-12 15:49:15.778795",
             "images": [
                 63
             ]
@@ -947,13 +947,13 @@
         "model": "core.item",
         "pk": 64,
         "fields": {
-            "title": "flying_courier",
+            "title": "Flying courier",
             "condition": "NEW",
             "category": 3,
             "description": "The faithful mount upon which soar the fortunes of battle.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 11:13:05.236383",
+            "date_created": "2022-05-12 15:49:15.778798",
             "images": [
                 64
             ]
@@ -963,13 +963,13 @@
         "model": "core.item",
         "pk": 65,
         "fields": {
-            "title": "tpscroll",
+            "title": "Tpscroll",
             "condition": "NEW",
             "category": 3,
             "description": "What a hero truly needs.",
             "seller": 1,
             "price": 100,
-            "date_created": "2022-05-12 11:13:05.236384",
+            "date_created": "2022-05-12 15:49:15.778799",
             "images": [
                 65
             ]
@@ -979,13 +979,13 @@
         "model": "core.item",
         "pk": 67,
         "fields": {
-            "title": "travel_boots",
+            "title": "Travel boots",
             "condition": "NEW",
             "category": 4,
             "description": "Winged boots that grant omnipresence.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 11:13:05.236391",
+            "date_created": "2022-05-12 15:49:15.778804",
             "images": [
                 67
             ]
@@ -995,13 +995,13 @@
         "model": "core.item",
         "pk": 68,
         "fields": {
-            "title": "travel_boots_2",
+            "title": "Travel boots 2",
             "condition": "NEW",
             "category": 4,
             "description": "Winged boots that grant omnipresence.",
             "seller": 1,
             "price": 4500,
-            "date_created": "2022-05-12 11:13:05.236393",
+            "date_created": "2022-05-12 15:49:15.778805",
             "images": [
                 68
             ]
@@ -1011,13 +1011,13 @@
         "model": "core.item",
         "pk": 69,
         "fields": {
-            "title": "phase_boots",
+            "title": "Phase boots",
             "condition": "NEW",
             "category": 4,
             "description": "Boots that allow the wearer to travel between the ether.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 11:13:05.236396",
+            "date_created": "2022-05-12 15:49:15.778807",
             "images": [
                 69
             ]
@@ -1027,13 +1027,13 @@
         "model": "core.item",
         "pk": 70,
         "fields": {
-            "title": "demon_edge",
+            "title": "Demon edge",
             "condition": "NEW",
             "category": 7,
             "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
             "seller": 1,
             "price": 2200,
-            "date_created": "2022-05-12 11:13:05.236398",
+            "date_created": "2022-05-12 15:49:15.778808",
             "images": [
                 70
             ]
@@ -1043,13 +1043,13 @@
         "model": "core.item",
         "pk": 71,
         "fields": {
-            "title": "eagle",
+            "title": "Eagle",
             "condition": "NEW",
             "category": 7,
             "description": "Capturing the majestic call of an eagle, this mystical horn brings limitless dexterity to those who hear it.",
             "seller": 1,
             "price": 2800,
-            "date_created": "2022-05-12 11:13:05.236400",
+            "date_created": "2022-05-12 15:49:15.778810",
             "images": [
                 71
             ]
@@ -1059,13 +1059,13 @@
         "model": "core.item",
         "pk": 72,
         "fields": {
-            "title": "reaver",
+            "title": "Reaver",
             "condition": "NEW",
             "category": 7,
             "description": "A massive axe capable of tearing whole mountains down.",
             "seller": 1,
             "price": 2800,
-            "date_created": "2022-05-12 11:13:05.236402",
+            "date_created": "2022-05-12 15:49:15.778811",
             "images": [
                 72
             ]
@@ -1075,13 +1075,13 @@
         "model": "core.item",
         "pk": 73,
         "fields": {
-            "title": "relic",
+            "title": "Relic",
             "condition": "NEW",
             "category": 7,
             "description": "An ancient weapon that often turns the tides of war.",
             "seller": 1,
             "price": 3750,
-            "date_created": "2022-05-12 11:13:05.236404",
+            "date_created": "2022-05-12 15:49:15.778812",
             "images": [
                 73
             ]
@@ -1091,13 +1091,13 @@
         "model": "core.item",
         "pk": 74,
         "fields": {
-            "title": "hyperstone",
+            "title": "Hyperstone",
             "condition": "NEW",
             "category": 7,
             "description": "A mystical, carved stone that boosts the fervor of the holder.",
             "seller": 1,
             "price": 2000,
-            "date_created": "2022-05-12 11:13:05.236406",
+            "date_created": "2022-05-12 15:49:15.778814",
             "images": [
                 74
             ]
@@ -1107,13 +1107,13 @@
         "model": "core.item",
         "pk": 75,
         "fields": {
-            "title": "ring_of_health",
+            "title": "Ring of health",
             "condition": "NEW",
             "category": 2,
             "description": "A shiny ring found beneath a fat halfling's corpse.",
             "seller": 1,
             "price": 825,
-            "date_created": "2022-05-12 11:13:05.236407",
+            "date_created": "2022-05-12 15:49:15.778815",
             "images": [
                 75
             ]
@@ -1123,13 +1123,13 @@
         "model": "core.item",
         "pk": 76,
         "fields": {
-            "title": "void_stone",
+            "title": "Void stone",
             "condition": "NEW",
             "category": 2,
             "description": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy.",
             "seller": 1,
             "price": 825,
-            "date_created": "2022-05-12 11:13:05.236409",
+            "date_created": "2022-05-12 15:49:15.778816",
             "images": [
                 76
             ]
@@ -1139,13 +1139,13 @@
         "model": "core.item",
         "pk": 77,
         "fields": {
-            "title": "mystic_staff",
+            "title": "Mystic staff",
             "condition": "NEW",
             "category": 7,
             "description": "Enigmatic staff made of only the most expensive crystals.",
             "seller": 1,
             "price": 2800,
-            "date_created": "2022-05-12 11:13:05.236411",
+            "date_created": "2022-05-12 15:49:15.778817",
             "images": [
                 77
             ]
@@ -1155,13 +1155,13 @@
         "model": "core.item",
         "pk": 78,
         "fields": {
-            "title": "energy_booster",
+            "title": "Energy booster",
             "condition": "NEW",
             "category": 7,
             "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
             "seller": 1,
             "price": 800,
-            "date_created": "2022-05-12 11:13:05.236413",
+            "date_created": "2022-05-12 15:49:15.778819",
             "images": [
                 78
             ]
@@ -1171,13 +1171,13 @@
         "model": "core.item",
         "pk": 79,
         "fields": {
-            "title": "point_booster",
+            "title": "Point booster",
             "condition": "NEW",
             "category": 7,
             "description": "A perfectly formed amethyst that nourishes body and mind when held.",
             "seller": 1,
             "price": 1200,
-            "date_created": "2022-05-12 11:13:05.236414",
+            "date_created": "2022-05-12 15:49:15.778820",
             "images": [
                 79
             ]
@@ -1187,13 +1187,13 @@
         "model": "core.item",
         "pk": 80,
         "fields": {
-            "title": "vitality_booster",
+            "title": "Vitality booster",
             "condition": "NEW",
             "category": 7,
             "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236416",
+            "date_created": "2022-05-12 15:49:15.778821",
             "images": [
                 80
             ]
@@ -1203,13 +1203,13 @@
         "model": "core.item",
         "pk": 81,
         "fields": {
-            "title": "fluffy_hat",
+            "title": "Fluffy hat",
             "condition": "NEW",
             "category": 7,
             "description": "Fine and functional foppery for the fashion-forward fighter.",
             "seller": 1,
             "price": 250,
-            "date_created": "2022-05-12 11:13:05.236418",
+            "date_created": "2022-05-12 15:49:15.778824",
             "images": [
                 81
             ]
@@ -1219,13 +1219,13 @@
         "model": "core.item",
         "pk": 82,
         "fields": {
-            "title": "power_treads",
+            "title": "Power treads",
             "condition": "NEW",
             "category": 4,
             "description": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 11:13:05.236420",
+            "date_created": "2022-05-12 15:49:15.778825",
             "images": [
                 82
             ]
@@ -1235,13 +1235,13 @@
         "model": "core.item",
         "pk": 83,
         "fields": {
-            "title": "grandmasters_glaive",
+            "title": "Grandmasters glaive",
             "condition": "NEW",
             "category": 4,
             "description": "",
             "seller": 1,
             "price": 5000,
-            "date_created": "2022-05-12 11:13:05.236422",
+            "date_created": "2022-05-12 15:49:15.778827",
             "images": [
                 83
             ]
@@ -1251,13 +1251,13 @@
         "model": "core.item",
         "pk": 85,
         "fields": {
-            "title": "hand_of_midas",
+            "title": "Hand of midas",
             "condition": "NEW",
             "category": 4,
             "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
             "seller": 1,
             "price": 2200,
-            "date_created": "2022-05-12 11:13:05.236431",
+            "date_created": "2022-05-12 15:49:15.778832",
             "images": [
                 85
             ]
@@ -1267,13 +1267,13 @@
         "model": "core.item",
         "pk": 86,
         "fields": {
-            "title": "oblivion_staff",
+            "title": "Oblivion staff",
             "condition": "NEW",
             "category": 4,
             "description": "Deceptively hidden as an ordinary staff, it is actually very powerful, much like the Eldritch who originally possessed it.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 11:13:05.236433",
+            "date_created": "2022-05-12 15:49:15.778834",
             "images": [
                 86
             ]
@@ -1283,13 +1283,13 @@
         "model": "core.item",
         "pk": 88,
         "fields": {
-            "title": "witch_blade",
+            "title": "Witch blade",
             "condition": "NEW",
             "category": 4,
             "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
             "seller": 1,
             "price": 2600,
-            "date_created": "2022-05-12 11:13:05.236439",
+            "date_created": "2022-05-12 15:49:15.778838",
             "images": [
                 88
             ]
@@ -1299,13 +1299,13 @@
         "model": "core.item",
         "pk": 89,
         "fields": {
-            "title": "pers",
+            "title": "Pers",
             "condition": "NEW",
             "category": 4,
             "description": "A gem that grants heart to the bearer.",
             "seller": 1,
             "price": 1650,
-            "date_created": "2022-05-12 11:13:05.236440",
+            "date_created": "2022-05-12 15:49:15.778839",
             "images": [
                 89
             ]
@@ -1315,13 +1315,13 @@
         "model": "core.item",
         "pk": 90,
         "fields": {
-            "title": "poor_mans_shield",
+            "title": "Poor mans shield",
             "condition": "NEW",
             "category": 4,
             "description": "A busted old shield that seems to block more than it should.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.236442",
+            "date_created": "2022-05-12 15:49:15.778840",
             "images": [
                 90
             ]
@@ -1331,13 +1331,13 @@
         "model": "core.item",
         "pk": 91,
         "fields": {
-            "title": "satchel",
+            "title": "Satchel",
             "condition": "NEW",
             "category": 4,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.236444",
+            "date_created": "2022-05-12 15:49:15.778842",
             "images": [
                 91
             ]
@@ -1347,13 +1347,13 @@
         "model": "core.item",
         "pk": 93,
         "fields": {
-            "title": "bracer",
+            "title": "Bracer",
             "condition": "NEW",
             "category": 4,
             "description": "The bracer is a common choice to toughen up defenses and increase longevity.",
             "seller": 1,
             "price": 505,
-            "date_created": "2022-05-12 11:13:05.236470",
+            "date_created": "2022-05-12 15:49:15.778879",
             "images": [
                 93
             ]
@@ -1363,13 +1363,13 @@
         "model": "core.item",
         "pk": 95,
         "fields": {
-            "title": "wraith_band",
+            "title": "Wraith band",
             "condition": "NEW",
             "category": 4,
             "description": "A circlet with faint whispers echoing about it.",
             "seller": 1,
             "price": 505,
-            "date_created": "2022-05-12 11:13:05.236476",
+            "date_created": "2022-05-12 15:49:15.778884",
             "images": [
                 95
             ]
@@ -1379,13 +1379,13 @@
         "model": "core.item",
         "pk": 97,
         "fields": {
-            "title": "null_talisman",
+            "title": "Null talisman",
             "condition": "NEW",
             "category": 4,
             "description": "A small gemstone attached to several chains.",
             "seller": 1,
             "price": 505,
-            "date_created": "2022-05-12 11:13:05.236482",
+            "date_created": "2022-05-12 15:49:15.778889",
             "images": [
                 97
             ]
@@ -1395,13 +1395,13 @@
         "model": "core.item",
         "pk": 99,
         "fields": {
-            "title": "mekansm",
+            "title": "Mekansm",
             "condition": "NEW",
             "category": 1,
             "description": "A glowing jewel formed out of assorted parts that somehow fit together perfectly.",
             "seller": 1,
             "price": 1875,
-            "date_created": "2022-05-12 11:13:05.236488",
+            "date_created": "2022-05-12 15:49:15.778893",
             "images": [
                 99
             ]
@@ -1411,13 +1411,13 @@
         "model": "core.item",
         "pk": 101,
         "fields": {
-            "title": "vladmir",
+            "title": "Vladmir",
             "condition": "NEW",
             "category": 1,
             "description": "An eerie mask that is haunted with the malice of a fallen vampire.",
             "seller": 1,
             "price": 2450,
-            "date_created": "2022-05-12 11:13:05.236521",
+            "date_created": "2022-05-12 15:49:15.778909",
             "images": [
                 101
             ]
@@ -1427,13 +1427,13 @@
         "model": "core.item",
         "pk": 103,
         "fields": {
-            "title": "wraith_pact",
+            "title": "Wraith pact",
             "condition": "NEW",
             "category": 1,
             "description": "A sentient amulet whose animus shakes the courage of even the strongest foes.",
             "seller": 1,
             "price": 4050,
-            "date_created": "2022-05-12 11:13:05.236527",
+            "date_created": "2022-05-12 15:49:15.778913",
             "images": [
                 103
             ]
@@ -1443,13 +1443,13 @@
         "model": "core.item",
         "pk": 105,
         "fields": {
-            "title": "buckler",
+            "title": "Buckler",
             "condition": "NEW",
             "category": 1,
             "description": "A powerful shield that imbues the bearer with the strength of heroes past, it is capable of protecting entire armies in battle.",
             "seller": 1,
             "price": 425,
-            "date_created": "2022-05-12 11:13:05.236534",
+            "date_created": "2022-05-12 15:49:15.778917",
             "images": [
                 105
             ]
@@ -1459,13 +1459,13 @@
         "model": "core.item",
         "pk": 107,
         "fields": {
-            "title": "ring_of_basilius",
+            "title": "Ring of basilius",
             "condition": "NEW",
             "category": 1,
             "description": "Ring given as a reward to the greatest mages.",
             "seller": 1,
             "price": 425,
-            "date_created": "2022-05-12 11:13:05.236541",
+            "date_created": "2022-05-12 15:49:15.778922",
             "images": [
                 107
             ]
@@ -1475,13 +1475,13 @@
         "model": "core.item",
         "pk": 109,
         "fields": {
-            "title": "holy_locket",
+            "title": "Holy locket",
             "condition": "NEW",
             "category": 1,
             "description": "A prized relic long thought lost forever in a failed crusade.",
             "seller": 1,
             "price": 2400,
-            "date_created": "2022-05-12 11:13:05.236592",
+            "date_created": "2022-05-12 15:49:15.778933",
             "images": [
                 109
             ]
@@ -1491,13 +1491,13 @@
         "model": "core.item",
         "pk": 111,
         "fields": {
-            "title": "pipe",
+            "title": "Pipe",
             "condition": "NEW",
             "category": 1,
             "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
             "seller": 1,
             "price": 3475,
-            "date_created": "2022-05-12 11:13:05.236599",
+            "date_created": "2022-05-12 15:49:15.778938",
             "images": [
                 111
             ]
@@ -1507,13 +1507,13 @@
         "model": "core.item",
         "pk": 113,
         "fields": {
-            "title": "urn_of_shadows",
+            "title": "Urn of shadows",
             "condition": "NEW",
             "category": 1,
             "description": "Contains the ashes of powerful demons.",
             "seller": 1,
             "price": 880,
-            "date_created": "2022-05-12 11:13:05.236604",
+            "date_created": "2022-05-12 15:49:15.778942",
             "images": [
                 113
             ]
@@ -1523,13 +1523,13 @@
         "model": "core.item",
         "pk": 115,
         "fields": {
-            "title": "headdress",
+            "title": "Headdress",
             "condition": "NEW",
             "category": 1,
             "description": "Creates a soothing aura that restores allies in battle.",
             "seller": 1,
             "price": 425,
-            "date_created": "2022-05-12 11:13:05.236610",
+            "date_created": "2022-05-12 15:49:15.778946",
             "images": [
                 115
             ]
@@ -1539,13 +1539,13 @@
         "model": "core.item",
         "pk": 116,
         "fields": {
-            "title": "sheepstick",
+            "title": "Sheepstick",
             "condition": "NEW",
             "category": 1,
             "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
             "seller": 1,
             "price": 5675,
-            "date_created": "2022-05-12 11:13:05.236612",
+            "date_created": "2022-05-12 15:49:15.778947",
             "images": [
                 116
             ]
@@ -1555,13 +1555,13 @@
         "model": "core.item",
         "pk": 118,
         "fields": {
-            "title": "orchid",
+            "title": "Orchid",
             "condition": "NEW",
             "category": 1,
             "description": "A garnet rod constructed from the essence of a fire demon.",
             "seller": 1,
             "price": 3475,
-            "date_created": "2022-05-12 11:13:05.236631",
+            "date_created": "2022-05-12 15:49:15.778984",
             "images": [
                 118
             ]
@@ -1571,13 +1571,13 @@
         "model": "core.item",
         "pk": 120,
         "fields": {
-            "title": "bloodthorn",
+            "title": "Bloodthorn",
             "condition": "NEW",
             "category": 5,
             "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
             "seller": 1,
             "price": 6800,
-            "date_created": "2022-05-12 11:13:05.236637",
+            "date_created": "2022-05-12 15:49:15.778991",
             "images": [
                 120
             ]
@@ -1587,13 +1587,13 @@
         "model": "core.item",
         "pk": 121,
         "fields": {
-            "title": "echo_sabre",
+            "title": "Echo sabre",
             "condition": "NEW",
             "category": 6,
             "description": "A deceptively swift blade imbued with resonant magic.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 11:13:05.236639",
+            "date_created": "2022-05-12 15:49:15.778993",
             "images": [
                 121
             ]
@@ -1603,13 +1603,13 @@
         "model": "core.item",
         "pk": 123,
         "fields": {
-            "title": "cyclone",
+            "title": "Cyclone",
             "condition": "NEW",
             "category": 1,
             "description": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil.",
             "seller": 1,
             "price": 2725,
-            "date_created": "2022-05-12 11:13:05.236645",
+            "date_created": "2022-05-12 15:49:15.778997",
             "images": [
                 123
             ]
@@ -1619,13 +1619,13 @@
         "model": "core.item",
         "pk": 125,
         "fields": {
-            "title": "wind_waker",
+            "title": "Wind waker",
             "condition": "NEW",
             "category": 1,
             "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
             "seller": 1,
             "price": 6825,
-            "date_created": "2022-05-12 11:13:05.236655",
+            "date_created": "2022-05-12 15:49:15.779001",
             "images": [
                 125
             ]
@@ -1635,13 +1635,13 @@
         "model": "core.item",
         "pk": 127,
         "fields": {
-            "title": "aether_lens",
+            "title": "Aether lens",
             "condition": "NEW",
             "category": 1,
             "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
             "seller": 1,
             "price": 2275,
-            "date_created": "2022-05-12 11:13:05.236661",
+            "date_created": "2022-05-12 15:49:15.779006",
             "images": [
                 127
             ]
@@ -1651,13 +1651,13 @@
         "model": "core.item",
         "pk": 129,
         "fields": {
-            "title": "force_staff",
+            "title": "Force staff",
             "condition": "NEW",
             "category": 1,
             "description": "Allows you to manipulate others, for good or evil.",
             "seller": 1,
             "price": 2200,
-            "date_created": "2022-05-12 11:13:05.236668",
+            "date_created": "2022-05-12 15:49:15.779009",
             "images": [
                 129
             ]
@@ -1667,13 +1667,13 @@
         "model": "core.item",
         "pk": 131,
         "fields": {
-            "title": "hurricane_pike",
+            "title": "Hurricane pike",
             "condition": "NEW",
             "category": 5,
             "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
             "seller": 1,
             "price": 4450,
-            "date_created": "2022-05-12 11:13:05.236674",
+            "date_created": "2022-05-12 15:49:15.779013",
             "images": [
                 131
             ]
@@ -1683,13 +1683,13 @@
         "model": "core.item",
         "pk": 133,
         "fields": {
-            "title": "dagon",
+            "title": "Dagon",
             "condition": "NEW",
             "category": 1,
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 2700,
-            "date_created": "2022-05-12 11:13:05.236680",
+            "date_created": "2022-05-12 15:49:15.779032",
             "images": [
                 133
             ]
@@ -1699,13 +1699,13 @@
         "model": "core.item",
         "pk": 134,
         "fields": {
-            "title": "dagon_2",
+            "title": "Dagon 2",
             "condition": "NEW",
             "category": 1,
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 3950,
-            "date_created": "2022-05-12 11:13:05.236682",
+            "date_created": "2022-05-12 15:49:15.779033",
             "images": [
                 134
             ]
@@ -1715,13 +1715,13 @@
         "model": "core.item",
         "pk": 135,
         "fields": {
-            "title": "dagon_3",
+            "title": "Dagon 3",
             "condition": "NEW",
             "category": 1,
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 5200,
-            "date_created": "2022-05-12 11:13:05.236684",
+            "date_created": "2022-05-12 15:49:15.779035",
             "images": [
                 135
             ]
@@ -1731,13 +1731,13 @@
         "model": "core.item",
         "pk": 136,
         "fields": {
-            "title": "dagon_4",
+            "title": "Dagon 4",
             "condition": "NEW",
             "category": 1,
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 6450,
-            "date_created": "2022-05-12 11:13:05.236686",
+            "date_created": "2022-05-12 15:49:15.779036",
             "images": [
                 136
             ]
@@ -1747,13 +1747,13 @@
         "model": "core.item",
         "pk": 137,
         "fields": {
-            "title": "dagon_5",
+            "title": "Dagon 5",
             "condition": "NEW",
             "category": 1,
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
             "seller": 1,
             "price": 7700,
-            "date_created": "2022-05-12 11:13:05.236689",
+            "date_created": "2022-05-12 15:49:15.779038",
             "images": [
                 137
             ]
@@ -1763,13 +1763,13 @@
         "model": "core.item",
         "pk": 139,
         "fields": {
-            "title": "necronomicon",
+            "title": "Necronomicon",
             "condition": "NEW",
             "category": 1,
             "description": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 11:13:05.236695",
+            "date_created": "2022-05-12 15:49:15.779043",
             "images": [
                 139
             ]
@@ -1779,13 +1779,13 @@
         "model": "core.item",
         "pk": 140,
         "fields": {
-            "title": "necronomicon_2",
+            "title": "Necronomicon 2",
             "condition": "NEW",
             "category": 1,
             "description": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages.",
             "seller": 1,
             "price": 3300,
-            "date_created": "2022-05-12 11:13:05.236697",
+            "date_created": "2022-05-12 15:49:15.779046",
             "images": [
                 140
             ]
@@ -1795,13 +1795,13 @@
         "model": "core.item",
         "pk": 141,
         "fields": {
-            "title": "necronomicon_3",
+            "title": "Necronomicon 3",
             "condition": "NEW",
             "category": 1,
             "description": "Considered the ultimate in necromancy and demonology, a powerful malefic force is locked within its pages.",
             "seller": 1,
             "price": 4550,
-            "date_created": "2022-05-12 11:13:05.236699",
+            "date_created": "2022-05-12 15:49:15.779047",
             "images": [
                 141
             ]
@@ -1811,13 +1811,13 @@
         "model": "core.item",
         "pk": 142,
         "fields": {
-            "title": "ultimate_scepter",
+            "title": "Ultimate scepter",
             "condition": "NEW",
             "category": 1,
             "description": "The scepter of a wizard with demigod-like powers.",
             "seller": 1,
             "price": 4200,
-            "date_created": "2022-05-12 11:13:05.236701",
+            "date_created": "2022-05-12 15:49:15.779049",
             "images": [
                 142
             ]
@@ -1827,13 +1827,13 @@
         "model": "core.item",
         "pk": 144,
         "fields": {
-            "title": "ultimate_scepter_2",
+            "title": "Ultimate scepter 2",
             "condition": "NEW",
             "category": 1,
             "description": "The scepter of a wizard with demigod-like powers.",
             "seller": 1,
             "price": 5800,
-            "date_created": "2022-05-12 11:13:05.236707",
+            "date_created": "2022-05-12 15:49:15.779053",
             "images": [
                 144
             ]
@@ -1843,13 +1843,13 @@
         "model": "core.item",
         "pk": 145,
         "fields": {
-            "title": "ultimate_scepter_roshan",
+            "title": "Ultimate scepter roshan",
             "condition": "NEW",
             "category": 1,
             "description": "The scepter of a wizard with demigod-like powers.",
             "seller": 1,
             "price": 5800,
-            "date_created": "2022-05-12 11:13:05.236709",
+            "date_created": "2022-05-12 15:49:15.779055",
             "images": [
                 145
             ]
@@ -1859,13 +1859,13 @@
         "model": "core.item",
         "pk": 146,
         "fields": {
-            "title": "aghanims_shard",
+            "title": "Aghanims shard",
             "condition": "NEW",
             "category": 1,
             "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 11:13:05.236713",
+            "date_created": "2022-05-12 15:49:15.779056",
             "images": [
                 146
             ]
@@ -1875,13 +1875,13 @@
         "model": "core.item",
         "pk": 147,
         "fields": {
-            "title": "aghanims_shard_roshan",
+            "title": "Aghanims shard roshan",
             "condition": "NEW",
             "category": 1,
             "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
             "seller": 1,
             "price": 1400,
-            "date_created": "2022-05-12 11:13:05.236715",
+            "date_created": "2022-05-12 15:49:15.779057",
             "images": [
                 147
             ]
@@ -1891,13 +1891,13 @@
         "model": "core.item",
         "pk": 149,
         "fields": {
-            "title": "refresher",
+            "title": "Refresher",
             "condition": "NEW",
             "category": 1,
             "description": "A powerful artifact created for wizards.",
             "seller": 1,
             "price": 5000,
-            "date_created": "2022-05-12 11:13:05.236722",
+            "date_created": "2022-05-12 15:49:15.779062",
             "images": [
                 149
             ]
@@ -1907,13 +1907,13 @@
         "model": "core.item",
         "pk": 151,
         "fields": {
-            "title": "assault",
+            "title": "Assault",
             "condition": "NEW",
             "category": 5,
             "description": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
             "seller": 1,
             "price": 5125,
-            "date_created": "2022-05-12 11:13:05.236728",
+            "date_created": "2022-05-12 15:49:15.779066",
             "images": [
                 151
             ]
@@ -1923,13 +1923,13 @@
         "model": "core.item",
         "pk": 153,
         "fields": {
-            "title": "heart",
+            "title": "Heart",
             "condition": "NEW",
             "category": 5,
             "description": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
             "seller": 1,
             "price": 5000,
-            "date_created": "2022-05-12 11:13:05.236796",
+            "date_created": "2022-05-12 15:49:15.779071",
             "images": [
                 153
             ]
@@ -1939,13 +1939,13 @@
         "model": "core.item",
         "pk": 155,
         "fields": {
-            "title": "black_king_bar",
+            "title": "Black king bar",
             "condition": "NEW",
             "category": 5,
             "description": "A powerful staff imbued with the strength of giants.",
             "seller": 1,
             "price": 4050,
-            "date_created": "2022-05-12 11:13:05.236815",
+            "date_created": "2022-05-12 15:49:15.779177",
             "images": [
                 155
             ]
@@ -1955,13 +1955,13 @@
         "model": "core.item",
         "pk": 156,
         "fields": {
-            "title": "aegis",
+            "title": "Aegis",
             "condition": "NEW",
             "category": 6,
             "description": "The Immortal was said to own a shield that protected him from death itself.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.236818",
+            "date_created": "2022-05-12 15:49:15.779184",
             "images": [
                 156
             ]
@@ -1971,13 +1971,13 @@
         "model": "core.item",
         "pk": 158,
         "fields": {
-            "title": "shivas_guard",
+            "title": "Shivas guard",
             "condition": "NEW",
             "category": 5,
             "description": "Said to have belonged to a goddess, today it retains much of its former power.",
             "seller": 1,
             "price": 4850,
-            "date_created": "2022-05-12 11:13:05.236825",
+            "date_created": "2022-05-12 15:49:15.779196",
             "images": [
                 158
             ]
@@ -1987,13 +1987,13 @@
         "model": "core.item",
         "pk": 160,
         "fields": {
-            "title": "bloodstone",
+            "title": "Bloodstone",
             "condition": "NEW",
             "category": 5,
             "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
             "seller": 1,
             "price": 4600,
-            "date_created": "2022-05-12 11:13:05.236832",
+            "date_created": "2022-05-12 15:49:15.779204",
             "images": [
                 160
             ]
@@ -2003,13 +2003,13 @@
         "model": "core.item",
         "pk": 162,
         "fields": {
-            "title": "sphere",
+            "title": "Sphere",
             "condition": "NEW",
             "category": 5,
             "description": "This magical sphere once protected one of the most famous heroes in history.",
             "seller": 1,
             "price": 4600,
-            "date_created": "2022-05-12 11:13:05.236839",
+            "date_created": "2022-05-12 15:49:15.779209",
             "images": [
                 162
             ]
@@ -2019,13 +2019,13 @@
         "model": "core.item",
         "pk": 163,
         "fields": {
-            "title": "lotus_orb",
+            "title": "Lotus orb",
             "condition": "NEW",
             "category": 5,
             "description": "The jewel at its center still reflects a pale image of its creator.",
             "seller": 1,
             "price": 3850,
-            "date_created": "2022-05-12 11:13:05.236841",
+            "date_created": "2022-05-12 15:49:15.779210",
             "images": [
                 163
             ]
@@ -2035,13 +2035,13 @@
         "model": "core.item",
         "pk": 165,
         "fields": {
-            "title": "meteor_hammer",
+            "title": "Meteor hammer",
             "condition": "NEW",
             "category": 5,
             "description": "",
             "seller": 1,
             "price": 2350,
-            "date_created": "2022-05-12 11:13:05.236847",
+            "date_created": "2022-05-12 15:49:15.779215",
             "images": [
                 165
             ]
@@ -2051,13 +2051,13 @@
         "model": "core.item",
         "pk": 166,
         "fields": {
-            "title": "nullifier",
+            "title": "Nullifier",
             "condition": "NEW",
             "category": 5,
             "description": "",
             "seller": 1,
             "price": 4725,
-            "date_created": "2022-05-12 11:13:05.236852",
+            "date_created": "2022-05-12 15:49:15.779216",
             "images": [
                 166
             ]
@@ -2067,13 +2067,13 @@
         "model": "core.item",
         "pk": 168,
         "fields": {
-            "title": "aeon_disk",
+            "title": "Aeon disk",
             "condition": "NEW",
             "category": 5,
             "description": "",
             "seller": 1,
             "price": 3000,
-            "date_created": "2022-05-12 11:13:05.236863",
+            "date_created": "2022-05-12 15:49:15.779222",
             "images": [
                 168
             ]
@@ -2083,13 +2083,13 @@
         "model": "core.item",
         "pk": 170,
         "fields": {
-            "title": "kaya",
+            "title": "Kaya",
             "condition": "NEW",
             "category": 5,
             "description": "",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 11:13:05.236869",
+            "date_created": "2022-05-12 15:49:15.779237",
             "images": [
                 170
             ]
@@ -2099,13 +2099,13 @@
         "model": "core.item",
         "pk": 173,
         "fields": {
-            "title": "refresher_shard",
+            "title": "Refresher shard",
             "condition": "NEW",
             "category": 3,
             "description": "",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.236934",
+            "date_created": "2022-05-12 15:49:15.779287",
             "images": [
                 173
             ]
@@ -2115,13 +2115,13 @@
         "model": "core.item",
         "pk": 175,
         "fields": {
-            "title": "spirit_vessel",
+            "title": "Spirit vessel",
             "condition": "NEW",
             "category": 1,
             "description": "",
             "seller": 1,
             "price": 2980,
-            "date_created": "2022-05-12 11:13:05.236941",
+            "date_created": "2022-05-12 15:49:15.779292",
             "images": [
                 175
             ]
@@ -2131,13 +2131,13 @@
         "model": "core.item",
         "pk": 176,
         "fields": {
-            "title": "vanguard",
+            "title": "Vanguard",
             "condition": "NEW",
             "category": 5,
             "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
             "seller": 1,
             "price": 1825,
-            "date_created": "2022-05-12 11:13:05.236943",
+            "date_created": "2022-05-12 15:49:15.779294",
             "images": [
                 176
             ]
@@ -2147,13 +2147,13 @@
         "model": "core.item",
         "pk": 178,
         "fields": {
-            "title": "crimson_guard",
+            "title": "Crimson guard",
             "condition": "NEW",
             "category": 5,
             "description": "A cuirass originally built to protect against the dreaded Year Beast.",
             "seller": 1,
             "price": 3600,
-            "date_created": "2022-05-12 11:13:05.236949",
+            "date_created": "2022-05-12 15:49:15.779298",
             "images": [
                 178
             ]
@@ -2163,13 +2163,13 @@
         "model": "core.item",
         "pk": 180,
         "fields": {
-            "title": "blade_mail",
+            "title": "Blade mail",
             "condition": "NEW",
             "category": 5,
             "description": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
             "seller": 1,
             "price": 2100,
-            "date_created": "2022-05-12 11:13:05.236968",
+            "date_created": "2022-05-12 15:49:15.779310",
             "images": [
                 180
             ]
@@ -2179,13 +2179,13 @@
         "model": "core.item",
         "pk": 181,
         "fields": {
-            "title": "soul_booster",
+            "title": "Soul booster",
             "condition": "NEW",
             "category": 5,
             "description": "Regain lost courage.",
             "seller": 1,
             "price": 3000,
-            "date_created": "2022-05-12 11:13:05.236970",
+            "date_created": "2022-05-12 15:49:15.779312",
             "images": [
                 181
             ]
@@ -2195,13 +2195,13 @@
         "model": "core.item",
         "pk": 183,
         "fields": {
-            "title": "hood_of_defiance",
+            "title": "Hood of defiance",
             "condition": "NEW",
             "category": 5,
             "description": "A furred, magic resistant headpiece that is feared by wizards.",
             "seller": 1,
             "price": 1500,
-            "date_created": "2022-05-12 11:13:05.236976",
+            "date_created": "2022-05-12 15:49:15.779319",
             "images": [
                 183
             ]
@@ -2211,13 +2211,13 @@
         "model": "core.item",
         "pk": 185,
         "fields": {
-            "title": "eternal_shroud",
+            "title": "Eternal shroud",
             "condition": "NEW",
             "category": 5,
             "description": "A pristine hood that feeds upon strife to empower its owner.",
             "seller": 1,
             "price": 3300,
-            "date_created": "2022-05-12 11:13:05.236982",
+            "date_created": "2022-05-12 15:49:15.779323",
             "images": [
                 185
             ]
@@ -2227,13 +2227,13 @@
         "model": "core.item",
         "pk": 186,
         "fields": {
-            "title": "rapier",
+            "title": "Rapier",
             "condition": "NEW",
             "category": 5,
             "description": "So powerful, it cannot have a single owner.",
             "seller": 1,
             "price": 5950,
-            "date_created": "2022-05-12 11:13:05.236984",
+            "date_created": "2022-05-12 15:49:15.779325",
             "images": [
                 186
             ]
@@ -2243,13 +2243,13 @@
         "model": "core.item",
         "pk": 188,
         "fields": {
-            "title": "monkey_king_bar",
+            "title": "Monkey king bar",
             "condition": "NEW",
             "category": 5,
             "description": "A powerful staff used by a master warrior.",
             "seller": 1,
             "price": 4975,
-            "date_created": "2022-05-12 11:13:05.236990",
+            "date_created": "2022-05-12 15:49:15.779329",
             "images": [
                 188
             ]
@@ -2259,13 +2259,13 @@
         "model": "core.item",
         "pk": 189,
         "fields": {
-            "title": "radiance",
+            "title": "Radiance",
             "condition": "NEW",
             "category": 5,
             "description": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
             "seller": 1,
             "price": 5050,
-            "date_created": "2022-05-12 11:13:05.236994",
+            "date_created": "2022-05-12 15:49:15.779331",
             "images": [
                 189
             ]
@@ -2275,13 +2275,13 @@
         "model": "core.item",
         "pk": 190,
         "fields": {
-            "title": "butterfly",
+            "title": "Butterfly",
             "condition": "NEW",
             "category": 5,
             "description": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
             "seller": 1,
             "price": 4975,
-            "date_created": "2022-05-12 11:13:05.236996",
+            "date_created": "2022-05-12 15:49:15.779332",
             "images": [
                 190
             ]
@@ -2291,13 +2291,13 @@
         "model": "core.item",
         "pk": 192,
         "fields": {
-            "title": "greater_crit",
+            "title": "Greater crit",
             "condition": "NEW",
             "category": 5,
             "description": "A weapon of incredible power that is difficult for even the strongest of warriors to control.",
             "seller": 1,
             "price": 5150,
-            "date_created": "2022-05-12 11:13:05.237003",
+            "date_created": "2022-05-12 15:49:15.779336",
             "images": [
                 192
             ]
@@ -2307,13 +2307,13 @@
         "model": "core.item",
         "pk": 194,
         "fields": {
-            "title": "basher",
+            "title": "Basher",
             "condition": "NEW",
             "category": 5,
             "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
             "seller": 1,
             "price": 2875,
-            "date_created": "2022-05-12 11:13:05.237009",
+            "date_created": "2022-05-12 15:49:15.779341",
             "images": [
                 194
             ]
@@ -2323,13 +2323,13 @@
         "model": "core.item",
         "pk": 195,
         "fields": {
-            "title": "bfury",
+            "title": "Bfury",
             "condition": "NEW",
             "category": 5,
             "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 11:13:05.237011",
+            "date_created": "2022-05-12 15:49:15.779342",
             "images": [
                 195
             ]
@@ -2339,13 +2339,13 @@
         "model": "core.item",
         "pk": 197,
         "fields": {
-            "title": "manta",
+            "title": "Manta",
             "condition": "NEW",
             "category": 5,
             "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
             "seller": 1,
             "price": 4600,
-            "date_created": "2022-05-12 11:13:05.237017",
+            "date_created": "2022-05-12 15:49:15.779347",
             "images": [
                 197
             ]
@@ -2355,13 +2355,13 @@
         "model": "core.item",
         "pk": 199,
         "fields": {
-            "title": "lesser_crit",
+            "title": "Lesser crit",
             "condition": "NEW",
             "category": 5,
             "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
             "seller": 1,
             "price": 1950,
-            "date_created": "2022-05-12 11:13:05.237023",
+            "date_created": "2022-05-12 15:49:15.779351",
             "images": [
                 199
             ]
@@ -2371,13 +2371,13 @@
         "model": "core.item",
         "pk": 200,
         "fields": {
-            "title": "dragon_lance",
+            "title": "Dragon lance",
             "condition": "NEW",
             "category": 6,
             "description": "The forward charge of the wyvern host grants no quarter.",
             "seller": 1,
             "price": 1900,
-            "date_created": "2022-05-12 11:13:05.237025",
+            "date_created": "2022-05-12 15:49:15.779352",
             "images": [
                 200
             ]
@@ -2387,13 +2387,13 @@
         "model": "core.item",
         "pk": 202,
         "fields": {
-            "title": "armlet",
+            "title": "Armlet",
             "condition": "NEW",
             "category": 5,
             "description": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 11:13:05.237032",
+            "date_created": "2022-05-12 15:49:15.779357",
             "images": [
                 202
             ]
@@ -2403,13 +2403,13 @@
         "model": "core.item",
         "pk": 203,
         "fields": {
-            "title": "invis_sword",
+            "title": "Invis sword",
             "condition": "NEW",
             "category": 5,
             "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
             "seller": 1,
             "price": 3000,
-            "date_created": "2022-05-12 11:13:05.237034",
+            "date_created": "2022-05-12 15:49:15.779362",
             "images": [
                 203
             ]
@@ -2419,13 +2419,13 @@
         "model": "core.item",
         "pk": 205,
         "fields": {
-            "title": "silver_edge",
+            "title": "Silver edge",
             "condition": "NEW",
             "category": 5,
             "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
             "seller": 1,
             "price": 5450,
-            "date_created": "2022-05-12 11:13:05.237040",
+            "date_created": "2022-05-12 15:49:15.779367",
             "images": [
                 205
             ]
@@ -2435,13 +2435,13 @@
         "model": "core.item",
         "pk": 206,
         "fields": {
-            "title": "sange_and_yasha",
+            "title": "Sange and yasha",
             "condition": "NEW",
             "category": 6,
             "description": "Sange and Yasha, when attuned by the moonlight and used together, become a very powerful combination.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 11:13:05.237042",
+            "date_created": "2022-05-12 15:49:15.779369",
             "images": [
                 206
             ]
@@ -2451,13 +2451,13 @@
         "model": "core.item",
         "pk": 207,
         "fields": {
-            "title": "kaya_and_sange",
+            "title": "Kaya and sange",
             "condition": "NEW",
             "category": 6,
             "description": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 11:13:05.237044",
+            "date_created": "2022-05-12 15:49:15.779370",
             "images": [
                 207
             ]
@@ -2467,13 +2467,13 @@
         "model": "core.item",
         "pk": 208,
         "fields": {
-            "title": "yasha_and_kaya",
+            "title": "Yasha and kaya",
             "condition": "NEW",
             "category": 6,
             "description": "Yasha and Kaya when paired together share a natural resonance.",
             "seller": 1,
             "price": 4100,
-            "date_created": "2022-05-12 11:13:05.237048",
+            "date_created": "2022-05-12 15:49:15.779371",
             "images": [
                 208
             ]
@@ -2483,13 +2483,13 @@
         "model": "core.item",
         "pk": 209,
         "fields": {
-            "title": "satanic",
+            "title": "Satanic",
             "condition": "NEW",
             "category": 6,
             "description": "Immense power at the cost of your soul.",
             "seller": 1,
             "price": 5050,
-            "date_created": "2022-05-12 11:13:05.237050",
+            "date_created": "2022-05-12 15:49:15.779373",
             "images": [
                 209
             ]
@@ -2499,13 +2499,13 @@
         "model": "core.item",
         "pk": 211,
         "fields": {
-            "title": "mjollnir",
+            "title": "Mjollnir",
             "condition": "NEW",
             "category": 6,
             "description": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
             "seller": 1,
             "price": 5600,
-            "date_created": "2022-05-12 11:13:05.237056",
+            "date_created": "2022-05-12 15:49:15.779377",
             "images": [
                 211
             ]
@@ -2515,13 +2515,13 @@
         "model": "core.item",
         "pk": 212,
         "fields": {
-            "title": "skadi",
+            "title": "Skadi",
             "condition": "NEW",
             "category": 6,
             "description": "Extremely rare artifact, guarded by the azure dragons.",
             "seller": 1,
             "price": 5300,
-            "date_created": "2022-05-12 11:13:05.237058",
+            "date_created": "2022-05-12 15:49:15.779379",
             "images": [
                 212
             ]
@@ -2531,13 +2531,13 @@
         "model": "core.item",
         "pk": 214,
         "fields": {
-            "title": "sange",
+            "title": "Sange",
             "condition": "NEW",
             "category": 6,
             "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 11:13:05.237064",
+            "date_created": "2022-05-12 15:49:15.779383",
             "images": [
                 214
             ]
@@ -2547,13 +2547,13 @@
         "model": "core.item",
         "pk": 216,
         "fields": {
-            "title": "helm_of_the_dominator",
+            "title": "Helm of the dominator",
             "condition": "NEW",
             "category": 6,
             "description": "The powerful headpiece of a dead necromancer.",
             "seller": 1,
             "price": 2400,
-            "date_created": "2022-05-12 11:13:05.237916",
+            "date_created": "2022-05-12 15:49:15.779387",
             "images": [
                 216
             ]
@@ -2563,13 +2563,13 @@
         "model": "core.item",
         "pk": 218,
         "fields": {
-            "title": "helm_of_the_overlord",
+            "title": "Helm of the overlord",
             "condition": "NEW",
             "category": 6,
             "description": "The powerful headpiece of a dead necromancer.",
             "seller": 1,
             "price": 6175,
-            "date_created": "2022-05-12 11:13:05.237930",
+            "date_created": "2022-05-12 15:49:15.779392",
             "images": [
                 218
             ]
@@ -2579,13 +2579,13 @@
         "model": "core.item",
         "pk": 219,
         "fields": {
-            "title": "maelstrom",
+            "title": "Maelstrom",
             "condition": "NEW",
             "category": 6,
             "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
             "seller": 1,
             "price": 2700,
-            "date_created": "2022-05-12 11:13:05.237933",
+            "date_created": "2022-05-12 15:49:15.779393",
             "images": [
                 219
             ]
@@ -2595,13 +2595,13 @@
         "model": "core.item",
         "pk": 221,
         "fields": {
-            "title": "gungir",
+            "title": "Gungir",
             "condition": "NEW",
             "category": 6,
             "description": "Bindings forged by impossible means to leash an ancient evil.",
             "seller": 1,
             "price": 6150,
-            "date_created": "2022-05-12 11:13:05.237940",
+            "date_created": "2022-05-12 15:49:15.779397",
             "images": [
                 221
             ]
@@ -2611,13 +2611,13 @@
         "model": "core.item",
         "pk": 222,
         "fields": {
-            "title": "desolator",
+            "title": "Desolator",
             "condition": "NEW",
             "category": 6,
             "description": "A wicked weapon, used in torturing political criminals.",
             "seller": 1,
             "price": 3500,
-            "date_created": "2022-05-12 11:13:05.237942",
+            "date_created": "2022-05-12 15:49:15.779400",
             "images": [
                 222
             ]
@@ -2627,13 +2627,13 @@
         "model": "core.item",
         "pk": 224,
         "fields": {
-            "title": "yasha",
+            "title": "Yasha",
             "condition": "NEW",
             "category": 6,
             "description": "Yasha is regarded as the swiftest weapon ever created.",
             "seller": 1,
             "price": 2050,
-            "date_created": "2022-05-12 11:13:05.237948",
+            "date_created": "2022-05-12 15:49:15.779404",
             "images": [
                 224
             ]
@@ -2643,13 +2643,13 @@
         "model": "core.item",
         "pk": 225,
         "fields": {
-            "title": "mask_of_madness",
+            "title": "Mask of madness",
             "condition": "NEW",
             "category": 6,
             "description": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
             "seller": 1,
             "price": 1775,
-            "date_created": "2022-05-12 11:13:05.237950",
+            "date_created": "2022-05-12 15:49:15.779406",
             "images": [
                 225
             ]
@@ -2659,13 +2659,13 @@
         "model": "core.item",
         "pk": 227,
         "fields": {
-            "title": "diffusal_blade",
+            "title": "Diffusal blade",
             "condition": "NEW",
             "category": 6,
             "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
             "seller": 1,
             "price": 2500,
-            "date_created": "2022-05-12 11:13:05.237959",
+            "date_created": "2022-05-12 15:49:15.779410",
             "images": [
                 227
             ]
@@ -2675,13 +2675,13 @@
         "model": "core.item",
         "pk": 229,
         "fields": {
-            "title": "ethereal_blade",
+            "title": "Ethereal blade",
             "condition": "NEW",
             "category": 5,
             "description": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
             "seller": 1,
             "price": 4650,
-            "date_created": "2022-05-12 11:13:05.237965",
+            "date_created": "2022-05-12 15:49:15.779431",
             "images": [
                 229
             ]
@@ -2691,13 +2691,13 @@
         "model": "core.item",
         "pk": 231,
         "fields": {
-            "title": "soul_ring",
+            "title": "Soul ring",
             "condition": "NEW",
             "category": 4,
             "description": "A ring that feeds on the souls of those who wear it.",
             "seller": 1,
             "price": 700,
-            "date_created": "2022-05-12 11:13:05.237984",
+            "date_created": "2022-05-12 15:49:15.779435",
             "images": [
                 231
             ]
@@ -2707,13 +2707,13 @@
         "model": "core.item",
         "pk": 232,
         "fields": {
-            "title": "arcane_boots",
+            "title": "Arcane boots",
             "condition": "NEW",
             "category": 1,
             "description": "Magi equipped with these boots are valued in battle.",
             "seller": 1,
             "price": 1300,
-            "date_created": "2022-05-12 11:13:05.237988",
+            "date_created": "2022-05-12 15:49:15.779437",
             "images": [
                 232
             ]
@@ -2723,13 +2723,13 @@
         "model": "core.item",
         "pk": 233,
         "fields": {
-            "title": "octarine_core",
+            "title": "Octarine core",
             "condition": "NEW",
             "category": 1,
             "description": "At the core of spellcraft are spectrums only the very gifted can sense.",
             "seller": 1,
             "price": 5275,
-            "date_created": "2022-05-12 11:13:05.237990",
+            "date_created": "2022-05-12 15:49:15.779438",
             "images": [
                 233
             ]
@@ -2739,13 +2739,13 @@
         "model": "core.item",
         "pk": 234,
         "fields": {
-            "title": "orb_of_venom",
+            "title": "Orb of venom",
             "condition": "NEW",
             "category": 2,
             "description": "Envenoms your veapon with the venom of a venomous viper.",
             "seller": 1,
             "price": 275,
-            "date_created": "2022-05-12 11:13:05.237991",
+            "date_created": "2022-05-12 15:49:15.779440",
             "images": [
                 234
             ]
@@ -2755,13 +2755,13 @@
         "model": "core.item",
         "pk": 235,
         "fields": {
-            "title": "blight_stone",
+            "title": "Blight stone",
             "condition": "NEW",
             "category": 2,
             "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
             "seller": 1,
             "price": 300,
-            "date_created": "2022-05-12 11:13:05.237993",
+            "date_created": "2022-05-12 15:49:15.779441",
             "images": [
                 235
             ]
@@ -2771,13 +2771,13 @@
         "model": "core.item",
         "pk": 237,
         "fields": {
-            "title": "orb_of_corrosion",
+            "title": "Orb of corrosion",
             "condition": "NEW",
             "category": 1,
             "description": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
             "seller": 1,
             "price": 925,
-            "date_created": "2022-05-12 11:13:05.238032",
+            "date_created": "2022-05-12 15:49:15.779447",
             "images": [
                 237
             ]
@@ -2787,13 +2787,13 @@
         "model": "core.item",
         "pk": 239,
         "fields": {
-            "title": "falcon_blade",
+            "title": "Falcon blade",
             "condition": "NEW",
             "category": 1,
             "description": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
             "seller": 1,
             "price": 1125,
-            "date_created": "2022-05-12 11:13:05.238039",
+            "date_created": "2022-05-12 15:49:15.779452",
             "images": [
                 239
             ]
@@ -2803,13 +2803,13 @@
         "model": "core.item",
         "pk": 241,
         "fields": {
-            "title": "mage_slayer",
+            "title": "Mage slayer",
             "condition": "NEW",
             "category": 1,
             "description": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
             "seller": 1,
             "price": 2400,
-            "date_created": "2022-05-12 11:13:05.238045",
+            "date_created": "2022-05-12 15:49:15.779457",
             "images": [
                 241
             ]
@@ -2819,13 +2819,13 @@
         "model": "core.item",
         "pk": 243,
         "fields": {
-            "title": "ancient_janggo",
+            "title": "Ancient janggo",
             "condition": "NEW",
             "category": 1,
             "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
             "seller": 1,
             "price": 1700,
-            "date_created": "2022-05-12 11:13:05.238051",
+            "date_created": "2022-05-12 15:49:15.779461",
             "images": [
                 243
             ]
@@ -2835,13 +2835,13 @@
         "model": "core.item",
         "pk": 245,
         "fields": {
-            "title": "boots_of_bearing",
+            "title": "Boots of bearing",
             "condition": "NEW",
             "category": 1,
             "description": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim.",
             "seller": 1,
             "price": 4125,
-            "date_created": "2022-05-12 11:13:05.238058",
+            "date_created": "2022-05-12 15:49:15.779465",
             "images": [
                 245
             ]
@@ -2851,13 +2851,13 @@
         "model": "core.item",
         "pk": 246,
         "fields": {
-            "title": "medallion_of_courage",
+            "title": "Medallion of courage",
             "condition": "NEW",
             "category": 1,
             "description": "The bearer has no fear of combat.",
             "seller": 1,
             "price": 1025,
-            "date_created": "2022-05-12 11:13:05.238062",
+            "date_created": "2022-05-12 15:49:15.779466",
             "images": [
                 246
             ]
@@ -2867,13 +2867,13 @@
         "model": "core.item",
         "pk": 248,
         "fields": {
-            "title": "solar_crest",
+            "title": "Solar crest",
             "condition": "NEW",
             "category": 1,
             "description": "A talisman forged to honor the daytime sky.",
             "seller": 1,
             "price": 2625,
-            "date_created": "2022-05-12 11:13:05.238069",
+            "date_created": "2022-05-12 15:49:15.779470",
             "images": [
                 248
             ]
@@ -2883,13 +2883,13 @@
         "model": "core.item",
         "pk": 249,
         "fields": {
-            "title": "smoke_of_deceit",
+            "title": "Smoke of deceit",
             "condition": "NEW",
             "category": 3,
             "description": "The charlatan wizard Myrddin's only true contribution to the arcane arts.",
             "seller": 1,
             "price": 50,
-            "date_created": "2022-05-12 11:13:05.238071",
+            "date_created": "2022-05-12 15:49:15.779472",
             "images": [
                 249
             ]
@@ -2899,13 +2899,13 @@
         "model": "core.item",
         "pk": 250,
         "fields": {
-            "title": "tome_of_knowledge",
+            "title": "Tome of knowledge",
             "condition": "NEW",
             "category": 3,
             "description": "That which raises beast to man and man to god.",
             "seller": 1,
             "price": 75,
-            "date_created": "2022-05-12 11:13:05.238073",
+            "date_created": "2022-05-12 15:49:15.779473",
             "images": [
                 250
             ]
@@ -2915,13 +2915,13 @@
         "model": "core.item",
         "pk": 252,
         "fields": {
-            "title": "veil_of_discord",
+            "title": "Veil of discord",
             "condition": "NEW",
             "category": 1,
             "description": "The headwear of corrupt magi.",
             "seller": 1,
             "price": 1525,
-            "date_created": "2022-05-12 11:13:05.238079",
+            "date_created": "2022-05-12 15:49:15.779478",
             "images": [
                 252
             ]
@@ -2931,13 +2931,13 @@
         "model": "core.item",
         "pk": 254,
         "fields": {
-            "title": "revenants_brooch",
+            "title": "Revenants brooch",
             "condition": "NEW",
             "category": 1,
             "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
             "seller": 1,
             "price": 6200,
-            "date_created": "2022-05-12 11:13:05.238085",
+            "date_created": "2022-05-12 15:49:15.779482",
             "images": [
                 254
             ]
@@ -2947,13 +2947,13 @@
         "model": "core.item",
         "pk": 256,
         "fields": {
-            "title": "guardian_greaves",
+            "title": "Guardian greaves",
             "condition": "NEW",
             "category": 1,
             "description": "One of many holy instruments constructed to honor the Omniscience.",
             "seller": 1,
             "price": 5100,
-            "date_created": "2022-05-12 11:13:05.238091",
+            "date_created": "2022-05-12 15:49:15.779486",
             "images": [
                 256
             ]
@@ -2963,13 +2963,13 @@
         "model": "core.item",
         "pk": 258,
         "fields": {
-            "title": "rod_of_atos",
+            "title": "Rod of atos",
             "condition": "NEW",
             "category": 1,
             "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
             "seller": 1,
             "price": 2750,
-            "date_created": "2022-05-12 11:13:05.238097",
+            "date_created": "2022-05-12 15:49:15.779492",
             "images": [
                 258
             ]
@@ -2979,13 +2979,13 @@
         "model": "core.item",
         "pk": 260,
         "fields": {
-            "title": "iron_talon",
+            "title": "Iron talon",
             "condition": "NEW",
             "category": 4,
             "description": "A simple but effective weapon devised to quell a great Hellbear uprising.",
             "seller": 1,
             "price": 301,
-            "date_created": "2022-05-12 11:13:05.238103",
+            "date_created": "2022-05-12 15:49:15.779496",
             "images": [
                 260
             ]
@@ -2995,13 +2995,13 @@
         "model": "core.item",
         "pk": 262,
         "fields": {
-            "title": "abyssal_blade",
+            "title": "Abyssal blade",
             "condition": "NEW",
             "category": 5,
             "description": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
             "seller": 1,
             "price": 6250,
-            "date_created": "2022-05-12 11:13:05.238109",
+            "date_created": "2022-05-12 15:49:15.779500",
             "images": [
                 262
             ]
@@ -3011,13 +3011,13 @@
         "model": "core.item",
         "pk": 264,
         "fields": {
-            "title": "heavens_halberd",
+            "title": "Heavens halberd",
             "condition": "NEW",
             "category": 6,
             "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
             "seller": 1,
             "price": 3550,
-            "date_created": "2022-05-12 11:13:05.238115",
+            "date_created": "2022-05-12 15:49:15.779505",
             "images": [
                 264
             ]
@@ -3027,13 +3027,13 @@
         "model": "core.item",
         "pk": 265,
         "fields": {
-            "title": "ring_of_aquila",
+            "title": "Ring of aquila",
             "condition": "NEW",
             "category": 1,
             "description": "The ring of the fallen Warlord Aquila continues to support armies in battle.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238117",
+            "date_created": "2022-05-12 15:49:15.779506",
             "images": [
                 265
             ]
@@ -3043,13 +3043,13 @@
         "model": "core.item",
         "pk": 266,
         "fields": {
-            "title": "tranquil_boots",
+            "title": "Tranquil boots",
             "condition": "NEW",
             "category": 1,
             "description": "While they increase the longevity of the wearer, this boot is not particularly reliable.",
             "seller": 1,
             "price": 925,
-            "date_created": "2022-05-12 11:13:05.238119",
+            "date_created": "2022-05-12 15:49:15.779508",
             "images": [
                 266
             ]
@@ -3059,13 +3059,13 @@
         "model": "core.item",
         "pk": 269,
         "fields": {
-            "title": "glimmer_cape",
+            "title": "Glimmer cape",
             "condition": "NEW",
             "category": 1,
             "description": "The stolen cape of a master illusionist.",
             "seller": 1,
             "price": 1950,
-            "date_created": "2022-05-12 11:13:05.238143",
+            "date_created": "2022-05-12 15:49:15.779520",
             "images": [
                 269
             ]
@@ -3075,13 +3075,13 @@
         "model": "core.item",
         "pk": 270,
         "fields": {
-            "title": "river_painter",
+            "title": "River painter",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238145",
+            "date_created": "2022-05-12 15:49:15.779521",
             "images": [
                 270
             ]
@@ -3091,13 +3091,13 @@
         "model": "core.item",
         "pk": 271,
         "fields": {
-            "title": "river_painter2",
+            "title": "River painter2",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238147",
+            "date_created": "2022-05-12 15:49:15.779523",
             "images": [
                 271
             ]
@@ -3107,13 +3107,13 @@
         "model": "core.item",
         "pk": 272,
         "fields": {
-            "title": "river_painter3",
+            "title": "River painter3",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238149",
+            "date_created": "2022-05-12 15:49:15.779524",
             "images": [
                 272
             ]
@@ -3123,13 +3123,13 @@
         "model": "core.item",
         "pk": 273,
         "fields": {
-            "title": "river_painter4",
+            "title": "River painter4",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238151",
+            "date_created": "2022-05-12 15:49:15.779525",
             "images": [
                 273
             ]
@@ -3139,13 +3139,13 @@
         "model": "core.item",
         "pk": 274,
         "fields": {
-            "title": "river_painter5",
+            "title": "River painter5",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238153",
+            "date_created": "2022-05-12 15:49:15.779527",
             "images": [
                 274
             ]
@@ -3155,13 +3155,13 @@
         "model": "core.item",
         "pk": 275,
         "fields": {
-            "title": "river_painter6",
+            "title": "River painter6",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238155",
+            "date_created": "2022-05-12 15:49:15.779528",
             "images": [
                 275
             ]
@@ -3171,13 +3171,13 @@
         "model": "core.item",
         "pk": 276,
         "fields": {
-            "title": "river_painter7",
+            "title": "River painter7",
             "condition": "NEW",
             "category": 2,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238157",
+            "date_created": "2022-05-12 15:49:15.779529",
             "images": [
                 276
             ]
@@ -3187,13 +3187,13 @@
         "model": "core.item",
         "pk": 277,
         "fields": {
-            "title": "mutation_tombstone",
+            "title": "Mutation tombstone",
             "condition": "NEW",
             "category": 3,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238159",
+            "date_created": "2022-05-12 15:49:15.779531",
             "images": [
                 277
             ]
@@ -3203,13 +3203,13 @@
         "model": "core.item",
         "pk": 280,
         "fields": {
-            "title": "pocket_roshan",
+            "title": "Pocket roshan",
             "condition": "NEW",
             "category": 1,
             "description": "",
             "seller": 1,
             "price": 1000,
-            "date_created": "2022-05-12 11:13:05.238175",
+            "date_created": "2022-05-12 15:49:15.779539",
             "images": [
                 280
             ]
@@ -3219,13 +3219,13 @@
         "model": "core.item",
         "pk": 296,
         "fields": {
-            "title": "greater_faerie_fire",
+            "title": "Greater faerie fire",
             "condition": "NEW",
             "category": 3,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238460",
+            "date_created": "2022-05-12 15:49:15.780896",
             "images": [
                 296
             ]
@@ -3235,13 +3235,13 @@
         "model": "core.item",
         "pk": 301,
         "fields": {
-            "title": "mango_tree",
+            "title": "Mango tree",
             "condition": "NEW",
             "category": 3,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238524",
+            "date_created": "2022-05-12 15:49:15.781057",
             "images": [
                 301
             ]
@@ -3251,13 +3251,13 @@
         "model": "core.item",
         "pk": 302,
         "fields": {
-            "title": "royal_jelly",
+            "title": "Royal jelly",
             "condition": "NEW",
             "category": 3,
             "description": "To those who harvest olgru jelly, success serves more than mere profit--it's often the means to survival--for only the jelly itself can cure the ravages that follow a sting from the vigilant denizens of the giant hives.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238527",
+            "date_created": "2022-05-12 15:49:15.781066",
             "images": [
                 302
             ]
@@ -3267,13 +3267,13 @@
         "model": "core.item",
         "pk": 305,
         "fields": {
-            "title": "repair_kit",
+            "title": "Repair kit",
             "condition": "NEW",
             "category": 3,
             "description": "",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238541",
+            "date_created": "2022-05-12 15:49:15.781110",
             "images": [
                 305
             ]
@@ -3283,13 +3283,13 @@
         "model": "core.item",
         "pk": 316,
         "fields": {
-            "title": "vambrace",
+            "title": "Vambrace",
             "condition": "NEW",
             "category": 4,
             "description": "The coveted treasure that divided the heirs of Queen Raiya upon her death, resulting in the eventual downfall of her kingdom.",
             "seller": 1,
             "price": 0,
-            "date_created": "2022-05-12 11:13:05.238702",
+            "date_created": "2022-05-12 15:49:15.781308",
             "images": [
                 316
             ]
@@ -3299,13 +3299,13 @@
         "model": "core.item",
         "pk": 383,
         "fields": {
-            "title": "diffusal_blade_2",
+            "title": "Diffusal blade 2",
             "condition": "NEW",
             "category": 6,
             "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
             "seller": 1,
             "price": 3850,
-            "date_created": "2022-05-12 11:13:05.241290",
+            "date_created": "2022-05-12 15:49:15.782438",
             "images": [
                 383
             ]
