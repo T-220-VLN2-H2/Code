@@ -1,4 +1,4 @@
-from core.models.item import Item
+from core.models import Item, Image
 from core.services.image_service import ImageService
 from core.services.bid_service import BidService
 from django.core.exceptions import ObjectDoesNotExist
@@ -21,7 +21,11 @@ class ItemService:
     def create_item(cls, form, user):
         new_item = form.save(commit=False)
         new_item.seller = user
+
         new_item.save()
+
+        if new_item.images.count() == 0:
+            new_item.images.add(Image.objects.get(id=1))
 
         return new_item
 
