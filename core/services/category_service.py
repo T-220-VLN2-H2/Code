@@ -23,6 +23,11 @@ class CategoryService:
         return categories
 
     @classmethod
+    def get_category(cls, id):
+        categorie = Category.objects.get(id=id)
+        return categorie
+
+    @classmethod
     def categories_with_parents(cls):
         categories = cls.get_all_category_items()
         sub_categories = {}
