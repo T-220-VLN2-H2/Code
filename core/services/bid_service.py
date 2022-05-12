@@ -53,6 +53,12 @@ Your bid of {new_bid.amount} has been added to {item.title}
         return bid
 
     @classmethod
+    def get_bid_by_item_id(cls, item_id):
+        bid = UserBids.objects.get(item_id_id = item_id)
+        print(bid)
+        return bid
+
+    @classmethod
     def get_max_bid(cls, item_id):
         try:
             max_bid = UserBids.objects.filter(item_id=item_id).latest("amount")

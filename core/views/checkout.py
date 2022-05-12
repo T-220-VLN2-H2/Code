@@ -7,10 +7,7 @@ from core.models.shipping_details import ShippingDetails
 from core.models.payment_info import PaymentInfo
 from datetime import date
 
-
-def user(request):
-    ctx = {}
-    request.session["bid_id"] = request.POST.get("bid")
+def user(request, bid_id=None):
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -19,24 +16,49 @@ def user(request):
             request.session["postal_code"] = form.cleaned_data["postal_code"]
             request.session["city"] = form.cleaned_data["city"]
             request.session.modified = True
-            return redirect('/checkout/delivery')
+            return redirect("/checkout/delivery", bid_id)
         else:
             form = PersonalInfoCreateForm()
+            ctx = {}
             ctx["form"] = form
+            request.session["bid_id"] = request.POST.get("bid")
+            request.session.modified = True
         return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
         if len(request.session.keys()) > 3:
+            print(request.session["bid_id"])
             form_init = {}
             form_init["full_name"] = request.session["full_name"]
             form_init["address"] = request.session["address"]
             form_init["postal_code"] = request.session["postal_code"]
             form_init["city"] = request.session["city"]
             form = PersonalInfoCreateForm(form_init)
+            ctx = {}
             ctx["form"] = form
             return render(request, "checkout/user_details.html", context=ctx)
 
+def delivery(request):
+    print(request.session["bid_id"])
+    if request.method == "POST":
+        form = DeliveryInfoCreateForm(request.POST)
+        if form.is_valid():
+            request.session["del_choice"] = form.cleaned_data["del_choice"]
+            request.session.modified = True
+            return redirect("/checkout/payment")
+    elif request.method == "GET":
+        if "del_choice" in request.session.keys():
+            form_init = {}
+            form_init["del_choice"] = request.session["del_choice"]
+            form = DeliveryInfoCreateForm(form_init)
+            ctx = {}
+            ctx["form"] = form
+            return render(request, "checkout/delivery_info.html", context=ctx)
+        form = DeliveryInfoCreateForm()
+        ctx["form"] = form
+        return render(request, "checkout/delivery_info.html", context=ctx)
 
 def payment(request):
+    print(request.session["bid_id"])
     ctx = {}
     if request.method == "POST":
         form = PaymentCreateForm(request.POST)
@@ -65,28 +87,8 @@ def payment(request):
             return render(request, "checkout/payment_info.html", context=ctx)
 
 
-def delivery(request):
-    ctx = {}
-    if request.method == "POST":
-        form = DeliveryInfoCreateForm(request.POST)
-        if form.is_valid():
-            request.session["del_choice"] = form.cleaned_data["del_choice"]
-            request.session.modified = True
-            return redirect("/checkout/payment")
-    elif request.method == "GET":
-        if "del_choice" in request.session.keys():
-            form_init = {}
-            form_init["del_choice"] = request.session["del_choice"]
-            form = DeliveryInfoCreateForm(form_init)
-            ctx["form"] = form
-            return render(request, "checkout/delivery_info.html", context=ctx)
-        form = DeliveryInfoCreateForm()
-        ctx["form"] = form
-        return render(request, "checkout/delivery_info.html", context=ctx)
-
 def process_payment(request):
-    bid = BidService.get_bid_by_id(request.session["bid_id"])
-    print(bid)
+    bid = BidService.get_bid_by_item_id(int(request.session["bid_id"]))
     bid.status = "COMPLETED"
     bid.save()
     if request.method == "POST":
@@ -111,18 +113,16 @@ def process_payment(request):
         return redirect("/checkout/summary")
 
 def summary(request):
+    print(request.session["bid_id"])
     ctx = {}
     summary_details = request.session["summary_details"]
     date_today = date.today()
-    bid = BidService.get_bid_by_id(request.session["bid_id"])
-    print(bid.item_id_id)
-    item = ItemService.get_item_by_id(bid.item_id_id)
-    print(item.title)
+    bid = BidService.get_bid_by_item_id(request.session["bid_id"])
+    item = ItemService.get_item_by_id(request.session["bid_id"])
     ctx["price"] = bid.amount
     ctx["item_name"] = item.title
     ctx["summary"] = summary_details
     ctx["date"] = date_today
-    print(ctx.keys())
     if request.method == "POST":
         return redirect("index_page")
     return render(request, "checkout/summary.html", context=ctx)
