@@ -1329,22 +1329,6 @@
     },
     {
         "model": "core.item",
-        "pk": 91,
-        "fields": {
-            "title": "Satchel",
-            "condition": "NEW",
-            "category": 4,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.778842",
-            "images": [
-                91
-            ]
-        }
-    },
-    {
-        "model": "core.item",
         "pk": 93,
         "fields": {
             "title": "Bracer",
@@ -1868,22 +1852,6 @@
             "date_created": "2022-05-12 15:49:15.779056",
             "images": [
                 146
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 147,
-        "fields": {
-            "title": "Aghanims shard roshan",
-            "condition": "NEW",
-            "category": 1,
-            "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
-            "seller": 1,
-            "price": 1400,
-            "date_created": "2022-05-12 15:49:15.779057",
-            "images": [
-                147
             ]
         }
     },
@@ -3068,150 +3036,6 @@
             "date_created": "2022-05-12 15:49:15.779520",
             "images": [
                 269
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 270,
-        "fields": {
-            "title": "River painter",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779521",
-            "images": [
-                270
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 271,
-        "fields": {
-            "title": "River painter2",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779523",
-            "images": [
-                271
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 272,
-        "fields": {
-            "title": "River painter3",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779524",
-            "images": [
-                272
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 273,
-        "fields": {
-            "title": "River painter4",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779525",
-            "images": [
-                273
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 274,
-        "fields": {
-            "title": "River painter5",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779527",
-            "images": [
-                274
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 275,
-        "fields": {
-            "title": "River painter6",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779528",
-            "images": [
-                275
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 276,
-        "fields": {
-            "title": "River painter7",
-            "condition": "NEW",
-            "category": 2,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779529",
-            "images": [
-                276
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 277,
-        "fields": {
-            "title": "Mutation tombstone",
-            "condition": "NEW",
-            "category": 3,
-            "description": "",
-            "seller": 1,
-            "price": 0,
-            "date_created": "2022-05-12 15:49:15.779531",
-            "images": [
-                277
-            ]
-        }
-    },
-    {
-        "model": "core.item",
-        "pk": 280,
-        "fields": {
-            "title": "Pocket roshan",
-            "condition": "NEW",
-            "category": 1,
-            "description": "",
-            "seller": 1,
-            "price": 1000,
-            "date_created": "2022-05-12 15:49:15.779539",
-            "images": [
-                280
             ]
         }
     },

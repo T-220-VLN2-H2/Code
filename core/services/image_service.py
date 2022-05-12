@@ -23,7 +23,7 @@ class ImageService:
     @classmethod
     def get_images(cls, item):
         if item.images.count() == 0:
-            default_image = Image.objects.get(id=1)
+            default_image = Image.objects.get(id=385)
             return [default_image]
 
         return item.images.all()

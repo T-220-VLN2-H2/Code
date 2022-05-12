@@ -25,7 +25,7 @@ class ItemService:
         new_item.save()
 
         if new_item.images.count() == 0:
-            new_item.images.add(Image.objects.get(id=1))
+            new_item.images.add(Image.objects.get(id=385))
 
         return new_item
 
