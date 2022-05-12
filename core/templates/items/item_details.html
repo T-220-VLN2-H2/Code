@@ -75,6 +75,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-4">
+                                <div class="input-group-fluid mb-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="item-highest-bid" aria-describedby="item-price" disabled value="{{max_bid}}">
+                                        <label for="item-highest-bid" class="form-label">Highest bid</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -87,9 +95,11 @@
                         <div class="row">
                             <div class="col-4 d-flex align-items-center justify-content-center">
                                 <div class="form-floating">
+                                    {% if item.seller != request.user %}
                                     {% block bid_item %}
                                         {% include 'items/item_bid.html' %}
                                     {% endblock %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="col-5 form-floating ">
