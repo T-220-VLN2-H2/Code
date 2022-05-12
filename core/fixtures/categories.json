@@ -3,57 +3,49 @@
     "model": "core.category",
     "pk": 1,
     "fields": {
-      "name": "Rare",
-      "parent": null
+      "name": "Rare"
     }
   },
   {
     "model": "core.category",
     "pk": 2,
     "fields": {
-      "name": "Component",
-      "parent": null
+      "name": "Component"
     }
   },
   {
     "model": "core.category",
     "pk": 3,
     "fields": {
-      "name": "Consumable",
-      "parent": null
+      "name": "Consumable"
     }
   },
   {
     "model": "core.category",
     "pk": 4,
     "fields": {
-      "name": "Common",
-      "parent": null
+      "name": "Common"
     }
   },
   {
     "model": "core.category",
     "pk": 5,
     "fields": {
-      "name": "Epic",
-      "parent": null
+      "name": "Epic"
     }
   },
   {
     "model": "core.category",
     "pk": 6,
     "fields": {
-      "name": "Artifact",
-      "parent": null
-
+      "name": "Artifact"
     }
   },
   {
     "model": "core.category",
     "pk": 7,
     "fields": {
-      "name": "secret_shop",
-      "parent": null
+      "name": "secret_shop"
     }
   }
 ]
