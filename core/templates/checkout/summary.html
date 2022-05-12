@@ -8,29 +8,33 @@
                 <p class="my-5 mx-5" style="font-size: 30px;">Thank for your purchase!</p>
                 <div class="row">
                   <ul class="list-unstyled">
-                    <li class="text-black">{{ summary.full_name }}</li>
+                    <li class="text-black">Full name: {{ summary.full_name }}</li>
+                    <li class="text-black">Address: {{ summary.address }}</li>
+                    <li class="text-black">Zip: {{ summary.postal_code }}</li>
+                    <li class="text-black">City: {{ summary.city }}</li>
                     <li class="text-black mt-1">{{ date }}</li>
                   </ul>
                   <hr>
                   <div class="col-xl-10">
-                    <p>Triforce</p>
+                    <p>{{ item_name }}</p>
                   </div>
                   <div class="col-xl-2">
-                    <p class="float-end">$199.00
+                    <p class="float-end"> $ {{ price }}
                     </p>
                   </div>
                   <hr>
                 </div>
                 <div class="row text-black">
                   <div class="col-xl-12">
-                    <p class="float-end fw-bold">Total: $199.00
+                    <p class="float-end fw-bold">Total: $ {{ price }}
                     </p>
                   </div>
                   <hr style="border: 2px solid black;">
                 </div>
-
               </div>
             </div>
           </div>
-        <button class="btn btn-primary" type="next">Home</button>
+        <form action="/user/history#bids" method="GET">
+            <button class="btn btn-primary" type="home">Home</button>
+        </form>
 {% endblock %}

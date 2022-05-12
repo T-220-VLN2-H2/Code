@@ -53,6 +53,12 @@ Your bid of {new_bid.amount} has been added to {item.title}
         return bid
 
     @classmethod
+    def get_bid_by_item_id(cls, item_id):
+        bid = UserBids.objects.get(item_id_id=item_id)
+        print(bid)
+        return bid
+
+    @classmethod
     def get_max_bid(cls, item_id):
         try:
             max_bid = UserBids.objects.filter(item_id=item_id).latest("amount")
@@ -98,9 +104,7 @@ Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {los
         """
 
         bids = UserBids.objects.filter(
-            ~Q(status="COMPLETED"),
-            ~Q(status="REJECTED"),
-            user_id=user
+            ~Q(status="COMPLETED"), ~Q(status="REJECTED"), user_id=user
         ).order_by("-timestamp")
         return bids
 
@@ -108,16 +112,11 @@ Your bid for {loser_bid.item_id} of {loser_bid.amount} has been rejected by {los
     def get_bids_for_item(cls, item, status=None):
         if status is None:
             bids = UserBids.objects.filter(
-                Q(status="PENDING") | Q(status="ACCEPTED"),
-                item_id=item
+                Q(status="PENDING") | Q(status="ACCEPTED"), item_id=item
             )
         else:
-            bids = UserBids.objects.filter(
-                status=status,
-                item_id=item
-            )
+            bids = UserBids.objects.filter(status=status, item_id=item)
         return bids
-
 
     @classmethod
     def get_all_bids(cls):
