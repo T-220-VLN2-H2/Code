@@ -45,7 +45,9 @@ class ProfileUpdateForm(ModelForm):
         model = Profile
         fields = ["description"]
         widgets = {
-            "description": widgets.Textarea(attrs={"class": "form-control", "rows": "8"}),
+            "description": widgets.Textarea(
+                attrs={"class": "form-control", "rows": "8"}
+            ),
         }
 
 

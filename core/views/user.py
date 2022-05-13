@@ -14,8 +14,9 @@ from datetime import datetime
 folder_path = "../templates/user"
 ctx = {}
 
+
 def add_information(items):
-    ''' Adds time and highest bid information for recents template '''
+    """Adds time and highest bid information for recents template"""
     now = datetime.now()
     for item in items:
         # add max bid
@@ -30,6 +31,7 @@ def add_information(items):
         # add single image
         image = ImageService.get_images(item)[0]
         item.image = image
+
 
 @login_required
 def home(request):
