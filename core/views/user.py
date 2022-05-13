@@ -46,10 +46,7 @@ def home(request):
     add_information(bids)
     ctx["items"] = [itm.item_id for itm in bids]
     ctx["items"] += ItemService.get_sale_items(request.user)
-
-    avg_rating = UserService.get_user_rating(request.user.id)
-
-    ctx["avg_rating"] = avg_rating
+    ctx["avg_rating"] = UserService.get_user_rating(request.user.id)
     return render(request, f"{folder_path}/index.html", context=ctx)
 
 
@@ -96,12 +93,7 @@ def profile(request, id):
 
     ctx["target_user"] = target_user
     ctx["user"] = request.user
-    avg_rating = UserService.get_user_rating(target_user.id)["rating__avg"]
-
-    if avg_rating and avg_rating.is_integer():
-        avg_rating = int(avg_rating)
-
-    ctx["avg_rating"] = avg_rating
+    ctx["avg_rating"] = UserService.get_user_rating(target_user.id)["rating__avg"]
 
     return render(request, f"{folder_path}/user.html", context=ctx)
 
