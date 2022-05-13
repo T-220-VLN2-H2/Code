@@ -63,10 +63,12 @@ class ItemService:
 
     @classmethod
     def get_sold_items(cls, user):
-        items = Item.objects.filter(seller=user, is_sold=True)
-        items = [
-            (item, BidService.get_bids_for_item(item, "COMPLETED")) for item in items
-        ]
+        bids = UserBids.objects.filter(item_id__seller=user, item_id__is_sold=True, status="COMPLETED")
+        items = []
+
+        for bid in bids:
+            items.append((bid.item_id, bid))
+
         return items
 
     @classmethod

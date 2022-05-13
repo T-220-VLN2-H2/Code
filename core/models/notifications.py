@@ -20,5 +20,5 @@ class Notification(models.Model):
         See https://code.djangoproject.com/wiki/CookBookSplitModelsToFiles
         """
 
-        db_table = "core_question"
+        db_table = "core_notifications"
         app_label = "core"
