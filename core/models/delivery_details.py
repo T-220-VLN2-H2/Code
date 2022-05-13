@@ -8,7 +8,7 @@ class DeliveryMethod(models.Model):
         ("DS", "Delivery service"),
         ("PU", "Pick up"),
         ("PB", "Postbox"),
-        ("SWS", "Speak with seller")
+        ("SWS", "Speak with seller"),
     )
     bid_id = models.ForeignKey(UserBids, on_delete=models.CASCADE)
     del_choice = models.CharField(choices=DEL_METHOD, max_length=128)

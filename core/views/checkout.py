@@ -130,6 +130,7 @@ def process_payment(request):
         print(request.session["del_choice"])
         return redirect("/checkout/summary")
 
+
 def summary(request):
     ctx = {}
     summary_details = request.session["summary_details"]
@@ -144,7 +145,7 @@ def summary(request):
     print(request.session["del_choice"])
     ctx["del_choice"] = request.session["del_choice"]
     for key in list(request.session.keys()):
-        if not key.startswith("_"): # skip keys set by the django system
+        if not key.startswith("_"):  # skip keys set by the django system
             del request.session[key]
     if request.method == "POST":
         return redirect("index_page")
