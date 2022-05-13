@@ -28,12 +28,15 @@ def item_details(request, item_id):
     ]
     ctx["images"] = ImageService.get_images(ctx["item"])
     ctx["similar_items"] = ItemService.get_similar_items(ctx["item"])
+
     if request.method == "POST":
         if request.user.is_authenticated:
             form = BidCreateForm(request.POST)
             result = None
+
             if form.is_valid():
                 result = BidService.add_bid(form, request.user, ctx["item"])
+
             if result:
                 # TODO: Some green bar or somethigng to validate users feelings
                 max_bid = BidService.get_max_bid(item_id).amount
@@ -43,7 +46,7 @@ def item_details(request, item_id):
         if ctx["item"] is None:
             return redirect("index_page")
 
-    ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid})
+    ctx["bid_form"] = BidCreateForm(initial={"amount": max_bid + 1})
     ctx["max_bid"] = max_bid
     return render(request, "../templates/items/item_details.html", context=ctx)
 
@@ -56,6 +59,9 @@ def item_create(request):
             item = ItemService.create_item(form, request.user)
             ImageService.create_image(request.FILES.getlist("images"), item)
             return redirect(reverse("item_details", args=[item.id]))
+        else:
+            ctx["form"] = form
+
     else:
         ctx["form"] = ItemCreateForm()
     return render(request, "../templates/items/items_create.html", context=ctx)
