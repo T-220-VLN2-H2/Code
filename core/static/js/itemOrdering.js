@@ -1,7 +1,9 @@
 const filter = document.getElementById('orderBy');
 window.addEventListener('load', function() {
   const selected = window.location.search.split('=')[1];
+  if (selected !== undefined){
   filter.value = selected;
+  }
 });
 
 filter.addEventListener('change', (e) => {
