@@ -15,7 +15,10 @@ def category_page(request, cat_id):
     max_page = int(item_count / 12)
     try:
         page = request.GET['page']
-        offset = (int(page) - 1) * 10
+        offset = ((int(page)) * 10)
+        if int(page) == 1 or int(page) < 1:
+            page = 1
+            offset = 0
     except:
         page = 1
         offset = 0
@@ -25,7 +28,6 @@ def category_page(request, cat_id):
         sort = request.GET["sort"]
     except:
         sort = "default"
-    print(offset)
     ctx = {
         "items": ItemService.get_items_offset(category=cat_id, sort=sort, offset=offset),
         "user": request.user,
