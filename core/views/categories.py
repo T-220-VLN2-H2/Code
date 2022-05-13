@@ -11,11 +11,12 @@ def home(request):
 
 def category_page(request, cat_id):
     import re
+
     item_count = ItemService.get_all_items_count(category=cat_id)
     max_page = int(item_count / 12)
     try:
-        page = request.GET['page']
-        offset = ((int(page)) * 10)
+        page = request.GET["page"]
+        offset = (int(page)) * 10
         if int(page) == 1 or int(page) < 1:
             page = 1
             offset = 0
@@ -29,9 +30,11 @@ def category_page(request, cat_id):
     except:
         sort = "default"
     ctx = {
-        "items": ItemService.get_items_offset(category=cat_id, sort=sort, offset=offset),
+        "items": ItemService.get_items_offset(
+            category=cat_id, sort=sort, offset=offset
+        ),
         "user": request.user,
         "page": page,
-        "max_page": max_page
+        "max_page": max_page,
     }
     return render(request, "../templates/categories/category_page.html", context=ctx)

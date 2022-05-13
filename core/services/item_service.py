@@ -52,9 +52,17 @@ class ItemService:
     @classmethod
     def get_user_items_with_bids(cls, user):
         items = Item.objects.filter(seller=user)
-        all_items_with_bids = [(item,
-                [bid for bid in BidService.get_bids_for_item(item) if bid.status not in ("COMPLETED", "REJECTED")])
-                for item in items]
+        all_items_with_bids = [
+            (
+                item,
+                [
+                    bid
+                    for bid in BidService.get_bids_for_item(item)
+                    if bid.status not in ("COMPLETED", "REJECTED")
+                ],
+            )
+            for item in items
+        ]
         items_with_bids = []
         for item, bids in all_items_with_bids:
             if len(bids) == 0:
@@ -101,7 +109,9 @@ class ItemService:
 
     @classmethod
     def get_items_offset(cls, category=None, sort="default", offset=0, count=12):
-        items = Item.objects.filter(is_sold=False, category=category).order_by(cls.get_sort(sort))[offset:][:count]
+        items = Item.objects.filter(is_sold=False, category=category).order_by(
+            cls.get_sort(sort)
+        )[offset:][:count]
         return items
 
     @classmethod
