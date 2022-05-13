@@ -19,6 +19,9 @@ class UserService:
 
         avg_rating = rating["rating__avg"]
 
+        if avg_rating is None:
+            avg_rating = 0
+
         if avg_rating and avg_rating.is_integer():
             avg_rating = int(avg_rating)
 
