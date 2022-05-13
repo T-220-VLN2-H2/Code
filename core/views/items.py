@@ -57,8 +57,13 @@ def item_create(request):
     if request.method == "POST":
         form = ItemCreateForm(request.POST)
         if form.is_valid():
-            item = ItemService.create_item(form, request.user)
-            ImageService.create_image(request.FILES.getlist("images"), item)
+            if len(request.FILES.getlist("images")) == 0:
+                images = None
+            else:
+                images = request.FILES.getlist("images")
+            item = ItemService.create_item(form, request.user, images)
+            if images is not None:
+                ImageService.create_image(images, item)
             return redirect(reverse("item_details", args=[item.id]))
         else:
             ctx["form"] = form

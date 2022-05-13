@@ -18,13 +18,13 @@ class ItemService:
         return sort[x]
 
     @classmethod
-    def create_item(cls, form, user):
+    def create_item(cls, form, user, images=None):
         new_item = form.save(commit=False)
         new_item.seller = user
 
         new_item.save()
 
-        if new_item.images.count() == 0:
+        if images is None:
             new_item.images.add(Image.objects.get(id=385))
 
         return new_item
