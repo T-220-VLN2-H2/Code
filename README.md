@@ -50,3 +50,5 @@ This should initialize the database, you'll still have to have the postgres data
 * History of past sold items
 * List of active listing for each user
 * List of active bids for each user 
+* Github workflow for linting and automatic testing
+* Default items fixtures 
