@@ -42,7 +42,7 @@ def add_information(bids: UserBids):
 def home(request):
     ctx["user"] = request.user
     ctx["ratings"] = UserService.get_user_ratings(request.user)
-    bids = BidService.get_max_bids()
+    bids = BidService.get_max_bids(request.user)
     add_information(bids)
     ctx["items"] = [itm.item_id for itm in bids]
     ctx["items"] += ItemService.get_sale_items(request.user)
