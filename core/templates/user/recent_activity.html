@@ -24,14 +24,30 @@
 
     <div class="col-5">
         <h2>Recent posting</h2>
-        <div class="list-group overflow-auto recents">
+        <div class="container list-group overflow-auto recents">
             {% for item in items %}
             <a href="/items/{{ item.id }}" class="list-group-item list-group-item-action" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{ item.title }}</h5>
-                    <small>${{ item.price }}</small>
-                    <small>${{ item.date_created }}</small>
-                </div>
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center">
+                            <h5 class="mb-1">{{ item.title }}</h5>
+                        </div>
+                        <div class="col-5">
+                            <p class="m-0">Highest bid ${{ item.max_bid }}</p>
+                            {% if item.time_since_days != 1 %}
+                                {% if item.time_since_hours != 1 %}
+                                    <small class="text-secondary">{{ item.time_since_days }} days {{ item.time_since_hours }} hours ago</small>
+                                {% else %}
+                                    <small class="text-secondary">{{ item.time_since_days }} days {{ item.time_since_hours }} hour ago</small>
+                                {% endif %}
+                            {% else %}
+                                {% if item.time_since_hours != 1 %}
+                                    <small class="text-secondary">{{ item.time_since_days }} day {{ item.time_since_hours }} hours ago</small>
+                                {% else %}
+                                    <small class="text-secondary">{{ item.time_since_days }} day {{ item.time_since_hours }} hour ago</small>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
             </a>
             {% endfor %}
         </div>

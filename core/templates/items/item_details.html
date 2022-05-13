@@ -87,13 +87,13 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <p id="item-description" class="form-control" disabled>{{item.description}}</p>
+                                    <p id="item-description" class="form-control m-1" disabled>{{item.description}}</p>
                                     <label for="item-description">Description</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
+                        <div class="row p-1">
+                            <div class="col-7 d-flex align-items-center justify-content-center">
                                 <div class="form-floating">
                                     {% if item.seller != request.user %}
                                     {% block bid_item %}
@@ -102,7 +102,7 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <div class="col-5 form-floating ">
+                            <div class="col-5 form-floating float-end">
                                 <label for="seller">Seller</label>
                                 <div class="container d-flex align-items-center justify-content-between mt-3 bg-white bg-opacity-50 rounded">
                                     <a href="/user/{{ item.seller.id }}">
