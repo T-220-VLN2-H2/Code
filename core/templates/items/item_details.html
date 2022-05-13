@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         <div class="row p-1">
-                            <div class="col-7 d-flex align-items-center justify-content-center">
+                            <div class="col-5 d-flex align-items-center justify-content-center">
                                 <div class="form-floating">
                                     {% if item.seller != request.user %}
                                     {% block bid_item %}
@@ -102,7 +102,7 @@
                                     {% endif %}
                                 </div>
                             </div>
-                            <div class="col-5 form-floating float-end">
+                            <div class="col-7 form-floating float-end">
                                 <label for="seller">Seller</label>
                                 <div class="container d-flex align-items-center justify-content-between mt-3 bg-white bg-opacity-50 rounded">
                                     <a href="/user/{{ item.seller.id }}">
