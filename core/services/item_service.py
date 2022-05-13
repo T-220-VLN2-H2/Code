@@ -91,7 +91,7 @@ class ItemService:
     def get_similar_items(cls, current_item):
         similar_items = Item.objects.filter(
             category=current_item.category, is_sold=False
-        )[:4]
+        )[:3]
         similar_items = [
             (item, ImageService.get_images(item))
             for item in similar_items
