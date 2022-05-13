@@ -67,6 +67,16 @@ Your bid of {new_bid.amount} has been added to {item.title}
         return max_bid
 
     @classmethod
+    def get_max_bids(cls):
+        try:
+            max_bids = UserBids.objects.annotate(max=Max('amount'))
+        except ObjectDoesNotExist:
+            return None
+
+        return max_bids
+
+
+    @classmethod
     def accept_bid(cls, bid: UserBids):
         item = bid.item_id
         item.is_sold = True

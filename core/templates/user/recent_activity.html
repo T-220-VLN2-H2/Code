@@ -30,10 +30,9 @@
         <h2>Recent posting</h2>
         <div class="list-group overflow-auto recents">
             {% for item in items %}
-            <a href="{% url "item_details" item.id %}" class="list-group-item list-group-item-action" aria-current="true">
+                    <a href="{% url 'item_details' item.id %}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="row">
                         <div class="col-7 d-flex align-items-center">
-                            <img src="{% static 'media/' %}{{item.image.image}}" class="img-thumbnail rounded-circle recent-image" alt="item image">
                             <h5 class="mx-1">{{ item.title }}</h5>
                         </div>
                         <div class="col-5">
