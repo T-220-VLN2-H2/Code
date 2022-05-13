@@ -9,9 +9,28 @@ from core.services.item_service import ItemService
 from core.services.notification_service import NotificationService
 from core.services.order_service import OrderService
 from core.services.user_service import UserService
+from datetime import datetime
 
 folder_path = "../templates/user"
 ctx = {}
+
+
+def add_information(items):
+    """Adds time and highest bid information for recents template"""
+    now = datetime.now()
+    for item in items:
+        # add max bid
+        max_bid = BidService.get_max_bid(item)
+        max_bid = max_bid.amount if max_bid is not None else 0
+        item.max_bid = max_bid
+        # add days/hours since created
+        then = item.date_created
+        time_since = now - then.replace(tzinfo=None)
+        item.time_since_hours = int(time_since.seconds / 60 / 60 % 24)
+        item.time_since_days = time_since.days
+        # add single image
+        image = ImageService.get_images(item)[0]
+        item.image = image
 
 
 @login_required
@@ -19,7 +38,12 @@ def home(request):
     ctx["user"] = request.user
     ctx["ratings"] = UserService.get_user_ratings(request.user)
     # TODO: implement count for get_sale_items
-    ctx["items"] = ItemService.get_sale_items(request.user.id)[:7]
+    ctx["items"] = ItemService.get_sale_items(request.user)
+    add_information(ctx["items"])
+    avg_rating = UserService.get_user_rating(request.user.id)["rating__avg"]
+    if avg_rating and avg_rating.is_integer():
+        avg_rating = int(avg_rating)
+    ctx["avg_rating"] = avg_rating
     return render(request, f"{folder_path}/index.html", context=ctx)
 
 
@@ -60,7 +84,8 @@ def profile(request, id):
 
     target_user = UserService.get_user_info(id)
     ctx["ratings"] = UserService.get_user_ratings(target_user)
-    ctx["items"] = ItemService.get_sale_items(target_user.id)[:7]
+    ctx["items"] = ItemService.get_sale_items(target_user.id)
+    add_information(ctx["items"])
     ctx["target_user"] = target_user
     ctx["user"] = request.user
     avg_rating = UserService.get_user_rating(target_user.id)["rating__avg"]

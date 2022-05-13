@@ -215,7 +215,56 @@ a:hover{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-label[for^="id_rating_"] {
-    margin: 0px 5px !important;
-    justify-content: space-around !important;
+/* Set window max for overflow scrolling */
+.recents {
+    max-height: 316px !important;
+}
+
+/* list items background color */
+.list-group-item {
+    background-color: var(--secondary-color-lighter) !important;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #EC4E20;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-button:single-button {
+    background-color: rgba(255,255,255,0.5);
+    display: block;
+    border-style: solid;
+    height: 8px;
+    width: 16px;
+  }
+  /* Up Arrow */
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent rgba(0,0,0,0.6) transparent;
+  }
+
+  /* Down Arrow */
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: rgba(0,0,0,0.6) transparent transparent transparent;
+  }
+
+  /* custom image size */
+.item-seller-image {
+    width: 55px !important;
+    height: 55px !important;
+}
+
+.recent-image {
+    width: 45px !important;
+    height: 45px !important;
 }

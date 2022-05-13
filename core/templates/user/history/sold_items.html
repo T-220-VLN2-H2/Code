@@ -2,7 +2,7 @@
     {% if bids.count == 0 %}
         <p>No sales completed</p>
     {% else %}
-    <div href="/items/{{item.id}}" class="list-group-item list-group-item-action" aria-current="true">
+    <div href="{% url "item_details" item.id %}" class="list-group-item list-group-item-action" aria-current="true">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{item.title}}</h5>
             <small>{{item.price}}</small>

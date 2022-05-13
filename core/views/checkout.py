@@ -123,6 +123,7 @@ def process_payment(request):
 def summary(request):
     print(request.method)
     ctx = {}
+
     # if "bid_id" in request.session.keys():
     if request.method == "GET":
         summary_details = request.session["summary_details"]
@@ -152,4 +153,5 @@ def summary(request):
         for key in list(request.session.keys()):
             if not key.startswith("_"):  # skip keys set by the django system
                 del request.session[key]
+
         return redirect("index_page")

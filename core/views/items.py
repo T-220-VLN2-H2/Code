@@ -23,9 +23,10 @@ def item_details(request, item_id):
     # TODO: fix late update when bidding
     max_bid = BidService.get_max_bid(item_id)
     max_bid = max_bid.amount if max_bid is not None else 0
-    ctx["seller_avg_rating"] = UserService.get_user_rating(item.seller.id)[
-        "rating__avg"
-    ]
+    seller_avg_rating = UserService.get_user_rating(item.seller.id)["rating__avg"]
+    if seller_avg_rating and seller_avg_rating.is_integer():
+        seller_avg_rating = int(seller_avg_rating)
+    ctx["seller_avg_rating"] = seller_avg_rating
     ctx["images"] = ImageService.get_images(ctx["item"])
     ctx["similar_items"] = ItemService.get_similar_items(ctx["item"])
 
