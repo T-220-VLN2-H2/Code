@@ -1,4 +1,4 @@
-from core.models import Item, Image
+from core.models import Item, Image, UserBids
 from core.services.image_service import ImageService
 from core.services.bid_service import BidService
 from django.core.exceptions import ObjectDoesNotExist
@@ -51,24 +51,14 @@ class ItemService:
 
     @classmethod
     def get_user_items_with_bids(cls, user):
-        items = Item.objects.filter(seller=user)
-        all_items_with_bids = [
-            (
-                item,
-                [
-                    bid
-                    for bid in BidService.get_bids_for_item(item)
-                    if bid.status not in ("COMPLETED", "REJECTED")
-                ],
-            )
-            for item in items
-        ]
+        active = ["ACCEPTED", "PENDING"]
+        itm_bids = UserBids.objects.filter(item_id__seller_id=user, status__in=active)
+
         items_with_bids = []
-        for item, bids in all_items_with_bids:
-            if len(bids) == 0:
-                pass
-            else:
-                items_with_bids.append((item, bids))
+
+        for i in itm_bids:
+            items_with_bids.append((i.item_id, [i]))
+
         return items_with_bids
 
     @classmethod
