@@ -61,7 +61,6 @@ def payment(request):
             request.session["cvc"] = form.cleaned_data["cvc"]
             request.session["expiry_month"] = form.cleaned_data["expiry_month"]
             request.session["expiry_year"] = form.cleaned_data["expiry_year"]
-            print(request.session["expiry_year"])
             request.session.modified = True
             return process_payment(request)
         else:
