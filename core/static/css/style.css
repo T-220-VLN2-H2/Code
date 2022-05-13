@@ -137,8 +137,8 @@ a:hover{
 }
 #profileImg{
     border-radius: 45px;
-    height: 32px;
-    width: 32px;
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -291,4 +291,25 @@ a:hover{
 
 .accordion-body {
     background-color: #FFC780 !important;
+}
+
+/* Register Site */
+.register-container > form > p > label  {
+    width: 15%;
+    text-align: end;
+}
+
+.register-container > form > ul  {
+    margin-left: 10%
+}
+
+.login-container > form > p > label {
+    width: 15%;
+    text-align: end;
+}
+
+.spacer {
+    display: inline-block;
+    /* width: 24%; */
+    width: 18%;
 }

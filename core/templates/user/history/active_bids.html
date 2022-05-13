@@ -5,10 +5,9 @@
     <div href="#" class="list-group-item list-group-item-action" aria-current="true">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{bid.item_id}}</h5>
-            <small>{{bid.timestamp}} | {{bid.expires}}</small>
+            <small>Sent {{bid.timestamp}} | Expires {{bid.expires}}</small>
         </div>
-        <p class="mb-1">{{bid.amount}}</p>
-        <small>{{bid.user_id}}</small>
+        <p class="mb-1">${{bid.amount}}</p>
         <small>{{bid.status}}</small>
         {% if bid.status == "ACCEPTED" %}
             <form action="{% url 'checkout_user' %}" method="POST">

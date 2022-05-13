@@ -8,7 +8,7 @@
                 <i class="fa fa-fire fa-stack-1x" style="color: #FF8F1F; font-size:64px;"></i>
              </span>
         </a>
-        <form action="/search" method="POST">
+        <form action="/search" method="POST" class="m-0">
             {% csrf_token %}
             <div class="dropdown">
              <input type="text" name="search" placeholder="Search..." id="myInput" >
@@ -37,7 +37,7 @@
         </div>
         {% if user.is_authenticated %}
         <div class="col-md-auto">
-            <div class="dropdown me-2">
+            <div class="dropdown me-2 mt-2">
                 <img id="profileImg" class="dropdown-toggle" src="{% static 'media' %}/{{user.profile.image.image}}" data-bs-toggle="dropdown" aria-expanded="false">
                   <p class="dropdown-toggle" data-bs-toggle="dropdown">{{logged_in_user_rating}} <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange"
                         class="bi bi-star-fill" viewBox="0 0 16 16">
