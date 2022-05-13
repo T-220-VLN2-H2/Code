@@ -22,7 +22,7 @@
                     {% if avg_rating %}
                     <h3 class="mx-3 m-0">{{ avg_rating }} / 5</h3>
                     {% else %}
-                    <h3 class="mx-3 m-0"> I have no rating yet! </h3>
+                    <h3 class="mx-3 m-0">No rating</h3>
                     {% endif %}
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange" class="bi bi-star-fill"
                         viewBox="0 0 16 16">
@@ -33,9 +33,9 @@
             </div>
             <h5>About Me</h5>
             {% if target_user.profile.description %}
-            <p class="bg-white p-4 bg-opacity-10">{{ target_user.profile.description }}</p>
+            <p class="bg-white p-4 bg-opacity-50 text-break mb-0">{{ user.profile.description }}</p>
             {% else %}
-            <p class="bg-white p-4 bg-opacity-10 justify-content-center align-items-center"><b>{{ target_user }}</b> has not written anything yet.</p>
+            <p class="bg-white p-4 bg-opacity-50 justify-content-center align-items-center"><b>{{ target_user }}</b> has not written anything yet.</p>
             {% endif %}
         </div>
     </div>

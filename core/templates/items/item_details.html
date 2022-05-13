@@ -44,8 +44,8 @@
                             <div class="col-4">
                                 <div class="input-group-fluid mb-3">
                                     <div class="form-floating">
-                                    <input type="text" class="form-control" id="item-name" aria-describedby="item-name" disabled value="{{item.title}}">
-                                    <label for="item-name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="item-name" aria-describedby="item-name" disabled value="{{item.title}}">
+                                        <label for="item-name" class="form-label">Name</label>
                                     </div>
                                 </div>
                                 <div class="input-group-fluid mb-3">
@@ -59,8 +59,8 @@
                                 <div class="input-group-fluid mb-3">
                                     <div class="form-floating">
                                         {% if item.auction %}
-                                        <input type="text" class="form-control" id="item-high-bid" aria-describedby="item-highest-bid" disabled value="{{item.price}}">
-                                        <label for="item-high-bid" class="form-label">Highest bid</label>
+                                            <input type="text" class="form-control" id="item-high-bid" aria-describedby="item-highest-bid" disabled value="{{item.price}}">
+                                            <label for="item-high-bid" class="form-label">Highest bid</label>
                                         {% endif %}
                                         {% if not item.auction %}
                                             <input type="text" class="form-control" id="item-price" aria-describedby="item-highest-bid" disabled value="{{item.price}}">
@@ -87,46 +87,40 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <p id="item-description" class="form-control" disabled>{{item.description}}</p>
+                                    <p id="item-description" class="form-control m-1" disabled>{{item.description}}</p>
                                     <label for="item-description">Description</label>
                                 </div>
                             </div>
                         </div>
-                        <div class"row">
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <p id="seller" class="form-control">
-                                        <span class="float-start">
-                                            <a href="/user/{{ item.seller.id }}">
-                                                <img src="{% static 'media/' %}{{ item.seller.profile.image.image }}" class="img-thumbnail rounded-circle" id="profileImg" alt="sellers profile image">
-                                                {{ item.seller }}
-                                            </a>
-                                        </span>
-                                        <span class="float-end">
-                                            {% if seller_avg_rating %}
-                                                {{ seller_avg_rating }} / 5
-                                            {% else %}
-                                                This user has no rating yet!
-                                            {% endif %}
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange" class="bi bi-star-fill"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                            </svg>
-                                        </span>
-                                    </p>
-                                    <label for="seller">Seller</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
+                        <div class="row p-1">
+                            <div class="col-7 d-flex align-items-center justify-content-center">
                                 <div class="form-floating">
                                     {% if item.seller != request.user %}
                                     {% block bid_item %}
                                         {% include 'items/item_bid.html' %}
                                     {% endblock %}
                                     {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-5 form-floating float-end">
+                                <label for="seller">Seller</label>
+                                <div class="container d-flex align-items-center justify-content-between mt-3 bg-white bg-opacity-50 rounded">
+                                    <a href="/user/{{ item.seller.id }}">
+                                        <img src="{% static 'media/' %}{{ item.seller.profile.image.image }}" class="img-thumbnail rounded-circle item-seller-image m-2 ms-4" id="profileImg" alt="sellers profile image">
+                                        <strong id="seller">{{ item.seller }}</strong>
+                                    </a>
+                                    <p class="mb-0 d-flex align-items-center">
+                                        {% if seller_avg_rating %}
+                                                <strong class="mx-2">{{ seller_avg_rating }} / 5</strong>
+                                        {% else %}
+                                            No rating
+                                        {% endif %}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange" class="bi bi-star-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                                    </p>
                                 </div>
                             </div>
                         </div>

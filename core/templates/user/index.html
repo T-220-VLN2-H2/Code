@@ -2,16 +2,15 @@
 {% load static %}
 {% block content %}
 <div class="d-flex m-5">
-    <h1>My Profile!</h1>
-    <a class="btn btn-primary mx-3" href="/user/edit" role="button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square"
+    <h1>My Profile</h1>
+    <a class="btn" href="{% url 'user_edit' %}" role="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1C7293" class="bi bi-pencil-square p-0"
             viewBox="0 0 16 16">
             <path
                 d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
             <path fill-rule="evenodd"
                 d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
         </svg>
-        Edit
     </a>
 </div>
 <div class="container">
@@ -20,7 +19,7 @@
             <img src="{% static 'media' %}/{{user.profile.image.image}}" class="img-thumbnail img-fluid w-100" alt="..." />
         </div>
         <div class="col-8 mt-2">
-            <div class="row mb-4">
+            <div class="row mb-5">
                 <div class="col">
                     {% if user.first_name or user.last_name %}
                     <h2> {{ user.first_name }} {{ user.last_name }}</h2>
@@ -32,7 +31,7 @@
                     {% if avg_rating %}
                     <h3 class="mx-3 m-0">{{ avg_rating }} / 5</h3>
                     {% else %}
-                    <h3 class="mx-3 m-0"> I have no rating yet! </h3>
+                    <h3 class="mx-3 m-0">No rating</h3>
                     {% endif %}
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="Orange" class="bi bi-star-fill"
                         viewBox="0 0 16 16">
@@ -41,11 +40,11 @@
                     </svg>
                 </div>
             </div>
-            <h5>About Me</h5>
+            <h5 class="mb-1">About Me</h5>
             {% if user.profile.description %}
-            <p class="bg-white p-4 bg-opacity-10">{{ user.profile.description }}</p>
+            <p class="bg-white p-4 bg-opacity-50 text-break mb-0">{{ user.profile.description }}</p>
             {% else %}
-            <p class="bg-white p-4 bg-opacity-10 justify-content-center align-items-center"><b>You</b> have not written anything yet.</p>
+            <p class="bg-white p-4 bg-opacity-50 justify-content-center align-items-center"><b>You</b> have not written anything yet.</p>
             {% endif %}
         </div>
     </div>
