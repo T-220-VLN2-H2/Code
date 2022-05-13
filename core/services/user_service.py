@@ -15,9 +15,17 @@ class UserService:
         rating = Order.objects.filter(seller=user_id).aggregate(Avg("rating"))
 
         if not rating:
-            rating = "Not rated."
+            avg_rating = "Not rated."
 
-        return rating
+        avg_rating = rating["rating__avg"]
+
+        if avg_rating is None:
+            avg_rating = 0
+
+        if avg_rating and avg_rating.is_integer():
+            avg_rating = int(avg_rating)
+
+        return avg_rating
 
     @classmethod
     def get_user_ratings(cls, user_id, count=12):

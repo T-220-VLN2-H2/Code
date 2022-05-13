@@ -5,11 +5,9 @@ from core.services.user_service import UserService
 def notifications(request):
     if request.user.is_authenticated:
 
-        rating = UserService.get_user_rating(request.user)["rating__avg"]
-        if rating is None:
-            rating = "not rated"
+        rating = UserService.get_user_rating(request.user)
     else:
-        rating = None
+        rating = 0
     return {
         "notifications": NotificationService.get_notifications(
             request.user, only_unread=True

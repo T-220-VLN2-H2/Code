@@ -268,3 +268,27 @@ a:hover{
     width: 45px !important;
     height: 45px !important;
 }
+
+.nav-link.active {
+    background-color: var(--accent-color) !important;
+}
+
+.nav-link {
+    border: 1px solid var(--primary-color-darker) !important;
+}
+
+.dropdown-item {
+    color:#EC4E20 !important;
+}
+
+.dropdown-menu {
+    background-color: #FFC780 !important;
+}
+
+.accordion-button {
+    background-color: #FFC780 !important;
+}
+
+.accordion-body {
+    background-color: #FFC780 !important;
+}
