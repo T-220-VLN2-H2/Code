@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Personal details</h1>
+    <h1>Shipping details</h1>
     <form action="/checkout/user" method="post">
         {% csrf_token %}
         {{ form.as_p}}

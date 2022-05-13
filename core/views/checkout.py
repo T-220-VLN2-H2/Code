@@ -1,4 +1,5 @@
 from ast import Or
+import re
 from django.shortcuts import render, redirect
 from core.forms.checkout_form import (
     PaymentCreateForm,
@@ -132,10 +133,12 @@ def process_payment(request):
 
 def summary(request):
     ctx = {}
+    #if "bid_id" in request.session.keys():
     if request.method == "GET":
         summary_details = request.session["summary_details"]
         date_today = date.today()
-        bid = BidService.get_bid_by_id(request.session["bid_id"])
+        bid = BidService.get_accepted_bid_by_item_id(request.session["item_id"])
+        request.session["bid_id"] = bid.id
         item = ItemService.get_item_by_id(request.session["item_id"])
         ctx["price"] = bid.amount
         ctx["item_name"] = item.title
@@ -144,7 +147,7 @@ def summary(request):
         return render(request, "checkout/summary.html", context=ctx)
     else:
         OrderService.create_order(bid.user_id_id, item.id, item.seller_id)
-        bid = BidService.get_accepted_bid_by_item_id(int(request.session["item_id"]))
+        bid = BidService.get_bid_by_id(request.session["bid_id"])
         request.session["bid_id"] = bid.id
         bid.status = "COMPLETED"
         bid.save()

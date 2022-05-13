@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Order summary</h1>
+    <h1>Order review</h1>
         {% csrf_token %}
         <div class="card">
             <div class="card-body mx-4">
               <div class="container">
-                <p class="my-5 mx-5" style="font-size: 30px;">Thank for your purchase!</p>
+                <p class="my-5 mx-5" style="font-size: 30px;">Please review the information for your order before you confirm.</p>
                 <div class="row">
                   <ul class="list-unstyled">
                     <div class="col-xl-10">
+                        <li class="text-black mt-1">{{ date }}</li>
+                        <hr>
                         <h3>Shipping info</h3>
                         <li class="text-black"><b>name:</b>  {{ summary.full_name }}</li>
                         <li class="text-black"><b>Address:</b> {{ summary.address }}</li>
                         <li class="text-black"><b>Zip:</b> {{ summary.postal_code }}</li>
                         <li class="text-black"><b>City:</b> {{ summary.city }}</li>
-                        <li class="text-black mt-1"><b>date:</b>{{ date }}</li>
                     </div>
                     <hr>
                     <div class="col-xl-10">
@@ -45,10 +46,10 @@
               </div>
             </div>
           </div>
-        <form action="/checkout/summary" method="GET">
-            <button class="btn btn-primary" type="home">Confirm</button>
+        <form action="accounts/profile/" method="GET">
+            <button class="btn btn-primary" type="next">Confirm</button>
         </form>
         <form action="/checkout/payment" method="PATCH">
-            <button class="btn btn-primary" type="Confirm">Back</button>
+            <button class="btn btn-primary" type="back">Back</button>
         </form>
 {% endblock %}
