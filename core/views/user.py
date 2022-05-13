@@ -88,16 +88,14 @@ def profile(request, id):
     target_user = UserService.get_user_info(id)
     ctx["ratings"] = UserService.get_user_ratings(target_user)
 
-    bids = BidService.get_max_bids(request.user)
+    bids = BidService.get_max_bids(id)
     add_information(bids)
     ctx["items"] = [bid.item_id for bid in bids]
-    ctx["items"] += ItemService.get_sale_items(request.user)
-
-    add_information(ctx["items"])
+    ctx["items"] += ItemService.get_sale_items(id)
 
     ctx["target_user"] = target_user
     ctx["user"] = request.user
-    ctx["avg_rating"] = UserService.get_user_rating(target_user.id)["rating__avg"]
+    ctx["avg_rating"] = UserService.get_user_rating(target_user.id)
 
     return render(request, f"{folder_path}/user.html", context=ctx)
 
