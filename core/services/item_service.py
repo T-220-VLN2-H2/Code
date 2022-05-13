@@ -52,7 +52,9 @@ class ItemService:
     @classmethod
     def get_user_items_with_bids(cls, user):
         items = Item.objects.filter(seller=user)
-        items_with_bids = [(item, BidService.get_bids_for_item(item)) for item in items]
+        items_with_bids = [(item,
+                [bid for bid in BidService.get_bids_for_item(item) if bid.status not in ("COMPLETED", "REJECTED")])
+                for item in items]
         return items_with_bids
 
     @classmethod
