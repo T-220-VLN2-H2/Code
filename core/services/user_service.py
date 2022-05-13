@@ -15,7 +15,7 @@ class UserService:
         rating = Order.objects.filter(seller=user_id).aggregate(Avg("rating"))
 
         if not rating:
-            rating = "Not rated."
+            avg_rating = "Not rated."
 
         avg_rating = rating["rating__avg"]
 
