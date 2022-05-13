@@ -1668,7 +1668,7 @@
       "pk": 385,
       "fields": {
         "name": "Default item image",
-        "images": "images/missing_image.jpg"
+        "image": "images/missing_image.jpg"
       }
     }
 ]
