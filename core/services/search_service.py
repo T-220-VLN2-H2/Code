@@ -15,6 +15,7 @@ class SearchService:
                 .filter(is_sold=False)
                 .order_by(ItemService.get_sort(sort))
             )
+        print(items)
         result = [(item, ImageService.get_images(item)) for item in items]
         return result
 

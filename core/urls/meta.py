@@ -7,6 +7,7 @@ urlpatterns = [
     path("login", meta.login_page, name="login_page"),
     path("register", meta.register, name="register_page"),
     path("search", search.search_result, name="search"),
+    path("api/search", search.get_search_items, name="search_items"),
     path("user/history#active-sales", user.history, name="active_sales"),
     path("user/history#bids", user.history, name="bids"),
 ]

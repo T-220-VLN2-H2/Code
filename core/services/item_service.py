@@ -93,7 +93,6 @@ class ItemService:
 
     @classmethod
     def get_items_offset(cls, category=None, sort="default", offset=0, count=12):
-        print(offset, count)
         items = Item.objects.filter(is_sold=False, category=category).order_by(cls.get_sort(sort))[offset:][:count]
         return items
 

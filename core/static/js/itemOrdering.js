@@ -1,11 +1,16 @@
 const filter = document.getElementById('orderBy');
 window.addEventListener('load', function() {
-  const selected = window.location.search.split('=')[1];
-  if (selected !== undefined){
-  filter.value = selected;
+    const query_params = window.location.search.split('&')
+    const selected = query_params[0].split("=")[1];
+    const query =  query_params[1].split("=")[1];
+    let query_field = document.getElementById("searchQuery")
+    query_field.value = query
+    if (selected !== undefined){
+        filter.value = selected;
   }
 });
 
 filter.addEventListener('change', (e) => {
-  window.location.href = `?sort=${filter.value}`;
+    const query = document.getElementById("searchQuery").value;
+    window.location.href = `?sort=${filter.value}&query=${query}`;
 });
