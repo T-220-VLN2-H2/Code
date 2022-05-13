@@ -49,7 +49,6 @@ def user(request, item_id=None):
             return render(request, "checkout/user_details.html", context=ctx)
 
 
-
 def payment(request):
     print(request.method)
     ctx = {}
@@ -119,10 +118,12 @@ def process_payment(request):
         request.session["summary_details"] = summary_details_dict
         return redirect("/checkout/summary")
 
+
 def summary(request):
     print(request.method)
     ctx = {}
-    #if "bid_id" in request.session.keys():
+
+    # if "bid_id" in request.session.keys():
     if request.method == "GET":
         summary_details = request.session["summary_details"]
         date_today = date.today()
@@ -139,12 +140,17 @@ def summary(request):
         ctx["date"] = date_today
         return render(request, "checkout/summary.html", context=ctx)
     else:
-        OrderService.create_order(request.session["buyer_id"], request.session["item_id"], request.session["seller_id"])
+        OrderService.create_order(
+            request.session["buyer_id"],
+            request.session["item_id"],
+            request.session["seller_id"],
+        )
         bid = BidService.get_bid_by_id(request.session["bid_id"])
         request.session["bid_id"] = bid.id
         bid.status = "COMPLETED"
         bid.save()
         for key in list(request.session.keys()):
-            if not key.startswith("_"): # skip keys set by the django system
+            if not key.startswith("_"):  # skip keys set by the django system
                 del request.session[key]
+
         return redirect("index_page")
