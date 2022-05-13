@@ -48,3 +48,14 @@ class ProfileUpdateForm(ModelForm):
             "description": widgets.Textarea(attrs={"class": "form-control"}),
         }
 
+
+class UserLoginForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ["username", "password"]
+        widgets = {
+            "username": widgets.TextInput(attrs={"class": "form-control"}),
+            "password": widgets.TextInput(
+                attrs={"class": "form-control", "type": "text"}
+            ),
+        }
