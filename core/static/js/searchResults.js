@@ -2,7 +2,7 @@
 toggle between hiding and showing the dropdown content */
 async function search() {
   const searchRequest = async (q) => {
-    const result = await fetch(`/search`, {
+    const result = await fetch(`/api/search`, {
       method: 'GET',
     }).then((r) => r.json());
     return result;

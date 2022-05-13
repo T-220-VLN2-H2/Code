@@ -58,6 +58,6 @@ class UserLoginForm(ModelForm):
         widgets = {
             "username": widgets.TextInput(attrs={"class": "form-control"}),
             "password": widgets.TextInput(
-                attrs={"class": "form-control", "type": "password"}
+                attrs={"class": "form-control", "type": "text"}
             ),
         }

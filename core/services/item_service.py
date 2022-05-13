@@ -25,7 +25,7 @@ class ItemService:
         new_item.save()
 
         if new_item.images.count() == 0:
-            new_item.images.add(Image.objects.get(id=1))
+            new_item.images.add(Image.objects.get(id=385))
 
         return new_item
 
@@ -52,7 +52,23 @@ class ItemService:
     @classmethod
     def get_user_items_with_bids(cls, user):
         items = Item.objects.filter(seller=user)
-        items_with_bids = [(item, BidService.get_bids_for_item(item)) for item in items]
+        all_items_with_bids = [
+            (
+                item,
+                [
+                    bid
+                    for bid in BidService.get_bids_for_item(item)
+                    if bid.status not in ("COMPLETED", "REJECTED")
+                ],
+            )
+            for item in items
+        ]
+        items_with_bids = []
+        for item, bids in all_items_with_bids:
+            if len(bids) == 0:
+                pass
+            else:
+                items_with_bids.append((item, bids))
         return items_with_bids
 
     @classmethod
@@ -92,6 +108,13 @@ class ItemService:
         return similar_items
 
     @classmethod
-    def sort_items(cls, **kwargs):
-        print("Do something")
-        # TODO sort items by name or price
+    def get_items_offset(cls, category=None, sort="default", offset=0, count=12):
+        items = Item.objects.filter(is_sold=False, category=category).order_by(
+            cls.get_sort(sort)
+        )[offset:][:count]
+        return items
+
+    @classmethod
+    def get_all_items_count(cls, category=None):
+        items_count = Item.objects.filter(category=category).count()
+        return items_count

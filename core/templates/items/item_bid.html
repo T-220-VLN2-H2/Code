@@ -14,8 +14,9 @@ Bid
       </div>
       <div class="modal-body">
         <form method="POST">
-        {% csrf_token %}
-        {{ bid_form.as_p }}
+            {% csrf_token %}
+            {{ form.errors }}
+            {{ bid_form.as_p }}
         <button type="submit">Bid!</button>
     </form>
       </div>

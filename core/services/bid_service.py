@@ -53,9 +53,8 @@ Your bid of {new_bid.amount} has been added to {item.title}
         return bid
 
     @classmethod
-    def get_bid_by_item_id(cls, item_id):
-        bid = UserBids.objects.get(item_id_id=item_id)
-        print(bid)
+    def get_accepted_bid_by_item_id(cls, item_id):
+        bid = UserBids.objects.get(item_id_id=item_id, status="ACCEPTED")
         return bid
 
     @classmethod

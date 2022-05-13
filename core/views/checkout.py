@@ -1,4 +1,5 @@
 from ast import Or
+import re
 from django.shortcuts import render, redirect
 from core.forms.checkout_form import (
     PaymentCreateForm,
@@ -15,7 +16,8 @@ from core.models.order import Order
 from datetime import date
 
 
-def user(request, bid_id=None):
+def user(request, item_id=None):
+    print(request.method)
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -23,51 +25,32 @@ def user(request, bid_id=None):
             request.session["address"] = form.cleaned_data["address"]
             request.session["postal_code"] = form.cleaned_data["postal_code"]
             request.session["city"] = form.cleaned_data["city"]
+            request.session["country"] = form.cleaned_data["country"]
             request.session.modified = True
-            return redirect("/checkout/delivery", bid_id)
+            return redirect("/checkout/payment", item_id)
         else:
             form = PersonalInfoCreateForm()
             ctx = {}
             ctx["form"] = form
-            request.session["bid_id"] = request.POST.get("bid")
+            request.session["item_id"] = request.POST.get("bid")
             request.session.modified = True
         return render(request, "checkout/user_details.html", context=ctx)
     elif request.method == "GET":
         if len(request.session.keys()) > 3:
-            print(request.session["bid_id"])
             form_init = {}
             form_init["full_name"] = request.session["full_name"]
             form_init["address"] = request.session["address"]
             form_init["postal_code"] = request.session["postal_code"]
             form_init["city"] = request.session["city"]
+            form_init["country"] = request.session["country"]
             form = PersonalInfoCreateForm(form_init)
             ctx = {}
             ctx["form"] = form
             return render(request, "checkout/user_details.html", context=ctx)
 
 
-def delivery(request):
-    ctx = {}
-    if request.method == "POST":
-        form = DeliveryInfoCreateForm(request.POST)
-        if form.is_valid():
-            request.session["del_choice"] = form.cleaned_data["del_choice"]
-            print(request.session["del_choice"])
-            request.session.modified = True
-            return redirect("/checkout/payment")
-    elif request.method == "GET":
-        if "del_choice" in request.session.keys():
-            form_init = {}
-            form_init["del_choice"] = request.session["del_choice"]
-            form = DeliveryInfoCreateForm(form_init)
-            ctx["form"] = form
-            return render(request, "checkout/delivery_info.html", context=ctx)
-        form = DeliveryInfoCreateForm()
-        ctx["form"] = form
-        return render(request, "checkout/delivery_info.html", context=ctx)
-
-
 def payment(request):
+    print(request.method)
     ctx = {}
     if request.method == "POST":
         form = PaymentCreateForm(request.POST)
@@ -79,6 +62,13 @@ def payment(request):
             request.session["expiry_year"] = form.cleaned_data["expiry_year"]
             request.session.modified = True
             return process_payment(request)
+        else:
+            form = PaymentCreateForm()
+            ctx = {}
+            ctx["form"] = form
+            request.session["item_id"] = request.POST.get("bid")
+            request.session.modified = True
+        return render(request, "checkout/payment_info.html", context=ctx)
     elif request.method == "GET":
         if "cardholder_name" in request.session.keys():
             form_init = {}
@@ -97,15 +87,14 @@ def payment(request):
 
 
 def process_payment(request):
-    bid = BidService.get_bid_by_item_id(int(request.session["bid_id"]))
-    bid.status = "COMPLETED"
-    bid.save()
+    print(request.method)
     if request.method == "POST":
         shipping_details = ShippingDetails(
             full_name=request.session["full_name"],
             address=request.session["address"],
             postal_code=request.session["postal_code"],
             city=request.session["city"],
+            country=request.session["country"],
         )
         payment_details = PaymentInfo(
             cardholder_name=request.session["cardholder_name"],
@@ -127,26 +116,41 @@ def process_payment(request):
         summary_details_dict["expiry_month"] = request.session["expiry_month"]
         summary_details_dict["expiry_year"] = request.session["expiry_year"]
         request.session["summary_details"] = summary_details_dict
-        print(request.session["del_choice"])
         return redirect("/checkout/summary")
 
 
 def summary(request):
+    print(request.method)
     ctx = {}
-    summary_details = request.session["summary_details"]
-    date_today = date.today()
-    bid = BidService.get_bid_by_item_id(request.session["bid_id"])
-    item = ItemService.get_item_by_id(request.session["bid_id"])
-    order = OrderService.create_order(bid.user_id_id, item.id, item.seller_id)
-    ctx["price"] = bid.amount
-    ctx["item_name"] = item.title
-    ctx["summary"] = summary_details
-    ctx["date"] = date_today
-    print(request.session["del_choice"])
-    ctx["del_choice"] = request.session["del_choice"]
-    for key in list(request.session.keys()):
-        if not key.startswith("_"):  # skip keys set by the django system
-            del request.session[key]
-    if request.method == "POST":
+
+    # if "bid_id" in request.session.keys():
+    if request.method == "GET":
+        summary_details = request.session["summary_details"]
+        date_today = date.today()
+        bid = BidService.get_accepted_bid_by_item_id(request.session["item_id"])
+        item = ItemService.get_item_by_id(request.session["item_id"])
+        request.session["bid_id"] = bid.id
+        request.session["buyer_id"] = bid.user_id_id
+        request.session["seller_id"] = item.seller_id
+        request.session["item_id"] = item.id
+        request.session.modified = True
+        ctx["price"] = bid.amount
+        ctx["item_name"] = item.title
+        ctx["summary"] = summary_details
+        ctx["date"] = date_today
+        return render(request, "checkout/summary.html", context=ctx)
+    else:
+        OrderService.create_order(
+            request.session["buyer_id"],
+            request.session["item_id"],
+            request.session["seller_id"],
+        )
+        bid = BidService.get_bid_by_id(request.session["bid_id"])
+        request.session["bid_id"] = bid.id
+        bid.status = "COMPLETED"
+        bid.save()
+        for key in list(request.session.keys()):
+            if not key.startswith("_"):  # skip keys set by the django system
+                del request.session[key]
+
         return redirect("index_page")
-    return render(request, "checkout/summary.html", context=ctx)

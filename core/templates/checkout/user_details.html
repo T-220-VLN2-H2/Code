@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Personal details</h1>
+    <h1>Shipping details</h1>
     <form action="/checkout/user" method="post">
         {% csrf_token %}
         {{ form.as_p}}
-        <button class="btn btn-primary" type="submit">Proceed to delivery method</button>
+        <button class="btn btn-primary" type="submit">Next</button>
     </form>
     <form action="/user/history#bids" method="GET">
-        <button class="btn btn-primary" type="back">Go back to your bids</button>
+        <button class="btn btn-primary" type="back">Back</button>
     </form>
 {% endblock %}

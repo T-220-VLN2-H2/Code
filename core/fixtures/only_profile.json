@@ -1,0 +1,18 @@
+[
+    {
+      "model": "core.image",
+      "pk": 384,
+      "fields": {
+        "name": "profile",
+        "image": "images/profile.jpg"
+      }
+    },
+    {
+      "model": "core.image",
+      "pk": 385,
+      "fields": {
+        "name": "Default item image",
+        "image": "images/missing_image.jpg"
+      }
+    }
+]

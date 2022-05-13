@@ -1,0 +1,20 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$APzwCA6jbxFgVZobNetH5z$iCaQozwe/uRTDmHgKLQb6D+ctqWxQdJ9gTjmoYxg4qQ=",
+    "last_login": "2022-05-12T14:04:58.406Z",
+    "is_superuser": true,
+    "username": "The Shopkeeper",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-05-11T15:00:37.269Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

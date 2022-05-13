@@ -4,9 +4,9 @@
     <form action="/checkout/delivery" method="POST">
         {% csrf_token %}
         {{ form.as_p}}
-        <button class="btn btn-primary" type="next">Proceed to payment</button>
+        <button class="btn btn-primary" type="next">Next</button>
     </form>
     <form action="/checkout/user" method="PATCH">
-        <button class="btn btn-primary" type="back">Go back to personal details</button>
+        <button class="btn btn-primary" type="back">Back</button>
     </form>
 {% endblock %}
