@@ -48,28 +48,6 @@ def user(request, item_id=None):
             return render(request, "checkout/user_details.html", context=ctx)
 
 
-def delivery(request):
-    # scrapped?
-    ctx = {}
-    if request.method == "POST":
-        form = DeliveryInfoCreateForm(request.POST)
-        if form.is_valid():
-            request.session["del_choice"] = form.cleaned_data["del_choice"]
-            print(request.session["del_choice"])
-            request.session.modified = True
-            return redirect("/checkout/payment")
-    elif request.method == "GET":
-        if "del_choice" in request.session.keys():
-            form_init = {}
-            form_init["del_choice"] = request.session["del_choice"]
-            form = DeliveryInfoCreateForm(form_init)
-            ctx["form"] = form
-            return render(request, "checkout/delivery_info.html", context=ctx)
-        form = DeliveryInfoCreateForm()
-        ctx["form"] = form
-        return render(request, "checkout/delivery_info.html", context=ctx)
-
-
 def payment(request):
     ctx = {}
     if request.method == "POST":
@@ -83,6 +61,14 @@ def payment(request):
             request.session.modified = True
             print(1)
             return process_payment(request)
+        else:
+            form = PaymentCreateForm()
+            ctx = {}
+            ctx["form"] = form
+            request.session["item_id"] = request.POST.get("bid")
+            request.session.modified = True
+        return render(request, "checkout/payment_info.html", context=ctx)
+
     elif request.method == "GET":
         if "cardholder_name" in request.session.keys():
             form_init = {}
