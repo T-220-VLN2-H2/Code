@@ -46,10 +46,12 @@
               </div>
             </div>
           </div>
-        <form action="accounts/profile/" method="GET">
+        <form action="/checkout/summary" method="POST">
+            {% csrf_token %}
             <button class="btn btn-primary" type="next">Confirm</button>
         </form>
         <form action="/checkout/payment" method="GET">
+            {% csrf_token %}
             <button class="btn btn-primary" type="back">Back</button>
         </form>
 {% endblock %}

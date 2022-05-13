@@ -49,6 +49,7 @@ def user(request, item_id=None):
             return render(request, "checkout/user_details.html", context=ctx)
 
 
+
 def payment(request):
     print(request.method)
     ctx = {}
@@ -60,8 +61,8 @@ def payment(request):
             request.session["cvc"] = form.cleaned_data["cvc"]
             request.session["expiry_month"] = form.cleaned_data["expiry_month"]
             request.session["expiry_year"] = form.cleaned_data["expiry_year"]
+            print(request.session["expiry_year"])
             request.session.modified = True
-            print(1)
             return process_payment(request)
         else:
             form = PaymentCreateForm()
@@ -70,7 +71,6 @@ def payment(request):
             request.session["item_id"] = request.POST.get("bid")
             request.session.modified = True
         return render(request, "checkout/payment_info.html", context=ctx)
-
     elif request.method == "GET":
         if "cardholder_name" in request.session.keys():
             form_init = {}
@@ -121,22 +121,26 @@ def process_payment(request):
         return redirect("/checkout/summary")
 
 def summary(request):
+    print(request.method)
     ctx = {}
     #if "bid_id" in request.session.keys():
     if request.method == "GET":
         summary_details = request.session["summary_details"]
         date_today = date.today()
         bid = BidService.get_accepted_bid_by_item_id(request.session["item_id"])
-        request.session["bid_id"] = bid.id
-        request.session.modified = True
         item = ItemService.get_item_by_id(request.session["item_id"])
+        request.session["bid_id"] = bid.id
+        request.session["buyer_id"] = bid.user_id_id
+        request.session["seller_id"] = item.seller_id
+        request.session["item_id"] = item.id
+        request.session.modified = True
         ctx["price"] = bid.amount
         ctx["item_name"] = item.title
         ctx["summary"] = summary_details
         ctx["date"] = date_today
         return render(request, "checkout/summary.html", context=ctx)
     else:
-        OrderService.create_order(bid.user_id_id, item.id, item.seller_id)
+        OrderService.create_order(request.session["buyer_id"], request.session["item_id"], request.session["seller_id"])
         bid = BidService.get_bid_by_id(request.session["bid_id"])
         request.session["bid_id"] = bid.id
         bid.status = "COMPLETED"
