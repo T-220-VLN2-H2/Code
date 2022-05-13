@@ -1233,22 +1233,6 @@
     },
     {
         "model": "core.item",
-        "pk": 83,
-        "fields": {
-            "title": "Grandmasters glaive",
-            "condition": "NEW",
-            "category": 4,
-            "description": "",
-            "seller": 1,
-            "price": 5000,
-            "date_created": "2022-05-12 15:49:15.778827",
-            "images": [
-                83
-            ]
-        }
-    },
-    {
-        "model": "core.item",
         "pk": 85,
         "fields": {
             "title": "Hand of midas",

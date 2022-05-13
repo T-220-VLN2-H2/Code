@@ -33,9 +33,9 @@
                     <a href="{% url 'item_details' item.id %}" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="row">
                         <div class="col-7 d-flex align-items-center">
-                            {% comment %} {% with item.images.values|first as image %}
+                            {% with item.images.values|first as image %}
                             <img src="{% static 'media/' %}{{image.image}}" class="img-thumbnail rounded-circle recent-image" alt="item image">
-                            {% endwith %} {% endcomment %}
+                            {% endwith %}
                             <h5 class="mx-1">{{ item.title }}</h5>
                         </div>
                         <div class="col-5">
