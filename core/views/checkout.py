@@ -17,6 +17,7 @@ from datetime import date
 
 
 def user(request, item_id=None):
+    print(request.method)
     if request.method == "POST":
         form = PersonalInfoCreateForm(request.POST)
         if form.is_valid():
@@ -71,6 +72,7 @@ def delivery(request):
 
 
 def payment(request):
+    print(request.method)
     ctx = {}
     if request.method == "POST":
         form = PaymentCreateForm(request.POST)
@@ -101,6 +103,7 @@ def payment(request):
 
 
 def process_payment(request):
+    print(request.method)
     if request.method == "POST":
         shipping_details = ShippingDetails(
             full_name=request.session["full_name"],
@@ -139,6 +142,7 @@ def summary(request):
         date_today = date.today()
         bid = BidService.get_accepted_bid_by_item_id(request.session["item_id"])
         request.session["bid_id"] = bid.id
+        request.session.modified = True
         item = ItemService.get_item_by_id(request.session["item_id"])
         ctx["price"] = bid.amount
         ctx["item_name"] = item.title
