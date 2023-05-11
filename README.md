@@ -19,7 +19,7 @@ You will need to have version 13/14 of postgres installed before installing the 
 python -m venv venv
 source venv/bin/activate
 
-pip -r requirements.txt
+pip install -r requirements.txt
 
 python manage.py makemigrations
 python manage.py migrate
